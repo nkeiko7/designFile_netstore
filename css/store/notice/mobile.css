@@ -1,0 +1,100 @@
+#main {_float: left;}
+
+/* h1 */
+h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; 
+background-image: url(/img/store/notice/mobile/title_mobile.png);}
+
+/* h2 */
+h2 {height: 21px; margin-bottom: 5px; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden;}
+#mobileAccess h2 {background-image: url(/img/store/notice/mobile/mobileaccess.gif);}
+
+.lead { margin-bottom: 0;}
+
+/* mobileCase*/
+#mobileCase {overflow: hidden; margin-right: -23px; _zoom: 1;}
+#mobileCase dl, #mobileCase dt, #mobileCase dd {margin: 0; padding: 0;}
+#mobileCase dl {float: left; width: 240px;}
+#mobileCase dt {background: transparent url(/img/store/notice/mobile/mobilecasear.gif) no-repeat 99px 190px; width: 220px; padding: 20px 0 18px;}
+#mobileCase dt img {border: 1px solid #CCC; vertical-align: bottom;}
+#mobileCase dd {padding-bottom: 7px; vertical-align: bottom;}
+
+/* mobileAccess*/
+#mobileAccess .notes {font-size: 11px; line-height: 13px; margin-top: 10px;}
+#memberMerit {clear: both; padding-top: 5px;}
+div > #memberMerit {padding-top: 10px;}
+#memberMerit h3 {margin: 0; padding-right: 10px;}
+#memberMerit p {font-size: 11px; padding-right: 10px;}
+#memberMerit p img {margin-bottom: 5px;}
+#mobileAccess {clear: both; padding-top: 10px;}
+
+#accessWrap {background: transparent url(/img/store/notice/mobile/wrapbg.gif) no-repeat 0 100%; width: 703px;}
+div > #accessWrap {width: 700px;}
+
+#mobileImage {background: transparent url(/img/store/notice/mobile/capturebg.gif) no-repeat 100% 0; float:right;
+padding-top: 14px; width: 148px; position: relative; left: -3px;}
+div > #mobileImage {width: 148px; left: 0px;}
+
+#process dl, #process dt, #process dd {margin: 0; padding: 0;}
+#process {background: transparent url(/img/store/notice/mobile/processbg.gif) no-repeat 0 0; padding-top: 14px;}
+#process dl {background: transparent url(/img/store/notice/mobile/processdlbg.gif) repeat-y 0 0; margin-bottom: 14px; padding-left: 15px;}
+div > #process dl {border-bottom: 1px solid transparent;}
+#process dt img {vertical-align: bottom; margin-bottom: 6px;}
+#process dd {background: transparent url(/img/store/notice/mobile/processddbg.gif) no-repeat 0 50%; margin-bottom: 14px; padding: 12px 55px 14px 12px; width: 537px;}
+div > #process dd { /*\*/	width: 470px;	/* */}
+#process dd img {vertical-align: bottom;}
+
+#process #process01lnk {margin-top: 10px;}
+#process a#process01lnk {background: transparent url(/img/store/notice/mobile/process01lnk.gif) no-repeat 0 0; text-indent: -9999px;
+/*\*/	overflow: hidden;	/* */
+display: block; width: 163px; height: 31px;}
+#process a:hover#process01lnk,
+#process a:active#process01lnk {background-position: 0 -31px;}
+
+#process #process02 {height: 102px;}
+div > #process #process02 {
+	padding-right: 100px;
+	/*\*/
+	padding-right: 55px;
+	height: 76px;
+	/* */
+}
+
+#process .imageleft {float: left; margin-right: 10px;}
+#process03 #imageimode {border-bottom: 1px solid #E8E8E8; padding-bottom: 9px;}
+#process03 #imageezweb {padding-top: 9px;}
+#process04 img {margin-top: 5px;}
+
+/* mobileCase*/
+#mobileNotes {clear: both; padding: 25px 0 35px;}
+#mobileNotes p {font-size: 11px; line-height: 13px;}
+table.mobileNoncompliant {
+	border-collapse: collapse ;
+	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	padding: 0px;
+	vertical-align: top;
+	font-size: 11px;
+	width: 465px;
+}
+table.mobileNoncompliant td {
+	border-width: 0 1px 1px 0;
+	border-color: #cccccc;
+	border-style: solid;
+	width: 155px;
+	vertical-align: top;
+	padding: 6px;
+}
+table.mobileNoncompliant tr {
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	border-style: solid;
+	vertical-align: top;
+	padding: 0px;
+}
+table.mobileNoncompliant dt img {vertical-align: bottom; padding: 0px;}
+
+/* memberMerit*/
+#memberMerit {margin-bottom: 10px;}
+#memberMerit .lead {font-size: 11px; padding-bottom: 10px;}
+

@@ -1,0 +1,29 @@
+/* CLEARFIX */
+.category {zoom: 1;}
+.category:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+#main {width: 100%;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background: url(/img/store/notice/title_categorylist.png) no-repeat; text-indent: -9999px; overflow: hidden;}
+
+h2 {margin: 20px 0;}
+
+.section {letter-spacing:-.40em;} /* delete carriage return */
+
+h2, .category, .pageTop{letter-spacing: normal;}
+
+.section {margin-right: -20px; overflow: hidden;}
+
+.category {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 430px; margin: 0 20px 40px 0; vertical-align: top;
+}
+
+.category li {float: left;}
+.category ul li a {display: block; text-decoration: none; padding: 0 15px 0 8px; white-space: nowrap; background: url(/img/common/arrow_b3b3b3.png) no-repeat left center;}
+
+.section .pageTop {margin-right: 20px; padding-bottom: 5px; border-bottom: 1px solid #666; font-size: 10px;}
+

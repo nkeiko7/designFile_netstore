@@ -1,0 +1,19 @@
+/* CLEARFIX */
+.aside, .aside p, .attention {zoom: 1;}
+.aside:after,
+.aside p:after,
+.attention:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+.relatedLink {margin-bottom:10px;text-align:right;}
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}
+.attention img {float: left; margin:0 5px 2em 0;}
+
+.column3 li {margin-bottom: 20px;}
+
+.aside .column3 {margin-right: -20px;}
+.aside .column3 .col {float:left;width:210px;margin:0 15px 0 0;}

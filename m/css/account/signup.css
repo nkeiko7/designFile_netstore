@@ -1,0 +1,132 @@
+#main section h1 {font-size: 12px; margin: 10px 10px 15px; padding: 5px 0; color: #191919; font-weight: bold;}
+
+.error {margin: 10px;}
+
+#signupTop #main section ul {padding-left: 20px; margin: 0 10px 30px;}
+#signupTop #main section li {list-style: disc;}
+
+#submit {margin-top: 15px;}
+#submit input {margin-right: 5px;}
+#submit p a {text-decoration: underline;}
+#submit p {text-align: center;}
+
+#terms {margin: 30px 10px;}
+#terms .section {margin-bottom: 20px;}
+#terms ol {padding-left: 20px;}
+#terms li {margin: 10px 0; list-style-type: decimal;}
+#terms ol li li {list-style-type: none;}
+
+
+#featureSmartToggleBtn {float: right; margin: 5px 10px 5px 5px;}
+#featureSmartToggleBtn a {color: #fff; background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#666)); padding: 4px; border-radius: 4px; border: 1px solid #555; font-size: 10px; font-weight: bold;}
+
+#easy #main dl,
+#easy #mailnews ul,
+#easyConfirm #main dl,
+#easyConfirm #mailnews ul,
+#easyConfirm #mailnews p,
+#full #main dl,
+#full #mailnews ul,
+#fullConfirm #main dl,
+#fullConfirm #mailnews ul,
+#fullConfirm #mailnews p {padding: 10px;}
+
+#easyConfirm #mailnews p,
+#fullConfirm #mailnews p {text-align: center;}
+
+#easy #main section h1,
+#easyConfirm #main section h1,
+#full #main section h1,
+#fullConfirm #main section h1 {
+font-size: 12px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: #fff; text-indent: 0; border-bottom: 1px solid #eee; padding: 5px 10px; margin: 0;
+}
+
+#easy #main section dt,
+#full #main section dt {margin-bottom: 5px;}
+#easy #main section dt label,
+#full #main section dt label {font-size: 12px; font-weight: bold; margin-right: 5px;}
+#full #main section dt label[for="address4"] {font-weight: normal;}
+#easy #main section dd,
+#full #main section dd {margin-bottom: 15px;}
+
+#fullConfirm #main section dt,
+#easyConfirm #main section dt {float: left; width: 11em; font-weight: bold; margin-bottom: 10px;}
+#easyConfirm #main section dd,
+#fullConfirm #main section dd {margin-bottom: 10px; overflow: hidden;}
+
+.confirm #loginInfo dd {word-wrap: break-word;}
+
+section .message {margin: 5px 0;}
+
+#signupComplete .annotation {margin: 0 10px;}
+.complete #main {margin-bottom: 30px;}
+
+.submit {margin: 10px auto;}
+
+#easy #submit,
+#full #submit {margin-top: 15px;}
+
+#pcMailAdd,
+#mobileMailAddAccount,
+#password,
+#passwordCon,
+#postalCode1,
+#postalCode2,
+#birthDateYear,
+#firstName,
+#lastName,
+#name,
+#firstNameKana,
+#lastNameKana,
+#nameKana,
+#address2,
+#address3r,
+#address3b,
+#address3m,
+#address4,
+#sendName,
+#tel1,
+#tel2,
+#tel3 {width: 97%; font-size: 16px; padding: .4em 0 .4em 5px;
+-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+border: 1px solid #adadad;
+-webkit-appearance: none;
+line-height:1.4;
+}
+
+#mobileMailAddAccount,
+#postalCode1,
+#postalCode2,
+#birthDateYear,
+#sendName,
+#tel1,
+#tel2,
+#tel3 {width: auto;}
+
+#firstName,
+#lastName,
+#firstNameKana,
+#lastNameKana {width: 112px;}
+
+.featurePhone {display: none;}
+
+#postalCode1 {margin-right: 5px;}
+#postalCode2 {margin: 0 5px;}
+
+#zipButton {padding: .4em; font-size: 16px; line-height:1.4; margin-right: 5px;}
+
+
+dd.gender ul:after {content: ""; display: block; clear: both;}
+dd.gender li {float: left; margin-right: 30px; list-style: none;}
+dd.gender input {margin-right: 5px;}
+
+dd.dateOfBirth input,
+dd.dateOfBirth select {margin: 0 5px;}
+
+#mailnews li {margin-bottom: 10px;}
+#mailnews input {margin-right: 5px;}
+#mailnews .desc {display: none;}
+
+body.confirm dt {font-weight: bold;}
+
+select#addresslist {width: 100%; font-size: 16px; line-height:1.4; padding: .4em 0 .4em 5px;}

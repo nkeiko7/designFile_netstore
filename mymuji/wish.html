@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>“ほしい！”と言っている人 | my MUJI | 無印良品</title>
+	<link rel="stylesheet" href="//www.muji.net/css/muji.css">
+	<link rel="stylesheet" href="/css/ownhave.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/img/lab/common/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/js/spin.min.js"></script>
+
+	<!--[if lt IE 9]><script src="//www.muji.net/js/lib/html5.js"></script><![endif]-->
+
+	<script>
+	$(function(){
+		$('.more a').click(function(){
+			var opts = {
+				lines: 8,
+				length: 5,
+				width: 3,
+				radius: 5,
+				color: '#666',
+				speed: 1,
+				trail: 60,
+				shadow: false,
+				hwaccel: false
+			};
+			var target = $(this).addClass('loading').get(0);
+			var spinner = new Spinner(opts).spin(target);
+			return false;
+		});
+	});
+	</script>
+		
+</head>
+
+<body id="wishUsers" class="usersList">
+
+<h1>“ほしい！”と言っている人 </h1>
+
+<ul id="users">
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000001/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Masahiro Yamada Masahiro</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000002/profile_thumb.jpg" alt="" class="profileImage"><span class="name">k_e_t_a</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000003/profile_thumb.jpg" alt="" class="profileImage"><span class="name">netch</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000004/profile_thumb.jpg" alt="" class="profileImage"><span class="name">芝田　友之</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000005/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Simon</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000006/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Tumi</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000002/profile_thumb.jpg" alt="" class="profileImage"><span class="name">k_e_t_a</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000001/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Masahiro Yamada Masahiro</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000003/profile_thumb.jpg" alt="" class="profileImage"><span class="name">netch</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000004/profile_thumb.jpg" alt="" class="profileImage"><span class="name">芝田　友之</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000005/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Simon Simon Simon</span></a></li>
+	<li><a href="/individual/" class="userProfile" target="_top"><img src="http://my.muji.net/img/profile/0000006/profile_thumb.jpg" alt="" class="profileImage"><span class="name">Tunemi Kawana Tunemi Kawana</span></a></li>
+</ul>
+
+<div class="more"><a href="#"><span>もっと見る</span></a></div>
+
+</body>
+</html>

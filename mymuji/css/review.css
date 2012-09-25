@@ -1,0 +1,48 @@
+h1 {font-size: 16px; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #e6e6e6; padding-bottom: 5px;}
+
+.loading {background: url("/img/store/cmdty/mymuji/icon_loading_14x14.gif") no-repeat scroll 50% 50% transparent; min-height: 14px; text-indent: 0;}
+
+.lead {margin-bottom: 10px; font-size: 12px;}
+#shareSetting {margin-bottom: 20px; text-align: right;}
+
+textarea {border: 1px solid #ddd; color: #333; display: block; font-size: 12px; height: 100px; margin-bottom: 15px; padding: 5px; width: 505px;}
+
+h2 {font-weight: bold; margin-bottom: 5px;}
+
+.btn {text-align: center; margin-bottom: 15px;}
+.btn a {background: #333; color: #fff; font-weight: bold; padding: 5px 40px; display: inline-block; cursor: pointer; text-decoration: none; border-radius: 2px;}
+.btn a:hover {background: #7f0019; color: #fff;}
+.btn a.loading {color: #666; background: #555; cursor: default;}
+
+#checkAlert {text-align: center;}
+#checkAlert input {margin-right: 5px;}
+
+.lead span {padding: 2px 0 0 22px;}
+.fb {background: url(/mymuji/img/common/icon_fb_off.png) no-repeat;}
+.tw {background: url(/mymuji/img/common/icon_tw_off.png) no-repeat;}
+.mx {background: url(/mymuji/img/common/icon_mixi_off.png) no-repeat;}
+
+#postReview #publish {zoom:1; margin-bottom: 20px;}
+#postReview #publish:after {content: ""; display: block; clear: both;}
+#postReview #publish li {float: left; margin-right: 20px; background: none;}
+#postReview #publish label {padding: 2px 0 0 22px;}
+#postReview #publish .fb label {background: url(/mymuji/img/common/icon_fb_off.png) no-repeat;}
+#postReview #publish .tw label {background: url(/mymuji/img/common/icon_tw_off.png) no-repeat;}
+#postReview #publish .mx label {background: url(/mymuji/img/common/icon_mixi_off.png) no-repeat;}
+#postReview #publish li input {margin-right: 2px;}
+
+.message {margin-bottom: 10px;}
+.error {color: #d00; font-weight: bold;}
+.message span {display: inline-block; background: #f5f2e9; padding: 5px; border-radius: 5px;}
+.message.error span {background: #fdd;}
+.message ul {display: table; background: #f5f2e9; padding: 5px; border-radius: 5px;}
+.message.error ul {background: #fdd;}
+.message ul span {display: inline; padding: 0;}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 569px) {
+ textarea {border: 1px solid #ddd; color: #333; display: block; font-size: 12px; height: 130px; margin-bottom: 10px; padding: 5px; width: 90%;}
+ .lead .fb, .lead .tw, .lead .mx {font: 0/0 a; text-shadow: none; color: transparent; background-size: 0; padding: 0; margin-bottom: 5px;}
+ .lead .fb:before {content: url(/mymuji/img/common/icon_fb_off.png) no-repeat; display: inline-block; font-size: 0; line-height: 0;}
+ .lead .tw:before {content: url(/mymuji/img/common/icon_tw_off.png) no-repeat; display: inline-block; font-size: 0; line-height: 0;}
+ .lead .mx:before {content: url(/mymuji/img/common/icon_mixi_off.png) no-repeat; display: inline-block; font-size: 0; line-height: 0;}
+}

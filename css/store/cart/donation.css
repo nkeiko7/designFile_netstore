@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+#payment .info,#payment #balanceCheck dl {zoom:1;}
+#payment .info:after,#payment #balanceCheck dl:after{content:" ";display:block;visibility:hidden;clear:both;height:.1px;font-size:.1em;line-height:0;}
+
+
+/* h1 */
+
+#confirm h1 {background-image: url(/img/store/cart/donation/title_donation.png);}
+#complete h1 {background-image: url(/img/store/cart/donation/title_donation.png); background-position: 0 -40px;}
+
+#payment table.vertical th {width: 150px;}
+
+#payment .inputAmount {margin-top: 15px; padding: 10px; background: #e6e6e6;}
+#payment .inputAmount input {margin-right: 5px;}
+#balanceGiftCard .inputAmount {clear: both;}
+
+#payment .annotation {margin-bottom: 20px;}
+#payment table.vertical th {width: 150px;}
+#payment table.vertical #balanceGiftCard td.info {border-right: 1px solid #ddd;}
+#payment #balanceGiftCard .price {float: left; margin-right: 20px;}
+#payment #balanceGiftCard #balanceCheck {margin-top: 10px;}
+#payment #balanceGiftCard #balanceCheck p {margin-bottom: 10px;}
+#payment #balanceCheck dt {clear: both; float: left; width: 80px; margin: 2px 0 5px 0; font-weight: bold;}
+#payment #balanceCheck dd {margin-bottom: 5px;}
+#payment #balanceCheckBtn {margin: 10px 0 0 80px;}
+
+#balance {position: relative;}
+.card {position: absolute; right: 5px;}
+
+#payment #balance {
+margin-bottom: 40px; padding: 0; border: 0;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+}
+#payment #balanceCheck {margin-bottom: 30px;}
+#payment #balanceGiftCard #balanceCheck {width: 100%;}
+#payment #balanceCheck {margin-left: 0;}

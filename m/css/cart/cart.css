@@ -1,0 +1,339 @@
+.lead {margin-bottom: 20px;}
+
+#main .price ins,
+#main .price del {display: inline-block;}
+
+
+/* shoppingCart */
+
+body#shoppingCart h1#title {padding-left: 17px; background: url(/m/img/icon_cart_right.png) no-repeat 0 10px; -webkit-background-size: 13px 11px;}
+.error.message {margin: 15px 10px;}
+.incidental .error.message {margin: 0px;}
+
+.purchaseItems li {padding: 20px 10px 20px 110px; border-bottom: 1px solid #e6e6e6;}
+.purchaseItems li:after {content: ""; display: block; clear: both;}
+.purchaseItems li .thumb {margin-left: -100px; float: left;}
+body#shoppingCart .purchaseItems li .thumb img {width: 90px; height: 90px;}
+
+.purchaseItems li.outofstock {padding-top: 10px; padding-bottom: 10px; background: #fdd;}
+.purchaseItems li.multiple {padding: 0; border-bottom: 0;}
+.purchaseItems li.outofstock {border:2px solid #f66;} /* This ".outofstock" class must be declare after ".multiple" class. */
+
+.purchaseItems li.hasIncidental.multiple {border-bottom: 1px solid #e6e6e6;}
+.purchaseItems li.hasIncidental.multiple li {border-bottom: 0; padding-bottom: 0;}
+.purchaseItems li.multiple .incidental {margin: 10px 10px 20px 110px;}
+
+.purchaseItems .item {display: block;}
+.purchaseItems .name {display: block;}
+.purchaseItems .jan {color: #aaa;}
+
+.purchaseItems li .quantity select {margin-right: 10px;}
+
+.incidental {border-radius: 5px; background: #f2f2f2; padding: 0; margin-top: 10px;}
+.incidental h1 {font-size: 10px; font-weight: bold; padding: 5px 0; margin: 0; text-align: center; background: #dedede;border-radius: 5px 5px 0 0;}
+.incidental li {border-top: 1px solid #ddd; border-bottom: 0; padding: 5px 5px 5px 37px; margin: 0;}
+.incidental li:first-child {border:0; padding-top: 5px;}
+.incidental li input {margin-left: -27px; float: left;}
+.incidental .item {display: block;}
+.incidental .price {display: inline-block; width: 80px;}
+.incidental .annotation {padding: 0 5px 10px 15px;}
+
+body#shoppingCart .hemSetting {margin-left: -32px; display: none;}
+.hemSetting {margin-top: 5px; margin-bottom: 5px; background: #e6e6e6; padding: 5px;  border-radius: 4px; -webkit-border-radius: 4px;}
+.hemSetting label {display: block;}
+
+.purchaseItems .total {text-align: center; padding: 10px;}
+.purchaseItems .total dt {display: inline; font-size: 14px; font-weight: bold;}
+.purchaseItems .total dd {display: inline; font-size: 12px;}
+.purchaseItems .total dd .num {font-size: 16px;}
+
+body#shoppingCart #pickUp {text-align: center; border-top: 1px solid #e6e6e6;}
+body#shoppingCart #pickUp h1 {font-size: 12px; margin: 10px 0;}
+body#shoppingCart #pickUp p {padding: 0 10px;}
+body#shoppingCart #pickUp .btn {margin: 10px 0; display: inline-block;}
+body#shoppingCart #pickUp a[target="_blank"] {text-decoration: underline;}
+
+body#shoppingCart #recommend {margin-top: 30px;}
+
+.freeShippingIcon,
+.pickupIcon{margin:6px 0; overflow:hidden; display:inline-block; text-align:center; font-size:11px; padding:2px; vertical-align:middle; font-weight:normal; border:1px solid #666; color:#444; line-height:10px; border-radius:2px;}
+.pickupIcon {margin: -2px 2px 0; line-height:10px;}
+
+.rakutenDisabled {display: block; font-size: 10px; margin: 5px 0;}
+
+
+#bannerWrap {position: static; bottom: 0; margin-bottom: 20px; display: none; color: #fff; z-index: 9999;}
+#banner {padding: 5px 0 5px 5px; background: #000; opacity: 0.8;}
+#fancybox-close {width: 30px; height: 30px;
+background: url('/js/fancybox/fancybox.png') -40px 0;
+cursor: pointer; display: block; float: right;}
+#banner .campaignInfo {font-size: 11px;}
+#banner .campaignName {font-weight: bold;}
+#banner .memberName { margin-right: 5px;}
+#banner .currentPrice {display: none;}
+
+/* addressee */
+
+.addressList {margin-bottom: 30px;}
+.addressList ul {margin: 10px 0 0; letter-spacing: normal;}
+/*.addressList li {background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));}*/
+.addressList li a {
+display: block;
+padding: 15px;
+border-bottom: 1px solid #eee;
+background: url(/m/img/arrow_set.png) no-repeat 95% center;
+-webkit-background-size: 29px 29px;
+}
+.addressList li:last-child a {border-bottom: 0;}
+.addressList dt {margin-bottom: 5px; font-weight: bold;}
+.addressList dd {padding-right: 40px;}
+.zip {margin-right: 10px;}
+
+#step{text-align: center; margin: 10px 0;}
+#step img {width: 220px; height: 12px;}
+
+body#addressee h1 {float: left;}
+body#addressee #editItem {float: right; margin: 13px 10px 0;}
+a.editBtn {color: #fff; background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#666)); padding: 4px; border-radius: 4px; border: 1px solid #555; font-size: 10px; font-weight: bold; display: inline-block;}
+body#addressee .lead {clear: both;}
+
+
+
+
+/* addresseeConfirm */
+
+body#addresseeConfirm .division {margin-bottom: 30px;}
+
+body#addresseeConfirm .division>h1 {font-size: 10px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: #fff; text-indent: 0; border-bottom: 1px solid #eee; padding: 5px 10px; margin-bottom: 20px;}
+
+.packet {-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); margin: 10px 10px 30px; border-radius: 5px;}
+body#addresseeConfirm .packet h1,
+body#confirm .packet h1 {font-size: 12px; margin: 0; border-radius: 5px 5px 0 0; padding: 10px 0; text-align: center; border-top: 0;}
+body#addresseeConfirm .incidental h1 {margin: 0; padding: 5px 0; border: 0; background: #dedede;}
+.packetInfo {overflow:hidden;}
+.packetInfo dl {padding: 10px 20px; background-color: #eee;
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.5); width: 100%; margin-left: -10px;}
+.packetInfo dl:after {content: ""; display: block; clear: both;}
+.packetInfo dt {float: left; clear: both; font-weight: bold; width: 6em; margin-bottom: 10px;}
+.packetInfo dt.deliveryDate,
+.packetInfo dt.deliveryTime {line-height: 23px;}
+.packetInfo dd {padding-left: 6em; margin: 0 20px 10px 0;}
+.packetInfo a {text-decoration: underline; display: inline-block;}
+
+body#addresseeConfirm .purchaseItems li {padding: 20px 10px 20px 60px;}
+body#addresseeConfirm .purchaseItems li.outofstock {padding: 10px 10px 10px 60px;}
+body#addresseeConfirm .purchaseItems li:first-child {border-top:0;}
+body#addresseeConfirm .purchaseItems li .thumb {margin-left: -55px;}
+body#addresseeConfirm .purchaseItems li .thumb img {width: 50px; height: 50px;}
+body#addresseeConfirm .purchaseItems .price {margin-right: 20px; display: inline-block; width: 80px;}
+body#addresseeConfirm .purchaseItems .quantity {display: inline;}
+body#addresseeConfirm .purchaseItems .value {display: inline-block; width: 60px;}
+body#addresseeConfirm .purchaseItems li .jan {display: none;}
+
+body#addresseeConfirm .purchaseItems li.multiple {padding: 0; border-bottom: 0;}
+body#addresseeConfirm .purchaseItems li.outofstock {border:2px solid #f66;} /* This ".outofstock" class must be declare after ".multiple" class. */
+body#addresseeConfirm .purchaseItems li.hasIncidental.multiple {border-bottom: 1px solid #e6e6e6;}
+body#addresseeConfirm .purchaseItems li.hasIncidental.multiple li {border-bottom: 0; padding-bottom: 0;}
+body#addresseeConfirm .purchaseItems li.multiple .incidental {margin: 10px 10px 20px 60px;}
+body#addresseeConfirm .purchaseItems li.multiple .incidental li {padding: 5px 10px;}
+
+body#addresseeConfirm .incidental li {padding: 5px 10px;}
+body#addresseeConfirm .incidental li:first-child {padding-top: 10px;}
+.quantity .value {margin-right: 20px;}
+a.delete {text-decoration: underline;}
+.outofstock .error {margin-bottom: 5px;}
+.outofstock .delete {
+background: #333; color: #fff; font-weight: bold; padding: 5px; display: inline-block; cursor: pointer; text-decoration: none;
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;
+			background-image: 
+				-webkit-gradient(linear, left top, left bottom,
+					from(#444444),
+					color-stop(0.5, #333333),
+					color-stop(0.5, #222222),
+					to(#222222));
+					border-radius: 5px;
+}
+
+body#addresseeConfirm .incidental .item {display: block;}
+body#addresseeConfirm .incidental .quantity {display: inline-block;}
+body#addresseeConfirm .incidental .price {display: inline-block; width: 80px;}
+body#addresseeConfirm .incidental .added .item:before {content: "\2713";}
+
+del {color: #999; display: inline;}
+del .item {text-decoration: line-through;}
+
+.shippingCost {text-align: right; padding: 10px;}
+.shippingCost dt {display: inline; font-size: 12px; font-weight: bold;}
+.shippingCost dd {display: inline; font-size: 12px;}
+.shippingCost dd .num {font-size: 16px;}
+
+.free {font-size: 12px;}
+
+.shippingCost .freeShipping {color: #fff; background: #7f0019; font-weight: bold; -webkit-border-radius: 2px; border-radius: 2px; font-size: 10px; float: left; padding: 2px 5px; display: inline-block; margin-top: 3px;}
+
+body#addresseeConfirm .total {text-align: right; margin: 0 20px;}
+body#addresseeConfirm .total dt {float: left; clear: both; display: inline-block;}
+body#addresseeConfirm dt.payment {font-size: 14px; font-weight: bold; margin-top: 5px; padding-top: 9px;}
+body#addresseeConfirm .total dd .num {font-size: 12px; font-weight: normal;}
+
+body#addresseeConfirm .total  dd.payment {border-top: 1px solid #e6e6e6; margin-top: 5px; padding-top: 5px;}
+body#addresseeConfirm .total  dd.payment .num {font-size: 16px; font-weight: bold;}
+body#addresseeConfirm .gift input {margin-right: 5px;}
+body#addresseeConfirm dt.giftMessage {float: none; width: auto; display: none;}
+body#addresseeConfirm dd.giftMessage {padding-left: 0; display: none;}
+body#addresseeConfirm dd textarea {
+font-size: 14px; padding: .4em 0 .4em 5px;
+-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+border: 1px solid #adadad;
+-webkit-appearance: none;
+line-height:1.4;
+}
+.hemSetting .length,
+.hemSetting .type {font-weight: bold;}
+
+
+/* addresseeChange */
+
+body#addresseeChange h1#title {float: left;}
+body#addresseeChange #editItem {float: right; margin: 13px 10px 0;}
+body#addresseeChange .lead {clear: both;}
+
+body#addresseeChange #items {margin: 0 10px;}
+body#addresseeChange #items li {margin-bottom: 10px; font-size: 10px;}
+
+
+body#addresseeChange aside#items {border-radius: 5px; background: #f2f2f2; padding: 0; margin: 10px 10px 30px;}
+body#addresseeChange aside#items h1 {font-size: 10px; font-weight: bold; padding: 5px 0; margin: 0; text-align: center; background: #dedede;border-radius: 5px 5px 0 0;}
+body#addresseeChange aside#items li {border-top: 1px solid #ddd; border-bottom: 0; padding: 5px; margin: 0;}
+body#addresseeChange aside#items li:first-child {border:0; padding-top: 5px;}
+
+
+
+/* payment */
+
+#payment section h1 {font-size: 10px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: #fff; text-indent: 0; border-bottom: 1px solid #eee; padding: 5px 10px; margin-bottom: 20px;}
+
+#payment section section {padding: 10px; border-top: 1px solid #e6e6e6;}
+#payment section section:first-child {border-top: 0;}
+#payment section .packet h1 {text-align: left;}
+
+#payment #paymentMethod .packet {padding: 0;}
+#payment #paymentMethod .packet section {padding: 0;}
+
+#coupon:after,
+#giftCard:after {content: ""; display: block; clear: both;}
+#coupon dt,
+#giftCard dt {font-weight: bold;}
+#payment .toggleSwitch {float: right;}
+#payment .toggleSwitch li {float: left; margin-left: 10px;}
+#payment input[type="radio"],
+#payment input[type="checkbox"] {margin-right: 5px; width: 20px; height: 20px; vertical-align: middle; -webkit-border-radius: 10px;}
+#payment .balance {clear: both; float: left; margin-top: 5px;}
+#payment .amount {float: right; margin-top: 5px;}
+#payment .amount input,
+#payment .auth input {margin-right: 5px;
+font-size: 14px; padding:.2em 5px;
+-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+border: 1px solid #adadad;
+-webkit-appearance: none;
+line-height:1.4;
+text-align: right;
+}
+#payment #giftCard .auth {display: none; float: right;}
+#payment .auth {clear: both; margin-top: 5px; border-radius: 5px; background: #f2f2f2;}
+#payment .auth p {font-size: 10px; margin-bottom: 5px; font-weight: bold; padding: 5px 0; margin: 0; text-align: center; background: #dedede;border-radius: 5px 5px 0 0;}
+#payment .auth ul {margin: 10px 10px 5px;}
+#payment .auth li {margin-bottom: 5px;}
+#payment #giftCard .auth li label {width: 6em; display: inline-block; text-align: right;}
+#payment #giftCard .auth li input {margin-left: 5px; text-align: left;}
+#payment .auth .btn {margin: 5px 10px 10px; margin-left: 7.3em;}
+#payment #giftCard .balance,
+#payment #giftCard .amount {display: none;}
+
+#payment #paymentMethod dt {padding: 10px; font-weight: bold; border-top: 1px solid #e6e6e6;}
+#payment #paymentMethod dt:first-child {border-top: 0;}
+#payment #paymentMethod dt.disabled {color: #ccc;}
+#payment #paymentMethod dd {display: none; padding: 0 10px 10px 35px;}
+#payment #paymentMethod dd dd {display: block; padding: 0;}
+#payment #paymentMethod .auth {padding-bottom: 5px; margin-bottom: 10px;}
+#payment #paymentMethod .auth label {display: block;}
+#payment #paymentMethod .auth li input {text-align: left;}
+#payment #paymentMethodC img {margin: 10px;}
+#payment dd.paymentMethodR a {text-decoration: underline;}
+
+
+
+/* confirm */
+
+body#confirm #orderSummary>h1,
+body#confirm #orderDetail>h1 {font-size: 10px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: #fff; text-indent: 0; border-bottom: 1px solid #eee; padding: 5px 10px; margin-bottom: 20px;}
+body#confirm #orderSummary dl {margin: 0 10px 30px;}
+body#confirm #orderSummary dl {text-align: right; padding-bottom: 10px; line-height: 14px;}
+body#confirm #orderSummary dt {float: left; clear: both; display: inline-block; margin-bottom: 10px; padding-bottom: 10px;}
+body#confirm #orderSummary dt:first-child {margin-top: 0;}
+body#confirm #orderSummary dd {border-bottom: 1px solid #e6e6e6; margin-bottom: 10px; padding-bottom: 10px;}
+
+body#confirm .shippingInfo {overflow:hidden;}
+body#confirm .shippingInfo .wrapper {padding: 10px 20px; background-color: #eee; border: solid #e3e3e3; border-width: 1px 0; width: 100%; margin-left: -10px;}
+body#confirm .shippingInfo .wrapper div {margin: 5px 20px 5px 0;}
+body#confirm .shippingInfo .shippingTime,
+body#confirm .shippingInfo .shippingGift {border-top: 1px solid #e0e0e0; padding-top: 5px;}
+body#confirm .shippingInfo .shippingGiftMessage {background: #fcfcfc; padding: 10px; -webkit-border-radius: 5px;}
+
+body#confirm .purchaseItems li {padding: 10px 10px 10px 60px;}
+body#confirm .purchaseItems li:first-child {border-top:0;}
+body#confirm .purchaseItems li .thumb {margin-left: -55px;}
+body#confirm .purchaseItems li .thumb img {width: 50px; height: 50px;}
+
+body#confirm .purchaseItems li.multiple {padding: 0; border-bottom: 0;}
+body#confirm .purchaseItems li.hasIncidental.multiple {border-bottom: 1px solid #e6e6e6;}
+body#confirm .purchaseItems li.hasIncidental.multiple li {border-bottom: 0; padding-bottom: 0;}
+body#confirm .purchaseItems li.multiple .incidental {margin: 10px 10px 10px 60px;}
+body#confirm .purchaseItems li.multiple .incidental li {padding: 5px 10px;}
+
+body#confirm .incidental h1 {margin: 0; padding: 5px 0; border: 0; background: #dedede;}
+body#confirm .incidental li {padding: 5px 10px; margin: 0;}
+body#confirm .incidental li:first-child {padding-top: 10px;}
+body#confirm .incidental .item {display: block;}
+body#confirm .incidental .quantity {display: inline-block;}
+body#confirm .incidental .price {display: inline-block; width: 80px;}
+body#confirm .incidental .added .item:before {content: "\2713";}
+
+body#confirm dl.shippingCost {border-bottom: 1px solid #dedede; margin-bottom: 15px;}
+body#confirm dl.shippingCost dd {font-size: 11px;}
+body#confirm dl.shippingCost dd .num {font-size: 14px;}
+body#confirm dl.shippingCost .freeShipping {margin-top: 0;}
+
+body#confirm dl.total {text-align: right; padding: 10px 0 20px; margin: 0 10px; line-height: 12px;}
+body#confirm .total dt {float: left; clear: both; display: inline-block;}
+body#confirm .total dt,
+body#confirm .total dd {margin-top: 5px; padding-top: 5px;}
+body#confirm .total dt:first-child {margin-top: 0;}
+body#confirm .total .num {font-weight: normal;}
+body#confirm .total .payment {margin-top: 15px; padding: 10px 0;}
+body#confirm .total dd.payment {border-top: 1px solid #999; border-bottom: 1px solid #e6e6e6;}
+body#confirm .total .payment .num {font-weight: bold;}
+
+body#confirm .submit.rakuten{width:240px;}
+body#confirm .submit.rakuten a{background: url(https://checkout.rakuten.co.jp/p/common/img/btn_check_01.gif) no-repeat; padding: 0; height: 40px; text-indent:-9999px;}
+
+.prevNext .next,
+.submit {width: 100%;}
+.prevNext .next a,
+.submit a {padding: 10px;}
+
+body#complete .packet dd {padding: 10px; font-size: 14px; text-align: center;}
+body#complete .packet dt {padding: 10px; border-bottom: 1px solid #e6e6e6; font-weight: bold; text-align: center;}
+body#complete #main p {margin: 10px;}
+
+#recommend {margin-top: 10px; border-top: 1px solid #e6e6e6; padding: 10px 10px 0;}
+#recommend h1 {font-weight: bold; margin-bottom: 10px;}
+#recommend .itemList ul {letter-spacing: -.40em;}
+#recommend .itemList li {display: inline-block; width: 100px; margin: 0 8px; text-align: center; letter-spacing:normal; vertical-align: top;}
+#recommend .itemList li a {display: block;}
+#recommend .thumb {display: block;}
+#recommend .itemList .name {text-decoration:none;}
+#recommend .btn a {line-height: 70px; padding: 0 10px;}
+#recommend .prev {float: left;}
+#recommend .next {float: right;}
+#recommend .disabled a {background: #ccc;}

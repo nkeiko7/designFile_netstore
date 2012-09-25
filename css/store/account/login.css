@@ -1,0 +1,27 @@
+/* CLEARFIX */
+.focus dl {zoom: 1;}
+.focus dl:after { content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+body#login h1 {background-image: url(/img/store/account/login/title_login.png);}
+body#logout h1 {background-image: url(/img/store/account/login/title_logout.png);}
+
+.focus dl dt {float: left; clear: both; width: 235px; margin: 0 0 5px 0; padding: 5px 0; font-weight: bold; vertical-align: middle; text-align: right;}
+.focus dl dd {margin: 0 0 5px 235px; padding: 3px 0 3px 15px; vertical-align: middle;}
+
+.message {margin-bottom: 10px;}
+
+#goReminder {text-align: center; margin-bottom: 0;}
+.submit {margin: 0 0 10px 250px;}
+
+.note {background-color:#F3F3F3; padding: 15px; margin-top: 20px;}
+.note ul li {list-style:disc; margin-left: 1.5em;}
+
+p {margin-bottom: 20px;}
+
+#logout .note {margin-bottom: 20px;}
+#logout .note input {margin-right: 5px;}
+#logout .note label {font-weight: bold;}
+
+#member input {width: 155px;}

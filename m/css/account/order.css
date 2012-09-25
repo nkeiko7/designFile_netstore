@@ -1,0 +1,113 @@
+/* COMMON */
+
+.lead {margin-bottom: 20px;}
+
+.packet {-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); margin: 10px 10px 30px; border-radius: 5px;}
+.packet h1 {font-size: 12px; margin: 0; border-radius: 5px 5px 0 0; padding: 10px 0; text-align: center; border-bottom: 1px solid #eee;}
+
+.free {font-size: 12px;}
+
+/* ORDERLIST */
+
+#list li {padding: 15px 15px 10px;}
+#list li {border-top: 1px solid #e6e6e6;}
+#list li:first-child {border-top: 0;}
+#list dt {width: 80px; vertical-align: top; margin-bottom: 5px; display: inline-block; clear: both; float: left;}
+#list dd {margin-bottom: 5px; margin-left: 80px;}
+#list a {text-decoration: underline;}
+#list .orderID a {font-weight: bold;}
+
+.pageNav {border-top: 0;}
+.pageNumber {padding-top: 0;}
+
+#couponInfo {padding: 10px 10px 5px; background-color: #eee; width: 100%; margin-bottom: 15px;}
+#couponInfo .num {font-weight: bold; margin: 0 5px;}
+#couponInfo .yyyy, #couponInfo .mm, #couponInfo .dd {font-weight: bold; margin-left: 5px;}
+
+#faq ul {margin-bottom: 20px;}
+#faq li {margin: 0 10px;}
+#faq a {text-decoration: underline;}
+
+.message {text-align: center; margin-bottom: 30px;}
+
+/* DETAIL, CANCEL */
+
+#orderID {background: #eee; padding: 10px 10px 0; margin-bottom: 20px; line-height: 1;}
+#orderID:after {content: ""; display: block; clear: both;}
+#orderID dt {float: left; clear: both; font-weight: bold; width: 6em; padding-bottom: 10px;}
+#orderID dd {padding-left: 6em; padding-bottom: 10px;}
+
+.purchaseItems li {padding: 10px 10px 10px 60px; border-bottom: 1px solid #e6e6e6;}
+.purchaseItems li:after {content: ""; display: block; clear: both;}
+.purchaseItems li a {display: block; padding-right: 10px; background: url(/m/img/arrow.png) no-repeat right center;  -webkit-background-size: 10px 13px;}
+.purchaseItems li .thumb {margin-left: -55px; float: left;}
+.purchaseItems li .thumb img {width: 50px; height: 50px;}
+.purchaseItems li.multiple {padding: 0; border-bottom: 0;}
+.purchaseItems li.hasIncidental.multiple {border-bottom: 1px solid #e6e6e6;}
+.purchaseItems li.hasIncidental.multiple li {border-bottom: 0; padding-bottom: 0;}
+.purchaseItems li.multiple .incidental {margin: 10px 10px 10px 60px;}
+.purchaseItems li.multiple .incidental li {padding: 5px 10px;}
+.purchaseItems .item {display: block;}
+.purchaseItems .name {display: block;}
+.purchaseItems .jan {color: #aaa;}
+
+.incidental {border-radius: 5px; background: #f2f2f2; padding: 0; margin-top: 10px;}
+.incidental h1 {font-weight: bold; padding: 5px 0; margin: 0; text-align: center; background: #dedede; border-radius: 5px 5px 0 0; border: 0;}
+.incidental li {border-top: 1px solid #ddd; border-bottom: 0; padding: 5px 10px; margin: 0;}
+.incidental li:first-child {border:0; padding-top: 5px;}
+.incidental .item {display: block;}
+.incidental .price {display: inline-block; width: 80px;}
+.incidental .annotation {padding: 0 5px 10px 15px;}
+.incidental .quantity {display: inline-block;}
+.incidental .added .item:before {content: "\2713";}
+
+.hemSetting {margin-top: 5px; margin-bottom: 5px; background: #e6e6e6; padding: 5px;  border-radius: 4px; -webkit-border-radius: 4px;}
+.hemSetting label {display: block;}
+.hemSetting .length,
+.hemSetting .type {font-weight: bold;}
+
+.price ins,
+.price del {display: inline-block;}
+
+#shippingGift {padding: 10px 10px 5px;}
+#shippingGiftMessage {padding: 0 10px 10px;}
+
+.total {text-align: right; margin: 0 20px 30px;}
+.total dt {float: left; clear: both; display: inline-block;}
+.total dt.payment {font-size: 14px; font-weight: bold; margin-top: 5px; padding-top: 9px;}
+.total dd .num {font-size: 12px; font-weight: normal;}
+.total dd.payment {border-top: 1px solid #666666; border-bottom: 1px solid #E6E6E6; margin: 5px 0; padding: 5px 0;}
+.total dd.payment .num {font-size: 16px; font-weight: bold;}
+
+#deliverInfo ul {padding: 10px;}
+#deliverInfo li {margin-bottom: 20px;}
+#deliverInfo li:last-child {margin-bottom: 0;}
+#deliverInfo dt {font-weight: bold; margin-bottom: 5px;}
+
+#orderStatus dl {padding: 10px 10px 5px;}
+#orderStatus dl:after {content: ""; display: block; clear: both;}
+#orderStatus dt {font-weight: bold; display: inline-block; clear: both; float: left; width: 120px; margin-bottom: 5px;}
+#orderStatus dd {margin-bottom: 5px;}
+#orderStatus li {padding: 15px 15px 10px;}
+
+
+/* CANCEL */
+.error.message {margin: 15px 10px;}
+
+#giftCard {margin: 10px;}
+#giftCard dt {font-weight: bold; background: #dedede; border-radius: 5px 5px 0 0; padding: 5px 0; text-align: center;}
+#giftCard .auth {background: #f2f2f2; border-radius: 0 0 5px 5px; padding: 10px;}
+#giftCard .auth p {margin-bottom: 10px;}
+#giftCard .auth li {margin-bottom: 5px;}
+#giftCard .auth li label {display: inline-block; width: 6em;}
+#giftCard .auth li input {margin-left: 5px; border: 1px solid #adadad; font-size: 14px; line-height: 1.4; padding: .2em 5px;}
+
+.prevNext .next {width: 100%;}
+.prevNext .next a {padding: 10px;}
+
+
+/* COMPLETE */
+
+body#orderCancelComplete #orderID {padding: 15px; font-weight: bold; text-align: center;}
+body#orderCancelComplete #orderID a {text-decoration: underline;}
+body#orderCancelComplete .prevNext {margin-top: 15px;}

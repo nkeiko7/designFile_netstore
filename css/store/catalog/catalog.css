@@ -1,0 +1,96 @@
+/* CLEARFIX */
+#main {zoom:1;}
+#main:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+body#catalog h1 {background-image: url(/img/store/catalog/title_catalog.png);}
+body#catalogDelivery h1 {background-image: url(/img/store/catalog/title_catalogShipping.png);}
+body#catalogConfirm h1 {background-image: url(/img/store/catalog/title_confirm.png);}
+body#catalogComplete h1 {background-image: url(/img/store/catalog/title_complete.png);}
+
+.focus h2 {font-size: 18px;}
+h2 span {font-size: 12px; padding-left: 5px; color: #666;font-weight: normal;}
+
+table {margin: 0 auto;}
+
+.note {background-color:#F3F3F3; padding: 10px; margin-top: 30px;}
+.aside .note ul li {margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;}
+.aside .note ul li:first-child {margin-top: 0; padding-top: 0; border-top: 0;}
+
+body#catalog .focus {float: left; width: 480px;}
+.aside {float: right; width: 160px;}
+
+#delivery {margin-bottom: 30px;}
+#delivery img {border:1px solid #ccc;}
+
+.thumbnail {margin: 20px auto 0; text-align: center;}
+body#catalog .submit {margin: 20px auto 0; text-align: center;width:280px;}
+.annotation {margin-top: 20px;}
+
+#pdfDownload {margin-top: 30px;padding-top:15px; border-top: 1px solid #E6E6E6;}
+#pdfDownload li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 130px; padding: 15px 23px 15px 0; vertical-align: top; letter-spacing: normal;}
+
+#pdfDownload li .pdf {display:block;margin-top: 5px;text-decoration: underline;cursor:pointer;}
+
+#pdfDownload li a:link img,
+#pdfDownload li a:visited img { border: 1px solid #CCCCCC;}
+#pdfDownload li a:hover img,
+#pdfDownload li a:active img { border: 1px solid #7F0019;}
+
+#pdfDownload p {margin-bottom: 15px;}
+
+#pdfDownload li img {
+-moz-box-shadow: 1px 1px 5px #999;
+-webkit-box-shadow: 1px 1px 5px #999;
+}
+
+.related dl {border: solid #e6e6e6; border-width: 1px 0; padding: 10px 0;}
+.related dl.catalog {border-width: 0 0 1px;}
+.related dt {margin-bottom: 5px;}
+.related dt a {font-weight: bold;}
+.related dt img {float: left; margin:2px 5px 0 0;}
+.related dd {overflow: hidden;}
+
+.related dl.over {cursor:pointer;}
+.related dl.over a {color: #7f0019;}
+
+/* catalogDelivery */
+#catalogDelivery .note {margin-top: 0;}
+#catalogDelivery .note ul li {list-style:disc outside none;margin-left:1.5em;}
+
+.list {margin-bottom: 20px; border-bottom: solid 1px #666; padding-bottom: 15px;}
+.list dt.first {border-top: solid 1px #666; margin-top: 10px;}
+.list dt {border-top: solid 1px #e6e6e6; clear: both; padding: 15px 15px 0; margin: 15px 0 5px;}
+.list dd {padding: 0 15px;}
+.list .name {font-weight: bold; font-size: 13px;}
+.list .address {width: 500px;}
+.list .function {float: right; margin-top: -1.5em;}
+.list .function li {float: left; margin-left: 10px; padding-left: 10px; border-left: 1px solid #ccc;}
+.list .function li:first-child {border-left: 0;}
+.list .annotation {margin-top: 5px; float: right;}
+
+body#catalogDelivery h2 {margin-top: 30px;}
+
+.catalogList ul {margin-right: -30px; letter-spacing: -.80em;}
+.catalogList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 130px; margin-right: 30px; padding:15px 0 15px 10px; vertical-align: top; letter-spacing: normal;}
+
+.catalogList img {border:1px solid #ccc;}
+.catalogList input {margin-right: 5px;vertical-align: middle;}
+
+.message {margin-bottom:10px;}
+
+/* catalogConfirm */
+#catalogConfirm .catalogList {border:1px solid #DDD;margin-bottom: 20px;}
+#catalogConfirm .catalogList li { margin-right: 20px; padding:15px 0 15px 20px;}
+
+/* catalogComplete */
+#catalogComplete #orderID {font-size:14px; font-weight:bold; margin-bottom:20px; text-align: center; background: #f3f3f3; padding:15px;}

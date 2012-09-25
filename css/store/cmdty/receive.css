@@ -1,0 +1,37 @@
+/* CLEARFIX */
+.focus dl {zoom: 1;}
+.focus dl:after { content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+body#receive h1 {background-image: url(/img/store/cmdty/title_receive.png);}
+body#receiveConfirm h1 {background-image: url(/img/store/cmdty/title_receive_res.png);}
+body#receiveComplete h1 {background-image: url(/img/store/cmdty/title_receive_complete.png);}
+
+table.horizontal {width: 100%; margin: 20px 0;}
+
+.focus h2 {font-size: 14px;}
+h2 span {border-right: 1px solid #ccc; padding-right: 5px; color: #666;}
+
+.focus dt {float: left; clear: both; width: 127px; margin: 0 0 5px 0; padding: 5px 0; font-weight: bold; vertical-align: middle; text-align: right;}
+.focus dd {width: 520px; margin: 0 0 5px 127px; padding: 3px 0 3px 15px; vertical-align: middle; height: 25px;}
+.focus dt {/margin: 0; /padding: 5px 0;}/* IE6,IE7 */
+.focus dd {/margin: 0; /padding: 3px 0 3px 15px; /width: auto;}/* IE6,IE7 */
+
+input#pc {width: 250px;}
+#receiveConfirm .focus dd {padding: 5px 0 5px 15px;}
+input#pc {width: 250px;}
+input#mobile {width: 145px;}
+
+.focus .submit {margin: 20px 0 0 255px;}
+
+#prefecture {text-align: center; margin-bottom: 30px;}
+#prefecture h2 {text-align: left;}
+
+optgroup {margin-bottom: 0.5em; padding: 0 0.5em 0.5em; border-bottom: 1px solid #ccc;}
+option:first-child {margin-top: 0.5em;}
+
+.message.error {margin-top: 20px;}
+
+body#receiveConfirm .lead {margin-bottom: 10px;}
+body#receiveConfirm .annotation {margin-bottom: 20px;}

@@ -1,0 +1,43 @@
+@charset "utf-8";#main{_float:left;}
+
+/* step navigation for cart */
+#shoppingFlow {width:100%;}
+#shoppingFlow ol.stepNavi {overflow: hidden; margin: 0 auto; width: 680px;}
+#shoppingFlow .stepNavi li{list-style: none; float: left;}
+#shoppingFlow .stepNavi .current { background:url("/img/de/store/cart/crumbs.png") no-repeat scroll 100% 0 #E5E5E5; color: #333; font-weight: bold; }
+#shoppingFlow .stepNavi li span {
+padding:10px 18px 10px 12px;
+height: 15px;
+background:url("/img/de/store/cart/crumbs2.png") no-repeat scroll 100% 0 #f0f0f0;
+border-radius: 2px 0 0 2px;
+-moz-border-radius: 2px 0 0 2px;
+-webkit-border-radius: 2px 0 0 2px;
+-o-border-radius: 2px 0 0 2px;
+-ms-border-radius: 2px 0 0 2px;
+display:block;
+margin-right: 2px;
+color: #666;
+font-size: 10px;
+}
+
+/* 納品分（画像パスが違う）
+#shoppingFlow {width:100%;}
+#shoppingFlow ol.stepNavi {overflow: hidden; margin: 0 auto; width: 680px;}
+#shoppingFlow .stepNavi li{list-style: none; float: left;}
+#shoppingFlow .stepNavi .current { background:url("http://img.muji.net/img/de/store/cart/crumbs.png") no-repeat scroll 100% 0 #E5E5E5; color: #333; font-weight: bold; }
+#shoppingFlow .stepNavi li span {
+padding:10px 18px 10px 12px;
+height: 15px;
+background:url("http://img.muji.net/img/de/store/cart/crumbs2.png") no-repeat scroll 100% 0 #f0f0f0;
+border-radius: 2px 0 0 2px;
+-moz-border-radius: 2px 0 0 2px;
+-webkit-border-radius: 2px 0 0 2px;
+-o-border-radius: 2px 0 0 2px;
+-ms-border-radius: 2px 0 0 2px;
+display:block;
+margin-right: 2px;
+color: #666;
+font-size: 10px;
+}
+
+*/

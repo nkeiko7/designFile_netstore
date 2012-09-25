@@ -1,0 +1,43 @@
+/* CLEARFIX */
+.info01 dl {zoom: 1;}
+.info01 dl:after { content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+h1 {margin: 15px 0;text-indent: -9999px; overflow: hidden;}
+
+#precheck h1 {background: url(/img/store/notice/title_precheck.png) no-repeat; height: 21px;}
+#hookPleated h1 {background: url(/img/store/notice/title_hookpleated.png) no-repeat; height: 44px;}
+#hookNonPleated h1 {background: url(/img/store/notice/title_hooknonpleated.png) no-repeat; height: 44px;}
+#hookWPleated h1 {background: url(/img/store/notice/title_hookwpleated.png) no-repeat; height: 44px;}
+#hookGathered h1 {background: url(/img/store/notice/title_hookgather.png) no-repeat; height: 44px;}
+#hatomeInfo h1 {background: url(/img/store/notice/title_hatomeinfo.png) no-repeat; height: 21px;}
+
+/* precheck */
+.itemize {margin-bottom:10px; padding-bottom:15px; border-bottom: 1px solid #E6E6E6;}
+
+.itemize ul li {list-style:disc; margin-left: 1.5em;}
+.itemize .adjuster {float: right; width: 77px; margin-left: 10px;}
+.itemize .supp li {list-style:none outside none;margin-bottom:0;font-size:11px;color:#555555;}
+
+/* tsugimeOrdercurtain */
+#hookPleated, #hookNonPleated, #hookGathered, #hookWPleated {width: 400px;}
+.annotation {background-color:#F3F3F3;color:#333333;margin-top:20px;padding:5px 5px 2px;}
+
+/* hatomeInfo */
+#hatomeInfo {width: 450px;}
+#hatomeInfo .infoWrap {margin-bottom:15px;}
+
+#hatomeInfo h2 {border-top:1px solid #E6E6E6;padding-top:10px;font-size:14px;}
+#hatomeInfo #no01 h2 {border:none; padding:0;}
+#hatomeInfo h2 span {font-size:11px;}
+
+#no01 dl dt {float: left; clear: both; width: 1em; margin-bottom:5px; padding: 3px 0; font-weight: bold; vertical-align: middle;}
+#no01 dl dd {margin: 0 0 5px 1em; padding: 3px 0 3px 15px; vertical-align: middle;}
+
+#no02 table.vertical th {width:20%;}
+
+#no03 ul li {list-style:disc; margin-left: 1.5em;}
+#no03 .imagecut {margin-bottom:10px;}
+
+#no04 dl dt {font-weight: bold;}
+#no04 dl dd {margin:5px 0 10px;}

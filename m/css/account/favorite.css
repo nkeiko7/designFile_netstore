@@ -1,0 +1,50 @@
+
+#editButton {float: right; margin: 10px 10px 0 0;}
+
+.annotation {margin: 0 10px 5px;}
+.message {margin: 0 10px 5px;}
+.packet {-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); margin: 10px 10px 30px; border-radius: 5px;}
+.packet h1 {font-size: 12px; margin: 0; border-radius: 5px 5px 0 0; padding: 10px 0; text-align: center; border-bottom: 1px solid #eee;}
+
+#list li { border-bottom: 1px solid #e6e6e6; position: relative;}
+#list li:after {content: ""; display: block; clear: both;}
+#list li:last-child {border-bottom: 0;}
+.item {float: left; width: 78%;}
+.item a {padding: 10px; display: block;}
+.thumb {margin-right: 10px; float: left;}
+.thumb img {width: 50px; height: 50px;}
+
+.purchaseItems li.outofstock {padding-top: 10px; padding-bottom: 10px; background: #fdd;}
+.purchaseItems li.multiple {padding: 0; border-bottom: 0;}
+.purchaseItems li.outofstock {border:2px solid #f66;} /* This ".outofstock" class must be declare after ".multiple" class. */
+
+.item {display: block;}
+.jan {color: #aaa;}
+span.desc {display: block; padding-left: 60px;}
+.name, .purchaseItems .unitPrice, .outstock {display: block;}
+
+.addCart a {display: inline-block; height: 13px; position: absolute; top: 50%; right: 10px; margin-top: -7px; line-height: 14px;}
+.addCart a img {width: 34px; height: 25px; padding: 10px;}
+.addCart.btn {font-size: 9px;}
+
+.remove {position: absolute; top: 0; width: 100%; height: 100%; display: none;}
+.removeToggle {position: absolute; top: 50%; left: 10px; margin-top: -13px;}
+.removeBtn {display: none; position: absolute; top: 50%; right: 10px; margin-top: -16px; z-index: 1000;}
+.removeToggle.active {-webkit-transform: rotate(-90deg);}
+
+.mask {display: none; position: fixed; top: 0; width: 100%; height: 10000px;}
+
+.outstock {padding: 10px;}
+.outstockMessage {color: #999; font-weight: bold;}
+
+#main .price ins, #main .price del { display: inline-block;}
+p.favoriteLinkImg {text-align: center; margin-bottom: 20px;}
+p.favoriteLinkImg img {width: 280px; height: auto;}
+
+#cartInfoWrap {position: static; bottom: 0; margin-bottom: 20px; display: none; color: #fff; z-index: 9999;}
+#cartInfo {padding: 5px 0 5px 5px; background: #000; opacity: 0.8; position: relative; z-index: 9999;}
+#fancybox-close {width: 30px; height: 30px; background: url('/js/fancybox/fancybox.png') -40px 0; cursor: pointer; display: block; float: right;}
+#cartInfo .addCartInfo {font-size: 12px; width: 60%; font-weight: bold;}
+#cartInfo .itemName {font-size: 10px; width: 60%;}
+#cartInfo .btn.linkCart {font-size: 9px;display: inline-block; height: 13px; position: absolute; top: 50%; right: 10px; margin-top: -11px; line-height: 14px;}
+#cartInfo .btn.linkCart a {margin-right: 40px; background-image: -webkit-gradient(linear, left top, left bottom, from(#777), color-stop(0.5, #666), color-stop(0.5, #222), to(#222));}

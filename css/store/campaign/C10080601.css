@@ -1,0 +1,21 @@
+/* CLEARFIX */
+.annotation dl,
+.aside {zoom: 1;}
+.annotation dl:after,
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+dl.annotation{margin: 5px 0;}
+dl.annotation dt,
+dl.annotation dd{float:left; display:inline;}
+
+.column3 li {margin-bottom: 20px;}
+
+.aside h3:first-child {margin-top:0;}
+.aside p {margin-bottom:10px;}
+.aside img {float:left;margin-right:10px;}
+.aside .col {width:206px;margin-right:12px;float:left;}
+.aside .col img {float:none;}
+.aside table {width:650px;border-right:1px solid #CCC;border-bottom:1px solid #CCC;}
+.aside td {text-align:center;padding:2px 10px;border-left:1px solid #CCC;border-top:1px solid #CCC;}

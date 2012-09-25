@@ -1,0 +1,35 @@
+/* CLEARFIX */
+.aside {zoom: 1;}
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* .annotation dl,
+.aside {zoom: 1;}
+.annotation dl:after,
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+ */
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+h2 {margin-top: 25px;}
+h4 {margin-bottom: 10px; font-weight: bold;}
+
+/* dl.annotation{margin: 5px 0;}
+dl.annotation dt,
+dl.annotation dd{float:left; display:inline;}
+
+.column3 li {margin-bottom: 20px;} */
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}
+
+#snSection1 .column2 .itemList {margin: 10px 0;}
+.itemList .annotation {margin-top: 3px; line-height: 1.3; display: block;}
+
+.relatedLink {margin-bottom: 10px; text-align: right;}
+
+.recipe dd {margin-bottom: 10px;}
+.recipe li {background: no-repeat left top; padding-left: 20px;}
+.recipe li.no1 {background-image: url(/img/store/campaign/parts/no1.gif);}
+.recipe li.no2 {background-image: url(/img/store/campaign/parts/no2.gif);}
+.recipe li.no3 {background-image: url(/img/store/campaign/parts/no3.gif);}
+.recipe li.no4 {background-image: url(/img/store/campaign/parts/no4.gif);}
+.recipe li.no5 {background-image: url(/img/store/campaign/parts/no5.gif);}

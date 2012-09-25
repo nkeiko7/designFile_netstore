@@ -1,0 +1,101 @@
+#main,#function ul,#mailnews li,#history li a{zoom:1;}
+#main:after,#function ul:after,#mailnews li:after,#history li a:after{content:".";display:block;visibility:hidden;clear:both;height:0;font-size:0;line-height:0;}
+h1{height:27px;margin-bottom:20px;background:url(/img/store/account/mypage/title_mypage.png) no-repeat;text-indent:-9999px;overflow:hidden;}
+#message{width:220px;}
+.section{width:460px;}
+.aside{width:220px;float:right;}
+#message .loginName{font-weight:bold;padding-right:.5em;}
+#coupon{line-height:1.5em;font-size:11px;padding:19px 6px 6px;background:#F5F2E9 url(/img/store/account/mypage/contsidebg01.gif) no-repeat;text-align:center;}
+#coupon b{font-size:14px;}
+#coupon b a{text-decoration:none;}
+#coupon span.num{font-size:16px;}
+#message{margin-bottom:40px;}
+#message ul{margin-top:10px;}
+#message ul span{font-weight:bold;padding:0 .5em 0 0;}
+#message li{margin-top:10px;padding-top:10px;border-top:1px solid #E7E7E7;}
+#message ul li:first-child{border:0;}
+#message li a{text-decoration:none;}
+#function,#recommend{float:left;width:460px;}
+#function{margin-bottom:40px;}
+#personalInfo,#orderConfirm{margin-bottom:20px;}
+#function h2{height:15px;margin-bottom:15px;text-indent:-9999px;background-repeat:no-repeat;}
+#personalInfo h2{background-image:url(/img/store/account/mypage/contmainttl01.gif);}
+#orderConfirm h2{background-image:url(/img/store/account/mypage/contmainttl02.gif);}
+#faq h2{background-image:url(/img/store/account/mypage/contmainttl03.gif);}
+#function ul{margin-left:60px;}
+#function li{float:left;width:160px;margin:0 20px 10px 0;}
+#history{clear:both;width:198px;border:1px solid #ccc;padding:15px 10px 5px;*display:inline;}
+#history h2{height:15px;margin-bottom:20px;text-indent:-9999px;background:url(/img/store/account/mypage/contsidettl01.gif) no-repeat;}
+#history li{margin-bottom:10px;overflow:hidden;}
+#history .thumb{float:left;margin-right:10px;}
+#history .desc{display:block;overflow:hidden;}
+#history a{text-decoration:none;}
+#history a .name{text-decoration:underline;}
+#history .btn{display:none;}
+#newItem,#outlet{font-size:11px;margin-bottom:30px;}
+#recommend h2{font-size:14px;float:left;margin-bottom:5px;}
+#recommend h2 span{margin-right:2px;}
+#recommend .all{float:right;line-height:24px;}
+#recommend .all a{text-decoration:none;}
+#recommend .itemList{clear:both;padding-top:10px;border-top:1px solid #666;}
+#recommend .itemList ul{margin-right:-20px;letter-spacing:-.40em;}
+#recommend .itemList li{display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;width:140px;margin-right:20px;vertical-align:top;letter-spacing:normal;}
+.#recommend itemList a{display:block;margin-bottom:5px;}
+#recommend .itemList .thumb{display:block;margin-bottom:3px;text-align:center;}
+#recommend .itemList .price{display:inline-block;margin-bottom:3px;line-height:1.2;}
+#mailnews{float:left;width:430px;padding:15px;background:#E9E9E9;position:relative;}
+#mailnews h2{width:120px;height:14px;text-indent:-9999px;background:url(/img/store/account/mypage/contmainttl04.gif) no-repeat 0 0;position:absolute;left:15px;top:15px;}
+#mailnews #subscribe{text-align:right;font-size:11px;}
+#mailnews ul{margin-top:10px;color:#999;}
+#mailnews li{margin-bottom:5px;}
+#mailnews .news span{float:left;font-weight:bold;margin-right:5px;font-family:"Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;}
+#mailnews .news a{overflow:hidden;display:block;text-decoration:none;}
+
+#cardcampaign {margin-top:20px;}
+#cardcampaign a img {border:1px solid #CCCCCC;}
+#cardcampaign a:hover img {border:1px solid #7F0019;}
+
+#charge { margin:20px 0 20px 0; font-size: 90%;}
+#charge .annotation a { color: #666;}
+
+#news { margin: 10px 0; padding: 5px 0;}
+#news p.image { margin: 0 auto; width: 150px;}
+#news p.title { margin: 0 auto; width: 180px; font-weight: bold; text-align: center; text-decoration: none;}
+
+
+/* nishiwaki_step10 */
+#userInfo {line-height:1.5em;font-size:11px;padding:10px 10px 5px; background:#eee; text-align:center; position: relative; top: 10px;	margin-bottom: 20px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+#userInfo:before {
+width: 0;
+height: 0;
+border-right: 5px solid transparent;
+border-left: 5px solid transparent;
+border-bottom: 10px solid #eee;
+position: absolute;
+top: -10px;
+left: 100px;
+content: " ";
+}
+#userInfo b{font-size:14px;}
+#userInfo b a{text-decoration:none;}
+#userInfo span.num{font-size:16px;}
+.campaignName {font-weight: bold;}
+
+#campaignInfo {color: #7F0019; padding: 10px; margin-bottom: 10px; border: 1px solid #7F0019; background-color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;}
+#couponInfo { border: 0; margin: 5px 0; background-color: #e2e2e2; padding:5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;}

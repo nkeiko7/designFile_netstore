@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>口コミを投稿</title>
+	<link rel="stylesheet" href="//www.muji.net/css/muji.css">
+	<link rel="stylesheet" href="/css/review.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/img/lab/common/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/js/spin.min.js"></script>
+
+	<!--[if lt IE 9]><script src="//www.muji.net/js/lib/html5.js"></script><![endif]-->
+
+	<script>
+	$(function(){
+	
+		$('#postReview .btn a').click(function(){
+			var opts = {
+				lines: 8,
+				length: 4,
+				width: 2,
+				radius: 4,
+				color: '#fff',
+				speed: 1,
+				trail: 60,
+				shadow: false,
+				hwaccel: false
+			};
+			var target = $(this).addClass('loading').get(0);
+			var spinner = new Spinner(opts).spin(target);
+			return false;
+		});
+	
+	});
+	</script>
+
+</head>
+
+<body id="reviewConfirm">
+
+	<h1>口コミを投稿</h1>
+	<p class="lead">口コミ投稿で MUJI COIN を獲得できます。（<a href="http://life.muji.net/howto.html" target="_top">詳しくはこちら</a>）</p>
+	<p class="message error"><span>口コミを入力してください</span></p>
+	<section id="postReview">
+		<form>
+		<textarea cols="40"></textarea>
+		<div id="publish">
+			<ul>
+				<li class="fb"><input type="checkbox" id="publishFb" name="publishFb"><label for="publishFb">Facebookに投稿</label></li>
+				<li class="tw"><input type="checkbox" id="publishTw" name="publishTw"><label for="publishTw">Twitterに投稿</label></li>
+				<li class="mx"><input type="checkbox" id="publishMx" name="publishMx"><label for="publishMx">mixiに投稿</label></li>
+			</ul>
+		</div>
+		<div class="btn"><a href="#">投稿</a></div>
+		</form>
+	</section><!-- /#postReview -->
+
+</body>
+
+</html>

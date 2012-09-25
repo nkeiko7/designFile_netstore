@@ -1,0 +1,25 @@
+/* CLEARFIX */
+.annotation dl,
+.size1,
+.size2 {zoom: 1;}
+.annotation dl:after,
+.size1:after,
+.size2:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+h4 {font-weight:bold;}
+
+.relatedLink {margin-bottom:10px;text-align:right;}
+
+.column3 li {margin-bottom: 20px;}
+
+.size1 img, .size2 img, .size2 table {float:left;}
+.size2 img {margin-right:20px;}
+.size2 dl {clear:both;}
+.size2 table {margin-right:10px;}
+.size1 table, .size1 p {margin-left:185px;}
+.size1 table {width:515px;}
+.size2 table {width:245px;}
+.size1 th, .size1 td, .size2 th, .size2 td {padding:5px 10px;text-align:center;border:1px solid #CCC;}
+.size1 th, .size2 th {font-weight:bold;}
+.firstline th {background-color:#E6E6E6;}

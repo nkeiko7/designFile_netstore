@@ -1,0 +1,13 @@
+/* CLEARFIX */
+ul,
+li {zoom: 1;}
+ul:after,
+li:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 21px; margin: 15px 0; background: url(/img/store/notice/title_detail_icon.png) no-repeat; text-indent: -9999px; overflow: hidden;}
+
+h2 {font-size: 14px; margin-top: 15px;}
+
+li {float: left; width: 160px; margin-left: 20px; margin-bottom: 15px;}
+li img {float: left; margin-right: 5px;}

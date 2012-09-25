@@ -1,0 +1,99 @@
+/* CLEARFIX */
+.listView li,
+.listView .desc {zoom: 1;}
+.listView li:after,
+.listView .desc:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+/* h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden;} */
+
+#freeShipping {font-size: 11px; margin-bottom: 10px;}
+#freeShipping b {font-size: 12px;}
+
+.aside {float: right; width: 220px; margin-bottom: 20px; padding-left: 20px; border-left: 1px solid #e6e6e6;}
+.aside li {font-size:11px; margin-bottom:5px;}
+
+.controlBar {color:#999999; clear: both; border-top: 1px solid #ddd; background: #f1f1f1; overflow: hidden; font-size: 11px; margin-top: 20px;}
+.controlBar dl {float:left; border-right:1px solid #ddd; margin: 5px 10px 5px 0; padding: 5px 10px; min-height: 19px;}
+.controlBar dt {display: none;}
+.controlBar dd {float:left; padding-right: 8px;}
+.controlBar .viewSwitch { border-right: 0;}
+.sort .current,
+.itemsParPage .current {font-weight: bold; border-bottom: 3px solid #ccc; padding: 0 1px 1px; line-height: 19px;}
+.sort a,
+.itemsParPage a {text-decoration: none; border-bottom: 1px solid #ccc; padding: 0 1px 1px; line-height: 19px;}
+.sort a:hover,
+.itemsParPage a:hover {text-decoration: none; border-bottom: 3px solid #7f0019;}
+.viewSwitch dd {padding-right: 10px;}
+.viewSwitch dd a,
+.viewSwitch dd span {display: block; width: 19px; height: 19px; overflow: hidden; background: url(/img/store/section/sub/sprite_switch.png) no-repeat;text-indent: -9999px;}
+.viewSwitch .vsThumbnail span {background-position: 0 0;}
+.viewSwitch .vsThumbnail a {background-position: -39px 0;}
+.viewSwitch .vsThumbnail a:hover {background-position: -79px 0;}
+.viewSwitch .vsList span{background-position: 0 -29px;}
+.viewSwitch .vsList a {background-position: -39px -29px;}
+.viewSwitch .vsList a:hover {background-position: -79px -29px;}
+.pageNav {clear: both; border-top: 1px solid #ccc;}
+
+#main .itemList {clear: both; margin-bottom: 30px; border-top:1px solid #E6E6E6; min-height: 120px;}
+#main .itemList .loading {padding:50px 0; text-align: center;}
+#main .itemList ul {margin-right: -15px; letter-spacing: -.40em;}
+#main .itemList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 127px; margin: 15px 15px 0 0; padding-top: 15px; vertical-align: top; letter-spacing: normal;}
+#main .itemList a {display: block; margin-bottom: 5px;}
+#main .itemList .thumb {display: block; margin-bottom: 3px;}
+#main .itemList .name {}
+#main .itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
+#main .itemList .info ul {margin-right: -3px; overflow: hidden;}
+.newicon,
+.stockicon {margin-bottom: 3px;}
+
+#main .info li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+margin: 0 3px 2px 0; width: 54px; text-align: center; font-size:10px; padding:1px 0 0; *padding:0 0 1px; vertical-align: middle; font-weight: normal; border: 1px solid #666; color: #444; line-height: 10px; 
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+#main .itemList br {display: none;}
+
+#noResults p {clear:both;margin:15px 0;font-size:117%;font-weight:bold;}
+
+/* listView */
+.listView {clear:both; border-top: 1px solid #E6E6E6;}
+
+.listView li {padding: 15px 0; border-bottom:1px solid #E6E6E6;}
+.listView .desc {width: 580px; float: left;}
+.listView .info li {padding:1px 0 0; *padding:0 0 1px; border: 1px solid #666;}
+.listView a {margin-right: 10px;}
+.listView .thumb {display: block; float: left; margin-right: 20px; margin-left: 5px;}
+.listView .itemSummary {margin: 5px 0;}
+.listView .name {font-weight: bold;}
+.listView .price {float: right; text-align: right; margin-right: 5px;}
+
+
+/* history */
+#history {clear: both; border: solid #ccc; border-width: 1px 0 0; margin-top: 30px; padding: 5px 0 0;}
+#history h2 {padding: 0 5px 5px; border-bottom: 1px solid #e8e8e8; font-size: 14px;}
+#history .itemList {margin-bottom: 0;}
+#history .itemList ul {letter-spacing: -.40em;}
+#history .itemList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 150px; margin: 0 5px; vertical-align: top; letter-spacing: normal;}
+#history .itemList a {text-decoration: none;}
+#history .itemList .thumb {float: left;
+*cursor: pointer; /* IE6, IE7 */
+}
+#history .itemList .desc {padding-left: 50px; display: block;}
+#history .itemList .name {font-size: 11px; text-decoration: underline;}
+#history .itemList .price {margin-top: 5px; display: block; color: #000;}
+#history .btn {width: 20px; font-size: 10px; line-height: 60px;}
+#history .prev {float: left;}
+#history .next {float: right;}
+#history .disabled a {background:#ccc; cursor: default;}
+
+#main .info li.mixMatch {width: 70px;}

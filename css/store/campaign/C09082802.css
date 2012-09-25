@@ -1,0 +1,29 @@
+/* CLEARFIX */
+.annotation dl,
+.aside {zoom: 1;}
+.annotation dl:after,
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+dl.annotation{margin: 5px 0;}
+dl.annotation dt,
+dl.annotation dd{float:left; display:inline;}
+
+.column3 li {margin-bottom: 20px;}
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}
+
+
+/* C09082802 */
+.aside .columun2 {width:650px;}
+.figure.simg {width:150px;}
+
+/* sizetable 101007èCê≥ìríÜ */
+.chart { border-top-style:none; border-bottom-style:none; border-left-style:solid 1px #00c;border-right-style:solid 1px #00c;border-collapse:collapse; width:657px; text-align:center;}
+.chart table {border-color:fff; width:657px;}
+.chart th,td {border:solid 1px #ccc;}
+.chart th {padding-left:5px;}
+.styles th{padding-top:5px; padding-bottom:5px;}

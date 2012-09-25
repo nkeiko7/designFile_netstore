@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+	<meta charset="UTF-8">  
+	<title>登録ランキング - 「持ってる」の多いアイテム | my MUJI | 無印良品</title>
+
+	<link rel="stylesheet" href="//www.muji.net/css/muji.css">
+	<link rel="stylesheet" href="/css/mymuji.css">
+	<link rel="stylesheet" href="/css/ranking.css">
+	<link rel="stylesheet" href="//www.muji.net/js/fancybox/jquery.fancybox-1.3.1.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/img/lab/common/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="//www.muji.net/js/jquery.tinyTips.js"></script>
+	<script src="//www.muji.net/js/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+	<script src="/js/mymuji.js"></script>
+	<script src="/js/spin.min.js"></script>
+
+	<!--[if lt IE 9]><script src="//www.muji.net/js/lib/html5.js"></script><![endif]-->
+
+	<script>
+	$(function(){
+		$('#paginate a').click(function(){		
+			var opts = {
+				lines: 8,
+				length: 5,
+				width: 3,
+				radius: 5,
+				color: '#666',
+				speed: 1,
+				trail: 60,
+				shadow: false,
+				hwaccel: false
+			};
+			var target = $(this).addClass('loading').get(0);
+			var spinner = new Spinner(opts).spin(target);
+			return false;
+		});
+
+		$('#browseNav a').click(function(){		
+			var opts = {
+				lines: 10,
+				length: 12,
+				width: 4,
+				radius: 8,
+				color: '#666',
+				speed: 1,
+				trail: 60,
+				shadow: false,
+				hwaccel: false,
+				top: '1'
+			};
+			var target = $('.rankingList').get(0);
+			$('.rankingList>ul').addClass('loading');
+			var spinner = new Spinner(opts).spin(target);
+			return false;
+		});
+
+	});
+	</script>
+
+</head>
+
+<body id="rankingOwn" class="ranking">
+
+	<header id="headerWrap"><div id="header">
+		<div id="siteName"><a href="http://www.muji.net/store/">無印良品 ネットストア</a></div>
+		<nav>
+			<ul id="globalNav">
+				<li id="gnHome"><a href="http://www.muji.net/">ホーム</a></li>
+				<li id="gnStore"><a href="http://www.muji.net/store/">ネットストア</a></li>
+				<li id="gnShop"><a href="http://www.muji.net/shop/">店舗情報</a></li>
+				<li id="gnLab"><a href="http://www.muji.net/lab/">くらしの良品研究所</a></li>
+				<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+				<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+				<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+			</ul>
+		</nav>
+	</div></header><!-- /#header --><!-- /#headerWrap -->
+
+<div class="content">
+
+	<div id="breadcrumbs">
+		<ol>
+			<li class=""><a href="http://www.muji.net/store/">ネットストア</a></li>
+			<li><a href="http://my.muji.net/">my MUJI</a></li>
+			<li class="current"><span>登録ランキング</span></li>
+		</ol>
+	</div>
+
+	<header id="myMUJIHeader">
+		<h1 id="myMUJILogo"><a href="/">my MUJI</a></h1>
+		<ul>
+		    <li id="mhAccount"><dl>
+		        <dt><a href="#">アカウント</a></dt>
+		        <dd><ul>
+		            <li><a href="#">プロフィールの設定</a></li>
+		            <li><a href="#">共有の設定</a></li>
+		            <li><a href="#">サインアウト</a></li>
+		        </ul></dd>
+		    </dl></li>
+			<li><a href="http://www.muji.net/mt/contact/mymuji/">ご利用ガイド</a></li>
+		</ul>
+	</header><!-- /#myMUJIHeader -->
+
+<div id="contentBody">
+
+	<div id="main">
+	
+		<div id="offer">
+			<script src="//www.muji.net/mymuji/js/mymujitop_login.js"></script>
+		</div>
+
+		<h1>登録ランキング</h1>
+	
+		<div id="browseNav">
+			<ul>
+				<li id="bnReviewRanking"><a href="#"><span>口コミの多い人</span></a></li>
+				<li id="bnWishRanking"><a href="#"><span>「ほしい！」の多いアイテム</span></a></li>
+				<li id="bnOwnRanking" class="current"><a href="#"><span>「持ってる」の多いアイテム</span></a><span class="arrow"></span></li>
+			</ul>
+		</div>
+	
+		<div id="rankingListOwn" class="base rankingList">
+			<ul>
+			
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718940066" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718940066_180.jpg"><span class="name">超音波アロマディフューザー１１ＳＳ　直径約８０×高さ１４０ｍｍ</span><span class="desc">超音波で香りを拡散し、光と合わせて楽しめます。さらに使いやすいように仕様をバージョンアップしました。</span></a>
+					<span class="itemCount"><span class="num">455</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish loading"><span><span>ほしい！</span></span></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4547315783489" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315783489_180.jpg"><span class="name">掃除用品システム・カーペットクリーナー　（Ｖ）１８．３×７．５×２７．５ｃｍ</span><span class="desc">収納時に便利な自立式です。カバーの両側から収納できます。</span></a>
+					<span class="itemCount"><span class="num">136</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish checked"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own loading"><span><span>持ってる</span></span></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718590681" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718590681_180.jpg"><span class="name">アクリル冷水筒　冷水専用約２Ｌ</span><span class="desc">容器を持ちやすいように、指の収まるくぼみを見直しました。ねじ式で取り外し簡単な水出しお茶パック入れ付きです。本体は縦置き・横置きができ、口が大きいので中が洗いやすい仕様です。...</span></a>        	<span class="itemCount"><span class="num">106</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718182480" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718182480_180.jpg"><span class="name">バターチキンカレー（レトルト）　１８０ｇ（１人前）</span><span class="desc">インドのバターチキンカレーをお手本にカシューナッツとバターを使い、濃厚でまろやかな味に仕あげました。チキンの旨みとコクが生きています。</span></a>
+					<span class="itemCount"><span class="num">105</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4547315854141" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315854141_180.jpg"><span class="name">ＰＰメイクボックス　（Ｖ）約１５０×２２０×１６９ｍｍ</span><span class="desc">収納する物に合わせて選べるポリプロピレンのメイクボックスです。同じサイズのものと積み重ねて使用できます。細かいものの収納に便利です。</span></a>
+					<span class="itemCount"><span class="num">100</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718339167" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718339167_180.jpg"><span class="name">壁に付けられる家具・棚・幅４４ｃｍ・タモ材／ナチュラル　幅４４×奥行１２×高さ１０ｃｍ</span><span class="desc">石膏ボードの壁であればどこでも付けられます。壁を大きく傷付けることなく、簡単に取り付けできます。</span></a>
+					<span class="itemCount"><span class="num">92</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718556120" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718556120_180.jpg"><span class="name">グリーンカレー（レトルト）　２００ｇ（１人前）</span><span class="desc">本場のタイカレーをお手本に、タイ独特のハーブを使って煮込みました。青唐辛子の刺激的な辛さとレモングラスの爽やかな風味が特長です。</span></a>
+					<span class="itemCount"><span class="num">92</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4945247027792" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4945247027792_180.jpg"><span class="name">掃除用品システム・アルミ伸縮式ポール　（Ｖ）約直径２．５×長さ６８〜１１６ｃｍ</span><span class="desc">立ったまま楽に作業できる長さです。ワンタッチボタンで簡単にヘッドを交換できます。伸縮部分の止め部品を改良し伸縮部分がゆるみにくくしました。</span></a>
+					<span class="itemCount"><span class="num">91</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4934761049182" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4934761049182_180.jpg"><span class="name">体にフィットするソファ・本体　幅６５×奥行６５×高さ４３ｃｍ</span><span class="desc">伸び難くく改良したニット地を使用しています。中の微粒子ビーズが独特の座り心地を実現します。</span></a>
+					<span class="itemCount"><span class="num">91</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="http://www.muji.net/store/cmdty/detail/4547315318476" class="itemProfile"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315318476_180.jpg"><span class="name">ポリプロピレンスタンドファイルボックス　（Ｖ）Ａ４用・約１００×２７６×３１８</span><span class="desc">材料を着色せずに使用しました</span></a>
+					<span class="itemCount"><span class="num">88</span><span class="label">持ってる</span></span>
+					<div class="action">
+						<ul>
+							<li class="wish"><a href="#"><span>ほしい！</span></a></li>
+							<li class="own"><a href="#"><span>持ってる</span></a></li>
+						</ul>
+					</div>
+				</li>
+			
+			</ul>
+
+			<div class="more" id="paginate"><a href="#"><span>もっと見る</span></a></div>
+
+		</div><!-- #rankingListOwn -->
+
+	</div><!-- #main -->
+
+<div class="aside">
+
+	<div id="myProfile">
+		<div class="profile"><a href="/1313971907435"><img alt="" class="profileImage" src="//my.muji.net/1313971907435/avatar?scale=l"><span class='name'>Ayumu Takeda</span><span class='honorific'>さん</span></a></div>
+		<div class="coin"><p>口コミ投稿でMUJI COINを獲得できます<br />（<a href="http://life.muji.net/howto.html" target="_blank">詳しくはこちら</a>）</p></div>
+	</div>
+
+	<div id="myActivity">
+	
+		<div class="myWish">
+			<h2><a href="wish_list.html">あなたのほしい！アイテム<span class="count">40</span></a></h2>
+			<ul>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718882762" class="tTip" title="えらべるパジャマ・天竺長袖シャツ　婦人・Ｌ・黒"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718882762_95.jpg"></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4547315276912" class="tTip" title="ポリプロピレン衣装ケース・引出式・大（宅送）　宅（Ｖ）約幅４０×奥行６５×高さ２４ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315276912_95.jpg"></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4945247241297" class="tTip" title="ポータブルシェーバー　ＳＶ‐ＭＪ１"><img alt="" class="itemImage" src="//img.muji.net/img/item/4945247241297_95.jpg"></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4547315517381" class="tTip" title="ＳＵＳスチール棚セット・ワイド大（グレー）　幅８６×奥行４１×高さ１７５．５ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315517381_95.jpg"></a></li>
+			</ul>
+		</div>
+	
+		<div class="myOwn">
+			<h2><a href="own_list.html">あなたが持ってるアイテム<span class="count">3</span></a></h2>
+			<ul>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718573042" class="tTip" title="インド綿ルームサンダル／生成×ブラウン・Ｍ　Ｍ■２３〜２４ｃｍ用"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718573042_95.jpg"></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548718710300" class="tTip" title="オーク無垢材ベンチ・小　幅４５×奥行３０×高さ４４ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718710300_95.jpg"></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4945247036923" class="tTip" title="バスクロック　防まつ形"><img alt="" class="itemImage" src="//img.muji.net/img/item/4945247036923_95.jpg"></a></li>
+			</ul>
+		</div>
+	
+		<div class="myReview">
+			<h2><a href="/1313971907435?feed_type=contribute">あなたが口コミしたアイテム<span class="count">4</span></a></h2>
+			<ul>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4945247389678" class="tTip" title="パイン材収納ＢＯＸ・キャスター付き　幅３５×奥行き３５×高３０．２ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4945247389678_95.jpg"><span class='desc'>これ、アナログレコード入れるのにぴったりかも。</span></a></li>
+				<li><a href="http://www.muji.net/store/cmdty/detail/4548076166665" class="tTip" title="シリコーンスパチュラ・小　長さ２３．５ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548076166665_95.jpg"><span class='desc'>お好み焼きやホットケーキなどの粉物を混ぜるときに使ってます。</span></a></li>
+			</ul>
+		</div>
+		
+	</div><!-- /#myActivity -->
+
+
+	<div id="ranking">
+		<h2>登録ランキング<span class="ex">(毎週月曜日更新)</span></h2>
+		<div id="rankingBody">
+		
+			<div class="rankingReview current">
+				<h3>口コミ</h3>
+				<ol>
+					<li><a href="/1321418762205" class="tTip" title="jyaricat"><img alt="" class="profileImage" src="//my.muji.net/1321418762205/avatar?scale=l"><span class='count'>249</span></a></li>
+					<li><a href="/1315319418731" class="tTip" title="吉田 美佳"><img alt="" class="profileImage" src="//my.muji.net/1315319418731/avatar?scale=l"><span class='count'>236</span></a></li>
+					<li><a href="/1329483432687" class="tTip" title="suzuuuki"><img alt="" class="profileImage" src="//my.muji.net/1329483432687/avatar?scale=l"><span class='count'>193</span></a></li>
+					<li><a href="/1313983157128" class="tTip" title="Y.nmuji"><img alt="" class="profileImage" src="//my.muji.net/1313983157128/avatar?scale=l"><span class='count'>165</span></a></li>
+				</ol>
+				<div class="more"><a href="/user_rankings/review/realtime">口コミ数ランキング一覧</a></div>
+			</div><!-- /.rankingReview -->
+		
+			<div class="rankingWish">
+				<h3>ほしい！</h3>
+				<ol>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4548718940066" class="tTip" title="超音波アロマディフューザー１１ＳＳ　直径約８０×高さ１４０ｍｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718940066_95.jpg"><span class='count'>194</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4934761142920" class="tTip" title="防災セット　約幅３０×奥行３４．５×高さ１２ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4934761142920_95.jpg"><span class='count'>143</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4934761152639" class="tTip" title="モバイル機器用充電トレー　ホワイト"><img alt="" class="itemImage" src="//img.muji.net/img/item/4934761152639_95.jpg"><span class='count'>143</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4548718939374" class="tTip" title="壁掛式ＣＤプレーヤー　ＣＰＤ‐３"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718939374_95.jpg"><span class='count'>126</span></a></li>
+				</ol>
+				<div class="more"><a href="/item_rankings/wish/realtime">ほしい！数ランキング一覧</a></div>
+			</div><!-- /.rankingWish -->
+		
+			<div class="rankingOwn">
+				<h3>持ってる</h3>
+				<ol>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4548718940066" class="tTip" title="超音波アロマディフューザー１１ＳＳ　直径約８０×高さ１４０ｍｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718940066_95.jpg"><span class='count'>455</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4547315783489" class="tTip" title="掃除用品システム・カーペットクリーナー　（Ｖ）１８．３×７．５×２７．５ｃｍ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4547315783489_95.jpg"><span class='count'>136</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4548718590681" class="tTip" title="アクリル冷水筒　冷水専用約２Ｌ"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718590681_95.jpg"><span class='count'>106</span></a></li>
+					<li><a href="http://www.muji.net/store/cmdty/detail/4548718182480" class="tTip" title="バターチキンカレー（レトルト）　１８０ｇ（１人前）"><img alt="" class="itemImage" src="//img.muji.net/img/item/4548718182480_95.jpg"><span class='count'>105</span></a></li>
+				</ol>
+				<div class="more"><a href="/item_rankings/owned/realtime">持ってる数ランキング一覧</a></div>
+			</div><!-- /.rankingOwn -->
+			
+		</div><!-- /#rankingBody -->
+	
+	</div><!-- /#ranking -->
+
+</div><!-- /.aside -->
+
+</div><!-- #contentBody -->
+
+</div><!-- .content -->
+
+<footer id="footerWrap"><div id="footer">
+	<ul id="footerNav"> 
+		<li id="fnPrivacy"><a href="http://www.muji.net/mt/faq/others/003513.html">個人情報の取り扱い</a></li> 
+		<li id="fnSecurity"><a href="http://www.muji.net/mt/faq/guide/netstore_info/003512.html">セキュリティについて</a></li> 
+		<li id="fnRss"><a href="http://www.muji.net/rss/">RSS</a></li> 
+		<li id="fnSitemap"><a href="http://www.muji.net/sitemap/">サイトマップ</a></li> 
+		<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li> 
+		<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li> 
+	</ul> 
+	<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p> 
+</div></footer><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">var scode = ((location.hostname==="my.muji.net") ?"http://www.muji.net/shared/js/sc/s_code.js" :"http://www.muji.net/shared/js/sc/s_code_dev.js");document.write(unescape("%3Cscript src='"+scode+"'type='text/javascript'%3E%3C/script%3E"));</script> 
+<script type="text/javascript" src="//www.muji.net/shared/js/sc/code_to_paste.js"></script> 
+
+</body>
+</html>

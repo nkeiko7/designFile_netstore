@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>購入履歴詳細 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" href="/m/css/mobile_optimized.css">
+	<link rel="stylesheet" href="/m/css/account/order.css">
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/m/js/mobile_optimized.js"></script>
+
+</head>
+<body id="orderDetail" class="mobile store order">
+
+<header id="headerWrap"><div id="header">
+<div id="siteName"><a href="/store/">無印良品</a></div>
+<nav id="globalNav">
+<ul>
+	<li id="snVisitor"><a href="/store/pc/user/guide/index.html">はじめての方へ</a></li>
+	<li id="gnShop"><a href="http://www.muji.net/shop/">店舗情報</a></li>
+</ul>
+</nav>
+</div></header><!-- /#header and #headerWrap -->
+
+<script src="/shared/js/sc/s_code.js"></script>
+
+<div id="storeHeaderWrap"><div class="loginBefore" id="storeHeader">
+	<ul id="storeMember">
+		<li id="smLogin"><a href="/store/cust/login">ログイン</a></li>
+		<li id="smSignUp"><a href="/store/cust/useradd/notice">メンバー登録</a></li>
+	</ul>
+	<div id="headerCartBox"><a href="/m/cart/"><span id="cButton">カートを見る</span></a></div><!-- /#headerCartBox -->
+	<div id="hSearch">
+		<form action="/store/cmdty/search" id="headerSearch" method="post">
+		<ul>
+			<li id="sKeyword" class="keyinputoff"><input type="text" name="query" id="skey" size="30" maxlength="255" /></li>
+			<li id="sCategory"><select id="scat" name="sectionId" title="カテゴリーから検索">
+					<option value="">全カテゴリーから</option>
+					<option value="D00001">衣料品</option><option value="D00002">子供・マタニティ</option><option value="D00003">家具・インテリア・家電</option><option value="D00004">ヘルス＆ビューティー</option><option value="D00005">雑貨・日用品</option><option value="D00006">食品</option>
+					
+				</select></li>
+			<li id="sSubmit"><a href="javascript:void(0)" onclick="javascript:document.forms['headerSearch'].submit();return false;">検索</a></li>
+		</ul>
+		</form>
+	</div><!-- /#hSearch -->
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+
+	<div id="showSearch"></div>
+
+	<div id="breadcrumbs"><a href="index.html">戻る</a></div>
+
+	<div id="main">
+		<h1 id="title">購入履歴詳細</h1>
+
+		<section id="orderID">
+			<dl>
+				<dt>ご注文番号</dt>
+				<dd>400027955879</dd>
+				<dt>ご注文日付</dt>
+				<dd>2010年6月11日(金)</dd>
+			</dl>
+		</section>
+
+		<section id="orderItem" class="packet">
+			<h1>ご注文商品</h1>
+			<ul class="purchaseItems">
+				<li><a href="#">
+					<div class="item">
+						<span class="thumb"><img src="http://img.muji.net/img/item/4934761013510_95.jpg" alt=""></span>
+						<span class="desc"><span class="jan">1013510</span><span class="name">タッチパネル可能手袋・フリー・黒</span></span>
+					</div>
+					<div class="unitPrice price"><span class="num">1,980</span>円</div>
+					<div class="quantity"><span class="value">数量：<span class="num">10</span></span></div>
+				</a></li>
+
+				<li><a href="#">
+					<div class="item">
+						<span class="thumb"><img src="http://img.muji.net/img/item/4548718482832_95.jpg" alt=""></span>
+						<span class="desc"><span class="jan">8482832</span><span class="name">スタッキングシェルフ・ワイド・追加２段・ウォールナット材・幅７９．５×奥行２８．５×高さ８１．５</span></span>
+					</div>
+					<div class="unitPrice price"><span class="num">18,000</span>円</div>
+					<div class="quantity"><span class="value">数量：<span class="num">1</span></span></div>
+					</a>
+					<aside class="incidental">
+						<h1>付帯作業</h1>
+						<ul>
+							<li class="added">
+								<span class="item">開梱設置・包材持ち帰り</span>
+								<span class="unitPrice price free">無料</span>
+								<span class="quantity"><span class="value">数量：<span class="num">1</span></span></span>
+							</li>
+						</ul>
+					</aside>
+				</li>
+			
+				<li class="hasIncidental">
+					<div class="item">
+						<span class="thumb"><img src="http://img.muji.net/img/item/4548718801183_95.jpg" alt=""></span>
+						<span class="desc"><span class="jan">8801183</span><span class="name">家電一式３点セット・Ｂ・電気冷蔵庫・１１０Ｌ（ＳＭＪ‐１１Ａ）他</span></span>
+					</div>
+					<div class="unitPrice price"><span class="num">59,800</span>円</div>
+					<div class="quantity"><span class="value">数量：<span class="num">1</span></span></div>
+					<aside class="incidental">
+						<h1>付帯作業</h1>
+						<ul>
+							<li class="added"><span class="item">オーブン取付</span>
+							<span class="unitPrice price"><span class="num">840</span>円</span><span class="quantity"><span class="value">数量：<span class="num">1</span></span></span></li>
+							<li class="added"><span class="item">裾上げ</span>
+							<span class="unitPrice price free">無料</span><span class="quantity"><span class="value">数量：<span class="num">2</span></span></span>
+							<div class="hemSetting">股下の仕上がり寸法：<span class="length">74cm</span>、<span class="type">シングル</span></div>
+							</li>
+						</ul>
+					</aside>
+				</li>
+
+				<li class="hasIncidental multiple">
+					<ul>
+	
+						<li><a href="#">
+							<div class="item">
+								<span class="thumb"><img src="http://img.muji.net/img/item/4934761173887_180.jpg" alt=""></span>
+								<span class="desc">
+									<span class="jan">1173887</span><span class="name">ざっくりリブボーダー柄足なり直角靴下（紳士・えらべる）・紳士・２４〜２６ｃｍ・オートミール</span>
+								</span>
+							</div>
+							<div class="unitPrice price"><del><span class="num">349</span>円</del><ins><span class="num">326</span>円</ins></div>
+							<div class="quantity"><span class="value">数量：<span class="num">2</span></span></div>
+						</a></li>
+			
+						<li><a href="#">
+							<div class="item">
+								<span class="thumb"><img src="http://img.muji.net/img/item/4934761173887_180.jpg" alt=""></span>
+								<span class="desc">
+									<span class="jan">1173887</span><span class="name">ざっくりリブボーダー柄足なり直角靴下（紳士・えらべる）・紳士・２４〜２６ｃｍ・オートミール</span>
+								</span>
+							</div>
+							<div class="unitPrice price"><del><span class="num">349</span>円</del><ins><span class="num">327</span>円</ins></div>
+							<div class="quantity"><span class="value">数量：<span class="num">1</span></span></div>
+						</a></li>
+	
+					</ul>
+	
+					<aside class="incidental">
+						<h1>付帯作業</h1>
+						<ul>
+							<li class="added"><span class="item">裾上げ</span>
+							<span class="unitPrice price free">無料</span><span class="quantity"><span class="value">数量：<span class="num">2</span></span></span>
+							<div class="hemSetting">股下の仕上がり寸法：<span class="length">74cm</span>、<span class="type">シングル</span></div>
+							</li>
+						</ul>
+					</aside>
+	
+				</li><!-- /.multiple -->
+
+				<li class="multiple">
+					<ul>
+	
+						<li><div class="item">
+								<span class="thumb"><img src="http://img.muji.net/img/item/4548718672882_180.jpg" alt=""></span>
+								<span class="desc">
+									<span class="jan">1173887</span><span class="name">えらべる・綿混ストレッチ天竺ローライズボクサー　紳士・Ｍ・杢グレー</span>
+								</span>
+							</div>
+							<div class="unitPrice price"><del><span class="num">349</span>円</del><ins><span class="num">326</span>円</ins></div>
+							<div class="quantity"><span class="value">数量：<span class="num">2</span></span></div>
+						</li>
+			
+						<li><div class="item">
+								<span class="thumb"><img src="http://img.muji.net/img/item/4548718672882_180.jpg" alt=""></span>
+								<span class="desc">
+									<span class="jan">1173887</span><span class="name">えらべる・綿混ストレッチ天竺ローライズボクサー　紳士・Ｍ・杢グレー</span>
+								</span>
+							</div>
+							<div class="unitPrice price"><del><span class="num">349</span>円</del><ins><span class="num">327</span>円</ins></div>
+							<div class="quantity"><span class="value">数量：<span class="num">1</span></span></div>
+						</li>
+	
+					</ul>
+	
+				</li><!-- /.multiple -->
+
+			</ul>
+
+		</section><!-- /#orderItem -->
+
+		<dl class="total">
+			<dt class="productTotal">商品合計</dt><dd class="productTotal price"><span class="num">131,663</span>円</dd>
+			<dt class="coupon">MUJI.netクーポンご利用額</dt><dd class="coupon price"><span class="num">0</span>円</dd>
+			<dt class="subTotal">小計</dt><dd class="subTotal price"><span class="num">13,000</span>円</dd>
+			<dt class="optionService">付帯サービス・ギフト包装料</dt><dd class="optionService price"><span class="num">0</span>円</dd>
+			<dt class="shipping">配送料</dt><dd class="shipping price"><span class="num">2,125</span>円</dd>
+			<dt class="payment">お買い上げ合計</dt><dd class="payment price"><span class="num">133,788</span>円</dd>
+			<dt class="tax">消費税</dt><dd class="tax price"><span class="num">719</span>円</dd>
+			<dt class="giftcard">ギフトカードご利用額</dt><dd class="giftcard price"><span class="num">0</span>円</dd>
+			<dt class="cash">お支払い金額</dt><dd class="cash price"><span class="num">15,100</span>円</dd>
+		</dl><!--/.total-->
+
+		<section id="deliverInfo" class="packet">
+			<h1>店舗受け取り</h1>
+			<ul>
+				<li class="to">
+					<dl>
+						<dt>西友大森<span class="detail">（<a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&amp;grp=muji&amp;poi_code=000188" target="_blank">詳細</a>）</span></dt>
+						<dd class="address">東京都品川区南大井６－２７－２５　西友大森店　２Ｆ</dd>
+						<dd class="tel"><a href="telto:03-3768-1211">03-3768-1211</a></dd>
+						<dd class="time"><span class="heading">営業時間: </span>09:00～22:00</dd>
+					</dl>
+				</li>
+				<li class="deliveryDate">
+					<dl>
+						<dt>受け渡し可能日</dt>
+						<dd>2012年6月9日（土）以降、受け渡し可能</dd>
+					</dl>
+				</li>
+				<li class="contactInfo">
+					<dl>
+						<dt>ご連絡先</dt>
+						<dd class="name">武田　歩（タケダ　アユム） 様</dd>
+						<dd class="tel">電話番号: 090-9969-9999</dd>
+						<dd class="isContact">入荷時の電話連絡: 不要（留守番電話への伝言：不可　連絡時間帯：指定無し）</dd>
+					</dl>
+				</li>
+			</ul>
+		</section><!-- /#deliverInfo -->
+
+		<section id="orderStatus" class="packet">
+			<dl>
+				<dt class="status">ご注文状況</dt>
+				<dd>出荷完了</dd>
+			</dl>
+		</section><!-- /#orderStatus -->
+
+	</div><!-- /#main -->
+
+</div><!-- #content -->
+
+<footer id="footerWrap"><div id="footer">
+	<nav id="snCategory">
+		<h2 class="headClose">全商品カテゴリー</h2>
+		<ul>
+			<li class="D00010"><h3 class="contentClose">特集・新商品</h3>
+				<ul>
+					<li><a href="/store/campaign/">キャンペーン／特集一覧</a></li>
+					<li><a href="/store/cmdty/section/S10901">新発売商品</a></li>
+					<li><a href="/store/campaign/detail/C11042201">再販売・改良商品</a></li>
+				</ul>
+			</li>
+			<li class="D00011"><h3 class="contentClose">お買い得商品</h3>
+				<ul>
+					<li><a href="/store/factoryoutlet">アウトレット</a></li>
+					<li><a href="/store/cmdty/section/T00035">まとめ買い</a></li>
+					<li><a href="/store/cmdty/section/X00001">お手頃価格になりました。</a></li>
+					<li><a href="/store/cmdty/section/S0004501">お試し価格商品</a></li>
+					<li><a href="/store/campaign/detail/C09110201">いっしょに買うとお買い得</a></li>
+				</ul>
+			</li>
+			<li class="D00001">
+				<h3 class="contentClose">衣料品</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T10000">婦人ウェア</a></li>
+					<li><a href="/store/cmdty/section/T10001">婦人インナーウェア</a></li>
+					<li><a href="/store/cmdty/section/T10002">紳士ウェア</a></li>
+					<li><a href="/store/cmdty/section/T10003">紳士インナーウェア</a></li>
+					<li><a href="/store/cmdty/section/T10004">靴</a></li>
+					<li><a href="/store/cmdty/section/T10005">バッグ</a></li>
+					<li><a href="/store/cmdty/section/T10006">服飾雑貨</a></li>
+					<li><a href="/store/cmdty/section/T10012">MUJI LABO</a></li>
+				</ul>
+			</li>
+			<li class="D00002">
+				<h3 class="contentClose">子供・マタニティ</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T10007">ベビー（80-100ｃｍ）</a></li>
+					<li><a href="/store/cmdty/section/T10008">トドラー（110-130cm）</a></li>
+					<li><a href="/store/cmdty/section/T10011">ジュニア（140・150cm）</a></li>
+					<li><a href="/store/cmdty/section/T10009">マタニティ・新生児</a></li>
+					<li><a href="/store/cmdty/section/T10010">子供用品・家具</a></li>
+				</ul>
+			</li>
+			<li class="D00003">
+				<h3 class="contentClose">家具・インテリア・家電</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T20003">収納家具</a></li>
+					<li><a href="/store/cmdty/section/T20005">ユニットシェルフ</a></li>
+					<li><a href="/store/cmdty/section/T20004">収納用品</a></li>
+					<li><a href="/store/cmdty/section/T20000">ベッド</a></li>
+					<li><a href="/store/cmdty/section/T20009">布団・寝具</a></li>
+					<li><a href="/store/cmdty/section/T20001">ソファ</a></li>
+					<li><a href="/store/cmdty/section/T20011">ラグ・クッション</a></li>
+					<li><a href="/store/cmdty/section/T20010">カーテン・ブラインド</a></li>
+					<li><a href="/store/cmdty/section/T20012">スリッパ・タオル</a></li>
+					<li><a href="/store/cmdty/section/T20006">テーブル・チェア</a></li>
+					<li><a href="/store/cmdty/section/T20007">デスク・チェア</a></li>
+					<li><a href="/store/cmdty/section/T20008">インテリア用品・本</a></li>
+					<li><a href="/store/cmdty/section/T20024">THONET</a></li>
+					<li><a href="/store/cmdty/section/T20125">REAL FURNITURE</a></li>
+					<li><a href="/store/cmdty/section/T20013">家電・照明</a></li>
+				</ul>
+			</li>
+			<li class="D00004">
+				<h3 class="contentClose">ヘルス＆ビューティー</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T20201">スキンケア</a></li>
+					<li><a href="/store/cmdty/section/T20202">メイクアップ</a></li>
+					<li><a href="/store/cmdty/section/T20203">ヘアケア</a></li>
+					<li><a href="/store/cmdty/section/T20204">ボディケア・入浴剤</a></li>
+					<li><a href="/store/cmdty/section/T20205">エッセンシャルオイル・アロマポット</a></li>
+					<li><a href="/store/cmdty/section/T20206">衛生用品・ケア用品</a></li>
+					<li><a href="/store/cmdty/section/T20207">ポーチ・小分け容器</a></li>
+					<li><a href="/store/cmdty/section/T00044">MUJI BEAUTY</a></li>
+				</ul>
+			</li>
+			<li class="D00005">
+				<h3 class="contentClose">雑貨・日用品</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T20014">キッチン用品・食器</a></li>
+					<li><a href="/store/cmdty/section/T20015">エプロン・キッチンマット</a></li>
+					<li><a href="/store/cmdty/section/T20016">文房具・アルバム</a></li>
+					<li><a href="/store/cmdty/section/T20020">バス・トイレ用品</a></li>
+					<li><a href="/store/cmdty/section/T20021">掃除・洗濯用品</a></li>
+					<li><a href="/store/cmdty/section/T20023">防災用品</a></li>
+					<li><a href="/store/cmdty/section/T20022">自転車・アウトドア</a></li>
+					<li><a href="/store/cmdty/section/T00038">MUJI to GO</a></li>
+					<li><a href="/store/cmdty/section/T00023">Found MUJI</a></li>
+					<li><a href="/store/cmdty/section/T20027">World MUJI Gift</a></li>
+				</ul>
+			</li>
+			<li class="D00006">
+				<h3 class="contentClose">食品</h3>
+				<ul>
+					<li><a href="/store/cmdty/section/T30001">レトルト・調味料</a></li>
+					<li><a href="/store/cmdty/section/T30003">手づくりセット</a></li>
+					<li><a href="/store/cmdty/section/T30002">菓子</a></li>
+					<li><a href="/store/cmdty/section/T30004">飲料</a></li>
+				</ul>
+			</li>
+
+			<li class="snFlower"><h3 class="contentClose">花・グリーン</h3>
+				<ul>
+					<li><a href="/store/pc/user/flower/kanyou.html">観葉植物</a></li>
+					<li><a href="/store/pc/user/flower/gift.html">贈り物の花</a></li>
+					<li><a href="/store/pc/user/flower/gardening.html">ガーデニング</a></li>
+				</ul>
+			</li>
+			<li class="snGlass"><h3 class="contentClose">めがね</h3>
+				<ul>
+					<li><a href="/glass/">めがね</a></li>
+				</ul>
+			</li>
+			<li class="snIe"><h3 class="contentClose">家</h3>
+				<ul>
+					<li><a href="/store/pc/user/ie/kinoie.html">木の家</a></li>
+					<li><a href="/store/pc/user/ie/madonoie.html">窓の家</a></li>
+					<li><a href="/store/pc/user/ie/asanoie.html">朝の家</a></li>
+				</ul>
+			</li>
+			<li class="snApp"><h3 class="contentClose">アプリケーション</h3>
+				<ul>
+					<li><a href="/store/pc/user/app/ipad/index.html">iPad</a></li>
+					<li><a href="/store/pc/user/app/iphone/index.html">iPhone</a></li>
+				</ul>
+			</li>
+			<li class="snDonation"><h3 class="contentClose">募金</h3>
+				<ul>
+					<li><a href="/store/cmdty/donation/">募金券</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav><!-- /#snCategory -->
+	<nav id="mobileNav">
+		<ul>
+			<li><a href="http://www.muji.net/mt/contact/guide/">ご利用ガイド</a></li>
+			<li><a href="/contact/">お問い合わせ／重要なお知らせ</a></li>
+			<li><a href="/sitemap/">サイトマップ</a></li>
+			<li><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+		</ul>
+	</nav>
+	<ul id="pageEnd">
+		<li class="siteTop"><a href="/store/">ネットストアTOP</a></li>
+		<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+	</ul>
+	<div id="modeSwitch">
+		<dl>
+			<dt>表示モード：</dt>
+			<dd>
+				<ul>
+					<li><a href="#" class="current">スマートフォン</a></li>
+					<li><a href="#">PC</a></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></footer><!-- /#footer and #footerWrap -->
+
+<script src="/shared/js/sc/code_to_paste.js"></script>
+
+</body>
+</html>

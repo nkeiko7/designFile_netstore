@@ -1,0 +1,23 @@
+/* CLEARFIX */
+
+.aside {zoom: 1;}
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+.relatedLink {margin-bottom:10px;text-align:right;}
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}
+
+#snSection1 .aside .priceListVertical {margin-left:260px;}
+
+.recipe li {background: no-repeat left top; padding-left: 20px;}
+.recipe li.no1 {background-image: url(/img/store/campaign/parts/no1.gif);}
+.recipe li.no2 {background-image: url(/img/store/campaign/parts/no2.gif);}
+.recipe li.no3 {background-image: url(/img/store/campaign/parts/no3.gif);}
+.recipe li.no4 {background-image: url(/img/store/campaign/parts/no4.gif);}
+.recipe li.no5 {background-image: url(/img/store/campaign/parts/no5.gif);}
+.recipe li.no6 {background-image: url(/img/store/campaign/parts/no6.gif);}
+.recipe li.no7 {background-image: url(/img/store/campaign/parts/no7.gif);}

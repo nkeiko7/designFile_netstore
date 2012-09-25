@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>お届け先の確認 | 無印良品ネットストア</title>
+	
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/cart/cart.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+	<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.1.css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script  type="text/javascript" src="/js/jquery.tinyTips.js"></script>
+	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+	<script type="text/javascript" src="/js/store/store.js"></script>
+	<script type="text/javascript" src="/js/store/cart/addresseeconfirm.js"></script>
+
+</head>
+
+<body class="store cart" id="addresseeConfirm">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+
+<div id="main">
+
+	<div id="shoppingFlow" class="stepNavi">
+	<ol>
+	<li class="addressee">お届け先の指定</li>
+	<li class="addresseeConfirm current">お届け先の確認</li>
+	<li class="optionService">お届け日時・オプション指定</li>
+	<li class="payment">お支払い方法の指定</li>
+	<li class="confirm">ご注文内容の確認</li>
+	<li class="complete">注文完了</li>
+	</ol>
+	</div><!--/#shoppingFlow -->
+
+	<h1>お届け先の確認</h1>
+	
+	<p class="lead">お届け先をご確認ください。</p>
+	<p>商品ごとにお届け先とお届け日時を指定できます。商品の数量を複数のお届け先に分割する場合は、「分割」を押してください。</p>
+	
+	<div id="large" class="section">
+	
+		<h2><b>家具、家電、椅子、布団、予約商品</b>など<span>（配送料A以外の商品）</span></h2>
+		<p>配送料Aの商品とは別配送となります。あらかじめご了承ください。（<a href="http://www.muji.net/mt/faq/detail_list/004858.html" class="iframe fancyBox" target="_blank">配送料について</a>）</p>
+	
+		<table class="horizontal">
+			<tr>
+				<th class="addressee">お届け先1</th><th class="shippingDate">お届け日</th><th class="shippingTime">お届け時間帯</th>
+			</tr>
+			<tr>
+			<td class="addressee">滝川・ラルドゥ・クリステル・雅美 様（本人）</td>
+			<td class="shippingDate"><select name="dateSelect">
+				<option value="000001-0" selected="selected">11月5日(土)</option>
+				<option value="000001-1">11月6日(日)</option>
+				<option value="000001-2">11月7日(月)</option>
+				<option value="000001-3">11月8日(火)</option>
+				<option value="000001-4">11月9日(水)</option>
+			</select></td>
+			<td class="shippingTime"><select onchange="" name="timeSelect">
+				<option value="000001-0" selected="selected">希望無し</option>
+				<option value="000001-1">午前中</option>
+				<option value="000001-2">１２時～１４時</option>
+				<option value="000001-3">１４時～１６時</option>
+				<option value="000001-4">１６時～１８時</option>
+				<option value="000001-5">１８時～２０時</option>
+				<option value="000001-6">２０時～２１時</option>
+			</select></td>
+			</tr>
+			<tr>
+			<td colspan="3" class="orderDetail">
+				<div class="detail">
+					<table class="horizontal">
+						<tr>
+							<th></th>
+							<th class="item">商品番号／商品名／価格</th>
+							<th class="quantity">数量</th>
+							<th class="subTotal price">小計</th>
+							<th class="addressee">お届け先</th>
+							<th class="divide"><span class="btn"><a href="cart_separate.html" class="tipTitle" title="商品の数量を複数のお届け先に分割する場合は、チェックボックスにチェックを入れて、このボタンを押してください">届先分割</a></span></th>
+							<th class="delete"></th>
+							</tr>
+							<tr>
+							<td rowspan="2" class="num">1</td>
+							<td class="item"><span class="thumb"><img src="/img/cmdty/4547315957842_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">5957842</span>体にフィットするソファ・セット・チャコールグレー<br />
+							<span class="unitPrice price">税込<span class="num">13,000</span>円</span></span></td>
+							<td class="quantity">1</td>
+							<td class="price">税込<span class="num">13,000</span>円</td>
+							<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル・雅美</span><span class="place">（自宅）</span><div class="change"><a href="addressee_change.html">変更</a></div></td>
+							<td class="divide"><input type="checkbox" /></td>
+							<td class="delete"><a href="#">削除</a></td>
+							</tr>
+							<tr>
+							<td colspan="6" class="shipping price">配送料<span class="num">800</span>円</td>
+							</tr>
+						</table><!--/.itemInfo -->
+					</div>
+				</td>
+			</tr>
+		</table><!--/.horizontal -->
+
+		<table class="horizontal">
+			<tr>
+				<th class="addressee">お届け先2</th><th class="shippingDate">お届け日</th><th class="shippingTime">お届け時間帯</th>
+			</tr>
+			<tr>
+			<td class="addressee">滝川・ラルドゥ・クリステル・雅美 様（本人）</td>
+			<td class="shippingDate"><select name="dateSelect">
+				<option value="000001-0" selected="selected">11月5日(土)</option>
+				<option value="000001-1">11月6日(日)</option>
+				<option value="000001-2">11月7日(月)</option>
+				<option value="000001-3">11月8日(火)</option>
+				<option value="000001-4">11月9日(水)</option>
+			</select></td>
+			<td class="shippingTime"><select onchange="" name="timeSelect">
+				<option value="000001-0" selected="selected">希望無し</option>
+				<option value="000001-1">午前中</option>
+				<option value="000001-2">１２時～１４時</option>
+				<option value="000001-3">１４時～１６時</option>
+				<option value="000001-4">１６時～１８時</option>
+				<option value="000001-5">１８時～２０時</option>
+				<option value="000001-6">２０時～２１時</option>
+			</select></td>
+			</tr>
+			<tr>
+			<td colspan="3" class="orderDetail">
+				<div class="detail">
+					<table class="horizontal">
+						<tr>
+							<th></th>
+							<th class="item">商品番号／商品名／価格</th>
+							<th class="quantity">数量</th>
+							<th class="subTotal price">小計</th>
+							<th class="addressee">お届け先</th>
+							<th class="divide"><span class="btn"><a href="cart_separate.html" class="tipTitle" title="商品の数量を複数のお届け先に分割する場合は、チェックボックスにチェックを入れて、このボタンを押してください">届先分割</a></span></th>
+							<th class="delete"></th>
+							</tr>
+							<tr>
+							<td rowspan="2" class="num">2</td>
+							<td class="item"><span class="thumb"><img src="/img/cmdty/4547315957842_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">5957842</span>体にフィットするソファ・セット・チャコールグレー<br />
+							<span class="unitPrice price">税込<span class="num">13,000</span>円</span></span></td>
+							<td class="quantity">1</td>
+							<td class="price">税込<span class="num">13,000</span>円</td>
+							<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル・雅美</span><span class="place">（自宅）</span><div class="change"><a href="addressee_change.html">変更</a></div></td>
+							<td class="divide"><input type="checkbox" /></td>
+							<td class="delete"><a href="#">削除</a></td>
+							</tr>
+							<tr>
+							<td colspan="6" class="shipping price">配送料<span class="num">800</span>円</td>
+							</tr>
+						</table><!--/.itemInfo -->
+					</div>
+				</td>
+			</tr>
+		</table><!--/.horizontal -->
+	</div><!--/large -->
+
+	<div id="small" class="section">
+		<h2><b>衣服雑貨、文具、小物、食品、自転車</b>など<span>（配送料Aの商品）</span></h2>
+		<p>配送料A以外の商品とは別配送となります。あらかじめご了承ください。（<a href="http://www.muji.net/mt/faq/detail_list/004858.html" class="iframe fancyBox" target="_blank">配送料について</a>）</p>
+		
+		<table class="horizontal">
+			<tr>
+				<th class="addressee">お届け先3</th><th class="shippingDate">お届け日</th><th class="shippingTime">お届け時間帯</th>
+			</tr>
+			<tr>
+			<td class="addressee">滝川・ラルドゥ・クリステル・雅美 様（本人）</td>
+			<td class="shippingDate"><select name="dateSelect">
+				<option value="000001-0" selected="selected">11月5日(土)</option>
+				<option value="000001-1">11月6日(日)</option>
+				<option value="000001-2">11月7日(月)</option>
+				<option value="000001-3">11月8日(火)</option>
+				<option value="000001-4">11月9日(水)</option>
+			</select></td>
+			<td class="shippingTime"><select onchange="" name="timeSelect">
+				<option value="000001-0" selected="selected">希望無し</option>
+				<option value="000001-1">午前中</option>
+				<option value="000001-2">１２時～１４時</option>
+				<option value="000001-3">１４時～１６時</option>
+				<option value="000001-4">１６時～１８時</option>
+				<option value="000001-5">１８時～２０時</option>
+				<option value="000001-6">２０時～２１時</option>
+			</select></td>
+			</tr>
+			<tr>
+			<td colspan="3" class="orderDetail">
+				<div class="detail">
+					<table class="horizontal">
+						<tr>
+						<th></th>
+						<th class="item">商品番号／商品名／価格</th>
+						<th class="quantity">数量</th>
+						<th class="price">小計</th>
+						<th class="addressee">お届け先</th>
+						<th class="divide"><span class="btn"><a href="cart_separate.html" class="tipTitle" title="商品の数量を複数のお届け先に分割する場合は、チェックボックスにチェックを入れて、このボタンを押してください">届先分割</a></span></th>
+						<th class="delete"></th>
+						</tr>
+						<tr>
+						<td rowspan="4" class="num">3</td>
+						<td class="item"><span class="thumb"><img src="/img/cmdty/4548718449774_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">8449774</span><span class="name">ウール混リバーダッフルコート婦人・Ｍ・ネイビー</span><span class="unitPrice price"><del>税込<span class="num">13,500</span>円</del><ins>税込<span class="num">13,000</span>円</ins></span><span class="freeShippingIcon">配送無料対象</span></span></td>
+						<td class="quantity">1</td>
+						<td class="price">税込<span class="num">13,000</span>円</td>
+						<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル・雅美</span><span class="place">（自宅）</span><div class="change"><a href="addressee_change.html">変更</a></div></td>
+						<td class="divide"><input type="checkbox" /></td>
+						<td class="delete"><a href="#">削除</a></td>
+						</tr>
+						<tr>
+						<td class="item"><span class="thumb"><img src="/img/cmdty/4548718486120_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">8486120</span><span class="name">あったかボーダーボートネック婦人・Ｍ・オフ白×紺</span><span class="unitPrice price">税込<span class="num">2,579</span>円</span><span class="freeShippingIcon">配送無料対象</span></span></td>
+						<td class="quantity">1</td>
+						<td class="price">税込<span class="num">2,579</span>円</td>
+						<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル・雅美</span><span class="place">（自宅）</span><div class="change"><a href="addressee_change.html">変更</a></div></td>
+						<td class="divide"><input type="checkbox" /></td>
+						<td class="delete"><a href="#">削除</a></td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<ul id="giftService">
+									<li><label><input name="giftchk-000002" type="checkbox" /><span class="serviceName">ギフト配送 </span></label>（<span class="price">税込<span class="num">157</span>円</span>）</li>
+									<li>
+										<p class="annotation asterisk">※ギフト配送は、クレジットカードでお支払いいただく場合のみご利用いただけます。あらかじめご了承ください。</p>
+										<p>メッセージを添える場合は下記にご入力ください。<span class="ime">（改行なし／全角100文字以内）</span></p>
+										<textarea name='gifttxt-000002' rows='1' cols='100' id='message' ></textarea>
+									</li>
+									<li class="faq">
+										<span class="faqlink"><a href="https://www.muji.net/mt/faq/detail_list/004885.html" class="iframe fancyBox" target="_blank">ギフト配送・のしについて</a></span>
+									</li>
+								</ul><!-- /#giftService -->
+							</td>
+						</tr>
+						<tr>
+						<td colspan="6" class="shipping price">配送料<span class="num">0</span>円<div class="bannerFreeShipping"><img src="/img/store/cart/banner_charge-free.gif" alt="ネットストア限定配送料無料" /></div></td>
+						</tr>
+					</table><!--/.horizontal -->
+				</div>
+			</td>
+			</tr>
+		</table>
+		
+		<table class="horizontal">
+			<tr>
+				<th class="addressee">お届け先4</th><th class="shippingDate">お届け日</th><th class="shippingTime">お届け時間帯</th>
+			</tr>
+			<tr>
+			<td class="addressee">滝川・ラルドゥ・クリステル・雅美 様（本人）</td>
+			<td class="shippingDate"><select name="dateSelect">
+				<option value="000001-0" selected="selected">11月5日(土)</option>
+				<option value="000001-1">11月6日(日)</option>
+				<option value="000001-2">11月7日(月)</option>
+				<option value="000001-3">11月8日(火)</option>
+				<option value="000001-4">11月9日(水)</option>
+			</select></td>
+			<td class="shippingTime"><select onchange="" name="timeSelect">
+				<option value="000001-0" selected="selected">希望無し</option>
+				<option value="000001-1">午前中</option>
+				<option value="000001-2">１２時～１４時</option>
+				<option value="000001-3">１４時～１６時</option>
+				<option value="000001-4">１６時～１８時</option>
+				<option value="000001-5">１８時～２０時</option>
+				<option value="000001-6">２０時～２１時</option>
+			</select></td>
+			</tr>
+			<tr>
+			<td colspan="3" class="orderDetail">
+				<div class="detail">
+					<table class="horizontal">
+						<tr>
+						<th></th>
+						<th class="item">商品番号／商品名／価格</th>
+						<th class="quantity">数量</th>
+						<th class="price">小計</th>
+						<th class="addressee">お届け先</th>
+						<th class="divide"><span class="btn"><a href="cart_separate.html" class="tipTitle" title="商品の数量を複数のお届け先に分割する場合は、チェックボックスにチェックを入れて、このボタンを押してください">届先分割</a></span></th>
+						<th class="delete"></th>
+						</tr>
+						
+						<tr>
+						<td rowspan="4" class="num">4</td>
+						<td class="item"><span class="thumb"><img src="/img/cmdty/4548718327188_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">8327188</span><span class="name">手摘みインド超長綿ミニ裏毛ワンピース婦人・Ｍ・ベージュ</span>
+						<span class="unitPrice price">税込<span class="num">2,505</span>円</span></span></td>
+						<td class="quantity">1</td>
+						<td class="price">税込<span class="num">2,505</span>円</td>
+						<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル</span><span class="place">（親戚）</span><div class="change"><a href="cart_addrchange.html">変更</a></div></td>
+						<td class="divide"><input type="checkbox" /></td>
+						<td class="delete"><a href="#">削除</a></td>
+						</tr>
+						<tr>
+						<td class="item"><span class="thumb"><img src="/img/cmdty/4548718486120_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="jan">8486120</span><span class="name">あったかボーダーボートネック婦人・Ｍ・オフ白×紺</span><span class="unitPrice price">税込<span class="num">2,579</span>円</span><span class="freeShippingIcon">配送無料対象</span></span></td>
+						<td class="quantity">1</td>
+						<td class="price">税込<span class="num">2,579</span>円</td>
+						<td class="addressee"><span class="addresseeName">滝川・ラルドゥ・クリステル</span><span class="place">（親戚）</span><div class="change"><a href="cart_addrchange.html">変更</a></div></td>
+						<td class="divide"><input type="checkbox" /></td>
+						<td class="delete"><a href="#">削除</a></td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<ul id="giftService">
+									<li><label><input name="giftchk-000002" type="checkbox" /><span class="serviceName">ギフト配送 </span></label>（<span class="price">税込<span class="num">157</span>円</span>）</li>
+									<li>
+										<p class="annotation asterisk">※ギフト配送は、クレジットカードでお支払いいただく場合のみご利用いただけます。あらかじめご了承ください。</p>
+										<p>メッセージを添える場合は下記にご入力ください。<span class="ime">（改行なし／全角100文字以内）</span></p>
+										<textarea name='gifttxt-000002' rows='1' cols='100' id='message' ></textarea>
+									</li>
+									<li class="faq">
+										<span class="faqlink"><a href="https://www.muji.net/mt/faq/detail_list/004885.html" class="iframe fancyBox" target="_blank">ギフト配送・のしについて</a></span>
+									</li>
+								</ul><!-- /#giftService -->
+							</td>
+						</tr>
+						<tr>
+						<td colspan="6" class="shipping price">配送料<span class="num">525</span>円</td>
+						</tr>
+					</table><!--/.horizontal -->
+				</div>
+			</td>
+			</tr>
+		</table>
+	</div><!--/.small -->
+
+	<table class="total">
+		<tr class="productTotal"><th>商品合計</th><td><span class="num">131,663</span>円</td></tr>
+		<tr class="shipping"><th>配送料</th><td><span class="num">2,125</span>円</td></tr>
+		<tr class="payment"><th><b>お支払い合計金額</b></th><td><strong><span class="num">133,788</span></strong>円</td></tr>
+	</table><!--/.total-->
+
+	<ul class="prevNext">
+		<li class="prev"><a href="addressee.html">前のページに戻る</a></li>
+		<li class="btn next"><a href="option.html">次へ進む</a></li>
+	</ul><!-- /.prevNext -->
+
+</div><!-- /#main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* CLEARFIX */
+.aside,
+#snSection3 .section p {zoom: 1;}
+.aside:after,
+#snSection3 .section p:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom:0;margin-bottom:0;padding-bottom:0;}
+
+#snSection3 .section p img {margin-right:10px;float:left;}
+#snSection3 .section p {margin-bottom:10px;}
+.aside h3:first-child {margin-top:0;}
+.aside .col {margin-bottom:10px;}
+.aside .col {width:320px;margin-right:20px;float:left;}
+
+.itemList .annotation {margin-top:3px;line-height:1.3;display:block;}
+
+#snSection3 .section {padding-top:30px;background:url(/img/store/campaign/080912/01/arrow.gif) no-repeat 95px 5px;}
+#main #snSection3 .nobg {padding-top:0;background:none;}

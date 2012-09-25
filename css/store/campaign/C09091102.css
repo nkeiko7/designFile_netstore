@@ -1,0 +1,105 @@
+
+
+
+
+.herbtype {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 655px;
+	height: 83px;
+}
+.herbtype li{
+	float: left;
+	height: 70px;
+	width: 70px;
+	padding: 0;
+	margin: 0 11px 0 0;
+}
+.herbtype img{
+    margin-bottom:3px;
+}
+
+.herbtype p{
+   font-size:10px;
+   color:#666;
+}
+
+.herbtypeR ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 356px;
+	height: 83px;
+}
+
+.herbtypeR li{
+	float: left;
+	height: 62px;
+	width: 62px;
+	padding: 0;
+	margin: 5px 8px 25px 0;
+}
+.herbtypeR img{
+	padding: 0;
+    margin: 0;
+}
+
+.herbtypeR p{
+   font-size:10px;
+   color:#666;
+}
+
+/*右フロート内イメージリスト*/
+.careimg {
+	margin: 20px 0 10px 0;
+	padding: 0;
+}
+
+/*右フロート内イメージリスト 海藻*/
+ul.algaeEssence {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 356px;
+}
+.algaeEssence li {
+	float: left;
+	height: 120px;
+	width: 150px;
+	padding: 0 10px 0 0;
+	margin: 0;
+}
+.algaeEssence li.last {
+	float: left;
+	height: 120px;
+	width: 186px;
+	padding: 0;
+	margin: 0;
+}
+.algaeEssence p {
+	font-size: 11px;
+	color: #666666;
+}
+
+
+
+
+
+/* CLEARFIX */
+.annotation dl,
+.aside {zoom: 1;}
+.annotation dl:after,
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+dl.annotation{margin: 5px 0;}
+dl.annotation dt,
+dl.annotation dd{float:left; display:inline;}
+
+.column3 li {margin-bottom: 20px;}
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}

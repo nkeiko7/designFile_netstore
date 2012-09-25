@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* clearfix */
+#cardinfo dd {zoom:1;}
+#cardinfo dd:after {content:" ";display:block;visibility:hidden;clear:both;height:.1px;font-size:.1em;line-height:0;}
+
+.prevNext{margin-top:40px;}
+td {text-align:center;}
+h1 {height:27px;margin:20px 0;background-repeat:no-repeat;text-indent:-9999px;overflow:hidden;}
+table.horizontal{width:100%;}
+.name{ width: 45%;}
+.valid{ width: 30%;}
+td.price{ width: 25%;}
+.num{margin-right:5px;}
+.total .num{margin-left:5px;}
+body#giftcardDetail h1{background-image:url(/img/store/account/coupon/title_giftcard_detail.png);}
+#cardinfo dt {float: left; margin: 0 10px 5px 0; font-weight: bold;}
+#cardinfo dd {margin-bottom: 5px; }
+#giftcardDetail .titletop {padding: 15px 0 5px 0; font-weight: bold;}
+#detail td {background-color: #fff;}
+
+table.horizontal td.nocharge { border-width: 1px 1px 1px;}
+
+#expiredList td {color: #999;}
+.toggleBtn {margin-left: 10px; font-size: 11px; font-weight: normal; cursor: pointer; text-decoration: underline;}
+.toggleBtn.onBtn {background:url(/img/store/account/coupon/togglearrow.png) no-repeat left 2px; padding-left: 10px;}
+#expiredList {display: none;}
+.toggleBtn.offBtn {display: none; background:url(/img/store/account/coupon/togglearrow.png) no-repeat left -13px; padding-left: 10px;}
+.title {padding: 15px 0 5px 0; font-weight: bold; font-size: 13px;}
+

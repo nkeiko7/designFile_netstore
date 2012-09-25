@@ -1,0 +1,8 @@
+/* auth */
+input {width: 97%; font-size: 16px; padding: .4em 0 .4em 5px; border-radius: 0; border: 1px solid #ADADAD; -webkit-appearance: none; line-height: 1.4;}
+section {padding: 0 10px 10px 10px;}
+section dt {margin-bottom: 5px; font-weight: bold;}
+section dd {margin-bottom: 15px;}
+.cardAuth {text-align: center; width: 160px; margin: 30px auto;}
+.submit {width: 160px; margin: 0 auto; }
+input#pinNo {width: 45%;}

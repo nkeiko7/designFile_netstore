@@ -1,0 +1,121 @@
+/* CLEARFIX */
+#main, #promotionSection, .preChecklist, .preChecklist .stepImage {zoom:1;}
+#main:after, #promotionSection:after, .preChecklist:after, .preChecklist .stepImage:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; padding:0 0 10px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+#S00608 h1 {background-image: url(/img/store/section/title/title_s00608.png); border: 0; margin: 0;}
+#S0060851 h1 {background-image: url(/img/store/section/title/title_s0060851.png); border: 0; margin: 0;}
+#orderInput h1 {background-image: url(/img/store/section/title/title_orderinput.png);}
+
+#freeShipping {font-size: 11px; margin-bottom: 10px;}
+.exclude {color:#999;}
+
+.lead {border-top: 1px solid #E6E6E6; margin-top: 10px; padding:15px 0;}
+
+.note {background-color:#F3F3F3; padding: 15px; margin-top: 20px;}
+.note ul li {list-style:disc; margin-left: 1.5em;}
+.note p {font-size:12px; margin-bottom:5px;}
+
+#S00608 .note h2 {font-size: 14px;}
+#S00608 #subCategory h2 {border-bottom: 1px solid #666666; margin:20px 0 10px; padding-bottom: 7px;}
+
+#subCategory ul {margin-right: -20px; letter-spacing: -.80em;}
+#subCategory li {
+float:none;
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 160px; margin-right: 20px; padding:10px 0 15px; vertical-align: top; letter-spacing: normal;}
+
+#subCategory li a {display: block; margin: 0; padding-top:142px; width: 160px; background-repeat: no-repeat;}
+#subCategory li.pleated a {background-image: url(/img/store/sectionparts/S00608/ph_pleats.jpg);}
+#subCategory li.nonPleated a {background-image: url(/img/store/sectionparts/S00608/ph_nopleats.jpg);}
+#subCategory li.wPleated a {background-image: url(/img/store/sectionparts/S00608/ph_wpleats.jpg);}
+#subCategory li.gathered a {background-image: url(/img/store/sectionparts/S00608/ph_gather.jpg);}
+#subCategory li.hatome a {background-image: url(/img/store/sectionparts/S00608/ph_hatome.jpg);}
+#subCategory li.lining a {background-image: url(/img/store/sectionparts/S00608/ph_lining.jpg);}
+#subCategory li.rollScreen a {background-image: url(/img/store/sectionparts/S00608/ph_rollscreen.jpg);}
+#subCategory li.plainshade a {background-image: url(/img/store/sectionparts/S00608/ph_plainshade.jpg);}
+#subCategory li.alumiBlind a {background-image: url(/img/store/sectionparts/S00608/ph_alumiblind.jpg);}
+#subCategory li.woodBlind a {background-image: url(/img/store/sectionparts/S00608/ph_woodblind.jpg);}
+
+
+/* orderInput */
+#orderInput .message {margin-bottom:20px;}
+
+#orderInput .chooseItem {float: left; width: 200px;}
+#orderInput .chooseItem dt {margin-top:5px;}
+#orderInput .chooseItem dd {margin-top:5px;}
+
+#orderInput .pricebySize {float: right; width: 480px;}
+#orderInput .itemWrap {zoom:1;}/* IE6, IE7 */
+#detailInfo {margin-top:5px;text-align:right;}
+
+#orderInput table {border: solid #ddd; border-width: 1px;}
+#orderInput table .jan {display:block;}
+#orderInput table th.length { width:18%; border-left: none;}
+
+#orderInput h2 {clear: both;font-size: 14px;}
+
+#orderInput .inputSize {clear: both; margin-bottom:20px;}
+#orderInput .inputSize h2 {padding-top:20px;}
+#orderInput .inputSize .lead {margin-bottom:0;}
+
+#orderInput .step {overflow: hidden;}
+
+#orderInput #main h3 {clear: both;font-size: 14px;font-weight:bold;margin-top:20px;padding:10px 0 20px; border-top: 1px solid #E6E6E6;}
+#orderInput #main h3 span {border-right: 1px solid #ccc; padding-right: 5px; color: #666;}
+#orderInput #main h3 span.annotation {border: none;}
+
+#orderInput .stepImage li {float:left;margin-right: 30px;display: inline;width: 148px;}
+#orderInput .stepImage dt {font-weight:bold;margin-bottom:3px;}
+#orderInput .stepImage dd {margin-top:5px;}
+#orderInput .stepImage dd .typettl {font-weight:bold;}
+
+#orderInput .focus {margin-bottom:0;}
+#orderInput .focus dt {clear:both;font-weight:bold;padding:5px 0;}
+
+#orderInput .inputForm {float:right;padding-left:20px;width:110px;}
+#orderInput .inputForm #railLength,
+#orderInput .inputForm #windowLength,
+#orderInput .inputForm #fixHeight {width:5em;}
+
+#orderInput .sizeDecideWrap {clear:both;margin-bottom:30px;padding-top:10px; border-top: 1px solid #E6E6E6;}
+
+dl#orderSize {background:none repeat scroll 0 0 #E6E6E6;margin:10px 0;padding:15px 15px 5px;}
+#orderSize dt {display: block;margin:0 10px 10px 0;padding-right:10px;border-right:1px solid #999999;float:left;font-weight:bold;height: 33px;line-height: 33px;}
+#orderSize dd {overflow:hidden;padding-bottom:10px;height: 33px;line-height: 33px;}
+#orderSize .num {font-size:14px;font-weight:bold;margin-left:5px;}
+#orderSize .unit {margin:0 3px;}
+#orderSize .widthResult {font-size:24px;}
+
+.preChecklistWrap {clear:both;margin-bottom:20px;padding-top:10px; border-top: 1px solid #333333;}
+.preChecklist {background:none repeat scroll 0 0 #F6F6F6;margin:10px 0 3px;padding:15px;}
+.preChecklist ul li {list-style:disc outside none;margin:0 0 5px 1.5em;}
+.preChecklist .adjuster {float: right; width: 77px; margin-left: 10px;}
+.preChecklist .annotation li {list-style:none outside none;margin-bottom:3px; line-height: 1.5;}
+.preChecklist ul .annotation {margin-top:3px;}
+
+.preChecklist table.vertical {width:500px;margin:5px 0;}
+.preChecklist table.vertical th {width:3em;}
+.preChecklist table th {background:none repeat scroll 0 0 #ccc;}
+.preChecklist table td {background:none repeat scroll 0 0 #fff;}
+
+.preChecklist .stepImage li {float:left;margin:0 20px 0 0;display: inline;width: 203px;}
+.preChecklist .stepImage dt {font-weight:bold;margin-bottom:3px;}
+.preChecklist .stepImage dd {margin:5px 0;}
+
+#orderInput #main .preChecklist h3 {padding-bottom:0;}
+
+.preChecklist .weight {float:left;width:300px;}
+.preChecklist .tatamishiro {float:right;width:350px;}
+
+.preChecklist .heightWidth {clear:both;padding-top:1px;}
+
+.preChecklist .heightWidth p {float:left;width:400px;}
+.preChecklist .horizontal {float:right;width:250px;}
+
+.preChecklist .rollscreenImg {float: right; width: 136px; margin-left: 10px;}
+
+

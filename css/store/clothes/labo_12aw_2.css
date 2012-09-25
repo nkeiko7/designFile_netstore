@@ -1,0 +1,83 @@
+ul {list-style: none; }
+h1 {border: none; margin: 0; padding-bottom: 0;}
+h1 img {position: fixed; top: 52px; right: 40px; z-index: 900;}
+a:link, a:visited {text-decoration: none;}
+#copyright {margin-top: 0; border: 0;}
+#storeFooterWrap {background: none;}
+
+#mainWrap {position: relative; margin: 0; padding: 0;}
+#header, #footer {width: 100%; height: auto; min-width: 840px; max-width: 1000px; padding: 0 20px;}
+#headerWrap {border: 0;}
+#LaboMain {margin: 20px auto; padding: 0 20px; width: 100%; height: auto; min-width: 840px; max-width: 1000px; position: relative;}
+
+.coordinate {margin: 0 auto; width: 100%; height: auto; position: relative; font-family: Helvetica, sans-serif;}
+.coordinate img {width: 100%; height: auto;}
+.coordinate ul {margin-bottom: 100px; padding: 0; }
+.coordinate .detail {background-color: none;}
+.coordinate .detail img {margin-bottom: 0;}
+
+.productList {margin: 10px 0 40px 0; font-size: 11px; width: 91%; padding-left: 3em; text-indent: -3em;}
+.productList a {margin: 0 10px;}
+
+/*
+#aboutdetail, #coordinateList {margin: 0 auto; padding: 30px; width: 100%; height: 100%; position: fixed; top: 0; z-index: 200; background-color: rgba(0, 0, 0, 0.7); display: none;}
+.aboutdetailwrap, .coordinateListwrap {margin: 50px auto; width: 100%; height: auto; min-width: 840px; max-width: 1040px; position: relative;}
+#aboutdetail .aboutclose, #coordinateList .listclose {padding: 15px; text-align: right; cursor: pointer; margin-right: 40px;}
+#aboutdetail .ja {float: left; margin-right: 50px;}
+#aboutdetail .ja, #aboutdetail .en {color: #fff; font-size: 13px; font-family: serif; line-height: 200%;}
+*/
+#aboutdetail, #coordinateList {padding: 0; width: 100%; height: 610px; position: absolute; display:none; z-index: 200; }
+.aboutdetailwrap, .coordinateListwrap {left: 50%; margin-left: -480px; width: 860px; height: 95%; background-color: rgba(255, 255, 255, 0.9); padding: 30px 50px; position: absolute; top:20px;}
+#aboutdetail .aboutclose, #coordinateList .listclose {margin: 0 -20px 15px 0; text-align: right; cursor: pointer;}
+#aboutdetail .ja {float: left; margin: 0 50px 130px 0;}
+#aboutdetail .ja, #aboutdetail .en {color: #000; font-size: 13px; font-family: serif; line-height: 200%;}
+
+.detail .title {font-weight: bold; margin-bottom: 10px;}
+.coordinateimg {display: inline-block; width: 100%; height: auto; position: relative;}
+.coordinateimg a, .coordinateimg a img {overflow: hidden; border: none;}
+
+.aboutdetail .close img {position: absolute; top: 20px; right: 20px; width: 17px; height: 17px;}
+.aboutdetail .close a img {border: 0;}
+.detail {position: absolute; width: 500px; height: auto; top: 0; right: 0; margin: 40px 50px 0 0; padding: 0; display: none; z-index: 100;}
+ 
+#coordinateList li {list-style: none; float: left; margin: 0 20px 20px 0;}
+#coordinateList li:last-child {margin-right: 0;}
+#coordinateList a img { width: 152px; height: auto;}
+#coordinateList a:hover img {filter: alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;}
+#coordinateList li img {width: 152px; height: auto;}
+ 
+#skipNav {position: fixed; right: 125px; top: 45px; z-index: 100;}
+#skipNav li a {font: 0/0 a; text-shadow: none; color: transparent; background-image: url("/img/store/clothes/labo/12aw/dot.png"); background-repeat: no-repeat; background-position: 7px 8px; width: 15px; height: 15px; display: block; padding: 8px;}
+#skipNav li:first-child a {background-position: -73px 8px;}
+#skipNav li a:hover {background-position: -33px 8px;}
+
+.comment {position: absolute; bottom: -100px; right: -25px; z-index: 101; background-color: #fff; padding: 20px; width: 400px;}
+
+.detailBtn {position: absolute; bottom: 30px; right: -10px; cursor: pointer; color: #333; font-size: 16px; font-weight: bold; padding: 10px;}
+.aboutLaboBtn {color: #333; position: fixed; top: 380px; right: 55px; cursor: pointer; z-index: 199; font-family:Helvetica, sans-serif; font-size: 14px; font-weight: bold;}
+#listBtn {color: #333; position: fixed; top: 410px; right: 60px; cursor: pointer; z-index: 199; font-family:Helvetica, sans-serif; font-size: 14px; font-weight: bold;}
+
+.navi {float: right;}
+.comment span {display: inline-block; float: left; text-indent: -9999px; margin-right: 5px; }
+.naviicon {background-image: url("/img/store/clothes/labo/12aw/naviicon.png"); background-position: 0 -15px; background-repeat: no-repeat; width: 10px; height: 10px;}
+.naviicon a:hover {background-position: 0 0;}
+.navi span.current {background-position: 0 0;}
+.prevBtn {margin: 10px 0 0 40px; background-image: url("/img/store/clothes/labo/12aw/arrow.png"); background-position: 0 0; background-repeat: no-repeat; width: 15px; height: 25px;  cursor: pointer;}
+.nextBtn {margin: 10px 0 0 50px; background-image: url("/img/store/clothes/labo/12aw/arrow.png"); background-position: -18px 0; background-repeat: no-repeat; width: 15px; height: 25px;  cursor: pointer;}
+.detail .closeBtn {margin: 13px 0 0 0; background-image: url("/img/store/clothes/labo/12aw/close.png"); background-position: 0 0; background-repeat: no-repeat; background-size: 20px 20px; width: 20px; height: 20px; cursor: pointer;}
+
+/*addClass*/
+.selected {cursor: pointer; overflow: hidden;border: 10px solid #ddd;
+/*
+-moz-transition: border 0.2s linear 0;
+-webkit-transition: border 0.2s linear 0;
+-o-transition: border 0.2s linear 0;
+-ms-transition: border 0.2s linear 0;
+*/
+}
+.selectedimg {margin: -10px; }
+.selected2 {color: 000; background-color: #ddd;}
+
+/* CLEARFIX */
+.coordinate, #coordinateList ul, .productList ul {zoom: 1;}
+.coordinate:after, #coordinateList ul:after, .productList ul:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}

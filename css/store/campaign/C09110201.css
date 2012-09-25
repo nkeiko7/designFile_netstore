@@ -1,0 +1,9 @@
+/* CLEARFIX */
+.annotation dl,
+.aside {zoom: 1;}
+.annotation dl:after,
+.aside:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+.banner .col {text-align:right;line-height:2em;}

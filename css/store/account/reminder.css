@@ -1,0 +1,20 @@
+/* CLEARFIX */
+.focus dl {zoom: 1;}
+.focus dl:after { content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+body#reminder h1 {background-image: url(/img/store/account/reminder/title_reminder.png);}
+body#reminderComplete h1 {background-image: url(/img/store/account/reminder/title_remindercomplete.png);}
+
+p {margin-bottom: 20px;}
+p.message {margin-bottom: 10px;}
+.annotation {margin-bottom: 20px;}
+.ex {display: block; margin-top: 5px;}
+.prevNext {margin-bottom: 20px;}
+.ime {margin-left: 5px;}
+
+.focus dl dt {float: left; clear: both; width: 110px; margin: 0 0 5px 0; padding: 5px 0; font-weight: bold; vertical-align: middle;}
+.focus dl dd {width: 520px; margin: 0 0 5px 110px; padding: 3px 0 3px 15px; vertical-align: middle;}
+.focus input#email {width: 250px;}
+.focus input#ad {width: 35px; margin-right: 5px;}

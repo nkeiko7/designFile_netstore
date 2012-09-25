@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* ------------------------------------------
+reset
+------------------------------------------ */
+html, body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: #FFF;
+}
+img { border: none; }
+
+/* ------------------------------------------
+font
+------------------------------------------ */
+body, p, li, dt, dd,
+input, textarea, select, option,
+th, td, address {
+	font-family:"Lucida Grande", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", Arial, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+a:link, a:visited { color: #333; }
+a:active, a:hover { color: #7F0019; }
+
+/* ------------------------------------------
+layout
+------------------------------------------ */
+.contentsWrapper {
+	clear: both;
+	width: 910px;
+	margin: 0 auto;
+}
+.contentsWrapper .inBox {
+	padding: 0 15px;
+}

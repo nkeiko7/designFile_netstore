@@ -1,0 +1,49 @@
+/* CLEARFIX */
+.list,
+.prevNext {zoom: 1;}
+.list:after,
+.prevNext:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+
+a.blank { background: url(/img/common/imageview.gif); background-repeat: no-repeat; background-position: left; width: 11px; height: 8px; padding: 0 2px 0 14px;}
+
+.add {text-align: right;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+
+body#addressList h1 {background-image: url(/img/store/account/address/title_index.png);}
+body.edit h1 {background-image: url(/img/store/account/address/title_edit.png);}
+body.confirm h1 {background-image: url(/img/store/account/address/title_confirm.png);}
+body#addressEditComplete h1 {background-image: url(/img/store/account/address/title_edit_complete.png);}
+body#addressAdd h1 {background-image: url(/img/store/account/address/title_add.png);}
+body#addressAddComplete h1 {background-image: url(/img/store/account/address/title_add_complete.png);}
+
+/* INDEX */
+.list {border-bottom: solid 1px #666; padding-bottom: 15px;}
+.list dt.first {border-top: solid 1px #666; margin-top: 0;}
+.list dt {border-top: solid 1px #e6e6e6; clear: both; padding: 15px 15px 0; margin: 15px 0 5px;}
+.list dd {padding: 0 15px;}
+.list .name {font-weight: bold; font-size: 13px;}
+.list .address {width: 500px;}
+.list .function {float: right; margin-top: -1.5em;}
+.list .function li {float: left; margin-left: 10px; padding-left: 10px; border-left: 1px solid #ccc;}
+.list .function li:first-child {border-left: 0;}
+.list .annotation {margin-top: 5px; float: right;}
+
+/* EDIT */
+.address.edit .annotation {margin-bottom: 20px;}
+
+tr.zip input,
+tr.tel input {ime-mode: inactive;}
+table.vertical .required th {font-weight: bold;}
+table.vertical .ex {display: block; margin-top: 5px;}
+table.vertical .ime {margin-left: 5px;}
+.content .address select {width: 220px; margin-right: 5px;}
+table.vertical .message {display: inline;}
+.message span {margin-top: 5px; font-size: 11px;}
+
+.zipToAddress {margin: 0 5px; font-size: 11px;}
+.zipToAddress a {padding: 3px 5px; *padding: 3px 5px 1px;}
+
+#loadContent {min-height: 75px;}

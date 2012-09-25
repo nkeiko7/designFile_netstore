@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>MUJI.net メンバー登録・変更 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/account/signup.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/store/store.js"></script>
+
+</head>
+
+<body class="store account signup" id="full">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+<div id="main">
+
+	<h1>MUJI.net メンバー登録・変更</h1>
+	<p class="lead">MUJI.net メンバーへのご登録、またはメンバー情報を変更できます。</p>
+	<p class="message"><span>ネットストアでご購入の際には、下記の「お客様の情報」をご記入ください。</span></p>
+	<table id="loginInfo" class="vertical">
+		<caption>ログイン情報</caption>
+		<tr class="email pc required">
+		<th rowspan="2">メールアドレス<br /><span class="req">（PC、携帯のいずれか必須）</span></th>
+		<td>PC：<input name="email" type="text" value="mujitaro@muji.net" size="30" />
+		<span class="ime">（半角英数字）</span><span class="ex">例：mujitaro@muji.net</span></td>
+		</tr>
+		<tr class="email mobile required">
+		<td>携帯：<input name="mobile" type="text" value="mujitaro" size="15" />@<select name="mobileDomain" id="mobileDomain"><option>docomo.ne.jp</option></select><span class="ime">（半角英数字）</span><span class="ex">例：mujitaro@docomo.ne.jp</span></td>
+		</tr>
+		<tr class="password required">
+		<th>ご希望のパスワード<span class="req">（必須）</span></th>
+		<td><input type="password" /><span class="ime">（半角英数字：8〜20文字）</span>
+		<p class="message"><span>英数字ともに1文字以上は使用してください。</span></p>
+		</td>
+		</tr>
+		<tr class="passwordConfirm required">
+		<th>ご希望のパスワード（確認）<span class="req">（必須）</span></th>
+		<td><input type="password" /></td>
+		</tr>
+	</table>
+	
+	<table id="personalInfo" class="vertical">
+	<caption>お客様の情報</caption>
+	<tr class="name required">
+	<th>お名前<span class="req">（必須）</span></th>
+	<td>姓：<input type="text" value="" size="15" /> 名：<input type="text" value="" size="15" /><span class="ime">（全角）</span><span class="ex">例：無印　太郎</span></td>
+	</tr>
+	<tr class="kana required">
+	<th>フリガナ<span class="req">（必須）</span></th>
+	<td>姓：<input type="text" value="" size="15" /> 名：<input type="text" value="" size="15" /><span class="ime">（全角）</span><span class="ex">例：ムジルシ　タロウ</span></td>
+	</tr>
+	<tr class="name required">
+	<th>お名前<span class="req">（必須）</span></th>
+	<td><input type="text" value="無印 太郎" size="40" /><span class="ime">（全角）</span><span class="ex">例：無印 太郎</span></td>
+	</tr>
+	<tr class="kana required">
+	<th>フリガナ<span class="req">（必須）</span></th>
+	<td><input type="text" value="ムジルシ タロウ" size="40" /><span class="ime">（全角）</span><span class="ex">例：ムジルシ タロウ</span></td>
+	</tr>
+	<tr class="zip required">
+	<th>郵便番号<span class="req">（必須）</span></th>
+	<td>〒 <input name="postCode1" type="text" value="170" size="5" maxlength="3" /> - <input name="postCode2" type="text" value="8424" size="5" maxlength="4" /> <span class="btn zipToAddress"><a href="#">住所表示</a></span><span class="ime">（半角数字）</span><span class="ex">例：170-8424</span>
+	<p class="message"><span>７桁の郵便番号を入力して「住所表示」ボタンを押してください。<br />
+	県・市区町村名を郵便番号から自動検索し、入力されます。</span></p></td>
+	</tr>
+	<tr class="address address1 required">
+	<th>住所<span class="req">（必須）</span></th>
+	<td><input name="address" type="hidden" value="東京都 豊島区" /><select name="addresslist"></select>
+	<p class="message"><span>郵便番号より自動検索されます。</span></p><span class="ex">例：東京都 豊島区</span></td>
+	</tr>
+
+	<!-- register -->
+	<tr class="address address2 required">
+	<th>以降の住所（町域・丁目）<span class="req">（必須）</span></th>
+	<td><input name="address2" type="text" value="" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：東池袋</span></td>
+	</tr>
+	<tr class="address address3 required">
+	<th>番地<span class="req">（必須）</span></th>
+	<td><input name="address3" type="text" value="" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：３</span><p class="message"><span>番地がない場合は「番地なし」とご入力ください。</span></p></td>
+	</tr>
+	<!-- /register -->
+
+	<tr class="address address4">
+	<th>ビル・マンション名・部屋番号</th>
+	<td><input name="address4" type="text" value="" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：ムジ・ネットビル７Ｆ</span></td>
+	</tr>
+
+	<!-- register -->
+	<tr class="address address5">
+	<th scope="row">様方</th>
+	<td><input name="sendName" type="text" size="40" value="" maxlength="256" /> 様方<span class="ime">（全角）</span></td>
+	</tr>
+	<!-- /register -->
+
+	<!-- modify -->
+	<tr class="address address2 required">
+	<th>以降の住所（町域・丁目・番地）<span class="req">（必須）</span></th>
+	<td><input name="address3" type="text" value="東池袋４-２６-３" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：東池袋４-２６-３</span></td>
+	</tr>
+	<!-- /modify -->
+
+	<tr class="tel required">
+	<th>お届け時に連絡可能な電話番号<span class="req">（必須）</span></th>
+	<td><input name="tel1" type="text" value="" size="5" maxlength="5" /> - <input name="tel2" type="text" value="" size="5" maxlength="4" /> - <input name="tel3" type="text" value="" size="5" maxlength="4" /><span class="ime">（半角数字）</span><span class="ex">例：03-3989-4191</span></td>
+	</tr>
+	<tr class="tel tel2">
+	<th>上記以外に連絡可能な電話番号</th>
+	<td><input name="tel4" type="text" value="" size="5" maxlength="5" /> - <input name="tel5" type="text" value="" size="5" maxlength="4" /> - <input name="tel6" type="text" value="" size="5" maxlength="4" /><span class="ime">（半角数字）</span><span class="ex">例：03-3989-4191</span></td>
+	</tr>
+	<tr class="gender required">
+	<th>性別<span class="req">（必須）</span></th>
+	<td>
+	<ul>
+	<li><input type="radio" name="gender" value="male" id="genderMale" /><label for="genderMale">男性</label></li>
+	<li><input type="radio" name="gender" value="female" id="genderFemale" /><label for="genderFemale">女性</label></li>
+	</ul>
+	</td>
+	</tr>
+	<tr class="birth required">
+	<th>生年月日<span class="req">（必須）</span></th>
+	<td><label><span>西暦</span><input type="text" name="ad" id="ad" size="6" /><span>年</span></label><label><select name="month"><option>01</option></select><span>月</span></label><label><select name="day"><option>01</option></select><span>日</span></label><span class="ime">（半角数字）</span></td>
+	</tr>
+	</table>
+	
+	<table id="option" class="vertical">
+	<caption>オプション設定</caption>
+	<tr class="mailnewsMujinet">
+	<th rowspan="2">MUJI.net MailNEWS 配信<p class="desc">無印良品に関する情報を毎週お届け</p></th>
+	<td>PCメール</td>
+	<td>
+	<ul>
+	<li><input name="mailnewsPC" id="mailnewsPC_y" type="radio" value="y" /><label for="mailnewsPC_y">希望する</label></li>
+	<li><input name="mailnewsPC" id="mailnewsPC_n" type="radio" value="n" checked="checked" /><label for="mailnewsPC_n">希望しない</label></li>
+	</ul>
+	</td>
+	</tr>
+	<tr>
+	<td>携帯メール</td>
+	<td>
+	<ul>
+	<li><input name="mailnewsMobile" id="mailnewsMobile_y" type="radio" value="y" /><label for="mailnewsMobile_y">希望する</label></li>
+	<li><input name="mailnewsMobile" id="mailnewsMobile_n" type="radio" value="n" checked="checked" /><label for="mailnewsMobile_n">希望しない</label></li>
+	</ul>
+	</td>
+	</tr>
+	<tr class="mailnewsHouse">
+	<th>無印良品の家 MailNEWS 配信<p class="desc">「無印良品の家」に関する情報を毎週お届け</p></th>
+	<td>PCメール</td>
+	<td>
+	<ul>
+	<li><input name="mailnewsHouse" id="mailnewsHouse_y" type="radio" value="y" /><label for="mailnewsHouse_y">希望する</label></li>
+	<li><input name="mailnewsHouse" id="mailnewsHouse_n" type="radio" value="n" checked="checked" /><label for="mailnewsHouse_n">希望しない</label></li>
+	</ul>
+	</td>
+	</tr>
+	</table>
+
+<ul class="prevNext">
+	<li class="prev"><a href="easy.html">前のページに戻る</a></li>
+	<li class="btn next"><a href="full_confirm.html">次へ進む</a></li>
+</ul><!-- /.prevNext -->
+
+
+	</div><!-- /.main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

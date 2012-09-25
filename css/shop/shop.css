@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* --------------------------------]
+global_header
+-------------------------------- */
+#siteName a { width: 139px; background-position: -155px 0; }
+#siteName a:hover { background-position: -155px -18px; }
+
+#gnShop a { background-position: -185px -58px; }

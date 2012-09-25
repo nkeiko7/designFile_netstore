@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html lang="ja"><head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+<title>口コミを投稿</title>
+	<link rel="stylesheet" href="http://www.muji.net/css/muji.css">
+	<link rel="stylesheet" href="/mymuji/css/review.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--[if lt IE 9]><script src="http://www.muji.net/js/lib/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="//my.muji.net/jp/api/javascript/config"></script>
+<script type="text/javascript" src="//my.muji.net/js/jarty.js"></script>
+<script type="text/javascript" src="//my.muji.net/js/jarty.date.js"></script>
+<script type="text/javascript" src="//my.muji.net/js/spin.min.js"></script><style></style>
+<script type="text/javascript" src="//my.muji.net/js/libs.js"></script>
+<script type="text/javascript" src="//my.muji.net/js/jp/application.js"></script>
+	<script type="text/javascript">
+$(function(){
+	myMUJI.app.widgetPostSns("4934761052076");
+});
+	</script>
+</head>
+
+<body id="reviewConfirm" style="">
+
+	<h1>口コミを投稿</h1>
+	<p class="lead"><span class="fb">Facebook</span> <span class="tw">Twitter</span> <span class="mx">mixi</span>  に共有<!-- （<a href="http://my.muji.net/account/setting/connects" target="_top">共有の設定</a>） --></p>
+	<p class="message error" style="display:none;"><span>口コミを入力してください</span></p>
+
+	<section id="postReview">
+		<form>
+			<input type="hidden" id="contribution_content" value="スピーカーとiPodと組み合わせて簡易目覚ましを作成しました。デザインがシンプルなため、大変気に入りました。ただ、コードがもう少し短くてもいいのかなあ？">
+			<input type="hidden" id="sns_facebook" value="true">
+			<input type="hidden" id="sns_twitter" value="true">
+			<input type="hidden" id="sns_mixi" value="false">
+			
+			<textarea cols="40" id="sns_content" readonly=""></textarea>
+			<div class="btn"><a href="javascript:void(0);">投稿</a></div>
+			<!-- <div id="checkAlert"><label><input type="checkbox" id="never">今後このアラートを表示しない</label></div> -->
+		</form>
+	</section><!-- /#postReview -->
+
+</body></html>

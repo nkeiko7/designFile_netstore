@@ -1,0 +1,99 @@
+.userProfile,
+.rankingList li {zoom:1;}
+.userProfile:after,
+.rankingList li:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+
+.rankingList {padding: 15px;}
+
+.rankingList li {border-bottom: 1px solid #e5e5e5; padding-bottom: 15px; margin-bottom: 15px; position: relative;}
+.rankingList .userProfile {float: left; margin-right: 15px; width: 360px;}
+.rankingList .itemProfile {float: left; margin-right: 15px; width: 400px;}
+.rankingList .userCount {float: left; width: 100px;}
+.rankingList .itemCount {float: left; width: 100px;}
+.rankingList .userActivity {float: left;}
+.rankingList .follow {float: right; margin-top: 12px; font-size: 10px;}
+.rankingList .profileImage,
+.rankingList .itemImage {float: left; vertical-align: middle; margin-right: 15px;}
+
+.rankingList .name {font-weight: bold; display: block; margin-bottom: 10px;}
+.rankingList .desc {color: #666; font-size: 11px; overflow: hidden;display: block;}
+
+.rankingList .userCount,
+.rankingList .itemCount {text-align: center; display: block;}
+.rankingList .userCount .num,
+.rankingList .itemCount .num {font-size: 50px; display: block; font-weight: bold; font-family: "Helvetica","Arial","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック" ,sans-serif; line-height: 37px; margin-bottom: 10px;}
+#rankingListWish .itemCount .label {background-image:url(/img/common/icons.png); background-repeat: no-repeat; padding-left: 17px; background-position: -20px -40px;}
+#rankingListOwn .itemCount .label {background-image:url(/img/common/icons.png); background-repeat: no-repeat; padding-left: 17px; background-position: -20px -100px;}
+
+.rankingList .action li {border-bottom: 0; padding-bottom: 0; margin-bottom: 0; position: static;}
+
+.rankingList .userActivity {margin: 10px 15px; font-size: 12px;}
+.rankingList .userActivity li {border: 0; padding-bottom: 0; float: left; margin-right: 15px; width: 30px; text-align: center;}
+.rankingList .userActivity .label {display: inline-block; *display: block; width: 13px; height: 13px; background-image: url(/img/common/icons.png); background-repeat: no-repeat; text-indent: -9999px; font-size: 10px; white-space: nowrap;}
+.rankingList .userActivity li.wish .label {background-position: -20px -40px;}
+.rankingList .userActivity li.own .label {background-position: -20px -100px;}
+.rankingList .userActivity li.review .label {background-position: -20px -160px;}
+.rankingList .userActivity li.indeed .label {background-position: -188px -40px; height: 15px;}
+.rankingList .userActivity li .count {display: block;}
+.rankingList .userActivity li:hover .label {text-indent: 0; text-align: center; background: none; overflow: visible; position: relative; left: -50%;}
+
+.btn,
+.btn.disabled {
+        margin-bottom:15px;
+        display: inline-block;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        padding: 5px 10px;
+        text-decoration: none;
+        font-weight: bold;
+        width: 60px;
+}
+
+.btn.standby {
+        background-image: url("/img/common/plus.gif");
+        background-position:10px 4px;
+        background-repeat: no-repeat;
+        background-color: #666;
+        -moz-box-shadow: inset 0 0 1px 1px #555;
+        -webkit-box-shadow: inset 0 0 1px 1px #555;
+        box-shadow: inset 0 0 1px 1px #555;
+        border: 1px solid #666;
+        color:#fff;
+        padding-left: 34px;
+}
+.btn.standby:hover {
+        border: 1px solid #7F0019;
+        background-color: #7F0019;
+        -moz-box-shadow: inset 0 0 1px 1px #A85162;
+        -webkit-box-shadow: inset 0 0 1px 1px #A85162;
+        box-shadow: inset 0 0 1px 1px #A85162;
+}
+
+.btn.connected {
+        background: url("/img/common/check.gif") 6px 2px no-repeat #e3e3e3;
+        -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+        -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+        box-shadow: inset 0 0 1px 1px #f6f6f6;
+        border: 1px solid #ccc;
+        color: #999;
+        padding-left: 34px;
+}
+.btn.connected:hover {border: 1px solid #7F0019; color:#7F0019;}
+
+.btn.disabled {
+        background: #e3e3e3;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+        -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+        box-shadow: inset 0 0 1px 1px #f6f6f6;
+        border: 1px solid #ccc;
+        color: #fff;
+        padding: 3px 10px;
+        text-align:center;
+}

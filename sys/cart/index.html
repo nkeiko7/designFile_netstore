@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>ショッピングカート | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.1.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/cart/cart.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+	<!--[if IE]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.1.js"></script>
+	<script type="text/javascript" src="/js/store/store.js"></script>
+	<script type="text/javascript" src="/js/jcarousellite_1.0.1.min.js"></script>
+	<script type="text/javascript" src="/js/store/cart/cart.js"></script>
+	
+	<!-- nishiwaki -->
+	<script type="text/javascript">
+	<!--
+	function showBox(chk,id){
+		if(chk.checked)
+		{
+			$("#"+id).show();
+		}
+		else
+		{
+			$("#"+id).hide();
+		}
+		return false;
+	}
+	function showBoxByName(chk,name){
+		$("dd[name="+name+"]").each(function(){
+			if(chk.checked) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
+		});
+		return false;
+	}
+
+		function doOk(){
+			//付帯作業パラメタ
+			var serviceParam = "";
+			//プライベート作業パラメタ
+			var privateParam = "";
+			//ギフトパラメタ
+			var giftParam = "";
+			//inputタグ検索
+			var inputs = $("input").get();
+			for(i=0; i<inputs.length; i++){
+				var input = inputs[i];
+				var name = input.name;
+				//付帯作業
+				if(name.indexOf("servicechk-")!=-1){
+					var value = (input.checked)?"true":"false";
+					serviceParam += replaceAll(name,"-","\t") + "\t"+ value + "\f";
+				}
+				//プライベート作業
+				else if(name.indexOf("privatechk-") != -1){
+					var items = name.split("-");
+					//裾上げ幅値
+					var name = "privatetxt1-" +items[1]+"-"+items[2];
+					var cm1 = document.getElementsByName(name)[0].value;
+					var name = "privatetxt2-" +items[1]+"-"+items[2];
+					var cm2 = document.getElementsByName(name)[0].value;
+					//プルダウン選択値
+					var name = "privateslt-" +items[1]+"-"+items[2];
+					var type = document.getElementsByName(name)[0].value;
+					//
+					var value = (input.checked)? "true":"false";
+					//
+					privateParam += replaceAll(name,"-","\t") + "\t"+
+						 value+"\t" +cm1+"\t" +cm2+"\t" +type+"\f";
+				}
+				//ギフト
+				else if(name.indexOf("giftchk-") != -1){
+					var items = name.split("-");
+					//ギフトメッセージ
+					var name = "gifttxt-" +items[1];
+					var txt = '';
+					var txtbox = document.getElementsByName(name)[0];
+					if (txtbox != null) {
+						txt = document.getElementsByName(name)[0].value;
+					}
+					//
+					var value = (input.checked)? "true":"false";
+					//
+					giftParam += replaceAll(name,"-","\t") + "\t"+
+						 value+"\t" +txt+"\f";
+				}
+
+			}
+			$("#serviceResult").val(serviceParam);
+			$("#privateResult").val(privateParam);
+			$("#giftResult").val(giftParam);
+			//
+			$("#optionForm").submit();
+
+			return false;
+		}
+
+		function replaceAll(target,src,dst){
+			while(target.indexOf(src)!=-1){
+				target = target.replace(src,dst);
+			}
+			return target;
+		}
+
+
+		$(window).load(function () {
+			var pr = document.getElementById("privateResultRet").value;
+			var sr = document.getElementById("serviceResultRet").value;
+			var gr = document.getElementById("giftResultRet").value;
+			//裾上げ
+			var items = pr.split("\f");
+			for(i=0; i<items.length; i++){
+				var item = items[i].split("\t");
+				if(item.length!=7){
+					continue;
+				}
+				var orderNo = item[1];
+				var itemId = item[2];
+				var checked = item[3]=="true";;
+				var length1 = item[4];
+				var length2 = item[5];
+				var selected = item[6];
+				//チェックボックス
+				var name = "privatechk-"+orderNo+"-"+itemId;
+				document.getElementsByName(name)[0].checked = (checked)?"checked":"";
+				if(checked){
+					var boxArr = document.getElementsByName(orderNo+"-"+itemId+"-box");
+					for(var j=0;j<boxArr.length;j++)
+					{
+						boxArr[j].style.display = "block";
+					}
+				}
+				//仕上がり寸法
+				var name = "privatetxt1-"+orderNo+"-"+itemId;
+				document.getElementsByName(name)[0].value = length1;
+				var name = "privatetxt2-"+orderNo+"-"+itemId;
+				document.getElementsByName(name)[0].value = length2;
+				//プルダウン
+				var name = "privateslt-"+orderNo+"-"+itemId;
+				document.getElementsByName(name)[0].value = selected;
+			}
+			//サービス
+			var items = sr.split("\f");
+			for(i=0; i<items.length; i++){
+				var item = items[i].split("\t");
+				if(item.length!=5){
+					continue;
+				}
+				var orderNo = item[1];
+				var itemId = item[2];
+				var workCode = item[3];
+				var checked = item[4]=="true";;
+				//チェックボックス
+				var name = "servicechk-"+orderNo+"-"+itemId+"-"+workCode;
+				document.getElementsByName(name)[0].checked = (checked)?"checked":"";
+			}
+			//ギフト
+			var items = gr.split("\f");
+			for(i=0; i<items.length; i++){
+				var item = items[i].split("\t");
+				if(item.length!=4){
+					continue;
+				}
+				var orderNo = item[1];
+				var checked = item[2]=="true";
+				var txt = item[3];
+				//チェックボックス
+				var name = "giftchk-"+orderNo;
+				document.getElementsByName(name)[0].checked = (checked)?"checked":"";
+				//テキストエリア
+				var name = "gifttxt-"+orderNo;
+				document.getElementsByName(name)[0].innerHTML = txt;
+			}
+			$("input[type='checkbox']").each(function() {
+				$(this).change();
+			});
+		});
+
+		$(document).ready(function(){
+			$("#ok").click(doOk);
+
+		});
+
+	//-->
+	</script>
+</head>
+
+<body class="store cart" id="shoppingCart">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+
+	<div id="breadcrumbs">
+		<ol>
+			<li><a href="/store/">ネットストア</a></li>
+			<li class="current">ショッピングカート</li>
+		</ol>
+	</div>
+
+<div id="sideNav">
+<script type="text/javascript" src="/js/dummy/sidenav.js"></script>
+</div><!-- /#sideNav -->
+
+<div id="main">
+
+	<h1>ショッピングカート</h1>
+
+	<p class="lead">ショッピングカートの中には以下の商品が入っています。</p>
+	<p>商品ごとに付帯作業を指定できます。内容をご確認の上、ご購入手続きへお進みください。<span class="faqlink"><a href="http://www.muji.net/mt/contact/guide/accompanying_info/" class="iframe fancyBox" target="_blank">付帯作業について</a></span></p>
+	
+	<table class="horizontal">
+		<tr><th class="item">商品番号／商品名</th><th class="unitPrice price">価格</th><th class="quantity">数量</th><th class="subTotal price">小計</th><th class="delete"></th></tr>
+		<tr class="hasincidentalService">
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4548718590537"><span class="thumb"><img src="http://www.muji.net/img/cmdty/4548718590537_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8590537</span><span class="name">電気冷蔵庫・３５５ＬＳＭＪ－３６Ａ</span>
+<span class="freeShippingIcon">20,000円以上配送無料対象</span>
+<span class="pickupIcon">店舗受取可</span>
+</span>
+</a></td>
+		<td class="unitPrice price">税込<span class="num">98,000</span>円</td>
+		<td class="quantity"><select><option>1</option><option>10</option></select></td>
+		<td class="subTotal price">税込<span class="num">98,000</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr class="incidentalServiceItem">
+			<td class="ServiceName">
+				<input type="checkbox" id="incidentalService01" /><label for="incidentalService01">開梱設置・包材持ち帰り</label>
+			</td>
+			<td class="unitPrice price">無料</td>
+			<td class="quantity">0</td>
+			<td class="subTotal price">無料</td>
+			<td class="delete">-</td>
+		</tr>
+		<tr class="incidentalServiceItem">
+			<td class="ServiceName">
+				<input type="checkbox" id="incidentalService02" /><label for="incidentalService02">家電リサイクル引取</label>
+			</td>
+			<td class="unitPrice price">税込<span class="num">1,050</span>円</td>
+			<td class="quantity">0</td>
+			<td class="subTotal price">税込<span class="num">0</span>円</td>
+			<td class="delete">-</td>
+		</tr>
+		<tr class="incidentalServiceItem last">
+			<td class="ServiceName">
+				<input type="checkbox" id="incidentalService03" /><label for="incidentalService03">オーブン取付</label>
+			</td>
+			<td class="unitPrice price">税込<span class="num">840</span>円</td>
+			<td class="quantity">0</td>
+			<td class="subTotal price">税込<span class="num">0</span>円</td>
+			<td class="delete">-</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4547315957842"><span class="thumb"><img src="http://www.muji.net/img/cmdty/4547315957842_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">5957842</span><span class="name">体にフィットするソファ・セット・チャコールグレー</span><span class="freeShippingIcon">5,250円以上配送無料対象</span></span></a></td>
+			<td class="unitPrice price">税込<span class="num">13,000</span>円</td>
+			<td class="quantity"><select><option>1</option><option>10</option></select></td>
+			<td class="subTotal price">税込<span class="num">13,000</span>円</td>
+			<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr>
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4547315957842"><span class="thumb"><img src="http://www.muji.net/img/cmdty/4548718449774_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8449774</span><span class="name">ウール混リバーダッフルコート婦人・Ｍ・ネイビー</span>
+<span class="pickupIcon">店舗受取可</span>
+</span></a></td>
+		<td class="unitPrice price"><del>税込<span class="num">13,500</span>円</del><ins>税込<span class="num">13,000</span>円</ins></td>
+		<td class="quantity"><select><option>1</option><option>10</option></select></td>
+		<td class="subTotal price">税込<span class="num">13,000</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr class="hasincidentalService">
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4548718685745"><span class="thumb"><img src="http://www.muji.net/img/cmdty/4548718685745_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8685745</span><span class="name">オーガニックコットンデニムレギュラーパンツ　紳士・７６×８５・ウォッシュド</span>
+<span class="pickupIcon">店舗受取可</span>
+</span></a></td>
+		<td class="unitPrice price">税込<span class="num">2,500</span>円</td>
+		<td class="quantity"><select><option>2</option><option>10</option></select></td>
+		<td class="subTotal price">税込<span class="num">5,000</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr class="hasincidentalService">
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4548718685745"><span class="thumb"><img src="http://www.muji.net/img/cmdty/4548718685745_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8685745</span><span class="name">オーガニックコットンデニムレギュラーパンツ　紳士・７６×８５・ウォッシュド</span>
+<span class="pickupIcon">店舗受取可</span>
+</span></a></td>
+		<td class="unitPrice price">税込<span class="num">3,980</span>円</td>
+		<td class="quantity"><select><option>1</option><option>10</option></select></td>
+		<td class="subTotal price">税込<span class="num">3,980</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr class="incidentalServiceItem last">
+			<td class="ServiceName">
+				<dl id="hemService">
+					<dt><label><input name="privatechk-000001-000002" onchange="showBoxByName(this,'000001-000002-box');" type="checkbox" onclick="this.blur();" /><span class="serviceName">裾上げ</span>（<span class="price">無料</span>）</label></dt>
+					<dd name="000001-000002-box"><label>股下を補正（仕上がり寸法）：<select name="privatetxt2-000001-000002" value="0"><option value="0" selected="selected">補正しない</option><option value="74">74cm</option><option value="73">73cm</option><option value="72">72cm</option><option value="">…</option><option value="50">50cm</option></select></dd>
+					<dd name="000001-000002-box"><label>裾上げ種類：<select name="privateslt-000001-000002"><option value="200" selected="selected">裾上げシングル</option><option>裾上げダブル</option></select></label></dd>
+					<p class="annotation">※同じ商品には、同じ付帯作業が適応されます</p>
+				</dl><!-- /#hemService -->
+			</td>
+			<td class="unitPrice price">無料</td>
+			<td class="quantity">3</td>
+			<td class="subTotal price">無料</td>
+			<td class="delete">-</td>
+		</tr>
+		<tr>
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4547315957842"><span class="thumb"><img src="/img/cmdty/S006088168_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8592012</span><span class="name">ポリエステル二重織杢調プリーツカーテン（遮光性）／アイボリー</span><span class="spec">（幅99 X 丈99cm／操作 左）</span></span></a></td>
+		<td class="unitPrice price">税込<span class="num">3,150</span>円</td>
+		<td class="quantity">2</td>
+		<td class="subTotal price">税込<span class="num">7,300</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+		<tr>
+		<td class="item"><a href="http://www.muji.net/store/cmdty/detail/4547315957842"><span class="thumb"><img src="/img/cmdty/S006088168_c.jpg" width="50" height="50" alt="" /></span><span class="desc"><span class="jan">8592012</span><span class="name">ポリエステル二重織杢調プリーツカーテン（遮光性）／アイボリー</span><span class="attachment">※プレーンシェードパーツセット／シングル 付属</span><span class="spec">（幅99 X 丈99cm／操作 左）</span>
+<span class="freeShippingIcon">5,250円以上配送無料対象</span>
+<span class="pickupIcon">店舗受取可</span>
+</span>
+</a></td>
+		<td class="unitPrice price">税込<span class="num">3,150</span>円</td>
+		<td class="quantity">2</td>
+		<td class="subTotal price">税込<span class="num">7,300</span>円</td>
+		<td class="delete"><a href="#">削除</a></td>
+		</tr>
+	</table>
+	<div id="totalArea">
+		<table class="total">
+			<tr class="productTotal"><th><b>ご注文金額合計</b></th><td><span class="num">129,084</span>円</td></tr>
+		</table>
+		<div id="banner">
+			<p class="price">商品代金 税込19,000円<br /><span class="clearConditions">あと<span class="num">1,000</span>円で配送無料</span>
+			<span class="campaignInfo">無印　太郎太郎太郎太郎太郎太郎太様だけに、「<span class="campaignName">商品代金20,000円以上のお買い上げで配送無料キャンペーン</span>」実施中<br />YYYY.MM.DD AM10:00まで</span></p>
+			<a id="fancybox-close" style="display: inline;"></a>
+		</div>
+	</div>
+
+<script>
+$(function(){
+setTimeout(function(){$("#banner").fadeIn(400)},1000);
+$("#fancybox-close").click(function(){
+$("#banner").fadeOut(200);
+});
+
+});
+
+</script>
+
+<ul class="prevNext">
+<li class="prev"><a href="/store/">トップページに戻り、お買い物を続ける</a></li>
+<li class="btn submit"><a href="addressee.html">ご購入手続きへ進む</a></li>
+</ul><!-- /.prevNext -->
+
+<div id="pickUp">
+<p>カート内の商品が全て<span class="pickupIcon">店舗受取可</span>の場合、無印良品の店舗で受け取りが可能です（送料無料） <span class="btn"><a href="/store/cart/goshop/?_st=NMjyXslgyE">店舗で受け取る</a></span></p>
+<p class="annotation asterisk"><a href="http://www.muji.net/mt/contact/detail_list/014353.html" class="iframe fancyBox" target="_blank">ネット注文店舗受け取りサービス</a>をご利用の場合、お支払いは店舗となります。また、MUJI.netクーポンは、お支払いにはご利用できません。</p>
+<p class="annotation asterisk"><a href="http://www.muji.net/mt/contact/detail_list/014353.html" class="iframe fancyBox" target="_blank">ネット注文店舗受け取りサービス</a>をご利用の場合、裾上げは店舗でご指定ください。</p>
+</div>
+
+<div id="recommend">
+	<h2>このショッピングカートにある商品を買った人は、こんな商品も購入しています</h2>
+
+	<div class="prev btn disabled"><a>◀</a></div>
+	<div class="next btn"><a>▶</a></div>
+	<div class="itemList">
+		<ul>
+			<li><a href="/store/cmdty/detail/4548718562541"><span class="thumb"><img src="/img/cmdty/4548718562541_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">バテンレース使いノースリーブワンピース・婦人</span><br />
+			<span class="price"><del>税込<span class="num">2,980</span>円</del><ins>税込<span class="num">2,489</span>円</ins></span></span></a></li>
+			<li><a href="/store/cmdty/detail/4548718562015"><span class="thumb"><img src="/img/cmdty/4548718562015_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">ベルギーリネンシャツワンピース・婦人</span><br />
+			<span class="price">税込<span class="num">4,980</span>円</span></span></a></li>
+			<li><a href="/store/cmdty/detail/4548718545896"><span class="thumb"><img src="/img/cmdty/4548718545896_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">綿テンセル天竺BIGチュニックワンピース・婦人</span><br />
+			<span class="price">税込<span class="num">2,980</span>円</span></span></a></li>
+			<li><a href="/store/cmdty/detail/4548718513413"><span class="thumb"><img src="/img/cmdty/4548718513413_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">編み上げバックルベルト・婦人</span><br />
+			<span class="price"><del>税込<span class="num">2,980</span>円</del><ins>税込<span class="num">2,489</span>円</ins></span></span></a></li>
+			<li><a href="/store/cmdty/detail/4548718546008"><span class="thumb"><img src="/img/cmdty/4548718546008_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">エスパシューズ</span><br />
+			<span class="price">税込<span class="num">3,580</span>円</span></span></a></li>
+			<li><a href="/store/cmdty/detail/4548718520206"><span class="thumb"><img src="/img/cmdty/4548718520206_c.jpg" alt="" width="50" height="50" /></span><span class="desc"><span class="name">シーグラスリボンシーグラスリボンシーグラスリボンシーグラスリボンシーグラスリボンかぶせトート</span><br />
+			<span class="price">税込<span class="num">3,580</span>円</span></span></a></li>
+		</ul>
+	</div><!-- /.itemList -->
+</div><!-- /#recommend -->
+
+</div><!-- /#main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

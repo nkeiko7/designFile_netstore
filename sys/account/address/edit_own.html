@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>お届け先の編集 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/account/account.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/account/address.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+</head>
+
+<body class="store account address edit" id="addressEdit">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+	<div id="main">
+
+		<h1>お届け先の編集</h1>
+		<p class="lead">新しいお届け先情報をご入力ください。</p>
+		<p class="annotation">パソコンの種類や環境によって異なる表示となる機種依存文字を使用した場合、正しく表示できない場合がございます。<br/>
+		詳しくは「<a href="http://faq.muji.net/EokpControl?&event=FE0006&tid=17067">機種依存文字について</a>」をご覧ください。</p>
+
+		<table class="vertical">
+			<caption>お届け先情報</caption>
+			<tr class="name required">
+			<th>お名前<span class="req">（必須）</span></th>
+			<td><input name="deliveryAddressee" id="deliveryAddressee" type="text" value="無印　太郎" size="40" maxlength="48" /><span class="ime">（全角）</span><span class="ex">例：無印　太郎</span></td>
+			</tr>
+			<tr class="kana required">
+			<th>フリガナ<span class="req">（必須）</span></th>
+			<td><input name="deliveryNameKana" id="deliveryNameKana" type="text" value="ムジルシ　タロウ" size="40" maxlength="48" /><span class="ime">（全角）</span><span class="ex">例：ムジルシ　タロウ</span></td>
+			</tr>
+			<tr class="zip required">
+			<th>郵便番号<span class="req">（必須）</span></th>
+			<td>〒 <input name="postCode1" id="postCode1" type="text" value="170" size="5" maxlength="3" /> - <input name="postCode2" id="postCode2" type="text" value="8424 " size="5" maxlength="4" />
+			<span class="btn zipToAddress"><a href="#">住所表示</a></span><span class="ime">（半角数字）</span><span class="ex">例：170 - 8424</span>
+			<p class="message"><span>7桁の郵便番号を入力して「住所表示」ボタンを押してください。<br />
+			県・市区町村名を郵便番号から自動検索し、入力されます。</span></p></td>
+			</tr>
+			<tr class="address address1 required">
+			<th>住所<span class="req">（必須）</span></th>
+			<td><input name="address" type="hidden" value="東京都 豊島区" /><select name="addresslist" id="addresslist"><option>東京都 豊島区</option></select>
+			<p class="message"><span>郵便番号より自動検索されます</span></p><span class="ex">例：東京都 豊島区</span></td>
+			</tr>
+			<tr class="address address2 required">
+			<th>以降の住所（町域・丁目・番地）<span class="req">（必須）</span></th>
+			<td><input name="address2" id="address2" type="text" value="東池袋４－２６－３" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：東池袋４-２６-３</span></td>
+			</tr>
+			<tr class="address4">
+			<th>ビル・マンション名・部屋番号</th>
+			<td><input name="address3" id="address3" type="text" value="ムジ・ネットビル７Ｆ" size="40" maxlength="256" /><span class="ime">（全角）</span><span class="ex">例：ムジ・ネットビル７Ｆ　７０７号室</span>
+			<p class="message"><span>部屋番号までご入力ください。</span></p></td>
+			</tr>
+			<tr class="tel required">
+			<th>電話番号<span class="req">（必須）</span></th>
+			<td><input name="tel1" id="tel1" type="text" value="03" size="5" maxlength="5" /> - <input name="tel2" id="tel2" type="text" value="3989" size="5" maxlength="4" /> - <input name="tel3" id="tel3" type="text" value="4191" size="5" maxlength="4" /><span class="ime">（半角数字）</span><span class="ex">例：03-3989-4191</span></td>
+			</tr>
+		</table>
+
+		<ul class="prevNext">
+			<li class="prev"><a href="index.html">前のページに戻る</a></li>
+			<li class="btn next"><a href="edit_confirm.html">次へ進む</a></li>
+		</ul><!-- /.prevNext -->
+
+	</div><!-- /.main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

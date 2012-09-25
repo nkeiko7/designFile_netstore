@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#giftcard_auth #balanceCheck dd {zoom:1;}
+#giftcard_auth #balanceCheck dd:after {content:" ";display:block;visibility:hidden;clear:both;height:.1px;font-size:.1em;line-height:0;}
+
+#giftcard_auth h1 {background-image: url(/img/store/account/coupon/title_giftcard_auth.png); }
+#giftcard_auth #balanceGiftCard .price {margin-right: 20px; font-size: 12px; float:left;}
+#giftcard_auth #balanceGiftCard #balanceCheck {margin-top: 10px;}
+#giftcard_auth #balanceGiftCard #balanceCheck p {margin-bottom: 10px;}
+
+#giftcard_auth #balanceCheck {padding-top: 30px;}
+#giftcard_auth #balanceCheck dt {width: 80px; margin: 2px 0 5px 80px; font-weight: bold; float:left;}
+#giftcard_auth #balanceCheck dd {margin-bottom: 5px; height:25px;}
+#giftcard_auth #balanceCheckBtn {margin: 10px 0 0 80px;}
+#giftcard_auth .card {float: right; margin: -5px 80px 0 0;}
+#balance ul {padding-top: 100px;}

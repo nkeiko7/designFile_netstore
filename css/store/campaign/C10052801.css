@@ -1,0 +1,46 @@
+/* CLEARFIX */
+.aside, .imgNav ul, .aside .recipe {zoom:1;}
+.aside:after,
+.imgNav ul:after,
+.aside .recipe:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom:0;margin-bottom:0;padding-bottom:0;}
+h2 {margin-top:25px;}
+h4 {margin-bottom:10px;font-weight:bold;}
+
+.aside h2, .aside h3:first-child {margin-top:0;}
+.aside p {margin-bottom:10px;}
+.aside p img {float:left;margin-right:10px;}
+.aside dl {margin-bottom:10px;}
+.aside dt {font-weight:bold;}
+
+#snSection1 .column2 .itemList {margin: 10px 0;}
+.itemList .annotation {margin-top:5px;line-height:1.2;display:block;color:#666;}
+
+.relatedLink {margin-bottom: 10px; text-align: right;}
+
+.recipe ol li {background:no-repeat left top;margin-left:210px;padding-left:20px;}
+.recipe ol li.no1 {background-image: url(/img/store/campaign/parts/no1.gif);}
+.recipe ol li.no2 {background-image: url(/img/store/campaign/parts/no2.gif);}
+.recipe ol li.no3 {background-image: url(/img/store/campaign/parts/no3.gif);}
+.recipe ol li.no4 {background-image: url(/img/store/campaign/parts/no4.gif);}
+
+/* imgNav */
+.imgNav {margin: -10px 0 0 30px; padding: 0; height: 250px;}
+.imgNav ul li {list-style: none; float: left; margin: 0 24px 0 0; padding: 0; width: 187px;}
+.imgNav ul li img.lineup01 {margin: 0; padding: 0;}
+.imgNav ul li img.lineup02 {margin: 0 0 0 0; padding: 43px 0 0 0;}
+* html .imgNav ul li img.lineup02 {margin: 43px 0 0 0;}
+.imgNav ul li img.lineup03 {margin: 0; padding: 0;}
+
+/* êhÇ≥ÉâÉìÉLÉìÉOóp */
+.pepper ul {float:left;margin:5px 10px 0 0;padding:5px 0;background:no-repeat left top;}
+.pepper .high {background-image: url(/img/store/campaign/100528/01/cp_100528_simg22.gif);}
+.pepper .low {background-image: url(/img/store/campaign/100528/01/cp_100528_simg23.gif);}
+.pepper li{ width:265px;height:53px;overflow:hidden;margin-left: 50px;}
+.pepper img{ margin-right:5px; margin-left:10px; float:left; padding-bottom:3px;}
+.pepper .icon{ margin-top:14px;}
+
+#snSection1 .itemList li {width:168px;margin-right:11px;}
+.itemList .recipe {margin-top:5px;font-size:11px;line-height:1.2;display:block;}
+.itemList .icon {display:block;}

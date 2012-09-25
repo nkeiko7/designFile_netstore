@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/* CLEARFIX */
+.wishButton,
+.ownButton,
+#wish ul,
+#own ul,
+#review,
+.controlBar,
+#reviewList article,
+#postReview {zoom:1;}
+.wishButton:after,
+.ownButton:after,
+#wish ul:after,
+#own ul:after,
+#review:after,
+.controlBar:after,
+#reviewList article:after,
+#postReview:after {content: ""; display: block; clear: both;}
+
+body.outstock #overview {border-bottom: 0;}
+
+.profileImage {-ms-interpolation-mode: bicubic; border-radius: 3px;}
+
+.count {font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック" ,sans-serif;}
+
+#myMUJI {border: 1px solid #e6e6e6; padding: 5px; margin-top: 20px;}
+#myMUJI h2 {margin-bottom: 0;}
+#myMUJILogo a {display: block; height: 23px; background: url(/img/store/cmdty/mymuji/storeitem_mymujilogo.png) no-repeat; background-position: 5px 5px; text-indent: -9999px; padding: 5px 5px 7px;}
+#myMUJILogo a:hover {background-position: 5px -35px;}
+#wish, #own {background: #f2f2f2; padding: 10px;}
+.skipToComment {margin: 10px 5px;}
+#own {border-top: 1px solid #fff;}
+#myMUJI li {float: left; margin: 10px 5px 0 0;}
+.skipToComment a {background: url("/img/common/arrow_down.png") no-repeat 0 4px; padding-left: 10px;}
+#myMUJI .action,
+#myMUJI .count {float: left;}
+#myMUJI .action a,
+#myMUJI .action span {display: block; overflow: hidden; height: 16px; background-image: url(/img/store/cmdty/mymuji/icons.png); background-repeat: no-repeat; background-color: #fff; padding: 2px 2px 1px 16px; text-decoration: none; line-height: 16px; border: 1px solid #ddd; -webkit-border-radius : 3px; -moz-border-radius : 3px; -ms-border-radius : 3px; border-radius : 3px;}
+#myMUJI .action a:hover {border: 1px solid #ccc;}
+#myMUJI .wishButton a,
+#myMUJI .wishButton span {background-position: -18px -17px;}
+#myMUJI .ownButton a,
+#myMUJI .ownButton span {background-position: -18px -77px;}
+#myMUJI .wishButton a:hover {background-position: -18px -37px;}
+#myMUJI .ownButton a:hover {background-position: -18px -97px;}
+#myMUJI .checked.wishButton a {background-position: -18px 3px;}
+#myMUJI .checked.ownButton a {background-position: -18px -57px;}
+#myMUJI .checked .action a {background-color: #777; border: 1px solid #666; color: #fff;}
+
+/* loading */
+#myMUJI .loading,
+#review .loading {background: url(/img/store/cmdty/mymuji/icon_loading_14x14.gif) no-repeat 50% 50%; text-indent: 0; min-height: 14px;}
+#myMUJI .loading span,
+#review .loading span {opacity: 0.3; filter: alpha(opacity=25); background-color: none;}
+
+#myMUJI .count a {text-decoration: none; font-weight: bold; line-height: 16px; display: block; padding: 3px 0; margin-left: 10px;}
+
+#myMUJI li a {display: block;}
+#myMUJI .profileImage {width: 30px; height: 30px;}
+.profileTip .content {width: auto; display: block; padding: 7px; border-radius: 3px; background: #000; color: #fff; 
+opacity: .75;
+filter: alpha(opacity=75);
+-ms-filter: "alpha(opacity=75)";
+zoom:1;}
+.profileTip .bottom {display: none;}
+
+#review {background: #f7f7f7; padding: 10px 0 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; position: relative;}
+
+#review h2,
+#postReview,
+#reviewList {padding: 0 10px;}
+
+#review h2 {float: left; margin-right: 20px;}
+#review #aboutCoin {font-size: 10px; padding-top: 5px;}
+
+#postReview {margin-bottom: 10px; clear: both;}
+
+#postReview textarea {width: 488px; margin-bottom: 5px; font-size: 12px; color: #333; height: 14px; padding: 5px; border: 1px solid #ddd;}
+
+body.outstock textarea {width: 500px; padding: 5px; font-size: 12px;}
+body.outstock #postReview {width: 500px;}
+
+#postReview #publish {clear: both; display: none;}
+#postReview #publish li {float: left; margin-right: 20px;}
+#postReview #publish label {padding: 2px 0 0 22px;}
+#postReview #publish .fb label {background: url(/mymuji/img/icon_fb_off.png) no-repeat;}
+#postReview #publish .tw label {background: url(/mymuji/img/icon_tw_off.png) no-repeat;}
+#postReview #publish .mx label {background: url(/mymuji/img/icon_mixi_off.png) no-repeat;}
+#postReview #publish li input {margin-right: 2px;}
+
+#postReview .btn {float: right; display: none;}
+#postReview .btn a,
+#postReview .btn span {padding: 5px 20px; font-size: 12px; width: auto; height: auto;}
+.btn span {background: #333; color: #fff; font-weight: bold; padding: 2px 5px; display: inline-block; cursor: pointer; text-decoration: none; border-radius: 2px;}
+#postReview .btn a.loading {color: #666; background: #555; cursor: default;}
+
+
+
+#myMUJI .action .fancyBox {width: auto;}
+#shareSetting {position: absolute; right: 20px; top: 12px;}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 569px) {
+	#aboutCoin {display: none;}
+	#postReview {position: relative; width: 290px !important;}
+	#postReview #publish label span {display: none;}
+	#postReview textarea{
+	width: 215px; font-size: 16px;
+	border-radius: 0;
+	border: 1px solid #adadad;
+	-webkit-appearance: none;
+	line-height:1.4;
+	float: left;
+	}
+	#postReview .btn {position: absolute; top: 0; right: 0;}
+	#controlBar {clear: both;}
+	#shareSetting {top: 12px; left: 65px; text-decoration: underline;}
+}
+
+
+#controlBar {color: #999999; font-size: 11px; background: #E8E8E8; overflow: hidden; margin-bottom: 15px; padding: 5px 10px;}
+#controlBar dt {display: none;}
+#controlBar dd {float: left; padding-right: 8px;}
+
+.sort .current {border-bottom: 3px solid #CCCCCC; font-weight: bold; line-height: 19px; padding: 0 1px 1px;}
+.sort a {border-bottom: 1px solid #CCCCCC; line-height: 19px; padding: 0 1px 1px; text-decoration: none;}
+.sort a:hover {border-bottom: 3px solid #7f0019; text-decoration: none;}
+
+#reviewList {min-height: 55px;}
+#reviewList.empty {min-height: 0; padding-bottom: 20px;}
+#reviewList.empty p {text-align: center;}
+
+#reviewList article {padding: 15px 0 15px 60px; border-top: 1px solid #e8e8e8;}
+#reviewList article:first-child,
+#reviewList .spinner+article {padding-top: 0; border-top: none;}
+#reviewList article.loading {opacity:.3; filter: alpha(opacity=25); background: none;}
+
+#reviewList .image {float: left; margin-right: 10px; margin-left: -60px;}
+#reviewList a {text-decoration: none;}
+#reviewList .name {font-weight: bold;}
+#reviewList .name a {text-decoration: none;}
+#reviewList .profileImage {width: 50px; height: 50px;}
+#reviewList .message {margin-bottom: 5px; word-wrap: break-word;}
+#reviewList time {color: #808080; float: left;}
+#reviewList .violation a,
+#reviewList .delete a {font-size: 10px; float: right; color: #999; background: none; width: auto; height: auto; padding: 0;}
+
+.commentActions .delete a {color: #808080;}
+.commentActions .delete a:hover {color: #7F0019;}
+
+#review .more a {background-color: #E1E1E1; color: #333333; display: block; padding: 8px; text-align: center; text-decoration: none;}
+#review .more a:hover {background-color: #7F0019; color: #FFFFFF;}
+#review .more a span {background-position: 0 3px;}
+#review .more a:hover span {background-position: 0 -47px;}
+#review .more span {background: url("//www.muji.net/img/store/top/icon_openclose.gif") no-repeat; padding-left: 10px;}
+
+#review .more a.loading {background: #eee; color: #eee; cursor: default;}
+#review .more a.loading span {background: none;}
+
+body.outstock #footer {margin-top: 30px;}
+body.outstock #footerNav {border-top: 1px solid #666; padding-top: 10px;}

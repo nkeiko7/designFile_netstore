@@ -1,0 +1,30 @@
+/* CLEARFIX */
+#item,
+#prefecture {zoom: 1;}
+#item:after,
+#prefecture:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+body {width: 380px; padding: 10px !important;}
+
+/* H1 */
+h1 {height: 21px; margin: 15px 0; background: url(/img/store/notice/title_shopstock.png) no-repeat; text-indent: -9999px; overflow: hidden;}
+
+#item {margin-bottom: 20px;}
+.item img {float: left;}
+
+p {margin-bottom: 10px;}
+p.lead {margin-bottom: 5px;}
+.caution {border: 1px solid #ccc; padding: 5px;}
+.annotation {padding: 5px 5px 2px; color: #333; margin-bottom: 20px; background-color:#F3F3F3;}
+
+.prefecture {position: relative; padding-left: 100px; margin-bottom: 20px;}
+h2 {position: absolute; top: 0; left: 0; width: 90px; border-top: 2px solid #ccc; font-size: 13px; _left: -100px;}
+table {width: 100%;}
+th {border-top: 2px solid #eee; padding: 2px 5px; color: #333; font-size: 11px;}
+td {padding: 5px;}
+.status {width: 90px;}
+
+#selectPrefecture {margin-bottom: 20px;}
+#selectPrefecture dt {float: left; margin-right: 10px; font-weight: bold; width: 90px;}
+.pageTop {font-size: 11px; position: fixed; bottom: 0; right: 0; padding: 2px 10px; background: #f3f3f3; width: 100%; border-top: 1px solid #ccc;}
+

@@ -1,0 +1,116 @@
+#addressList #editButton {float: right; margin: 10px 10px 0 0;}
+
+.addressList {margin-bottom: 30px;}
+.addressList ul {margin: 10px 0 0; letter-spacing: normal;
+border-top: 1px solid #eee;
+}
+.addressList li {
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));
+position: relative;
+}
+.addressList li a.item {
+display: block;
+padding: 15px;
+border-bottom: 1px solid #eee;
+background: url(/m/img/arrow.png) no-repeat 95% center;
+-webkit-background-size: 10px 13px;
+}
+.addressList dt {margin-bottom: 5px; font-weight: bold;}
+.addressList dd {padding-right: 20px;}
+.zip {margin-right: 10px;}
+
+.addItem {font-weight: bold; font-family: Helvetica;
+}
+
+.addressList li .remove {position: absolute; top: 0; width: 100%; height: 100%; display: none;}
+.addressList li .removeToggle {position: absolute; top: 50%; left: 10px; margin-top: -13px;}
+.addressList li .removeBtn {display: none; position: absolute; top: 50%; right: 10px; margin-top: -16px; z-index: 1000;}
+.addressList li .removeToggle.active {-webkit-transform: rotate(-90deg);}
+
+.mask {display: none; position: fixed; top: 0; width: 100%; height: 100%;}
+
+#main section h1 {
+font-size: 12px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: #fff; text-indent: 0; border-bottom: 1px solid #eee; padding: 5px 10px; margin: 0;
+}
+
+.error {margin: 10px;}
+
+#submit {margin-top: 15px;}
+#submit input {margin-right: 5px;}
+#submit p a {text-decoration: underline;}
+#submit p {text-align: center;}
+
+.edit #main dl,
+.confirm #main dl {padding: 10px;}
+.edit #main section dt {margin-bottom: 5px;}
+.edit #main section dt label {font-size: 12px; font-weight: bold; margin-right: 5px;}
+.edit #main section dt label[for="address4"] {font-weight: normal;}
+.edit #main section dd {margin-bottom: 15px;}
+
+.confirm #main section dt {float: left; width: 11em; font-weight: bold; margin-bottom: 10px;}
+.confirm #main section dd {margin-bottom: 10px;}
+
+section .message {margin: 5px 0;}
+
+.complete #main {margin-bottom: 30px;}
+
+.submit {margin: 10px auto;}
+
+#submit {margin-top: 15px;}
+
+.prevNext .next,
+.submit {width: 100%;}
+.prevNext .next a,
+.submit a {padding: 10px;}
+
+#deliveryName,
+#deliveryAddressee,
+#deliveryNameKana,
+#postalCode1,
+#postalCode2,
+#birthDateYear,
+#firstName,
+#lastName,
+#firstNameKana,
+#lastNameKana,
+#address2,
+#address3r,
+#address3b,
+#address3m,
+#address4,
+#sendName,
+#tel1,
+#tel2,
+#tel3 {width: 97%; font-size: 16px; padding: .4em 0 .4em 5px;
+-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+border: 1px solid #adadad;
+-webkit-appearance: none;
+line-height:1.4;
+}
+
+#postalCode1,
+#postalCode2,
+#birthDateYear,
+#sendName,
+#tel1,
+#tel2,
+#tel3 {width: auto;}
+
+#firstName,
+#lastName,
+#firstNameKana,
+#lastNameKana {width: 112px;}
+
+.featurePhone {display: none;}
+
+#postalCode1 {margin-right: 5px;}
+#postalCode2 {margin: 0 5px;}
+
+#zipButton {padding: .4em; font-size: 16px; line-height:1.4; margin-right: 5px;}
+
+#addressEdit #personalInfo {clear: both;}
+#addressEdit .delete {float: right; margin: 10px;}
+
+.confirm dt {font-weight: bold;}
+
+select#addresslist {width: 100%; font-size: 16px; line-height:1.4; padding: .4em 0 .4em 5px;}

@@ -1,0 +1,20 @@
+/* REAL　FURNITURE */
+#T20125 h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/section/title/title_t20125.png);}
+
+
+/* オーク無垢材 */
+li#S11001 .img1 {background-image: url(/img/item/4945247112580_50.jpg);}
+li#S11001 .img2 {background-image: url(/img/item/4945247112801_50.jpg);}
+#S11001 h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/section/title/title_s11001.png);}
+
+
+/* オーク材 */
+li#S11002 .img1 {background-image: url(/img/item/4945247112542_50.jpg);}
+li#S11002 .img2 {background-image: url(/img/item/4945247112610_50.jpg);}
+#S11002 h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/section/title/title_s11002.png);}
+
+
+/* その他 */
+li#S11003 .img1 {background-image: url(/img/item/4945247112665_50.jpg);}
+li#S11003 .img2 {background-image: url(/img/item/4945247112740_50.jpg);}
+#S11003 h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/section/title/title_s11003.png);}

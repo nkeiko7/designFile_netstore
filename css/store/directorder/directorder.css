@@ -1,0 +1,52 @@
+/* CLEARFIX */
+#main {zoom:1;}
+#main:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/directorder/title_directorder.png);}
+
+#prefecture {text-align: center; margin-bottom: 30px;}
+#prefecture h2 {text-align: left;}
+table {margin: 0 auto;}
+#directorder td {text-align: center;}
+.message {margin-bottom: 10px;}
+
+.note {background-color:#F3F3F3; padding: 10px; margin-top: 30px;}
+.aside .note ul li {margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;}
+.aside .note ul li:first-child {margin-top: 0; padding-top: 0; border-top: 0;}
+
+.focus {float: left; width: 480px;}
+.aside {float: right; width: 160px;}
+
+.submit {margin: 20px auto 0; text-align: center;}
+
+.focus h2 {font-size: 14px;}
+h2 span {border-right: 1px solid #ccc; padding-right: 5px; color: #666;}
+
+optgroup {margin-bottom: 0.5em; padding: 0 0.5em 0.5em; border-bottom: 1px solid #ccc;}
+option:first-child {margin-top: 0.5em;}
+
+.related dl {border: solid #e6e6e6; border-width: 1px 0; padding: 10px 0;}
+.related dl.catalog {border-width: 0 0 1px;}
+.related dt {margin-bottom: 5px;}
+.related dt a {font-weight: bold;}
+.related dt img {float: left; margin:2px 5px 0 0;}
+.related dd {overflow: hidden;}
+
+.related dl.over {cursor:pointer;}
+.related dl.over a {color: #7f0019;}
+
+.jan {font-size: 11px;}
+
+#directorderConfirm table.horizontal {width: 100%;}
+#directorderConfirm .section {margin-bottom: 20px;}
+#directorderConfirm #prefecture p {padding: 10px; border: 1px solid #ccc; width: 140px;}
+
+#order p {margin-bottom: 20px;}
+
+/*
+#directorder tbody#list2 tr,
+#directorder tbody#list3 tr,
+#directorder tbody#list4 tr,
+#directorder tbody#list5 tr {display: none;}
+*/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp" xmlns:m="http://mayaa.seasar.org" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript"><!--
+
+	// 商品情報とデジタル署名を送信
+	function sendForm(){
+		var form = $("#rakutenFrm");
+		form.submit();
+		return false;
+	}
+
+	$(document).ready(function(){
+		//sendForm();
+	});
+	//-->
+	</script>
+
+<title>無印良品ネットストア</title>
+
+</head>
+
+<body>
+
+<form id="rakutenFrm" action="https://my.checkout.rakuten.co.jp/myc/cdodl/stepin_dd_2_0" method="post" accept-charset="UTF-8">
+<input m:id="checkout" type="hidden" name="checkout" value="" />
+<input m:id="sig" type="hidden" name="sig" value="" />
+</form>
+
+<div class="content">
+<div id="main">
+<p class="loading" style="text-align: center; margin-top: 50px; padding-bottom: 75px; text-indent: 0;">楽天あんしん支払いサービスへ移動します。</p>
+</div><!-- /#main -->
+</div><!-- /.content -->
+
+</body>
+</html>

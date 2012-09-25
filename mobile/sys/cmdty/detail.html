@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:m="http://mayaa.seasar.org" >
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=Shift_JIS" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta m:id="keywords" name="keywords" content="" />
+<meta m:id="description" name="description" content="" />
+<style type="text/css">
+
+<![CDATA[
+a:link {color:#333333;}
+a:focus {color:#cccccc;}
+a:visited {color:#333333;}
+]]>
+</style>
+<title>(商品名･規格名)&nbsp;|&nbsp;無印良品ﾈｯﾄｽﾄｱ</title>
+</head>
+<body>
+
+<div style="font-size: x-small; color:#333333;">
+
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+
+	<!-- トピックアイコン -->
+	<span m:id="m_hasNewIcon">
+		<img src="/img/btn/btn_new.gif" alt="" width="32" height="16" /><img src="/img/main/sp.gif" alt="" width="3" height="2" />
+	</span>
+	<span m:id="m_hasReserveItemIcon">
+		<img src="/img/btn/btn_senkouyoyaku.gif" alt="" width="46" height="16" /><img src="/img/main/sp.gif" alt="" width="3" height="2" />
+	</span>
+	<span m:id="m_hasStoreReceiveIcon">
+		<img src="/img/btn/btn_tenpouketori.gif" alt="" width="58" height="16" /><img src="/img/main/sp.gif" alt="" width="3" height="2" />
+	</span>
+	<span m:id="m_hasCombinationDiscountIcon">
+		<img src="/img/btn/btn_isshowari.gif" alt="" width="52" height="16" />
+	</span>
+	<span id="mixMatch" style="border:1px solid #666; padding:1px 2px; font-size:x-small; color:#444; vertical-align:top;">3つで1,000円</span>
+	<br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<!-- 商品名 -->
+	<span class="itemName">商品が選択されていません</span><br />
+	<!-- 規格名 -->
+	<span class="itemStandardName">商品が選択されていません</span><br />
+
+	<!-- 商品画像 -->
+	<div style="text-align:center">
+		<img m:id="itemThumbnail"  title="" alt="" src="" width="180" height="180"/><br />
+		<!-- 関連画像 -->
+		<a m:id="imageListURL" href="">関連画像を見る</a>
+	</div>
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<!-- 価格 -->
+	価格:<div m:id="priceComponent" /><br />
+	<!-- 商品番号 -->
+	商品番号:<span m:id="storeJanCode" /><br />
+	<div m:id="hasDeliveryCharge">
+		<!-- 配送料区分 -->
+		<a href="./../mt/m_faq/delivery_from_customer04.html">商品区分:<span m:id="itemDivision"/>　配送料:税込<span m:id="initialCost"/>円</a><br />
+		<!-- 配送料について -->
+		<span m:id="deliveryFree"><br /><span m:id="freeShippingIcon" style="color:#7f0019;"><a href="./../mt/m_faq/delivery_from_customer01.html">5,250円以上配送無料対象</a></span></span>
+		<span m:id="deliveryFree"><br /><span m:id="freeShippingIcon" style="color:#7f0019;">00,000円以上配送無料対象</span></span>
+	</div>
+	<span m:id="unableRakutenPayment"><br /><span style="color:#7f0019;">※楽天あんしん支払いｻｰﾋﾞｽ対象外商品</span></span>
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<div m:id="itemStocks">
+		<div m:id="hasStock">
+			<div m:id="hasSizeColorName">
+			<!-- サイズ・カラー表示エリア -->
+			<form m:id="otherJanCodeForm" name="itemForm" action="" method="post">
+				ｻｲｽﾞ･ｶﾗｰ一覧:<br />
+				<select name="janCode">
+				<div m:id="stockLoop">
+					<option m:id="otherJanCode" value="">
+						<span m:id="hasNotLink"><span m:id="noStock"/></span>
+						<span m:id="hasLink"><span m:id="withStock"/></span>
+						<span m:id="hasManyLink"><span m:id="showNoStock"/></span>
+					</option>
+				</div>
+				</select>
+				<input type="submit" name="submit" value="商品を見る" />
+			</form>
+			</div>
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			<div style="background-color:#F5EEDD;"><!--背景色:#F5EEDD-->
+				<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br /><br />
+				<form m:id="itemForm" name="itemForm" action="" method="post" >
+				<!-- カート投入エリア1 -->
+				<div>
+					現在の商品:<br />
+					<span class="itemName"/><br />
+					<span class="itemStandardName"/><span m:id="isStockDisplay"><span m:id="isStock"><span m:id="stockNumTxtNow"/></span></span>
+					<br />
+						<!-- カートに入れるボタン -->
+						<div m:id="isViewNumSelect">
+						数量:
+							<select id="numSelect" name="addNum" >
+								<div m:id="numLoop">
+									<option m:id="numOpt" style="font-size:x-small;" ><span m:id="numValue"/></option>
+								</div>
+							</select>
+						<span m:id="isCart" ><input type="submit" value="ｶｰﾄに入れる"/></span>
+						</div>
+						<!-- ネットストアでのお取り扱いはございません -->
+						<span m:id="isNoNetstore" >ﾈｯﾄｽﾄｱでのお取り扱いはございません</span>
+						<!-- カートボタン（予約申し込み） -->
+						<span m:id="isReservation" ><input type="submit" value="予約お申込み"/></span>
+						<!-- 入荷通知画面へ -->
+						<span m:id="isNotice" ><input type="submit" value="入荷通知希望"/></span>
+						<span m:id="isNoStock">在庫がありません</span>
+				</div>
+				</form>
+				<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			</div><!--背景色:#F5EEDD-->
+		</div>
+	</div>
+	<div style="background-color:#F5EEDD;"><!--背景色:#F5EEDD-->
+		<div m:id="isViewStockButton">
+			<form m:id="viewStockButtonUrl" name="itemForm" action="" method="post" >
+			<div>
+				<input m:id="janCode" name="janCode" type="hidden" value=""/>
+				<input m:id="intensiveJanCode" name="intensiveJanCode" type="hidden" value=""/>
+				<input m:id="productName" name="productName" type="hidden"value=""/>
+				<input m:id="itemArrival" name="itemArrival" type="hidden" value="" />
+				<input type="submit" value="在庫数を確認する"/>
+			</div>
+			</form>
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		</div>
+		<div m:id="isViewShopStockButton">
+		<form  m:id="viewShopStockButtonUrl" name="itemForm" action=""  method="post">
+			<div>
+			<input type="submit" value="店舗在庫状況を見る"/>
+			</div>
+		</form>
+			<div>※店舗在庫は、直接店舗へお問い合わせください</div>
+		</div>
+
+		<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		<a m:id="isFavorite"  href="">お気に入りに追加</a><br />
+
+		<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		<!-- 友達に教える -->
+		<a m:id="mailto" href="mailto:メールアドレス?subject=Subject&body=NowAddress"><img src="/img/icon/icon_mail.gif" alt="" width="14" height="13" />友達に教える</a><br />
+		<br />
+		<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	</div><!--背景色:#F5EEDD-->
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<!-- 商品説明 -->
+	商品説明:<span m:id="itemDescriptionPc" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<!-- 仕様 -->
+	<div m:id="hasSpec">
+	■主な仕様<br />
+		<span m:id="hasProductCountryName"><span m:id="productCountryName"/><br /></span>
+		<span m:id="hasMixRate"><span m:id="mixRate"/><br /></span>
+		<span m:id="hasMaterialName"><span m:id="materialName"/><br /></span>
+		<span m:id="hasSpecifications"><span m:id="specifications"/><br /></span>
+		<span m:id="hasQuality"><span m:id="quality"/><br /></span>
+		<span m:id="hasWrapMaterial"><span m:id="wrapMaterial"/><br /></span>
+		<span m:id="hasCalorie"><span m:id="calorie"/><br /></span>
+		<div m:id="hasProductCountryName"><span m:id="productCountryCaution"/></div>
+	</div>
+	<!-- アイコン -->
+	<span m:id="hasIcons" >
+		<div >
+			<div m:id="iconsLoop" >
+				<div m:id="iconLoop">
+					<span ><img m:id="iconVar" style="margin:0 0 1px 0;vertical-align:middle;" /></span>
+				</div>
+			</div>
+		</div>
+	</span>
+	<div id="position1" m:id="includeFiles1" ><div m:id="includeFile"></div></div>
+	<div m:id="hasCautionInfo">
+		<span m:id="hasCaution">
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			■ご注意<br /><span m:id="caution"/><br />
+		</span>
+		<span m:id="hasCareLabels">
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			■お洗濯<br /><div m:id="careLabelsLoop"><span m:id="careLabel"/></div>
+		</span>
+	</div>
+	<div id="position2" m:id="includeFiles2" ><div m:id="includeFile"></div></div>
+	<!-- 付帯作業 -->
+	<div id="hasServiceWork">
+		<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+		<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		■付帯作業･ｻｰﾋﾞｽ<br />
+		<div m:id="hasService">
+			<div m:id="serviceWorksLoop"><span m:id="serviceName" />(<span m:id="notFreePriceService">税込<span m:id="servicePrice" />円</span><span m:id="freePriceService">無料</span>)<br /></div>
+			<div m:id="privateWorksLoop">
+				<span m:id="isNotGift">
+					<span m:id="serviceName" />(<span m:id="notFreePriceService">税込<span m:id="servicePrice" />円</span><span m:id="freePriceService">無料</span>)<br />
+				</span>
+				<span m:id="isGift">
+					ｷﾞﾌﾄ配送(<span m:id="notFreePriceService">税込<span m:id="servicePrice" />円</span><span m:id="freePriceService">無料</span>)<br />
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+
+	<img src="/img/icon/icon_tyu.gif" alt="" width="20" height="20" />
+	<a href="#"><span style="color:#7f0019;">ご購入､配送に関するご注意※必ずお読みください｡</span></a><br />
+
+	-->
+	<div id="position3" m:id="includeFiles3" ><div m:id="includeFile"></div></div>
+	<!-- よくある質問 -->
+	<div m:id="hasFaq">
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	■よくある質問<br />
+	<div m:id="faqsLoop">･<a m:id="faqUrl" href="" ><span m:id="faq"/></a><br /></div>
+	</div>
+	<div id="position4" m:id="includeFiles4" ><div m:id="includeFile"></div></div>
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+
+	<div style="text-align:right"><img src="/img/key/000.gif" alt="" width="14" height="14" /><a href="#" accesskey="*">上に戻る</a><img src="/img/icon/up.gif" alt="" width="10" height="10" /></div>
+
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+	<img src="/img/main/line1.gif" alt="" width="100%" height="3" /><br />
+	<div>
+		<!-- 関連商品エリア -->
+		<div m:id="hasRelatedItems">
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			■関連商品<br />
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			<div m:id="relatedItemsLoop">
+				<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+				<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+					<img src="/img/photo/g001_50.gif" alt="" width="50" height="50" style="float:left;" align="left" m:id="item_img" />
+					<a m:id="relatedItemsURL" href="" ><span m:id="item"/></a><br />
+					<div clear="all" style="clear:both;">
+						<span m:id="relatedItemsPrice"/>
+					</div>
+				<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+			</div>
+			<img src="/img/main/line1.gif" alt="" width="100%" height="3" /><br />
+			<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+		</div>
+	</div>
+
+	<div>
+		<!-- おすすめエリア -->
+		<dl>
+			<dt>■こんな商品もおすすめです</dt>
+			<div m:id="recommendbyitem"/>
+		</dl>
+	</div>
+
+	<img src="/img/main/line1.gif" alt="" width="100%" height="1" /><br />
+	<img src="/img/main/sp.gif" alt="" width="5" height="2" /><br />
+
+	<div m:id="breadCrumb">
+		<!-- パンくず -->
+		<a m:id="top" href="#">ネットストア</a>
+		<div m:id="breadCrumbsLoop">
+			<div m:id="isShow">
+				&nbsp;&gt;&nbsp;
+				<span m:id="enableLink"><a m:id="anchor" href=""><span m:id="name">[パンくず]</span></a></span>
+				<span m:id="disableLink"><span m:id="name">[パンくず]</span></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div m:id="recommendEvent" />
+
+</body>
+</html>

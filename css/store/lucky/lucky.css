@@ -1,0 +1,109 @@
+/* CLEARFIX */
+#period dl,
+#promotion.single,
+#promotion.single .itemList li {zoom: 1;}
+#period dl:after,
+#promotion.single:after,
+#promotion.single .itemList li:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+/* H1 */
+#luckyTop h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/lucky/title_top.png);}
+#luckyConfirm h1 {height: 27px; margin-bottom: 20px; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/lucky/title_confirm.png);}
+#luckyComplete h1 {height: 27px; margin-bottom: 20px; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden; background-image: url(/img/store/lucky/title_complete.png);}
+
+/* H2 */
+#luckyConfirm h2 {font-size: 14px;}
+
+.section {padding: 20px 0 10px; border-top: 1px solid #e6e6e6;}
+
+table.horizontal th {white-space: nowrap;}
+table.horizontal {width: 698px; margin-bottom: 10px;}
+
+/* single */
+.single .image {float: left; margin-right: 20px;}
+.single .description {overflow: hidden;}
+.single .description p {margin-bottom: 15px;}
+.single .itemList {margin-bottom: 0;}
+.single .itemList ul {margin-right: 0; letter-spacing: normal;}
+.single .itemList li {display: block; width: auto; margin: 0 0 5px;}
+.single .itemList a {display: inline;}
+.single .itemList .thumb {float: left; display: inline; margin: 0 5px 0 0;}
+.single .itemList .price {display: block; margin: 5px 0 0; line-height: inherit;}
+.single .itemList br {display: inline;}
+.single .price del,
+.single .price ins {display: inline;}
+
+.single .notice {clear: both;}
+
+/* period */
+#period {padding: 10px 10px 0; background: #F1F1F1;}
+#period dt {float: left; width: 80px; padding-right: 10px; text-align: right; padding-bottom: 5px;}
+#period dd {overflow: hidden; padding-bottom: 5px;}
+#period dd li {float: left; margin-right: 10px; padding-right: 10px; border-right: 1px solid #ccc;}
+#period dd li:last-child {border-right: 0;}
+#luckyConfirm #period {margin: 10px 0 20px; border-bottom: 1px solid #e6e6e6;}
+#luckyConfirm #period dt {width: 70px;}
+
+.itemList {margin-bottom: 30px;}
+.itemList ul {margin-right: -15px; letter-spacing: -.40em;}
+.itemList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 127px; margin: 0 15px 25px 0; vertical-align: top; letter-spacing: normal;}
+.itemList a {display: block; margin-bottom: 5px;}
+.itemList .thumb {display: block;}
+.itemList .name {display: block; margin-bottom: 3px;}
+.itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
+.itemList br {display: none;}
+
+/* COMMON */
+.btn a {display: inline-block;}
+.btn a:visited {color: #fff;} /* IE6 */
+.btn a:hover {background: #7f0019; color: #fff;}
+
+.comp {background: #999; color: #fff; font-weight: bold; padding: 2px 5px; display: inline-block; text-decoration: none;
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+
+.end {
+overflow: hidden;
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline-block; *zoom: 1; /* IE6, IE7 */
+text-align: center; padding:1px 5px 1px; *padding:0 5px 2px; vertical-align: middle; _vertical-align: bottom; font-weight: normal; border: 1px solid #666; color: #444; 
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+
+.addr {float: right;}
+
+/* prevNext */
+.prevNext {margin-top: 15px;}
+.prevNext .prev {float: left;}
+.submit {width: 160px; margin-left: 270px; text-align: center;}
+.submit a {display: block; overflow: hidden; padding: 5px;}
+
+.total {font-size: 11px; margin: 0 11px 10px auto;}
+.total th {padding: 5px 20px 0 0; font-weight: normal;}
+.total td {padding-top: 5px; text-align: right;}
+#luckyConfirm .total .productTotal td,
+#luckyConfirm .total .productTotal th {border-bottom: 1px solid #e6e6e6;}
+#luckyConfirm .total .productTotal th {font-size: 14px; padding: 10px 20px 5px 0;}
+#luckyConfirm .total .productTotal td {padding: 10px 0 5px;}
+#luckyConfirm .total .productTotal td .num {font-size: 14px; font-weight: bold; margin: 0 2px; font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W6","‚l‚r ‚oƒSƒVƒbƒN" ,sans-serif;}
+
+table.horizontal .item .desc {display: block; overflow: hidden;}
+table.horizontal .item a {text-decoration: none; cursor: pointer;}
+.furthermore {float: right;}
+
+table.horizontal td.num {width: 20px;}
+table.horizontal .quantity {width: 50px;}
+table.horizontal .divide {width: 100px;}
+table.horizontal .delete {width: 30px;}
+table.horizontal .item .price {margin: 3px 0 3px 67px;}
+table.horizontal .item .num {display: inline;}
+table.horizontal .item .price del {display: inline;}
+table.horizontal .item .price ins {display: inline; margin-left:5px;}
+
+#luckyConfirm table.horizontal td {border-top: 1px solid #ddd;}
+
+.shippingAddress,
+.shippingName {margin-bottom: 5px;}

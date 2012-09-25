@@ -1,0 +1,193 @@
+/* CLEARFIX */
+.aside dl,
+dl#orderID,
+.total dl,
+#giftcard dl {zoom:1;}
+.aside dl:after,
+dl#orderID:after,
+.total dl.sum:after,
+#giftcard dl:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+
+body#orderList h1 {background-image: url(/img/store/account/orderlist/title_index.png);}
+body#orderDetail h1 {background-image: url(/img/store/account/orderlist/title_detail.png);}
+body#orderCancel h1 {background-image: url(/img/store/account/orderlist/title_cancel.png);}
+body#orderCancelComplete h1 {background-image: url(/img/store/account/orderlist/title_complete.png);}
+
+.aside li {margin-bottom: 5px; font-size: 11px;}
+
+#orderList #main,
+#orderDetail #main,
+#orderCancel #main,
+#createReceipt #main {width: 100%;}
+
+#orderDetail .lead {float: left; width: 750px;}
+#createReceipt .lead {float: left; width: 750px;}
+
+#orderList .lead {float: left; margin-right: 20px; width: 640px;}
+#orderList .aside {overflow: hidden; margin-bottom: 30px; padding-left: 20px; border-left: 1px solid #e6e6e6;}
+.pageNav {clear: both;}
+
+dl#orderID {margin: 50px 0 20px; background: #f3f3f3; padding: 15px;}
+#orderID dt {float: left; font-weight: bold; margin-right: 5px; padding-right: 5px; border-right: 1px solid #ccc;}
+#orderID dd {float: left; margin-right: 20px; overflow: hidden;}
+
+table.horizontal {width: 100%; margin-bottom: 10px;}
+table.vertical {width: 100%; margin-bottom: 30px;}
+#orderDetail p.annotation {margin-bottom: 30px;}
+#createReceipt p.annotation {margin-bottom: 30px;}
+.tracking {font-size:10px;}
+.tracking .num {font-size:12px; display:block;}
+.orderID {text-align: center;}
+table.horizontal .orderStatus {text-align: center;}
+.quantity {text-align: right;}
+
+.total {font-size: 11px; margin: 0 11px 30px auto;}
+.total th {padding: 5px 20px 0 0; font-weight: normal;}
+.total td {padding-top: 5px; text-align: right;}
+.total .shipping th {padding: 5px 20px 10px 0;}
+.total .shipping td {padding: 5px 0 10px;}
+.total .payment td,
+.total .payment th {border-top: 1px solid #666; border-bottom: 1px solid #e6e6e6;}
+.total .payment th {font-size: 14px; padding: 10px 20px 5px 0;}
+.total .payment td {padding: 10px 0 5px;}
+.total .payment td .num {font-size: 14px; font-weight: bold; margin: 0 2px; font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック" ,sans-serif;}
+.total .tax th,
+.total .tax td {padding: 10px 0 5px;}
+.total .tax,
+.total .giftcard,
+.total .cash { color: #666;}
+
+.cancel {font-size: 11px;}
+.none .apology {font-size: 11px;}
+.blank .prev {float: none; text-align: center;}
+#orderList .price .num {font-size: 12px;}
+
+.listdisc {margin-bottom: 20px;}
+.listdisc li {list-style:disc outside none;margin: 0 0 0 1.5em; padding: 0;}
+
+#couponInfo {margin: 10px 0 20px; background: #f3f3f3; padding: 15px;}
+#couponInfo .num {margin: 0 5px; font-weight: bold; font-size: 14px;}
+#couponInfo .valid {margin-left: 20px;}
+#couponInfo .yyyy,
+#couponInfo .mm,
+#couponInfo .dd {margin-left: 5px; font-weight: bold;}
+
+#giftcardWrap {text-align: center; clear: both;}
+#giftcard {display: table; *display: inline; zoom:1; margin: 0 auto 20px; background: #f3f3f3; padding: 15px; text-align: left;}
+#giftcard p {margin-bottom: 10px; padding-bottom: 10px; text-align: center; border-bottom: 1px solid #ddd;}
+#giftcard p span {text-align: left; display: inline-block;}
+#giftcard dl dt {float: left; clear: both; width:80px; margin-bottom: 5px; padding: 5px 0; font-weight: bold; vertical-align: middle; text-align: right;}
+#giftcard dl dd {margin: 0 0 5px 80px; padding: 3px 0 3px 15px; vertical-align: middle;}
+#giftcard input {width: 145px; margin-right: 5px;}
+#giftcard input#pin {width: 35px;}
+
+.submit {margin-left: 362px;}
+
+table#addressee {margin-right: 20px;}
+table#addressee,
+table#orderStatusInfo {float: left; width:430px;}
+#orderDetail table#orderStatusInfo {margin-bottom: 20px;}
+#createReceipt table#orderStatusInfo {margin-bottom: 20px;}
+table#addressee th,
+table#orderStatusInfo th {width:30%;}
+#addressee .address {line-height: 1.7;}
+#addressee .time {border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px;}
+#addressee .deliveryDate th {white-space: nowrap;}
+
+
+table#addressee dt {font-weight: bold; margin-bottom: 5px; font-size: 14px;}
+table#addressee dt .detail {font-weight: normal; font-size: 12px;}
+table#addressee dt a { background: url(/img/common/imageview.gif); background-repeat: no-repeat; background-position: 0 2px; width: 11px; height: 8px; padding: 0 2px 0 14px;}
+
+.prevNext {clear: both;}
+
+#orderCancelComplete #orderID {font-size:14px; font-weight:bold; margin-bottom:20px; text-align: center; background: #f3f3f3; padding:15px;}
+
+#orderCancelComplete p {margin-bottom:20px;}
+
+#loadContent {min-height: 75px;}
+
+
+
+/*nishiwaki*/
+.receipt_link{font-size:11px;}
+.published_receipt{font-size:11px;color:#999;}
+table#receipt{width:490px;}
+#receipt .detail td {border: 1px solid #ddd;}
+#receipt p.annotation{margin:0;line-height:140%;}
+#receipt p.btn{margin:10px 0 10px 160px;}
+body#createReceipt #createReceiptArea table.vertical {margin-bottom: 10px;}
+body#createReceipt #createReceiptArea table.vertical th {width:150px;}
+body#createReceipt #createReceiptArea .annotation {margin-bottom: 15px;}
+
+#createReceipt h1{background-image: url("/img/store/account/orderlist/title_receipt.png");}
+div#createReceiptArea {width:490px;}
+#publisher{font-size:14px;text-align:right;}
+.orderID{text-align:right;border-top: 1px solid #E6E6E6;padding-top:10px}
+.date{text-align:right}
+#receiptBox{border:1px solid #ccc;padding:10px 30px 30px 30px;margin-bottom:30px;}
+#receiptBox p.lead{margin: 0 0 10px 150px;font-size:14px;}
+.receipt_detail{margin:0 0 15px 150px;width:60%;}
+.receipt_detail dt{width:15%;float:left;margin:0 10px 5px;padding-left:10px;}
+.receipt_detail dd.receipt_name,dd.receipt_price{margin:5px 0 10px;border-bottom:1px solid #ccc;}
+.receipt_name,.receipt_price{font-size:18px;font-weight:bold;}
+.receipt_purpose,.receipt_pay,receipt_date{font-size:12px;margin-bottom:5px;}
+.receipt_ttl{margin: 20px 0 10px;}
+#print_receipt dl#orderID{padding:0;background:none;margin: 20px 0 10px;}
+#print_receipt table.horizontal th{background:none;border:1px solid #ccc;}
+#print_receipt table.horizontal td {padding:5px 10px;}
+#print_receipt .logo{margin-top:15px}
+#print_receipt table.vertical th{background:none;padding: 5px 10px;}
+#print_receipt table.vertical td{padding: 5px 10px;}
+p.message {margin-bottom: 10px;}
+#print_set{margin-bottom: 20px;}
+#print_receipt .caption{float:left;width:50%;font-size:14px;}
+#print_receipt input{margin:0 2px 0 10px;}
+.print_link{float:right;width:42%;}
+.print_link p{float:left;}
+#print_set input,#print_set label{margin-top: 5px;}
+#createReceipt submit{margin-left:300px;}
+#orderReceipt #main {width: 100%;}
+#orderReceipt .submit{margin-left:20px}
+
+#createReceiptArea p.submit{margin-left:171px; width: 148px;}
+#createReceiptArea p.annotation{margin-bottom:10px}
+
+/*clearfix*/
+.receipt_detail,#receiptBox dd,#print_set{zoom:1;}
+.receipt_detail:after,#receiptBox dd:after,#print_set:after{content: ""; display: block; clear: both;}
+
+
+/* nishiwaki */
+#orderDetail .disabled,
+#orderCancel .disabled,
+#createReceipt .disabled,
+#orderReceipt .disabled { color: #999999;}
+
+#orderDetail .disabled .serviceName,
+#orderCancel .disabled .serviceName,
+#createReceipt .disabled .serviceName,
+#orderReceipt .disabled .serviceName {text-decoration: line-through;}
+
+#orderDetail tr.incidentalServiceItem td,
+#orderCancel tr.incidentalServiceItem td,
+#createReceipt tr.incidentalServiceItem td,
+#orderReceipt tr.incidentalServiceItem td {border-width: 0 1px;}
+
+#orderDetail table.horizontal td.giftServiceSet,
+#orderCancel table.horizontal td.giftServiceSet,
+#createReceipt table.horizontal td.giftServiceSet,
+#orderReceipt table.horizontal td.giftServiceSet {padding-left: 75px;}
+
+#orderDetail .giftMeaage,
+#orderCancel .giftMeaage,
+#createReceipt .giftMeaage,
+#orderReceipt .giftMeaage {font-size: 11px; word-break: break-all; word-wrap: break-word; max-width: 600px;}
+
+#orderDetail .serviceName,
+#orderCancel .serviceName,
+#createReceipt .serviceName,
+#orderReceipt .serviceName {margin-right: 10px;}

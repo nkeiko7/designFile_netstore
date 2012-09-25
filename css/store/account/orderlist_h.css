@@ -1,0 +1,107 @@
+/* CLEARFIX */
+.aside dl,
+dl#orderID,
+.total dl,
+#giftcard dl {zoom:1;}
+.aside dl:after,
+dl#orderID:after,
+.total dl.sum:after,
+#giftcard dl:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+
+body#orderList h1 {background-image: url(/img/store/account/orderlist/title_index.png);}
+body#orderDetail h1 {background-image: url(/img/store/account/orderlist/title_detail.png);}
+body#orderCancel h1 {background-image: url(/img/store/account/orderlist/title_cancel.png);}
+body#orderCancelComplete h1 {background-image: url(/img/store/account/orderlist/title_complete.png);}
+
+.aside li {margin-bottom: 5px; font-size: 11px;}
+
+#orderList #main,
+#orderDetail #main,
+#orderCancel #main {width: 100%;}
+
+#orderDetail .lead {float: left; width: 750px;}
+
+#orderList .lead {float: left; margin-right: 20px; width: 640px;}
+#orderList .aside {overflow: hidden; margin-bottom: 30px; padding-left: 20px; border-left: 1px solid #e6e6e6;}
+.pageNav {clear: both;}
+
+dl#orderID {margin: 30px 0 20px; background: #f3f3f3; padding: 15px;}
+#orderID dt {float: left; font-weight: bold; margin-right: 5px; padding-right: 5px; border-right: 1px solid #ccc;}
+#orderID dd {float: left; margin-right: 20px; overflow: hidden;}
+
+table.horizontal {width: 100%; margin-bottom: 10px;}
+table.vertical {width: 100%; margin-bottom: 30px;}
+#orderDetail p.annotation {margin-bottom: 30px;}
+.tracking {font-size:10px;}
+.tracking .num {font-size:12px; display:block;}
+.orderID {text-align: center;}
+table.horizontal .orderStatus {text-align: center;}
+.quantity {text-align: right;}
+
+.total {font-size: 11px; margin: 0 11px 30px auto;}
+.total th {padding: 5px 20px 0 0; font-weight: normal;}
+.total td {padding-top: 5px; text-align: right;}
+.total .shipping th {padding: 5px 20px 10px 0;}
+.total .shipping td {padding: 5px 0 10px;}
+.total .payment td,
+.total .payment th {border-top: 1px solid #666; border-bottom: 1px solid #e6e6e6;}
+.total .payment th {font-size: 14px; padding: 10px 20px 5px 0;}
+.total .payment td {padding: 10px 0 5px;}
+.total .payment td .num {font-size: 14px; font-weight: bold; margin: 0 2px; font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック" ,sans-serif;}
+.total .tax th,
+.total .tax td {padding: 10px 0 5px;}
+.total .tax,
+.total .giftcard,
+.total .cash { color: #666;}
+
+.cancel {font-size: 11px;}
+.none .apology {font-size: 11px;}
+.blank .prev {float: none; text-align: center;}
+#orderList .price .num {font-size: 12px;}
+
+.listdisc {margin-bottom: 20px;}
+.listdisc li {list-style:disc outside none;margin: 0 0 0 1.5em; padding: 0;}
+
+#couponInfo {margin: 10px 0 20px; background: #f3f3f3; padding: 15px;}
+#couponInfo .num {margin: 0 5px; font-weight: bold; font-size: 14px;}
+#couponInfo .valid {margin-left: 20px;}
+#couponInfo .yyyy,
+#couponInfo .mm,
+#couponInfo .dd {margin-left: 5px; font-weight: bold;}
+
+#giftcardWrap {text-align: center; clear: both;}
+#giftcard {display: table; *display: inline; zoom:1; margin: 0 auto 20px; background: #f3f3f3; padding: 15px; text-align: left;}
+#giftcard p {margin-bottom: 10px; padding-bottom: 10px; text-align: center; border-bottom: 1px solid #ddd;}
+#giftcard p span {text-align: left; display: inline-block;}
+#giftcard dl dt {float: left; clear: both; width:80px; margin-bottom: 5px; padding: 5px 0; font-weight: bold; vertical-align: middle; text-align: right;}
+#giftcard dl dd {margin: 0 0 5px 80px; padding: 3px 0 3px 15px; vertical-align: middle;}
+#giftcard input {width: 145px; margin-right: 5px;}
+#giftcard input#pin {width: 35px;}
+
+.submit {margin-left: 362px;}
+
+table#addressee {margin-right: 20px;}
+table#addressee,
+table#orderStatusInfo {float: left; width:430px;}
+#orderDetail table#orderStatusInfo {margin-bottom: 20px;}
+table#addressee th,
+table#orderStatusInfo th {width:30%;}
+#addressee .address {line-height: 1.7;}
+#addressee .time {border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px;}
+#addressee .deliveryDate th {white-space: nowrap;}
+
+
+table#addressee dt {font-weight: bold; margin-bottom: 5px; font-size: 14px;}
+table#addressee dt .detail {font-weight: normal; font-size: 12px;}
+table#addressee dt a { background: url(/img/common/imageview.gif); background-repeat: no-repeat; background-position: 0 2px; width: 11px; height: 8px; padding: 0 2px 0 14px;}
+
+.prevNext {clear: both;}
+
+#orderCancelComplete #orderID {font-size:14px; font-weight:bold; margin-bottom:20px; text-align: center; background: #f3f3f3; padding:15px;}
+
+#orderCancelComplete p {margin-bottom:20px;}
+
+#loadContent {min-height: 75px;}

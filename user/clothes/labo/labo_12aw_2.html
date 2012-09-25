@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MUJI Labo 12AW coordinate</title>
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/muji.css">
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/store/store.css">
+	<link rel="stylesheet" href="http://www.muji.net/css/store/campaign/campaign.css">
+	<link rel="stylesheet" href="http://www.muji.net/css/store/clothes/clothesStyle.css">
+	<link rel="stylesheet" href="http://www.muji.net/css/store/clothes/clothesHeader.css">
+	<link rel="stylesheet" href="/css/store/clothes/labo_12aw_2.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.muji.net/img/lab/fitness80/js/jquery.scrollorama.js"></script>
+	<script type="text/javascript" src="http://www.muji.net/img/lab/fitness80/js/jquery.scrollTo.js"></script>
+	<script type="text/javascript" src="http://www.muji.net/img/lab/fitness80/js/jquery.localscroll.js"></script>
+	<script type="text/javascript" src="http://www.muji.net/img/lab/fitness80/js/jquery.belatedPNG.min.js"></script>
+	<!--[if IE]><script src="http://www.muji.net/js/lib/html5.js"></script><![endif]-->
+	<script type="text/javascript">
+	
+	$(function() {
+		
+	  //coordinate img hover action  
+		$(".coordinateimg img").hover(
+	  function () {
+	  	$(this).parent().addClass("selected");
+	    $(this).addClass("selectedimg");
+	    $(this).parent().siblings(".detailBtn").addClass("selected2");
+	  }, 
+	  function () {
+	  	$(this).parent().removeClass("selected");
+	    $(this).removeClass("selectedimg");
+	    $(this).parent().siblings(".detailBtn").removeClass("selected2");
+	  });
+	  
+	  //.detailBtn hover action
+	  $(".detailBtn").hover(
+	  function () {
+	  	$(this).addClass("selected2");
+	  	$(this).siblings(".coordinateimg").addClass("selected");
+	    $(this).siblings(".coordinateimg img").addClass("selectedimg");//効いていない
+	  }, 
+	  function () {
+	  	$(this).removeClass("selected2");
+	  	$(this).siblings(".coordinateimg").removeClass("selected");
+	    $(this).siblings(".coordinateimg img").removeClass("selectedimg");//効いていない
+	  });
+	  
+	 
+		//thumbnail
+		$("#listBtn a").click(function() {
+			$("#coordinateList").show();
+			return false;
+		});
+		$(".listclose").click(function() {
+			$("#coordinateList").hide();
+			return false;
+		});
+		$("#coordinateList li a").click(function() {
+			$(this).parents("#coordinateList").hide();
+		});
+		
+		//show detail
+		$(".detailBtn").click(function() {
+			$(this).siblings(".detail").toggle();
+			return false;
+		});
+		$(".closeBtn").click(function() {
+			$(this).parents(".detail").hide();
+			return false;
+		});
+		$(".coordinateimg").click(function() {
+			$(this).siblings(".detail").toggle();
+			return false;
+		});
+	
+		
+		//about Labo
+		$("#about .aboutLaboBtn").click(function() {
+		    $("#aboutdetail").show();
+			return false;
+		});
+	  	$(".aboutclose").click(function() {
+				$("#aboutdetail").hide();
+			return false;
+	  });
+	  
+	
+		//scroll
+		$('a[href^=#]').click(function() {
+	      var speed = 400;
+	      var href= $(this).attr("href");
+	      var target = $(href == "#" || href == "" ? 'html' : href);
+	      var position = target.offset().top;
+	      $($.browser.safari ? 'body' : 'html').animate({scrollTop:position}, speed, 'swing');
+	      return false;
+	   });
+	   
+	   //効いてない
+	   $('#skipNav ul').localScroll();
+			var scrollorama = $.scrollorama({blocks:'.scrollblock', enablePin:'false'});	
+			scrollorama.onBlockChange(function() {
+				var i = scrollorama.blockIndex;	
+				$('#skipNav li a').css('backgroundPosition','10px 10px');
+				$('#skipNav li a').hover(
+					function(){$(this).css('backgroundPosition','-30px 10px')},
+					function(){$(this).css('backgroundPosition','10px 10px')
+				});
+				$('#skipNav li a').eq(i).css('backgroundPosition','-70px 10px');
+				$('#skipNav li a').eq(i).hover(
+					function(){$(this).css('backgroundPosition','-30px 10px')},
+					function(){$(this).css('backgroundPosition','-70px 10px')
+				});
+			});
+		
+	});
+	
+	</script>
+
+</head>
+<body id="Labo">
+	<header id="headerWrap"><div id="header">
+	<div id="siteName"><a href="/store/">無印良品 ネットストア</a></div>
+	<ul id="globalNav">
+		<li id="gnHome"><a href="http://www.muji.net/">ホーム</a></li>
+		<li id="gnStore"><a href="/store/">ネットストア</a></li>
+		<li id="snVisitor" class="mobileOnly"><a href="/store/pc/user/guide/index.html">はじめての方へ</a></li>
+		<li id="gnShop"><a href="http://www.muji.net/shop/">店舗情報</a></li>
+		<li id="gnLab"><a href="http://www.muji.net/lab/">くらしの良品研究所</a></li>
+		<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+		<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+		<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+	</ul>
+	</div></header>
+	
+	<section id="mainWrap">
+	
+		<div id="aboutdetail"><div class="aboutdetailwrap">
+			<div class="aboutclose"><img src="/img/store/clothes/labo/12aw/close.png" height="27" width="27"></div>
+				<div class="ja">
+				MUJI Laboは、考え方や姿勢、スタイル、ディテールにおいて、<br>着る人に新しい価値をもたらす服です。<br><br>無印良品の思想は、象徴的なステーショナリーや<br>生活雑貨に見られるように、シンプルさと実用性との調和にあります。<br>これをそのまま服づくりにも通わせ、<br>暮らしの道具としての服をつくります。<br><br>快適性や機能性、過度の装飾からの解放を意識したスタイル。<br>飾り立てるファッションから距離をおいた、<br>男女を問わず着られるかたち。<br>環境を敬う気持ちから採用したオーガニック素材。<br>形やパターン、素材、色がひとつになって、<br>これからの衣服を示すメッセージとなります。<br>服にまつわるあらゆる要素が調和した一着です。
+				</div><!-- /.ja -->
+				<div class="en">
+				Through its viewpoint, attitude, style and details,<br>MUJI Labo clothing brings its wearers something new.<br><br>MUJI’s approach can be seen in the iconic stationery and houseware,<br>achieving harmony between simplicity and practicality.<br>That approach is applied unchanged when MUJI makes apparel.<br>The result is clothing that becomes a tool for living.<br><br>The style is created to be comfortable, functional,<br>and free from superfluous decoration.<br>It avoids lavishly adorned fashions. Its shapes suit both men and women.<br>Organic materials are adopted out of a sense of respect for the environment.<br>Shapes, patterns, materials and colours all join together<br>communicating the new form that clothing will take.<br>Each item achieves harmony between the elements that clothing embodies.
+				</div><!-- /.en -->
+			</div></div><!-- /#aboutdetail and .aboutdetailwrap -->
+		
+		<div id="coordinateList"><div class="coordinateListwrap">
+			<div class="listclose"><img src="/img/store/clothes/labo/12aw/close.png" height="27" width="27"></div>
+			<ul>
+			<li><a href="#august1"><img src="/img/store/clothes/labo/12aw/hiki001_01.jpg" alt=""></a></li>
+			<li><a href="#august2"><img src="/img/store/clothes/labo/12aw/hiki002_01.jpg" alt=""></a></li>
+			<li><a href="#august3"><img src="/img/store/clothes/labo/12aw/hiki003_01.jpg" alt=""></a></li>
+			<li><a href="#august4"><img src="/img/store/clothes/labo/12aw/hiki004_01.jpg" alt=""></a></li>
+			<li><a href="#august5"><img src="/img/store/clothes/labo/12aw/hiki005_01.jpg" alt=""></a></li>
+			<li><a href="#august6"><img src="/img/store/clothes/labo/12aw/hiki006_01.jpg" alt=""></a></li>
+			<!-- 
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki007_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki008_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki009_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki010_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki011_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki012_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki013_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki014_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki015_01.jpg" alt=""></a></li>			
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki016_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/img/store/clothes/labo/12aw/hiki017_01.jpg" alt=""></a></li>
+			 -->
+			</ul>
+		</div></div><!-- /#coordinateList and .coordinateListwrap -->
+		
+		<section id="LaboMain">
+			
+			<h1><a href="#Labo"><img src="/img/store/clothes/labo/12aw/labo_logo_side.png"  alt="MUJI Labo"></a></h1>
+			
+			<div id="listBtn"><a href="#">一覧</a></div>
+			<div id="about"><a href="#" class="aboutLaboBtn">About</a></div>
+
+			<div id="august1" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><a href="#"></a><img src="/img/store/clothes/labo/12aw/hiki001_01.jpg" alt=""></a></span>
+				<div class="detail current">
+					<img src="/img/store/clothes/labo/12aw/yori001-01.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+						</div>
+						<p class="title">機能をいかしたデザイン</p>
+						<p>ポケットは無印良品の商品とモジュールを揃えました。シャツのポケットには、ペンとカードケースがぴったりと収まります。</p>
+						<span class="closeBtn">close</span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /.detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori001-02.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon">1</span>
+							<span class="naviicon current">2</span>
+						</div>
+						<p class="title">環境への配慮</p>
+						<p>生地には、農薬を使わない土地で育てたオーガニックコットンを使用しました。ボタンは、回収されたペットボトルからつくったリサイクルポリエステルです。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+						<!-- <span class="nextBtn"><a href="#">next</a></span> -->
+					</div>
+				</div><!-- /.detail -->
+				
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761209760">オーガニックコットンブロードシャツ・白</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761541457">オーガニックコットンデニムオーバーオール・インディゴ</a></p>
+					<p>紳士
+					<a href="http://www.muji.net/store/cmdty/detail/4934761817637">オーガニックコットンブロードシャツ・ライトグレー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761548784">オーガニックコットンデニム5ポケットパンツ・インディゴ</a></p>
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<div id="august2" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><img src="/img/store/clothes/labo/12aw/hiki002_01.jpg" alt=""></span>
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori002-01.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+						</div>
+						<p class="title">機能をいかしたデザイン</p>
+						<p>ポケットは無印良品の商品とモジュールを揃えました。シャツのポケットには、ペンとカードケースがぴったりと収まります。</p>
+						<span class="closeBtn">close</span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /.detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori002-02.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+						</div>
+						<p class="title">環境への配慮</p>
+						<p>生地には、農薬を使わない土地で育てたオーガニックコットンを使用しました。ボタンは、回収されたペットボトルからつくったリサイクルポリエステルです。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+					</div>
+				</div><!-- /.detail -->
+				
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761820187">オーガニックコットンブロードシャツ・グレー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761541556">オーガニックコットンツイルスカート・ネイビー</a>
+					</p>
+					<p>紳士
+					<a href="http://www.muji.net/store/cmdty/detail/4934761817408">オーガニックコットンブロードシャツ・ブルー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761823751">オーガニックコットンチノパンツ・モカブラウン</a>
+					</p>
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<div id="august3" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><img src="/img/store/clothes/labo/12aw/hiki003_01.jpg" alt=""></span>
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori003-01.jpg">
+					<div class="comment">
+						<!-- 
+						<div class="navi">
+							<span class="naviicon current">1</span>
+						</div>
+						 -->
+						<p class="title">環境への配慮</p>
+						<p>ボタンは、回収されたペットボトルからつくったリサイクルポリエステルを使用しました。地球資源を無駄なく使える素材を選んでいます。</p>
+						<span class="closeBtn">close</span>
+						<!-- 
+						<span class="prevBtn"><a href="#">prev</a></span>
+						<span class="nextBtn"><a href="#">next</a></span>
+						 -->
+					</div>
+				</div><!-- /.detail -->
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761532974">オーガニックコットン吊り裏毛パーカー・ネイビー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761536040">オーガニックコットンブロードチェックロングシャツ	・ギンガムチェック</a>
+					</p>
+					<p>紳士
+					<a href="http://www.muji.net/store/cmdty/detail/4934761529370">オーガニックコットン吊り裏毛パーカー・ネイビー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761822945">オーガニックコットン天竺ヘンリーネック長袖Ｔシャツ・杢カーキ</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761823805">オーガニックコットンチノパンツ・ネイビー</a>
+					</p>		
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<div id="august4" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><img src="/img/store/clothes/labo/12aw/hiki004_01.jpg" alt=""></span>
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori004-01.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+							<span class="naviicon">3</span>
+						</div>
+						<p class="title">環境への配慮</p>
+						<p>生地には、農薬を使わない土地で育てたオーガニックコットンを使用しました。ファスナーは、回収されたペットボトルからつくられたリサイクルポリエステルを使用しています。</p>
+						<span class="closeBtn">close</span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori004-02.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon">1</span>
+							<span class="naviicon current">2</span>
+							<span class="naviicon">3</span>
+						</div>
+						<p class="title">環境への配慮</p>
+						<p>生地には、農薬を使わない土地で育てたオーガニックコットンを使用しました。ファスナーは、回収されたペットボトルからつくられたリサイクルポリエステルを使用しています。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori004-03.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon">1</span>
+							<span class="naviicon">2</span>
+							<span class="naviicon current">3</span>
+						</div>
+						<p class="title">実用的・使いやすさ</p>
+						<p>パーカーは、背中上部に、通気性を良くするメッシュ素材を使用しました。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+					</div>
+				</div><!-- /detail -->
+				
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761536729">ナイロンコットン混フーデッドパーカー・ネイビー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761533339">オーガニックコットン天竺ボートネックシャツ・ネイビー×杢ベージュ</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761822204">オーガニックコットンチノハーフパンツ・モカブラウン</a>
+					</p>
+					<p>紳士
+					<!-- <a href="http://www.muji.net/store/cmdty/detail/4934761545929">オーガニックコットンツイルカバーオールジャケット・ネイビー</a>/ -->
+					<a href="http://www.muji.net/store/cmdty/detail/4934761530468">オーガニックコットン天竺ボートネックシャツ・ネイビー×杢ベージュ</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761823751">オーガニックコットンチノパンツ・モカブラウン</a>
+					</p>
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<div id="august5" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><img src="/img/store/clothes/labo/12aw/hiki005_01.jpg" alt=""></span>
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori005-01.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+						</div>
+						<p class="title">機能をいかしたデザイン</p>
+						<p>無印良品の商品とモジュールを合わせたポケットには、カードケースがぴったりと収まります。</p>
+						<span class="closeBtn">close</span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori005-02.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon">1</span>
+							<span class="naviicon current">2</span>
+						</div>
+						<p class="title">機能をいかしたデザイン</p>
+						<p>アウターのポケットは、文庫本がちょうど収まるサイズです。さらに、二重底にして補強しました。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+					</div>
+				</div><!-- /detail -->
+				
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761536750">オーガニックコットンツイルカバーオールジャケット・カーキ</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761820484">オーガニックコットンブロードスタンドカラーロングシャツ・ブルー</a>
+					</p>
+					<p>紳士
+					<a href="http://www.muji.net/store/cmdty/detail/4934761517360">メリノウールカシミヤ入りVネックカーディガン・杢ネイビー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761818405">オーガニックコットンブロードボタンダウンシャツ・ブルー</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761549002">オーガニックコットンツイルワークパンツ・カーキ</a>
+					</p>
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<div id="august6" class="coordinate">
+				<p class="detailBtn">+ detail</p>
+				<span class="coordinateimg"><img src="/img/store/clothes/labo/12aw/hiki006_01.jpg" alt=""></span>
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori006-01.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon current">1</span>
+							<span class="naviicon">2</span>
+						</div>
+						<p class="title">実用的・使いやすさ</p>
+						<p>パーカーの背中上部には、通気性を良くするメッシュ素材を使用しました。</p>
+						<span class="closeBtn">close</span>
+						<span class="nextBtn"><a href="#">next</a></span>
+					</div>
+				</div><!-- /detail -->
+				<div class="detail">
+					<img src="/img/store/clothes/labo/12aw/yori006-02.jpg">
+					<div class="comment">
+						<div class="navi">
+							<span class="naviicon">1</span>
+							<span class="naviicon current">2</span>
+						</div>
+						<p class="title">機能をいかしたデザイン</p>
+						<p>無印良品の商品とモジュールを合わせたポケットには、カードケースがぴったりと収まります。</p>
+						<span class="closeBtn">close</span>
+						<span class="prevBtn"><a href="#">prev</a></span>
+					</div>
+				</div><!-- /detail -->
+				
+				<div class="productList">
+					<p>婦人
+					<a href="http://www.muji.net/store/cmdty/detail/4934761516707">メリノウールカシミヤ入りクルーネックカーディガン・杢マスタード</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761534862">オーガニックコットンブロードチェックシャツ・ミニチェック</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761822204">オーガニックコットンチノハーフパンツ・モカブラウン</a>
+					</p>
+					<p>紳士
+					<a href="http://www.muji.net/store/cmdty/detail/4934761545707">ナイロンコットン混フーデッドパーカー・マスタード</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761539232">オーガニックコットンブロードストライプシャツ・ピンストライプ</a>/
+					<a href="http://www.muji.net/store/cmdty/detail/4934761823805">オーガニックコットンチノパンツ・ネイビー</a>
+					</p>
+				</div><!-- /.productList -->
+			</div><!-- /.coordinate -->
+			
+			<nav id="skipNav">
+				<ul>
+					<li><a href="#august1">august1</a></li>
+					<li><a href="#august2">august2</a></li>
+					<li><a href="#august3">august3</a></li>
+					<li><a href="#august4">august4</a></li>
+					<li><a href="#august5">august5</a></li>
+					<li><a href="#august6">august6</a></li>
+					<!-- 
+					<li><a href="#september1">september1</a></li>
+					<li><a href="#september2">september2</a></li>
+					<li><a href="#september3">september3</a></li>
+					<li><a href="#september4">september4</a></li>
+					<li><a href="#september5">september5</a></li>
+					<li><a href="#october1">october1</a></li>
+					<li><a href="#october2">october2</a></li>
+					<li><a href="#october3">october3</a></li>
+					<li><a href="#october4">october4</a></li>
+					<li><a href="#novenber1">novenber1</a></li>
+					<li><a href="#novenber2">novenber2</a></li>
+					
+					<li class="listBtn"><a href="#coordinateList">coordinateList</a></li>
+					-->
+				</ul>
+			</nav><!-- /#skipNav -->
+		
+		</section><!-- /#LaboMain -->
+	</section><!-- /#main -->
+
+
+<footer id="footerWrap"><div id="footer">
+	<div id="mobileNav">
+		<ul>
+			<li><a href="http://www.muji.net/mt/contact/guide/">ご利用ガイド</a></li>
+			<li><a href="/contact/">お問い合わせ／重要なお知らせ</a></li>
+			<li><a href="/sitemap/">サイトマップ</a></li>
+			<li><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+		</ul>
+	</div>
+	<ul id="pageEnd">
+		<li class="siteTop"><a href="/store/">ネットストアTOP</a></li>
+		<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+	</ul>
+	<div id="modeSwitch">
+		<dl>
+			<dt>表示モード：</dt>
+			<ul>
+				<li><a id="modeSwitch1" href="#" class="current">スマートフォン</a></li>
+				<li><a id="modeSwitch2" href="#">PC</a></li>
+			</ul>
+		</dl>
+	</div>
+	<div id="storeFooterWrap">
+	</div><!-- /#storeFooter and #storeFooterWrap -->
+	<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></footer><!-- /#footer and #footerWrap -->	
+
+</body>
+</html>
+

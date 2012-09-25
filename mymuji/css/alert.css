@@ -1,0 +1,29 @@
+body {background: #f7f7f7;}
+.message {text-align: center; margin-top: 30px; font-size: 13px;}
+
+.btn {text-align: center; margin-bottom: 15px;}
+.btn a {background: #333; color: #fff; font-weight: bold; padding: 5px 40px; display: inline-block; cursor: pointer; text-decoration: none; border-radius: 2px;}
+.btn a:hover {background: #7f0019; color: #fff;}
+
+#submit {margin: 30px auto 0; text-align: center;}
+#submit button.go {background: #333; color: #fff; font-weight: bold; display: inline-block; cursor: pointer; text-decoration: none;
+border-radius: 2px;
+padding: 5px 20px; line-height: 1.4; border: 0; font-size: 14px;}
+#submit button.back {background: #fff; color: #333; font-weight: bold; display: inline-block; cursor: pointer; text-decoration: none;
+border-radius: 2px;
+padding: 4px 10px; line-height: 1.4; border: 0; font-size: 14px; margin-left: 5px; border:1px solid #ccc;}
+#submit button.go:hover {background: #7f0019; color: #fff;}
+#submit button.back:hover {border:1px solid #7f0019;}
+#submit button.go.loading {color: #666; background: #555; cursor: default; text-indent: 0;}
+
+.message.error {margin-top: -16px; position: absolute; top: 50%; width: 100%;}
+.message span {display: inline-block; background: #f5f2e9; padding: 10px; border-radius: 5px;}
+.message.error span {background: #fdd;}
+
+
+@media screen and (min-device-width : 320px) and (max-device-width : 569px) {
+ body.alert {background: #fff;}
+ .message {margin-top: 10px;}
+ #submit {margin: 10px auto 0; text-align: center;}
+ #submit button.go, #submit button.back {margin: 10px auto; padding: 10px auto; width: 90%;}
+ }

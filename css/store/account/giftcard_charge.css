@@ -1,0 +1,18 @@
+
+.prevNext{margin-top:20px;}
+.prevNext .next{width:250px;margin-left:250px;text-align:center;}
+
+#giftcardDetail th {text-align: left;}
+
+table.horizontal{width:100%;}
+.num{margin-right:5px;}
+.total .num{margin-left:5px;}
+td{text-align:center;}
+h1{height:27px;margin:20px 0;background-repeat:no-repeat;text-indent:-9999px;overflow:hidden;}
+body#couponList h1{background-image:url(/img/store/account/coupon/title_giftcard_detail.png);}
+#cardinfo dt {float: left; margin: 0 10px 5px 0; font-weight: bold;}
+#cardinfo dd {margin-bottom: 5px; }
+
+/* clearfix */
+#cardinfo dd {zoom:1;}
+#cardinfo dd:after {content:" ";display:block;visibility:hidden;clear:both;height:.1px;font-size:.1em;line-height:0;}

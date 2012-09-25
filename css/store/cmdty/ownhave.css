@@ -1,0 +1,27 @@
+/* usersList */
+body.usersList h1 {font-weight: bold; font-size: 14px; margin-bottom: 10px;}
+
+body.usersList #users {margin-right: -15px; letter-spacing: -.40em; width: 590px;}
+body.usersList #users li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 179px; margin: 0 0 15px 0; vertical-align: top; letter-spacing: normal;position: relative;
+border-top: 1px solid #eee; padding: 10px 15px 0 0;
+min-height: 35px;
+}
+body.usersList #users .profileImage {margin-right: 10px; position: absolute; left: 0; top: 10px; width: 40px; height: 40px;}
+body.usersList #users a,
+body.usersList #users .follow span {text-decoration: none; margin-left: 45px; display: block;}
+body.usersList #users .name {font-weight: bold;}
+body.usersList #users .follow {font-size: 10px; margin-top: 5px;}
+
+.more {margin-top: 10px; overflow: hidden;}
+.more a {background-color: #E1E1E1; color: #333333; display: block; padding: 8px; text-align: center; text-decoration: none;}
+.more a:hover {background-color: #7F0019; color: #FFFFFF;}
+.more a span {background-position: 0 3px;}
+.more a:hover span {background-position: 0 -47px;}
+.more span {background: url("http://www.muji.net/img/store/top/icon_openclose.gif") no-repeat; padding-left: 10px;}
+
+.more a.loading {background: #eee; color: #eee; cursor: default;}
+.more a.loading span {background: none;}

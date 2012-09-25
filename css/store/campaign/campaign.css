@@ -1,0 +1,27 @@
+h1 {border-bottom: 0; padding-bottom: 0; margin-bottom: 10px;}
+h1 img {vertical-align: bottom;}
+
+#main h3 {margin-top: 20px;}
+
+.relatedLink {margin: 10px 0;}
+
+.itemList ul {margin-right: -20px; letter-spacing: -.40em;}
+.itemList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 100px; margin: 10px 20px 0 0; vertical-align: top; letter-spacing: normal;}
+.itemList a {display: block; margin-bottom: 5px;}
+.itemList .thumb {display: block; margin-bottom: 3px;}
+.itemList .name {}
+.itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
+.itemList br {display: none;}
+
+.fancyBoxLink {text-decoration: none;}
+.fancyBoxLink img {margin-bottom: 10px; border: 1px solid #fff;}
+.fancyBoxLink:hover img {border: 1px solid #7f0019;}
+
+.aside {border: 5px solid #efefef; margin-bottom: 20px; padding: 15px;}
+
+.priceListVertical {margin-top: 20px;}
+.priceListVertical li {margin-bottom: 10px;}

@@ -1,0 +1,451 @@
+@charset "utf-8";#main{_float:left;}
+#addresseeConfirm #main{width:100%;}
+.prevNext,#recommend,#shoppingFlow,#option,#coupon,dl#orderID,#incidental #gift .faq,#coupon #balanceCheck dl,#addresseeChange #item dd{zoom:1;}
+.prevNext:after,#recommend:after,#shoppingFlow:after,#option:after,#coupon:after,dl#orderID:after,#incidental #gift .faq:after,#coupon #balanceCheck dl:after,#addresseeChange #item dd:after{content:" ";display:block;visibility:hidden;clear:both;height:.1px;font-size:.1em;line-height:0;}
+h1{height:27px;margin:20px 0;background-repeat:no-repeat;text-indent:-9999px;overflow:hidden;}
+#shoppingCart h1{margin-top:0;background-image:url(/img/store/cart/title_shoppingcart.png);}
+#addressee h1{background-image:url(/img/store/cart/title_index.png);}
+#addresseeConfirm h1{background-image:url(/img/store/cart/title_addressconfirm.png);}
+#addresseeChange h1{background-image:url(/img/store/cart/title_addresschange.png);}
+#separate h1{background-image:url(/img/store/cart/title_deliverydivide.png);}
+#optionService h1{background-image:url(/img/store/cart/title_deliv_incid.png);height:60px;}
+#shipping h1{background-image:url(/img/store/cart/title_arrival.png);}
+#incidental h1{background-image:url(/img/store/cart/title_incidental.png);}
+#coupon h1{background-image:url(/img/store/cart/title_coupongift.png);}
+#payment h1{background-image:url(/img/store/cart/title_payment.png);}
+#confirm h1{background-image:url(/img/store/cart/title_confirm.png);}
+#complete h1{background-image:url(/img/store/cart/title_thanksorder.png);}
+#main .focus h2{margin-top:0;}
+#recommend h2{font-size:13px;font-weight:bold;margin-top:0;padding-top:10px;}
+#optionService h2{font-size:14px;}
+#addresseeConfirm h2{margin-top:20px;font-size:12px;}
+#addresseeConfirm h2 b{font-size:18px;margin-right:5px;}
+#addresseeConfirm h2 span{font-weight:normal;}
+table.horizontal th{white-space:nowrap;}
+.message.error{margin:10px 0;}
+.outofstock{background-color:#fdd;}
+#freeShipping{font-size:11px;padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #e6e6e6;}
+#freeShipping b{font-size:12px;}
+table.horizontal{width:100%;margin-bottom:10px;}
+.quantity{text-align:right;width:50px;}
+#optionService #shipping .prevNext,#optionService #option .prevNext,#optionService #coupon .prevNext{float:right;}
+#optionService #shipping p{margin-bottom:10px;}
+#shipping .horizontal{clear:both;}
+#optionService .faq{float:left;}
+#optionService .faq ul{margin-top: 5px;}
+#optionService .faq li{display: inline; margin-right: 10px;}
+#optionService .addrNum{background:#f3f3f3;padding:5px;margin-right:5px;font-size:11px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+#optionService .annotation{margin-bottom:15px;}
+.total{font-size:11px;margin:0 11px 10px auto;}
+#orderSummary .total th,#orderSummary .price th{font-size: 12px;}
+.total th{padding:5px 20px 0 0;font-weight:normal;}
+.total td{padding-top:5px;text-align:right;}
+#shoppingCart .total .productTotal td,#shoppingCart .total .productTotal th{border-bottom:1px solid #e6e6e6;}
+#shoppingCart .total .productTotal th{font-size:14px;padding:10px 20px 5px 0;}
+#shoppingCart .total .productTotal td{padding:10px 0 5px;}
+#shoppingCart .total .productTotal td .num{font-size:14px;font-weight:bold;margin:0 2px;font-family:"Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",sans-serif;}
+.total .shipping th{padding:5px 20px 10px 0;}
+.total .shipping td{padding:5px 0 10px;}
+.total .payment td,.total .payment th{border-top:1px solid #666;border-bottom:1px solid #e6e6e6;}
+.total .payment th{font-size:14px;padding:10px 20px 5px 0;}
+.total .payment td{padding:10px 0 5px;}
+.total .payment td .num{font-size:14px;font-weight:bold;margin:0 2px;font-family:"Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",sans-serif;}
+.total .tax th,.total .tax td{padding:10px 0 5px;}
+.total .tax,.total .giftcard,.total .cash{color:#666;}
+.recast{margin:5px 11px;text-align:right;}
+.addEdit{text-align:right;margin-top:-1.2em;}
+#separate .add{text-align:right;margin-bottom:10px;}
+#recommend{margin-top:60px;border:1px solid #ccc;padding:5px;}
+#recommend h2{padding:0 0 5px;border-bottom:1px solid #e8e8e8;}
+#recommend .itemList ul{width:648px;letter-spacing:-.40em;}
+#recommend .itemList li{display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;width:150px;margin:0 5px;vertical-align:top;letter-spacing:normal;}
+.itemList a{text-decoration:none;}
+.itemList .thumb{float:left;*cursor:pointer;}
+.itemList .desc{padding-left:50px;display:block;}
+.itemList .name{font-size:11px;text-decoration:underline;}
+.itemList .price{margin-top:5px;display:block;color:#000;}
+#recommend .btn{width:20px;font-size:10px;line-height:60px;}
+#recommend .prev{float:left;}
+#recommend .next{float:right;}
+#recommend .disabled a{background:#ccc;cursor:default;}
+.list{margin-bottom:20px;border-bottom:solid 1px #666;padding-bottom:15px;}
+.list dt.first{border-top:solid 1px #666;margin-top:10px;}
+.list dt{border-top:solid 1px #e6e6e6;clear:both;padding:15px 15px 0;margin:15px 0 5px;}
+.list dd{padding:0 15px;}
+.list .name{font-weight:bold;font-size:13px;}
+.list .address{width:500px;}
+.list .function{margin-top:-2em;float:right;}
+#addresseeConfirm table.horizontal{margin-top:10px;}
+td.addressee{text-align:center;}
+td.addressee .change{margin-top:5px;}
+th.divide,td.divide{text-align:center;width:50px;}
+.shipping{text-align:right;}
+#addresseeConfirm .prevNext .next{margin-left:362px;}
+#addresseeChange #item{margin-bottom:40px;padding:5px;border:1px solid #ccc;}
+#addresseeChange #item dt{padding-bottom:5px;margin-bottom:5px;border-bottom:1px solid #e8e8e8;font-weight:bold;}
+#addresseeChange #item img{float:left;}
+#addresseeChange #item .jan{display:block;color:#999;font-size:11px;}
+table.horizontal .item .freeShippingIcon{margin:6px 0;overflow:hidden;display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;text-align:center;font-size:11px;padding:2px;vertical-align:middle;font-weight:normal;border:1px solid #666;color:#444;line-height:10px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+table.horizontal .item .pickupIcon{margin:6px 0;overflow:hidden;display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;text-align:center;font-size:11px;padding:2px;vertical-align:middle;font-weight:normal;border:1px solid #666;color:#444;line-height:10px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+#pickUp .pickupIcon {margin: -2px 2px 0;*margin: -0 2px;display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;text-align:center;font-size:11px;padding:2px;vertical-align:middle;border:1px solid #666;color:#444;line-height:10px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+body#shoppingCart #pickUp .annotation {margin-top: 10px;}
+#payment h2 input{margin-right:5px;vertical-align:middle;}
+#payment .disabled{border:5px solid #eee;}
+#payment .disabled h2{color: #999;}
+#payment .disabled h2.tipObj{position: relative; display: inline-block; *display: inline; *zoom:1;}
+#payment .disabled h2 input{position: relative; z-index: -1;}
+#paymentCredit dl{margin-top:20px;}
+#paymentCredit dt{float:left;width:220px;padding-right:20px;margin-bottom:20px;font-weight:bold;text-align:right;}
+#paymentCredit .annotation{margin-top:40px;}
+#paymentCredit dd{margin-bottom:20px;}
+#payment #cardType li{display:inline;white-space:nowrap;}
+#payment #cardType dd{overflow:hidden;_zoom:1;padding-bottom:50px;background:url(/img/store/cart/creditcards.png) no-repeat bottom left;}
+#payment #cardNumber input{margin-right:5px;}
+#payment #valid select{margin-right:5px;}
+#payment .tipDesc{display:none;}
+#payment .tips{font-weight:bold;}
+body#shoppingCart a[target="_blank"],
+#optionService a[target="_blank"],
+#paymentRakuten a[target="_blank"]{ background: url(/img/common/imageview.gif); background-repeat: no-repeat; background-position: 0 2px; width: 11px; height: 8px; padding: 0 2px 0 14px;}
+#paymentRakuten .annotation {margin: 15px 0;}
+#rakutenCard {float: right;} 
+#confirm h2{margin-top:0;}
+#confirm table.vertical{width:100%;}
+#confirm table.vertical th,#confirm table.vertical td{width:auto;text-align:left;}
+#confirm table.vertical .tax{font-size:10px;}
+#confirm table.vertical .tax .num{font-size:12px;font-weight:normal;}
+#confirm .free{font-size:12px;}
+#confirm .blank{text-align:center;}
+#confirm .orderDetail .itemInfo{width:100%;}
+.shippingAddress,.shippingName{margin-bottom:5px;}
+.shippingTel{margin-bottom:15px;}
+.shippingTime,.shippingGift{margin:15px 0;padding-top:15px;border-top:1px solid #e6e6e6;}
+#confirm .submit{width:190px;margin-left:255px;}
+#confirm .submit a{padding:10px;font-size:14px;}
+#confirm .submit.rakuten{width:240px; margin-left:230px; margin-bottom: 15px;}
+#confirm .submit.rakuten a{background: url(https://checkout.rakuten.co.jp/p/common/img/btn_check_01.gif) no-repeat; padding: 0; height: 40px; text-indent:-9999px;}
+#confirm #rakutenConfirmMessage p {text-align: center; margin-bottom: 10px;}
+dl#orderID{margin:30px 0 20px;background:#f3f3f3;padding:15px;}
+#orderID dt{float:left;font-weight:bold;}
+#orderID dd{float:left;margin-left:10px;padding-left:10px;border-left:1px solid #ccc;overflow:hidden;}
+#orderID dd ul{margin-bottom:-5px;overflow:hidden;}
+#orderID dd li{margin-bottom:5px;font-size:14px;}
+#complete p{margin-bottom:20px;}
+#incidental .incidental{background:#f5f2e9;}
+#incidental table.horizontal .incidentalItem{border:solid #ddd7c7;border-width:2px 2px 0;}
+#incidental table.horizontal .incidentalService{border:solid #ddd7c7;border-width:0 2px 2px;}
+#incidental table.horizontal .incidental td{border:1px solid #eee8d8;}
+.incidentalService p{margin-bottom:10px;}
+#incidental .incidentalService .service{border:1px solid #ddd7c7;padding:5px;background:#f5eedd;margin-top:5px;}
+#incidental .incidentalService dt{font-weight:bold;}
+.incidentalService dt{margin-bottom:5px;}
+.incidentalService dt input{margin-right:5px;}
+.incidentalService dd input[type=checkbox]{margin-right:5px;}
+.incidentalService dd{margin-left:20px;margin-bottom:5px;}
+.incidentalService .point{margin:0 5px;}
+.incidentalService .digit{text-align:right;}
+.incidentalService label{font-weight:bold;}
+.incidentalService li{list-style:disc;margin-left:1.5em;}
+.incidentalService input,.incidentalService select{margin-right:5px;}
+#confirm .incidentalService .service{padding-left:65px;}
+#confirm .incidentalService .unitPrice{padding-left:65px;}
+#incidental #gift{margin-top:20px;}
+#incidental #gift .faq{margin-top:15px;}
+#incidental #gift .faq li{float:left;margin-right:10px;}
+#incidental #gift p{margin-bottom:5px;}
+#incidental #gift p.annotation{margin-bottom:15px;}
+#incidental #checkGift{margin-bottom:15px;}
+#incidental #checkGift input{margin-right:5px;}
+#incidental #checkGift label{font-weight:bold;font-size:14px;}
+#incidental #giftMessage{margin-bottom:15px;}
+fieldset{border:1px solid #ddd;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:15px;}
+legend{font-size:14px;font-weight:bold;padding:0 10px;}
+body#coupon .annotation{margin-bottom:20px;}
+body#coupon #balance table.vertical{width:699px;}
+body#coupon #balance table.vertical th{width:150px;}
+body#coupon table.vertical #balanceGiftCard td.info{border-right:0;}
+body#coupon #balanceGiftCard .price{float:left;margin-right:20px;}
+body#coupon #balanceGiftCard #balanceCheck{margin-top:10px;}
+body#coupon #balanceGiftCard #balanceCheck p{margin-bottom:10px;}
+body#coupon #balanceCheck dt{float:left;clear:both;width:80px;margin:2px 0 5px 0;font-weight:bold;}
+body#coupon #balanceCheck dd{margin-bottom:5px;}
+body#coupon #balanceCheckBtn{margin:10px 0 0 80px;}
+body#coupon .orderDetail,#shipping .orderDetail{background:#f1f1f1;}
+.orderDetail .detail dl{margin-bottom:10px;}
+.orderDetail .detail dt{font-weight:bold;margin-bottom:5px;}
+.orderDetail .detail dd{background:#fff;margin-bottom:0;padding:10px;border:1px solid #ddd;}
+.orderDetail .detail dd .shippingTel{margin-bottom:0;}
+.orderDetail .detail table {background: #fff;}
+.showHide a{display:block;background:#e1e1e1;padding:8px;font-size:11px;text-align:center;text-decoration:none;}
+.showHide a:hover{background:#7f0019;color:#fff;}
+#coupon dl.subTotal{float:right;width:280px;}
+#coupon .subTotal dt{float:left;clear:both;text-align:right;width:180px;margin-bottom:5px;}
+#coupon .subTotal dd{overflow:hidden;margin-bottom:5px;text-align:right;}
+#coupon .subTotal dd input{margin-right:5px;}
+#coupon #inputAmount table.horizontal,#shipping table.horizontal{margin-bottom:20px;}
+#coupon #inputAmount table.horizontal table,#shipping table.horizontal table{margin-bottom:10px;}
+#shipping td.shippingDate,#shipping td.shippingTime{text-align:center;}
+table.horizontal .item .desc{display:block;overflow:hidden;_zoom:1;}
+table.horizontal .item a{text-decoration:none;cursor:pointer;}
+table.horizontal .item .desc .name{text-decoration:underline;}
+.furthermore{float:right;}
+table.horizontal td.num{width:20px;}
+table.horizontal .quantity{width:50px;}
+table.horizontal .divide{width:100px;}
+table.horizontal .delete{width:30px;}
+table.horizontal .item .price{margin:3px 0 3px 0;}
+table.horizontal .item .num{display:inline;}
+table.horizontal .item .price del{display:inline;}
+table.horizontal .item .price ins{display:inline;margin-left:5px;}
+
+/* CLEARFIX */
+#giftcard {zoom: 1;}
+#giftcard:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+#giftcard {border:5px solid #EFEFEF;margin-bottom:20px;padding:15px;}
+#giftcard img {margin-bottom:10px;}
+#giftcard .floatLeft {float:left;margin-bottom:0;}
+#giftcard p {margin-left:135px;margin-bottom:10px;}
+
+/* PICKUP */
+#pickupShop h1{background-image:url(/img/store/cart/title_pickup_shop.png);}
+#pickupContact h1{background-image:url(/img/store/cart/title_pickup_contact.png);}
+#pickupConfirm h1{background-image:url(/img/store/cart/title_confirm.png);}
+#pickupComplete h1{background-image:url(/img/store/cart/title_thanksorder.png);}
+
+#shoppingCart #pickUp {text-align: right; margin-top: 30px; padding-top: 10px; border-top: 1px solid #ccc;}
+
+#pickupShop #selectPrefecture {padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px solid #666;}
+#pickupShop #selectPrefecture select{margin-right: 5px;}
+#pickupShop .time {width: 520px; margin-top: 5px;}
+
+#pickupShop .prevNext {margin-top: 20px;}
+#pickupShop dt a,
+#pickupContact .lead a,
+#pickupContact .telTime a,
+#pickupConfirm dt a { background: url(/img/common/imageview.gif); background-repeat: no-repeat; background-position: 0 2px; width: 11px; height: 8px; padding: 0 2px 0 14px;}
+#pickupShop dt .detail,
+#pickupConfirm dt .detail {font-weight: normal; font-size: 12px;}
+#pickupContact table.vertical .required th {font-weight: bold;}
+#pickupContact table.vertical .ex {display:block; margin-top:5px;}
+#pickupContact .telConfirm li,
+#pickupContact .voiceMail li {float: left; margin-right: 20px;}
+#pickupContact .telConfirm li input,
+#pickupContact .voiceMail li input {margin-right: 5px;}
+#pickupContact .message span {margin-top: 5px; font-size: 11px;}
+#pickupConfirm .submit{width:190px;margin-left:255px;}
+#pickupConfirm .submit a{padding:10px;font-size:14px;}
+#pickupConfirm .shop dt {font-weight: bold; margin-bottom: 5px; font-size: 14px;}
+#pickupConfirm .telConfirm dl,
+#pickupConfirm .telConfirm dt,
+#pickupConfirm .telConfirm dd {display: inline;}
+#pickupConfirm .telConfirm dd.voiceMail {margin-right: 15px;}
+#pickupConfirm .prevNext {margin-top: 20px;}
+#pickupConfirm .total td {text-align: left; font-size: 11px;}
+#pickupConfirm .total td .num {font-size: 14px;}
+#pickupConfirm .time {border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px;}
+body#pickupComplete #main p {margin-bottom: 20px; line-height: 1.6;}
+body#pickupComplete #main .annotation {margin-bottom: 20px;}
+
+.pickup #shoppingFlow{height:34px;background:url(/img/store/cart/shoppingflow_shop.png) no-repeat 0 -52px #f5eedd;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.pickup #shoppingFlow li.current{background-image:url(/img/store/cart/shoppingflow_shop.png);}
+#shoppingFlow .pickupShop{width:140px;background-position:0 -6px;}
+#shoppingFlow .pickupContact{width:100px;background-position:-140px -6px;}
+#shoppingFlow .pickupConfirm{width:110px;background-position:-240px -6px;}
+#shoppingFlow .pickupComplete{width:90px;background-position:-350px -6px;}
+
+/* RECEIPT */
+#receipt {zoom:1;border:5px solid #EFEFEF;padding:15px;margin-top:20px;}
+#receipt:after {content:".";display:block;visibility:hidden;clear:both;height:0;font-size:0;line-height:0;}
+#receipt h2 {font-size:16px;}
+#receipt h2 span {font-size:14px;}
+#receipt h2 b {color:#7F0019;}
+#receipt img {float:left;}
+#receipt p, #receipt ul {margin-left:165px;}
+#receipt .annotation li {margin-bottom:0;}
+#receipt dl {margin:5px 0 5px 165px;}
+#receipt dt {font-weight:bold;}
+#receipt p a {background:url("/img/common/imageview.gif") no-repeat scroll 0 2px transparent;height:8px;padding: 0 2px 0 14px;width:11px;}
+
+
+
+/* nishiwaki */
+/* step navigation for cart */
+#shoppingFlow {width:100%;}
+#shoppingFlow ol.stepNavi {overflow: hidden; margin: 0 auto; width: 680px;}
+#shoppingFlow .stepNavi li{list-style: none; float: left;}
+#shoppingFlow .stepNavi .current { background:url("/img/store/cart/crumbs.png") no-repeat scroll 100% 0 #E5E5E5; color: #333; font-weight: bold; }
+#shoppingFlow .stepNavi li span {
+padding:10px 25px 10px 15px;
+height: 15px;
+background:url("/img/store/cart/crumbs2.png") no-repeat scroll 100% 0 #f0f0f0;
+border-radius: 2px 0 0 2px;
+-moz-border-radius: 2px 0 0 2px;
+-webkit-border-radius: 2px 0 0 2px;
+-o-border-radius: 2px 0 0 2px;
+-ms-border-radius: 2px 0 0 2px;
+display:block;
+margin-right: 2px;
+color: #666;
+}
+
+/* shopping cart top */
+#shoppingCart table.horizontal {margin-top: 10px;}
+#shoppingCart table.horizontal td.ServiceName {padding-left: 75px;}
+#shoppingCart tr.hasincidentalService td {border-width: 0 1px;}
+#shoppingCart tr.incidentalServiceItem td {border-width: 0 1px;}
+#shoppingCart .faqlink { color: #666666; margin-left: 10px;}
+#shoppingCart .faqlink a { margin: 0 2px;}
+#shoppingCart p.annotation {margin-top: 3px;}
+#shoppingCart .incidentalServiceItem.last td {border-bottom: 1px solid #ddd;}
+#shoppingCart .incidentalServiceItem input{margin-right: 10px;}
+
+/* addressee_confirm */
+#addresseeConfirm .orderDetail{background:#f1f1f1;}
+#addresseeConfirm .giftService ul {padding-top: 5px; display: none;}
+#addresseeConfirm .giftService label {margin:0 3px; font-weight: bold; font-size: 14px;}
+#addresseeConfirm .giftService .faqlink {margin-top: 5px;}
+#addresseeConfirm .giftService li {margin-bottom: 10px;}
+#addresseeConfirm td.addressee .change{margin:5px 0 0 10px;}
+#addresseeConfirm td.shippingDate, td.shippingTime {text-align: center;}
+#addresseeConfirm .giftService dd, #shoppingCart #giftService dd {padding: 5px; border: none;}
+#addresseeConfirm h2 {margin-top: 40px;}
+#addresseeConfirm .deliveryTitle {font-size: 15px; font-weight: bold; margin-top: 30px;}
+#addresseeConfirm table.horizontal{margin-top: 5px;}
+#addresseeConfirm .serviceName, #shoppingCart .serviceName {margin: 0 5px;}
+#addresseeConfirm td.serviceNameBox {border: 1px solid #fff;}
+#addresseeConfirm td.serviceParentsBox {border-bottom: 1px solid #eee;}
+#addresseeConfirm td.ServiceName {padding-left: 75px;}
+#addresseeConfirm tr.incidentalServiceItem td {border-width: 0 1px;}
+#addresseeConfirm tr.hasincidentalService td {border-width: 0 1px;}
+#addresseeConfirm .last {border-bottom: 1px solid #ddd;}
+#addresseeConfirm .orderDetail .detail dd {border: none;}
+#addresseeConfirm .orderDetail .detail dt {font-weight: nomal;}
+#addresseeConfirm .disabled { color: #999999;}
+#addresseeConfirm .disabled .serviceName {text-decoration: line-through;}
+#addresseeConfirm .message li {padding :5px;}
+#addresseeConfirm p.annotation {margin-top: 10px;}
+
+/* payment */
+#payment #coupon li, #payment #paymentMethod li{float: left; margin: 5px 20px 5px 0;}
+#payment #coupon input, #payment #GiftCard input, #payment #paymentMethod input {margin-right: 5px;}
+#payment .annotation{margin-bottom:20px;}
+#payment #balanceGiftCard .price{float:left;margin-right:20px;}
+#payment #balanceGiftCard #balanceCheck{margin-top: 10px; width:500px;}
+#payment #balanceGiftCard #balanceCheck p {margin-bottom:10px;}
+#payment #balanceCheck {float:left; margin-left: 80px;}
+#payment #balanceCheck dt{float:left;clear:both;width:80px;margin:2px 0 5px 0;font-weight:bold;}
+#payment #balanceCheck dd{margin-bottom:5px;}
+#payment #balanceCheckBtn{margin:10px 0 0 80px;}
+#payment #coupon {margin: 0px; padding: 15px; background: #f2f2f2;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+}
+#payment #GiftCard, #payment #paymentMethod {margin: 20px 0 5px 0; padding: 15px; background: #f2f2f2;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+}
+#payment #balance, #payment #paymentCredit, #payment #paymentCod,  #payment #paymentRakuten {
+margin-bottom: 40px; padding: 15px; border: 6px solid #eee;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+}
+#payment .balloon {padding-top: 15px; background:url("/img/store/cart/balloon.png") no-repeat scroll 50px 2px transparent;}
+#payment #coupon .annotation, #payment #GiftCard .annotation{ margin:	5px 0 10px 0;}
+#payment #coupon .faqlink, #payment #GiftCard .faqlink, #payment #paymentMethod .faqlink {margin-left: 10px;　font-size: 12px;}
+#payment #inputAmount dt {float:left; margin-right: 10px;}
+#payment #inputAmount dt.subTotal {padding-top: 3px;}
+#payment #inputAmount p, #payment #balanceCheck p {margin-bottom: 10px;}
+#payment #inputAmount {width: 500px; margin: 5px auto; padding-top: 15px; border-top: 1px solid #ddd;}
+#payment #inputAmount #result {float:left; margin-right: 10px; width: 43%;}
+#payment #inputAmount #input {float:right; width: 52%;}
+#payment #inputAmount #input dl {margin-top: 12px;}
+#payment #inputAmount #input dt { margin-top: 3px;}
+#payment input {margin-right: 2px;}
+#payment .prevNext .prev, #payment .submit {padding-top: 20px;}
+
+
+/* confirm */
+#confirm .disabled {color: #999;}
+#confirm tr.incidentalServiceItem td {border-width: 0 1px;}
+#confirm tr.hasincidentalService td {border-width: 0 1px;}
+#confirm td.ServiceName {padding-left: 65px;}
+#confirm .incidentalServiceItem .service {padding-left: 65px;}
+#confirm .giftMeaage {font-size: 11px; word-break: break-all; word-wrap: break-word; max-width: 600px;}
+#confirm .service .price {margin-left: 10px;}
+#confirm .disabled .service {text-decoration: line-through;}
+
+/* CLEARFIX */
+#coupon, #paymentMethod, #GiftCard, #coupon ul, #mujigiftcard, #balanceCheck, #payment #inputAmount dd, #payment #inputAmount #result, #payment #inputAmount, #paymentMethod ul {zoom: 1;}
+#coupon:after, #paymentMethod:after, #GiftCard:after, #coupon ul:after, #balanceCheck:after, #payment #inputAmount dd:after, #payment #inputAmount #result:after, #payment #inputAmount:after, #paymentMethod ul:after {content: ""; display: block; clear: both;}
+
+
+.pickup #shoppingFlow {background: none;}
+
+
+/* nishiwaki_step10 */
+/* BANNER */
+#banner {
+	position: absolute;
+	top: 45px;
+	*top: 55px;
+	right: 30px;
+	width: 200px;
+	display: none;
+}
+#banner p {display: block; width: 200px; height: auto; margin: auto; position: relative; padding: 5px 10px 7px; background: #000; line-height: 1.6;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-ms-filter: "alpha( opacity=80 )";
+	filter: alpha( opacity=80 );
+	opacity: 0.8;
+}
+#banner span {text-decoration: none; color: #fff;}
+#fancybox-close {
+	position: absolute;
+	top: -12px;
+	right: -30px;
+	*top: 5px;
+	*right: -33px;
+	width: 30px;
+	height: 30px;
+	background-position: -40px 0px;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+	opacity: 0.8;
+}
+
+#fancybox-close:hover {
+opacity: 1;
+}
+
+#banner .price {color: #fff;}
+#banner .campaignInfo {margin-top: 10px; color: f5f5f5; display: inline-block;}
+#banner .clearConditions {border-bottom: 1px solid #666; padding-bottom: 3px;}
+#banner:before {
+	width: 0;
+	height: 0;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 10px solid #000;
+	position: absolute;
+	top: -10px;
+	left: 180px;
+	content: " ";
+	-ms-filter: "alpha( opacity=80 )";
+	filter: alpha( opacity=80 );
+	opacity: 0.8;
+}
+
+#totalArea {position: relative;}
+#banner .campaignName {font-weight: bold;}

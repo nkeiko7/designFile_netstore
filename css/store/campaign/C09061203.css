@@ -1,0 +1,65 @@
+/* CLEARFIX */
+.aside, #sub .section dd, .order, .title {zoom: 1;}
+.aside:after,
+#sub .section dd:after,
+.order:after,
+.title:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+h2 {margin-top: 25px;}
+h4 {margin-bottom: 10px; font-weight: bold;}
+
+.aside h3:first-child {margin-top: 0;}
+.aside p {margin-bottom: 10px;}
+.aside img {float: left; margin-right: 10px;}
+
+#snSection1 .column2 .itemList {margin: 10px 0;}
+.itemList .annotation {margin-top: 3px; line-height: 1.3; display: block;}
+
+.relatedLink {margin-bottom: 10px; text-align: right;}
+
+.recipe dd {margin-bottom:10px;}
+.recipe li {background:no-repeat left top; padding-left:20px;}
+.recipe li.no1 {background-image:url(/img/store/campaign/parts/no1.gif);}
+.recipe li.no2 {background-image:url(/img/store/campaign/parts/no2.gif);}
+.recipe li.no3 {background-image:url(/img/store/campaign/parts/no3.gif);}
+.recipe li.no4 {background-image:url(/img/store/campaign/parts/no4.gif);}
+.recipe li.no5 {background-image:url(/img/store/campaign/parts/no5.gif);}
+
+#sub #main {width:620px;}
+#sub .itemImage {width:75px;float:right;}
+
+#sub .column2 {clear:both;}
+#sub .column2 .col {width:300px;}
+#sub .section dt, #sub .section dd {margin-bottom:1px;}
+#sub .section dt {font-weight:bold;padding:8px 5px 2px;}
+#sub .section dt span {font-weight:normal;}
+#sub .section dd {background:#F3F3F3;padding:2px 5px;}
+#sub .section dd .food {float:left;}
+#sub .section dd .qty {float:right;}
+
+.order {margin-right:-20px;margin-bottom:21px;}
+.order li {
+display:inline-block;
+/display: inline;
+/zoom: 1;
+margin:10px 20px 0 0;
+padding-left:25px;
+padding-bottom:4px;
+vertical-align:top;
+width:165px;
+background:no-repeat left top;);
+}
+
+.order li.no1 {background-image:url(/img/store/campaign/parts/no01.gif);}
+.order li.no2 {background-image:url(/img/store/campaign/parts/no02.gif);}
+.order li.no3 {background-image:url(/img/store/campaign/parts/no03.gif);}
+.order li.no4 {background-image:url(/img/store/campaign/parts/no04.gif);}
+.order li.no5 {background-image:url(/img/store/campaign/parts/no05.gif);}
+.order li.no6 {background-image:url(/img/store/campaign/parts/no06.gif);}
+.order li.no7 {background-image:url(/img/store/campaign/parts/no07.gif);}
+
+.title {margin-bottom:10px;}
+.title .floatLeft {float:left;}
+.title .floatRight {border:1px solid #CCC;float:right;}
+.subtitle {margin:20px 0 5px;}

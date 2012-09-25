@@ -1,0 +1,11 @@
+.campaignList img {border: 1px solid #ccc; margin-bottom: 5px;}
+.campaignList a:hover img {border: 1px solid #7f0019;}
+
+.campaignList {margin-right: -20px; letter-spacing: -.40em;}
+.campaignList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 160px; margin: 0 20px 10px 0; padding-top: 15px; vertical-align: top; letter-spacing: normal;}
+.campaignList li.large {width: 340px;}
+.campaignList .title {display: block; font-weight: bold;}

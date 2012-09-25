@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<title>商品在庫数確認 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/notice/storestock.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+	<link rel="stylesheet" href="/m/css/mobile.css" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" id="mobileStyle" />
+	<link rel="apple-touch-icon" href="/m/img/apple-touch-icon.png" />
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.timers-1.2.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/system/common.js"></script>
+	<script src="/m/js/mobile.js"></script>
+
+
+	<script type="text/javascript"><!--
+	function receive(){
+		if(window.opener && !window.opener.closed){
+			window.opener.location.href = $(this).attr('href');
+			return false;
+		}
+		if(window.parent && window.parent != window.self){
+			window.parent.location.href = $(this).attr('href');
+			return false;
+		}
+		if(!window.opener || !window.opener.closed){
+			window.open($(this).attr('href'));
+			return false;
+		}
+	}
+
+	$(document).ready(function(){
+		$("#receiveButton").click(receive);
+	});
+	//-->
+	</script>
+</head>
+<body class="store stock iframe" id="storestock">
+<h1>商品在庫数確認</h1>
+<p class="lead">お届け先により配送センターが異なるため、お届け先の郵便番号を入力してください。</p>
+<p class="message error"></p>
+
+<form id="webshopFrm" name="webshopFrm" action="/store/cmdty/detail/search/" method="post">
+<div class="focus">
+	<dl>
+		<dt class="item">商品名</dt>
+		<dd class="item">スタッキングシェルフ・追加３段・ウォールナット材</dd>
+		<dt class="postalCode">郵便番号</dt>
+		<dd class="postalCode">
+			<input name="postalCode1" type="text" size="5" maxlength="3" /> - <input name="postalCode2" type="text" size="5" maxlength="4" />
+		</dd>
+		<dt class="stock">在庫数</dt>
+		<dd class="stock">
+			
+				
+			
+			
+		</dd>
+	</dl>
+	<div class="btn submit">
+		<a href="" onclick="javascript:$('#webshopFrm').submit();return false;">検索</a>
+	</div>
+</div>
+
+<input value="4548718218639" name="janCode" type="hidden" />
+<input value="4548718218639" name="intensiveJanCode" type="hidden" />
+<input value="false" name="itemArrival" type="hidden" />
+</form>
+
+<p class="note">ネットストアでは、家具、家電などの大型商品を最短でお届けできるよう、全国4箇所の配送センターから発送しています。<br />
+お住まい地域以外のセンターに在庫があっても、お取り寄せは出来かねます。<br />
+あらかじめご了承ください。</p>
+</body>
+</html>

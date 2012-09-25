@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<title>店舗在庫状況 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/notice/shopstock.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+	<link rel="stylesheet" href="/m/css/mobile.css" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" id="mobileStyle" />
+	<link rel="apple-touch-icon" href="/m/img/apple-touch-icon.png" />
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.timers-1.2.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/system/common.js"></script>
+	<script src="/m/js/mobile.js"></script>
+	
+	<script type="text/javascript" src="/js/jquery.colorize-2.0.0.js"></script>
+	<script type="text/javascript" src="/js/store/notice/shopstock.js"></script>
+
+<script language="javascript1.2" type="text/javascript">
+  //--「店舗情報」ウインドウを開く
+  function tenpoOpen(url){
+    var UrlParam = "http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=" + url;
+    var popup = window.open(UrlParam, "tenpo");
+    popup.focus();
+  }
+</script>
+</head>
+
+<BODY class="store stock iframe" id="shopstock">
+
+<h1 id="top">店舗在庫状況</h1>
+
+<dl id="item">
+	<dt class="item">
+		<img src="http://img.muji.net/img/item/4548718819904_95.jpg" id="productImage" alt="" width="50" height="50" />
+		綿シルクスラブカーディガン&nbsp;&nbsp;婦人・Ｓ・ネイビー
+	</dt>
+	<dd class="price">
+		
+		税込<span id="taxInPrice" class="num">2,490</span>円
+	</dd>
+</dl>
+
+<p class="lead">下記の店舗に在庫があります。</p>
+<p>店舗名をクリックすると、各店舗の地図や連絡先が確認できます。</p>
+<p class="caution">在庫ありの表示でも売り切れの場合がありますので、詳しくはご利用店舗に直接お問い合わせください。</p>
+<ul class="annotation">
+	<li>※表示のない店舗は、ただ今在庫がありません。</li>
+	<li>※表示されている在庫状況は、リアルタイムの状況ではありません。</li>
+	<li>※在庫状況は1時間ごとに更新されます。</li>
+	<li>※セール価格は店舗により異なる場合がございます。</li>
+</ul>
+
+
+
+
+<dl id="selectPrefecture">
+	<dt>都道府県で探す</dt>
+	<dd>
+		<select>
+			<option value="">都道府県</option>
+			
+			<optgroup label="東京23区内" id="prefectureAreaName">
+				
+					<option value="13.1" name="13.1" id="prefectureCode">東京23区内</option>
+				
+			</optgroup>
+			
+			<optgroup label="東京23区外" id="prefectureAreaName">
+				
+					<option value="13.2" name="13.2" id="prefectureCode">東京23区外</option>
+				
+			</optgroup>
+			
+			<optgroup label="東北" id="prefectureAreaName">
+				
+					<option value="07" name="07" id="prefectureCode">福島県</option>
+				
+			</optgroup>
+			
+			<optgroup label="関東(東京以外)" id="prefectureAreaName">
+				
+					<option value="10" name="10" id="prefectureCode">群馬県</option>
+				
+			</optgroup>
+			
+			<optgroup label="中部" id="prefectureAreaName">
+				
+					<option value="18" name="18" id="prefectureCode">福井県</option>
+				
+					<option value="20" name="20" id="prefectureCode">長野県</option>
+				
+					<option value="23" name="23" id="prefectureCode">愛知県</option>
+				
+			</optgroup>
+			
+			<optgroup label="関西" id="prefectureAreaName">
+				
+					<option value="29" name="29" id="prefectureCode">奈良県</option>
+				
+			</optgroup>
+			
+			<optgroup label="四国" id="prefectureAreaName">
+				
+					<option value="38" name="38" id="prefectureCode">愛媛県</option>
+				
+			</optgroup>
+			
+			<optgroup label="九州・沖縄" id="prefectureAreaName">
+				
+					<option value="40" name="40" id="prefectureCode">福岡県</option>
+				
+					<option value="43" name="43" id="prefectureCode">熊本県</option>
+				
+			</optgroup>
+			
+		</select>
+	</dd>
+</dl><!-- /#selectPrefecture -->
+
+
+
+<div id="13.1" class="prefecture">
+		<h2>東京23区内</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('040703');" id="storeUrl" target="_top">リヴィン錦糸町</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="13.2" class="prefecture">
+		<h2>東京23区外</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045819');" id="storeUrl" target="_top">八王子東急スクエア</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="07" class="prefecture">
+		<h2>福島県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('002004');" id="storeUrl" target="_top">ザ・モール郡山</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="10" class="prefecture">
+		<h2>群馬県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045432');" id="storeUrl" target="_top">けやきウォーク前橋</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="18" class="prefecture">
+		<h2>福井県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045245');" id="storeUrl" target="_top">福井西武</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+<div id="20" class="prefecture">
+		<h2>長野県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045420');" id="storeUrl" target="_top">長野ＭＩＤＯＲＩ</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+<div id="23" class="prefecture">
+		<h2>愛知県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('061609');" id="storeUrl" target="_top">イオン岡崎</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="29" class="prefecture">
+		<h2>奈良県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045660');" id="storeUrl" target="_top">イオンモール橿原アルル</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="38" class="prefecture">
+		<h2>愛媛県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('061725');" id="storeUrl" target="_top">エミフルＭＡＳＡＫＩ</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+<div id="40" class="prefecture">
+		<h2>福岡県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('045655');" id="storeUrl" target="_top">ゆめタウン久留米</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+<div id="43" class="prefecture">
+		<h2>熊本県</h2>
+		<table>
+			<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+			<tbody>
+				<tr id="shopLoop">
+					<td class="shop"><a href="javaScript:tenpoOpen('061732');" id="storeUrl" target="_top">ゆめタウン光の森</a></td>
+					<td class="status">
+						わずか
+						
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div><!-- /#Prefecture -->
+
+
+
+
+<div class="pageTop"><a href="#top">先頭へ</a></div>
+</BODY>
+</html>

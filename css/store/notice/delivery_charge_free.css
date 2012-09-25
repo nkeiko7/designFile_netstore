@@ -1,0 +1,41 @@
+
+h1 {background-image: url(/img/store/notice/title_delivery_charge_free.png);}
+
+#promotion{margin-bottom: 20px;}
+#promotion img{margin-bottom: 10px;}
+#promotion .annotation{margin-top: 10px;}
+.floatclear{font-size: 1px; clear: both;}
+
+#subCategory h2 {font-size: 14px; margin-bottom: 15px;}
+.payShippingCategory h2 {color: #7f0019; float: left; margin-right: 20px; width: 100%;}
+.payShippingCategory h2 span{color: #333; font-size: 12px; font-weight: normal; padding-left: 5px;}
+#aboutFreeShipping {float: left; border-left: 1px solid #ccc; margin-bottom: 15px; padding-left: 10px;}
+#aboutFreeShipping p {margin-top: 5px;}
+
+#subCategory ul {margin-right: -15px; letter-spacing: -.40em;}
+#subCategory li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 160px; margin: 0 20px 10px 0; vertical-align: top; letter-spacing: normal; float: none;
+background-repeat: no-repeat; background-position: 5px center; padding: 0; *vertical-align: middle; *display:inline-block; *zoom:1;}
+#subCategory li a {display: table-cell; margin-bottom: 5px; border: 1px solid #ccc; height: 55px; padding:0 5px 0 40px; text-decoration: none; width: 113px; vertical-align: middle;}
+* html #subCategory li a{display:inline-block; zoom:1;}/* IE 6 */
+*:first-child+html #subCategory li a{display:inline-block; zoom:1;}/* IE 7 */
+#subCategory li a:hover {border: 1px solid #7f0019;}
+
+.subList {margin-bottom: 20px;clear: both;}
+#subCategory li span {margin-right: 2px; font-size: 14px; font-weight: bold;}
+
+.aside {padding: 15px 0 15px 15px; border: 5px solid #efefef;}
+
+#devcation { width: 660px; margin: 10px 0 20px; background: transparent url(../../../img/store/notice/delivery_charge_free/cp_071226_img01.jpg) no-repeat 100% 1em;}
+#devcation dt, #devcation li a, #itemdiv dt, #itemdiv span { font-weight: bold;}
+#devcation li { width: 425px; font-size: 11px; color: #555; margin-bottom: 0.5em;}
+h3 {margin-bottom: 0;}
+#itemdiv ul { width: 100%;}
+#itemdiv li { width: 210px; margin-right: 15px; float: left;}
+#itemdiv li.end { margin-right: 0;}
+#itemdiv .devobj { border: 1px solid #7f0019; background: #E1BABC;}
+#itemdiv dl { margin-top: 10px; padding: 5px; border: 1px solid #CCC;}
+#itemdiv #diva2 ,#itemdiv #divbc ,#itemdiv #divcde { float: left;}

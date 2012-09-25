@@ -1,0 +1,90 @@
+/* CLEARFIX */
+#signupTop #register,
+#benefit2 {zoom: 1;}
+#signupTop #register:after,
+#benefit2:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+.gender ul {zoom: 1;}
+.gender ul:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background-repeat: no-repeat; text-indent: -9999px; overflow: hidden;}
+
+#signupTop h1 {background-image: url(/img/store/account/signup/title_index.png);}
+#agreement h1 {background-image: url(/img/store/account/signup/title_privacy.png);}
+#easy h1 {background-image: url(/img/store/account/signup/title_edit.png);}
+#full h1 {background-image: url(/img/store/account/signup/title_edit.png);}
+#easyConfirm h1 {background-image: url(/img/store/account/signup/title_cofirm.png);}
+#fullConfirm h1 {background-image: url(/img/store/account/signup/title_cofirm.png);}
+#signupComplete h1 {background-image: url(/img/store/account/signup/title_complete.png);}
+#modifyComplete h1 {background-image: url(/img/store/account/signup/title_modify.png);}
+
+
+/* #signupTop */
+#signupTop #register {border-bottom: 1px solid #e6e6e6; padding-bottom: 20px;}
+#signupTop .lead {float: left; margin-bottom: 0;}
+#signupTop #register .submit {float: right; margin: 0 20px 0 0; overflow: hidden;}
+#signupTop .submit a {padding: 10px; font-size: 14px;}
+#signupTop .section {margin-bottom: 30px;}
+#signupTop #benefit h2,
+#signupTop #benefit2 h2 {margin-bottom: 15px;}
+#signupTop #benefit ul {margin-right: -20px; overflow: hidden;}
+#signupTop #benefit li {float: left; border: 1px solid #ccc; width: 218px; height: 192px; margin-right: 20px;}
+#signupTop #benefit li a{display: block; height:190px;}
+#signupTop #benefit2 {clear: both;}
+#signupTop #benefit2 .section {float: left; width: 340px; margin-bottom: 20px;}
+#signupTop #benefit2 #catalog,
+#signupTop #benefit2 #community {margin-right: 20px; clear: both;}
+#signupTop #benefit2 h3 {border-bottom: 1px solid #666; padding-bottom: 5px;}
+#signupTop #benefit2 .section img {margin: 10px 0 2px;}
+
+#signupTop #function ul {padding-left: 20px; margin-top: 10px;}
+#signupTop #function li { list-style-type: disc;}
+
+
+/* #agreement */
+#agreement #terms {height: 200px; overflow: auto; margin-bottom: 20px; padding: 10px 10px 20px; background: #f3f3f3; border: 1px solid #e6e6e6;}
+@media print {#agreement #terms{height: auto; overflow: visible;}}
+#agreement #terms h2 {font-size: 14px; border-bottom: 1px solid #ccc; padding-bottom: 5px;}
+#agreement #terms h3 {font-size: 12px; margin-top: 20px;}
+#agreement #terms ol {padding-left: 20px;}
+#agreement #terms ol li {list-style-type: decimal; margin-bottom: 5px;}
+#agreement #terms ol li li {list-style-type: none;}
+
+#full .lead {margin-bottom: 0;}
+#full #loginInfo {margin-top: 30px;}
+#full td li,
+#easy td li {float: left; margin-right: 20px;}
+#full td li input,
+#easy td li input {margin-right: 5px;}
+.mobile input,
+.mobile select,
+.birth input,
+.birth select {margin: 0 5px;}
+
+
+#full td dd,
+#easy td dd {float: left; margin-right: 20px;}
+#full td dd input,
+#easy td dd input {margin-right: 5px;}
+
+body.confirm .lead {margin-bottom: 10px;}
+body.confirm .annotation {margin-bottom: 20px;}
+
+#option th {font-weight: bold;}
+#option th .desc {margin-top: 5px;font-size: 11px; font-weight: normal;}
+
+table.vertical .required th {font-weight: bold;}
+table.vertical .ex {display: block; margin-top: 5px;}
+table.vertical .ime {margin-left: 5px;}
+.address select {width: 220px; margin-right: 5px;}
+table.vertical .message {display: inline;}
+.message span {margin-top: 5px; font-size: 11px;}
+
+#signupComplete .prevNext {margin: 30px 0 0 180px;}
+#signupComplete .prevNext li {float: left; margin-right: 20px;}
+
+.gender li {float: left; margin-right: 10px;}
+
+#easy .prevNext .prev {width: 140px;}
+#easy .prevNext .next {width: 200px;}

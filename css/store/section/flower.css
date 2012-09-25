@@ -1,0 +1,71 @@
+h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden;}
+#flowerKanyou h1 {background-image: url(/img/store/section/title/title_flower_kanyou.png);}
+#flowerGift h1 {background-image: url(/img/store/section/title/title_flower_gift.png);}
+#flowerDaily h1 {background-image: url(/img/store/section/title/title_flower_daily.png);}
+#flowerGardening h1 {background-image: url(/img/store/section/title/title_flower_gardening.png);}
+
+#flowerKanyou li#floorSize .img1 {background-image: url(http://img.muji.net/img/flower/simg_greenlarge_l.jpg);}
+#flowerKanyou li#floorSize .img2 {background-image: url(http://img.muji.net/img/flower/simg_greenlarge_r.jpg);}
+
+#flowerKanyou li#mediumSize .img1 {background-image: url(http://img.muji.net/img/flower/simg_greenmedium_l.jpg);}
+#flowerKanyou li#mediumSize .img2 {background-image: url(http://img.muji.net/img/flower/simg_greenmedium_r.jpg);}
+
+#flowerKanyou li#tableSize .img1 {background-image: url(http://img.muji.net/img/flower/simg_greensmall_l.jpg);}
+#flowerKanyou li#tableSize .img2 {background-image: url(http://img.muji.net/img/flower/simg_greensmall_r.jpg);}
+
+#flowerKanyou li#mujiPot .img1 {background-image: url(http://img.muji.net/img/flower/simg_mujipot_l.jpg);}
+#flowerKanyou li#mujiPot .img2 {background-image: url(http://img.muji.net/img/flower/simg_mujipot_r.jpg);}
+
+#flowerKanyou li#pot .img1 {background-image: url(http://img.muji.net/img/flower/simg_aqua_l.jpg);}
+#flowerKanyou li#pot .img2 {background-image: url(http://img.muji.net/img/flower/simg_aqua_r.jpg);}
+
+#flowerKanyou li#cactus .img1 {background-image: url(http://img.muji.net/img/flower/simg_tanikukanyou_l.jpg);}
+#flowerKanyou li#cactus .img2 {background-image: url(http://img.muji.net/img/flower/simg_tanikukanyou_r.jpg);}
+
+
+#flowerGift li#arrangement .img1 {background-image: url(http://img.muji.net/img/flower/simg_arrange_l.jpg);}
+#flowerGift li#arrangement .img2 {background-image: url(http://img.muji.net/img/flower/simg_arrange_r.jpg);}
+
+#flowerGift li#flowers .img1 {background-image: url(http://img.muji.net/img/flower/simg_bunch_l.jpg);}
+#flowerGift li#flowers .img2 {background-image: url(http://img.muji.net/img/flower/simg_bunch_r.jpg);}
+
+#flowerGift li#cactus .img1 {background-image: url(http://img.muji.net/img/flower/simg_taniku_l.jpg);}
+#flowerGift li#cactus .img2 {background-image: url(http://img.muji.net/img/flower/simg_taniku_r.jpg);}
+
+#flowerGift li#pot .img1 {background-image: url(http://img.muji.net/img/flower/simg_orchid_l.jpg);}
+#flowerGift li#pot .img2 {background-image: url(http://img.muji.net/img/flower/simg_orchid_r.jpg);}
+
+#flowerGift li#quickDelivery .img1 {background-image: url(http://img.muji.net/img/flower/simg_quick_l.jpg);}
+#flowerGift li#quickDelivery .img2 {background-image: url(http://img.muji.net/img/flower/simg_quick_r.jpg);}
+
+
+#flowerDaily li#arrangement .img1 {background-image: url(http://img.muji.net/img/flower/simg_arrange_l.jpg);}
+#flowerDaily li#arrangement .img2 {background-image: url(http://img.muji.net/img/flower/simg_arrange_r.jpg);}
+
+#flowerDaily li#flowers .img1 {background-image: url(http://img.muji.net/img/flower/simg_bunch_l.jpg);}
+#flowerDaily li#flowers .img2 {background-image: url(http://img.muji.net/img/flower/simg_bunch_r.jpg);}
+
+#flowerDaily li#cactus .img1 {background-image: url(http://img.muji.net/img/flower/simg_taniku_l.jpg);}
+#flowerDaily li#cactus .img2 {background-image: url(http://img.muji.net/img/flower/simg_taniku_r.jpg);}
+
+#flowerDaily li#pot .img1 {background-image: url(http://img.muji.net/img/flower/simg_orchid_l.jpg);}
+#flowerDaily li#pot .img2 {background-image: url(http://img.muji.net/img/flower/simg_orchid_r.jpg);}
+
+#flowerDaily li#quickDelivery .img1 {background-image: url(http://img.muji.net/img/flower/simg_quick_l.jpg);}
+#flowerDaily li#quickDelivery .img2 {background-image: url(http://img.muji.net/img/flower/simg_quick_r.jpg);}
+
+
+#flowerGardening li#shelf .img1 {background-image: url(http://img.muji.net/img/flower/simg_shelf_l.jpg);}
+#flowerGardening li#shelf .img2 {background-image: url(http://img.muji.net/img/flower/simg_shelf_r.jpg);}
+
+#flowerGardening li#gardening .img1 {background-image: url(http://img.muji.net/img/flower/simg_tsuchihachi_l.jpg);}
+#flowerGardening li#gardening .img2 {background-image: url(http://img.muji.net/img/flower/simg_tsuchihachi_r.jpg);}
+
+#flowerGardening li#pot .img1 {background-image: url(http://img.muji.net/img/flower/simg_hachiue_l.jpg);}
+#flowerGardening li#pot .img2 {background-image: url(http://img.muji.net/img/flower/simg_hachiue_r.jpg);}
+
+#flowerGardening li#engei .img1 {background-image: url(http://img.muji.net/img/flower/soil_01.jpg);}
+#flowerGardening li#engei .img2 {background-image: url(http://img.muji.net/img/flower/soil_02.jpg);}
+
+#flowerGardening li#flowerBase .img1 {background-image: url(http://img.muji.net/img/flower/base_01.jpg);}
+#flowerGardening li#flowerBase .img2 {background-image: url(http://img.muji.net/img/flower/base_02.jpg);}

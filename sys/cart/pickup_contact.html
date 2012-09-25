@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>ご連絡先の指定 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/cart/cart.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/store/store.js"></script>
+
+</head>
+
+<body class="store cart pickup" id="pickupContact">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+	<div id="main">
+
+	<div id="shoppingFlow">
+	<ol class="stepNavi">
+	<li><span>受け取り店舗の指定</span></li>
+	<li><span class="current">連絡先の指定</span></li>
+	<li><span>注文内容の確認</span></li>
+	<li><span>注文完了</span></li>
+	</ol>
+	</div><!--/#shoppingFlow -->
+
+		<h1>ご連絡先の指定</h1>
+		<p class="lead">ご指定の店舗（<a href="" target="_blank">MUJI新宿</a>）に商品が届き次第、下記に入力されている電話番号へご連絡します。</p>
+
+		<table class="vertical">
+			<tr class="name required">
+			<th>お名前<span class="req">（必須）</span></th>
+			<td><input name="deliveryAddressee" type="text" value="無印　太郎" size="40" maxlength="48" /><span class="ime">（全角）</span><span class="ex">例：無印　太郎</span></td>
+			</tr>
+			<tr class="kana required">
+			<th>フリガナ<span class="req">（必須）</span></th>
+			<td><input name="deliveryNameKana" type="text" value="ムジルシ　タロウ" size="40" maxlength="48" /><span class="ime">（全角）</span><span class="ex">例：ムジルシ　タロウ</span></td>
+			</tr>
+			<tr class="tel required">
+			<th>電話番号<span class="req">（必須）</span></th>
+			<td><input name="tel11" type="text" value="03" size="5" maxlength="5" /> - <input name="tel12" type="text" value="3989" size="5" maxlength="4" /> - <input name="tel13" type="text" value="4191" size="5" maxlength="4" /><span class="ime">（半角数字）</span><span class="ex">例：03-3989-4191</span></td>
+			</tr>
+			<tr class="tel2">
+			<th>上記以外の連絡可能な電話番号</th>
+			<td><input name="tel21" type="text" value="" size="5" maxlength="5" /> - <input name="tel22" type="text" value="" size="5" maxlength="4" /> - <input name="tel23" type="text" value="" size="5" maxlength="4" /></td>
+			</tr>
+			<tr class="telConfirm required">
+			<th>入荷時の電話連絡<span class="req">（必須）</span></th>
+			<td>
+			<ul>
+			<li><input name="telConfirm" type="radio" id="telConfirm_y" value="y" checked="checked" /><label for="telConfirm_y">要</label></li>
+			<li><input name="telConfirm" type="radio" id="telConfirm_n" value="n" /><label for="telConfirm_n">不要</label></li>
+			</ul>
+			</td>
+			</tr>
+			<tr class="voiceMail required">
+			<th>留守番電話への伝言<span class="req">（必須）</span></th>
+			<td>
+			<ul>
+			<li><input name="voiceMail" type="radio" id="voiceMail_y" value="y" checked="checked" /><label for="voiceMail_y">可</label></li>
+			<li><input name="voiceMail" type="radio" id="voiceMail_n" value="n" /><label for="voiceMail_n">不可</label></li>
+			</ul>
+			</td>
+			</tr>
+			<tr class="telTime">
+			<th>ご希望連絡時間帯</th>
+			<td>
+			<select>
+			<option>指定なし</option>
+			<option>10時</option>
+			<option>11時</option>
+			<option>12時</option>
+			<option>13時</option>
+			<option>14時</option>
+			<option>15時</option>
+			<option>16時</option>
+			<option>17時</option>
+			<option>18時</option>
+			<option>19時</option>
+			<option>20時</option>
+			<option>21時</option>
+			</select> &#xFF5E; 
+			<select>
+			<option>指定なし</option>
+			<option>11時</option>
+			<option>12時</option>
+			<option>13時</option>
+			<option>14時</option>
+			<option>15時</option>
+			<option>16時</option>
+			<option>17時</option>
+			<option>18時</option>
+			<option>19時</option>
+			<option>20時</option>
+			<option>21時</option>
+			<option>22時</option>
+			</select>
+			<p class="message"><span>受け取り店舗（<a href="" target="_blank">MUJI新宿</a>）の営業時間内でご指定ください</span></p>
+			</td>
+			</tr>
+		</table>
+
+		<ul class="prevNext">
+			<li class="prev"><a href="pickup_shop.html">前のページに戻る</a></li>
+			<li class="btn next"><a href="pickup_confirm.html">次へ進む</a></li>
+		</ul><!-- /.prevNext -->
+
+	</div><!-- /.main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

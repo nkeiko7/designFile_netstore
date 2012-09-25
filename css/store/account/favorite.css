@@ -1,0 +1,19 @@
+/* H1 */
+h1 {height: 27px; margin: 20px 0; background: url(/img/store/account/favorite/title_favorite.png) no-repeat; text-indent: -9999px; overflow: hidden;}
+
+table.horizontal {width: 100%; margin: 10px 0;}
+
+#main .submit {width: auto; text-align:left; margin-left: 0; margin-bottom: 20px;}
+.submit a{display: inline; margin-left: 5px;}
+.none .apology {font-size: 11px;}
+.blank .prev {float: none; text-align: center;}
+.message span {margin-bottom: 20px;}
+
+
+#favorite #CartInfo {
+background: url("/img/store/cmdty/cartinfo.png") no-repeat scroll 130px 10px transparent;
+margin: 0;
+width: 245px;
+right: -55px;
+}
+#favorite .prevNext {margin-top: 20px;}

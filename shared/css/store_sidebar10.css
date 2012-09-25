@@ -1,0 +1,159 @@
+#sideNav p,
+#sideNav ul, #sideNav li,
+#sideNav dl, #sideNav dd {
+	margin: 0;
+	padding: 0;
+}
+#sideNav li { list-style-type: none; }
+#sideNav img { vertical-align: bottom; }
+/* ----------------
+さらに絞り込む
+.nar
+---------------- */
+#sideNav .nar a { text-decoration: none; }
+#sideNav .nar {
+	padding: 24px 0 0 0;
+}
+#sideNav .nar p.ttl { padding: 0 0 7px 0; }
+#sideNav .nar .select {
+	padding: 4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #CCC;
+}
+#sideNav .nar dl {
+	padding: 0 10px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	background: #F5EEDD;
+}
+#sideNav .nar dt {
+	padding: 9px 0 4px 0;
+	line-height: 10px;
+}
+#sideNav .nar dd {
+	line-height: 20px;
+}
+#sideNav .nar dd.active {
+	padding: 0 0 0 10px;
+	background: #D9D3C4;
+}
+#sideNav .nar dd a {
+	display: block;
+	padding: 0 0 0 10px;
+	background: url(/shared/img/storesidebar10/parts.gif) no-repeat 0 -13px;
+}
+#sideNav .nar dd.sol a {
+	margin-top: 5px;
+	padding: 5px 0;
+	border-top: 1px solid #DBD5C5;
+	background: none;
+	text-decoration: underline;
+}
+/* ----------------
+このカテゴリーから探す
+.this
+---------------- */
+#sideNav .this a { text-decoration: none; }
+#sideNav .this { padding: 24px 0 0 0; }
+#sideNav .this p.ttl { padding: 0 0 7px 0; }
+
+#sideNav .this p.thisttl {
+	padding: 10px 10px 3px 10px;
+	-moz-border-radius: 2px 2px 0 0;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-radius: 2px 2px 0 0;
+	background: #666;
+}
+#sideNav .this p.toplink {
+	position: relative;
+	z-index: 2;
+	margin-bottom: -1px;
+	padding: 0 0 11px 10px;
+	border: none;
+	background: #666;
+}
+#sideNav .this p.toplink a {
+	display: block;
+	width: 130px;
+	height: 13px;
+	overflow: hidden;
+	padding: 0;
+	line-height: 12px;
+	background: url(/shared/img/storesidebar10/parts.gif) no-repeat 0 0;
+	text-indent: -9999px;
+}
+#sideNav .this p.toplink a:hover {
+	background: url(/shared/img/storesidebar10/parts.gif) no-repeat -130px 0;
+}
+
+#sideNav .this ul {
+	border: 1px solid #CCC;
+	border-top: none;
+	background: #F3F3F3;
+}
+#sideNav .this li {
+	border-top: 1px dotted #C6C5BD;
+	line-height: 20px;
+}
+#sideNav .this li.active {
+	padding: 2px 10px;
+	background: #FFF;
+	color: #7F0019;
+}
+#sideNav .this li a {
+	display: block;
+	padding: 2px 10px;
+}
+#sideNav .this li a span {
+	color: #7F7F7F;
+	line-height: 15px;
+	font-size: 10px;
+}
+#sideNav .this li a:hover { background: #E2E2E2; }
+#sideNav .this li a:hover span { color: #7F0019; }
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------
+全商品カテゴリー
+.cat
+---------------- */
+#sideNav .cat a { text-decoration: none; }
+#sideNav .cat { padding: 24px 0 0 0; }
+#sideNav .cat li { padding: 3px 0 5px 0; }
+#sideNav .cat ul { border-top: 1px solid #666; }
+#sideNav .cat li { border-bottom: 1px solid #E6E6E6; font-size: 1px; }
+#sideNav .cat p.ttl { padding: 0 0 7px 0; }
+#sideNav .cat li a { display: block; }
+#sideNav .cat ul ul { border: none; }
+#sideNav .cat ul ul li { border: none; font-size: 12px; }
+#sideNav .cat ul ul li {
+	line-height: 20px;
+	padding: 0;
+}
+* html #sideNav .cat ul ul li { border-bottom: 1px solid #fff; } /*IE*/
+#sideNav .cat ul ul li a {
+	padding: 0 0 0 10px;
+	background: url(/shared/img/storesidebar10/parts.gif) no-repeat -125px -13px;
+}
+#sideNav .cat ul ul li.active {
+	padding: 0 0 0 10px;
+	background: #E6E6E6;
+}
+#sideNav .cat p.ttl span {
+	float: right;
+	font-size: 10px;
+	line-height: 14px;
+}

@@ -1,0 +1,56 @@
+/* COMMON */
+.lead {margin-bottom: 20px;}
+.sublead, .annotation {margin: 0 10px 5px;}
+.sublead a {text-decoration: underline;}
+.message {margin: 0 10px 5px;}
+
+.packet {-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); box-shadow: 0 2px 3px rgba(0,0,0,0.2),0 -1px 1px rgba(0,0,0,0.2); margin: 10px 10px 30px; border-radius: 5px;}
+.packet h1 {font-size: 12px; margin: 0; border-radius: 5px 5px 0 0; padding: 10px 0; text-align: center; border-bottom: 1px solid #eee;}
+
+.free {font-size: 12px;}
+
+/* COUPONLIST */
+#list li {padding: 15px 15px 10px;}
+#list li {border-top: 1px solid #e6e6e6;}
+#list li:first-child {border-top: 0;}
+#list dt {width: 80px; vertical-align: top; margin-bottom: 5px; display: inline-block; clear: both; float: left;}
+#list dd {margin-bottom: 5px;}
+#giftCardCharge {text-align: center;}
+#giftCardCharge a {text-decoration: underline;}
+
+.pageNav {border-top: 0;}
+.pageNumber {padding-top: 0;}
+
+.couponTotal {padding: 0 10px; text-align: center;}
+
+.days, .period {font-weight: bold; margin: 0 2px;}
+
+body#couponHistory dt.price {font-size: 12px;}
+dd.order a {text-decoration: underline; font-weight: bold;}
+
+.message {text-align: center;}
+
+.cardNumber {text-align: center; margin-top: 20px;}
+.amount {text-align: center; margin-bottom: 10px;}
+.num {font-weight: bold;}
+
+
+/* coupon charge */
+body#couponSelect #list.selectCoupon li {padding: 0;}
+body#couponSelect #list.selectCoupon li a { display: block; background: url(/m/img/arrow_set.png) no-repeat 95% center; -webkit-background-size: 29px 29px; padding: 15px 15px 10px;}
+body#couponSelect #list.selectCoupon li dd {padding-right: 40px;}
+body#couponSelect .giftCardInfo body#couponSelect p#charge.btn {text-align: right;}
+body#couponSelect .couponAnnotation {margin-bottom: 20px;}
+body#couponSelect .message span {margin-bottom: 10px;}
+body#couponSelect .amount .price {margin-right: 10px;}
+body#couponSelect .link {text-align: center; text-decoration: underline;}
+
+/* giftcardDetail */
+body#giftcardDetail section#list > h1 {font-size: 10px; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); color: white; text-indent: 0; border-bottom: 1px solid #EEE; padding: 5px 10px; margin-bottom: 20px;}
+body#giftcardDetail #couponChargeList li#expiration  {padding: 0; border-top: 1px solid #ccc;}
+body#giftcardDetail #expiration h1 {color: #191919; background-color: #ccc; padding: 15px; background: url(/m/img/arrow_down.png) no-repeat 95% center; -webkit-background-size: 13px 10px, auto; padding: 15px; margin: 0; text-align: left;}
+body#giftcardDetail #expiration h1.listOpen {background: url(/m/img/arrow_up.png) no-repeat 95% center; -webkit-background-size: 13px 10px, auto;}
+body#giftcardDetail #expiration #expirationList {display: none; color: #999;}
+
+
+

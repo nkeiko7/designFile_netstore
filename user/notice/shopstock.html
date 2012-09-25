@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>店舗在庫状況 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/notice/shopstock.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.colorize-2.0.0.js"></script>
+	<script type="text/javascript" src="/js/store/notice/shopstock.js"></script>
+
+</head>
+
+<body class="store stock iframe" id="shopstock">
+
+<h1 id="top">店舗在庫状況</h1>
+
+<dl id="item">
+	<dt class="item"><img src="/img/cmdty/4548718503025_c.jpg" alt="" width="50" height="50" />ウールリネンカーディガン　婦人・Ｍ・ベージュ</dt>
+	<dd class="price">税込<span class="num">2,506</span>円</dd>
+</dl>
+
+<p class="lead">下記の店舗に在庫があります。</p>
+<p>店舗名をクリックすると、各店舗の地図や連絡先が確認できます。</p>
+<p class="caution">在庫ありの表示でも売り切れの場合がありますので、詳しくはご利用店舗に直接お問い合わせください。</p>
+<ul class="annotation">
+	<li>※表示のない店舗は、ただ今在庫がありません。</li>
+	<li>※表示されている在庫状況は、リアルタイムの状況ではありません。</li>
+	<li>※在庫状況は1時間ごとに更新されます。</li>
+	<li>※セール価格は店舗により異なる場合がございます。</li>
+</ul>
+
+<dl id="selectPrefecture">
+	<dt>都道府県で探す</dt>
+	<dd>
+		<select>
+			<option value="">都道府県</option>
+			<optgroup label="北海道">
+				<option value="hokkaido">北海道</option>
+			</optgroup>
+			<optgroup label="東北">
+				<option value="aomori">青森県</option>
+				<option value="iwate">岩手県</option>
+				<option value="miyagi">宮城県</option>
+				<option value="akita">秋田県</option>
+				<option value="yamagata">山形県</option>
+				<option value="fukushima">福島県</option>
+			</optgroup>
+			<optgroup label="関東">
+				<option value="ibaraki">茨城県</option>
+				<option value="tochigi">栃木県</option>
+				<option value="gunma">群馬県</option>
+				<option value="saitama">埼玉県</option>
+				<option value="chiba">千葉県</option>
+				<option value="tokyo1">東京都23区内</option>
+				<option value="tokyo2">東京都23区外</option>
+				<option value="kanagawa">神奈川県</option>
+			</optgroup>
+			<optgroup label="甲信越・北陸">
+				<option value="niigata">新潟県</option>
+				<option value="toyama">富山県</option>
+				<option value="ishikawa">石川県</option>
+				<option value="fukui">福井県</option>
+				<option value="yamanashi">山梨県</option>
+				<option value="nagano">長野県</option>
+			</optgroup>
+			<optgroup label="東海">
+				<option value="gifu">岐阜県</option>
+				<option value="shizuoka">静岡県</option>
+				<option value="aichi">愛知県</option>
+				<option value="mie">三重県</option>
+			</optgroup>
+			<optgroup label="関西">
+				<option value="shiga">滋賀県</option>
+				<option value="kyoto">京都府</option>
+				<option value="osaka">大阪府</option>
+				<option value="hyogo">兵庫県</option>
+				<option value="nara">奈良県</option>
+				<option value="wakayama">和歌山県</option>
+			</optgroup>
+			<optgroup label="中国">
+				<option value="shimane">島根県</option>
+				<option value="tottori">鳥取県</option>
+				<option value="okayama">岡山県</option>
+				<option value="hiroshima">広島県</option>
+				<option value="yamaguchi">山口県</option>
+			</optgroup>
+			<optgroup label="四国">
+				<option value="tokushima">徳島県</option>
+				<option value="kagawa">香川県</option>
+				<option value="ehime">愛媛県</option>
+				<option value="kochi">高知県</option>
+			</optgroup>
+			<optgroup label="九州・沖縄">
+				<option value="fukuoka">福岡県</option>
+				<option value="saga">佐賀県</option>
+				<option value="nagasaki">長崎県</option>
+				<option value="kumamoto">熊本県</option>
+				<option value="oita">大分県</option>
+				<option value="miyazaki">宮崎県</option>
+				<option value="kagoshima">鹿児島県</option>
+				<option value="okinawa">沖縄県</option>
+			</optgroup>
+		</select>
+	</dd>
+</dl><!-- /#selectPrefecture -->
+
+<div id="hokkaido" class="prefecture">
+		<h2>北海道</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045608" target="_top">ウイングベイ小樽</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045509" target="_top">旭川西武</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061709" target="_top">新さっぽろ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#hokkaido -->
+
+<div id="aomori" class="prefecture">
+		<h2>青森県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061708" target="_top">青森ラビナ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#aomori -->
+
+<div id="iwate" class="prefecture">
+		<h2>岩手県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061688" target="_top">盛岡フェザン</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#iwate -->
+
+<div id="miyagi" class="prefecture">
+		<h2>宮城県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045517" target="_top">泉中央セルバ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#miyagi -->
+
+<div id="ibaraki" class="prefecture">
+		<h2>茨城県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045398" target="_top">イオン水戸内原</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045475" target="_top">イオン土浦</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045659" target="_top">水戸エクセル</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#ibaraki -->
+
+<div id="gunma" class="prefecture">
+		<h2>群馬県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045432" target="_top">けやきウォーク前橋</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045615" target="_top">イオン太田</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045778" target="_top">高崎ビブレ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#gunma -->
+
+<div id="saitama" class="prefecture">
+		<h2>埼玉県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045515" target="_top">ららぽーと新三郷</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045499" target="_top">イオン川口キャラ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045502" target="_top">ルミネ大宮</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045482" target="_top">ヴァリエ新越谷</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061637" target="_top">丸広入間</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045627" target="_top">熊谷ティアラ２１</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045824" target="_top">新所沢パルコ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#saitama -->
+
+<div id="chiba" class="prefecture">
+		<h2>千葉県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045636" target="_top">アリオ蘇我</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061695" target="_top">コルトンプラザ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045837" target="_top">柏ステーションモール</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#chiba -->
+
+<div id="tokyo1" class="prefecture">
+		<h2>東京都23区内</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045464" target="_top">ＭＵＪＩ銀座松坂屋</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045419" target="_top">ＭＵＪＩ東京ミッドタウン</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045443" target="_top">アキバ・トリム</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045471" target="_top">アトレ恵比寿</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045505" target="_top">アトレ大井町</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045402" target="_top">アトレ目黒</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045508" target="_top">ルミネ新宿</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045629" target="_top">ルミネ池袋</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045518" target="_top">ルミネ北千住</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045354" target="_top">三軒茶屋</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045353" target="_top">自由が丘</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045820" target="_top">渋谷パルコ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045231" target="_top">渋谷西武</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045237" target="_top">新宿</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045366" target="_top">青山３丁目</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045857" target="_top">池袋パルコ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045649" target="_top">池袋西武</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045663" target="_top">二子玉川</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045480" target="_top">有楽町</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#tokyo1 -->
+
+<div id="tokyo2" class="prefecture">
+		<h2>東京都23区外</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045275" target="_top">クイーンズ伊勢丹仙川</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045605" target="_top">ルミネ立川</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045399" target="_top">京王聖蹟桜ヶ丘</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045465" target="_top">国分寺エル</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=000010" target="_top">西友小金井</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045834" target="_top">調布パルコ</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045501" target="_top">府中プライム</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#tokyo2 -->
+
+<div id="kanagawa" class="prefecture">
+		<h2>神奈川県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045473" target="_top">たまプラーザテラス</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045423" target="_top">ららぽーと横浜</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045421" target="_top">ラゾーナ川崎</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045650" target="_top">港北東急</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045478" target="_top">藤沢</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045435" target="_top">本厚木ミロード</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#kanagawa -->
+
+<div id="niigata" class="prefecture">
+		<h2>新潟県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061692" target="_top">ＣｏＣｏＬｏ長岡</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061736" target="_top">ラブラ万代</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#niigata -->
+
+<div id="ishikawa" class="prefecture">
+		<h2>石川県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061698" target="_top">めいてつ・エムザ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061735" target="_top">アピタタウン金沢ベイ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#ishikawa -->
+		
+		<div id="yamanashi" class="prefecture">
+			<h2>山梨県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045603" target="_top">甲府山交</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#yamanashi -->
+
+<div id="gifu" class="prefecture">
+		<h2>岐阜県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045416" target="_top">岐阜高島屋</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#gifu -->
+
+<div id="shizuoka" class="prefecture">
+		<h2>静岡県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061705" target="_top">イオン志都呂</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045444" target="_top">サントムーン柿田川</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=000532" target="_top">西友富士今泉</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045414" target="_top">静岡</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#shizuoka -->
+
+<div id="aichi" class="prefecture">
+		<h2>愛知県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045656" target="_top">イオン木曽川キリオ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061879" target="_top">岡崎竜美丘</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061731" target="_top">豊橋カルミア</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061649" target="_top">豊田Ｔ−ＦＡＣＥ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045287" target="_top">名古屋パルコ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045422" target="_top">名古屋名鉄ヤング館</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#aichi -->
+
+<div id="mie" class="prefecture">
+		<h2>三重県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045873" target="_top">ベルシティ鈴鹿</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045258" target="_top">マイカル桑名</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#mie -->
+
+<div id="shiga" class="prefecture">
+		<h2>滋賀県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045749" target="_top">大津パルコ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045246" target="_top">大津西武</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#shiga -->
+
+<div id="kyoto" class="prefecture">
+		<h2>京都府</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061717" target="_top">京都ＢＡＬ</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045720" target="_top">千本</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#kyoto -->
+
+<div id="osaka" class="prefecture">
+		<h2>大阪府</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045253" target="_top">イオンりんくう泉南</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045747" target="_top">マイカル茨木</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045734" target="_top">京阪モール</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061606" target="_top">堺プラットプラット</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061880" target="_top">千里中央</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045654" target="_top">難波</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045247" target="_top">梅田ロフト</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#osaka -->
+
+<div id="hyogo" class="prefecture">
+		<h2>兵庫県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045652" target="_top">アクタ西宮</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045425" target="_top">イオン神戸北</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061835" target="_top">神戸ＢＡＬ</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#hyogo -->
+
+<div id="nara" class="prefecture">
+		<h2>奈良県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045721" target="_top">コトモール奈良</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045446" target="_top">近鉄生駒</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#nara -->
+
+<div id="tottori" class="prefecture">
+		<h2>鳥取県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061734" target="_top">イオン日吉津</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#tottori -->
+
+<div id="shimane" class="prefecture">
+		<h2>島根県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061727" target="_top">ゆめタウン出雲</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061602" target="_top">松江サティ</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#shimane -->
+
+<div id="okayama" class="prefecture">
+		<h2>岡山県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045724" target="_top">イオン倉敷</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#okayama -->
+
+<div id="hiroshima" class="prefecture">
+		<h2>広島県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045746" target="_top">ゆめタウン東広島</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045662" target="_top">イオン広島ソレイユ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061707" target="_top">フジグラン神辺</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045737" target="_top">広島アルパーク</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061697" target="_top">福山キャスパ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#hiroshima -->
+
+<div id="yamaguchi" class="prefecture">
+		<h2>山口県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061699" target="_top">シーモール下関</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061801" target="_top">山口</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#yamaguchi -->
+
+<div id="kagawa" class="prefecture">
+		<h2>香川県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061657" target="_top">ゆめタウン高松</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#kagawa -->
+
+<div id="ehime" class="prefecture">
+		<h2>愛媛県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061722" target="_top">イオン新居浜</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061725" target="_top">エミフルＭＡＳＡＫＩ</a></td><td class="status">あり</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061605" target="_top">松山</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#ehime -->
+
+<div id="kochi" class="prefecture">
+		<h2>高知県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061610" target="_top">イオン高知</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div><!-- /#kochi -->
+
+<div id="fukuoka" class="prefecture">
+		<h2>福岡県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045256" target="_top">イオン直方</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045849" target="_top">キャナルシティ博多</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045633" target="_top">コレット井筒屋</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061074" target="_top">小倉井筒屋</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045726" target="_top">西新プラリバ</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045519" target="_top">天神ソラリア</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="nagasaki" class="prefecture">
+		<h2>長崎県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061607" target="_top">アミュプラザ長崎</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="kumamoto" class="prefecture">
+		<h2>熊本県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061732" target="_top">ゆめタウン光の森</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="oita" class="prefecture">
+		<h2>大分県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045266" target="_top">トキハわさだタウン</a></td><td class="status">わずか</td></tr>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061374" target="_top">大分パルコ</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="miyazaki" class="prefecture">
+		<h2>宮崎県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061144" target="_top">宮崎</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="kagoshima" class="prefecture">
+		<h2>鹿児島県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody>
+		<tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=045667" target="_top">アミュプラザ鹿児島</a></td><td class="status">あり</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="okinawa" class="prefecture">
+		<h2>沖縄県</h2>
+		<table>
+		<thead><tr><th class="shop">店舗名</th><th class="status">在庫状況</th></tr></thead>
+		<tbody><tr><td class="shop"><a href="http://lbs.mapion.co.jp/map/uc/PoiInfo?vo=mbml&grp=muji&poi_code=061608" target="_top">天久</a></td><td class="status">わずか</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="pageTop"><a href="#top">先頭へ</a></div>
+
+</body>
+</html>

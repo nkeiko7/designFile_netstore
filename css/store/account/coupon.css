@@ -1,0 +1,12 @@
+table.horizontal{width:100%;}
+.num{margin-right:5px;}
+.total .num{margin-left:5px;}
+.prevNext{margin-top:20px;}
+.prevNext .next{width:170px;margin-left:265px;text-align:center;}
+td{text-align:center;}
+h1{height:27px;margin:20px 0;background-repeat:no-repeat;text-indent:-9999px;overflow:hidden;}
+body#couponList h1{background-image:url(/img/store/account/coupon/title_coupon.png);}
+body#couponHistory h1{background-image:url(/img/store/account/coupon/title_couponhistory.png);}
+
+.sublead{margin-bottom:10px;}
+.annotation {margin: 10px 0;}

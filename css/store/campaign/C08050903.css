@@ -1,0 +1,5 @@
+/* CLEARFIX */
+#snSection3 .section .figure {zoom: 1;}
+#snSection3 .section .figure:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+.relatedLink {text-align:right;}

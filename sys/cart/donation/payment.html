@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>お支払い方法の指定 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/cart/cart.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/cart/donation.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script  type="text/javascript" src="/js/jquery.tinyTips.js"></script>
+</head>
+
+<body class="store cart donation" id="payment">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+
+<div id="main">
+
+	<h1>お支払い方法の入力</h1>
+	
+	<p class="lead">寄付に使用されるクレジットカード情報を入力してください。</p>
+
+	<div id="orderSummary" class="section">
+		<table class="vertical">
+			<tr class="price"><th>寄付額合計</th><td><span class="num">1,500</span>円</td></tr>
+		</table><!--/.vertical -->
+	</div><!--/#orderSummary -->
+
+<form>
+
+<div class="focus" id="paymentCredit">
+<h2>クレジットカード情報</h2>
+<dl id="cardType">
+<dt>ご利用いただけるクレジットカード</dt>
+<dd>
+<ul>
+<li>セゾンカード（MUJI Cardを含む）、</li>
+<li>VISA、</li>
+<li>MASTER CARD、</li>
+<li>JCB、</li>
+<li>アメリカン・エキスプレス</li>
+</ul>
+</dd>
+</dl>
+<dl id="cardNumber">
+<dt>カード番号</dt>
+<dd><input type="text" name="cardNumber1" value="" id="cardNumber1" maxlength="4" size="4" /><input type="text" name="cardNumber2" value="" id="cardNumber2" maxlength="4" size="4" /><input type="text" name="cardNumber3" value="" id="cardNumber3" maxlength="4" size="4" /><input type="text" name="cardNumber4" value="" id="cardNumber4" maxlength="4" size="4" /></dd>
+</dl>
+<dl id="valid">
+<dt>有効期限</dt>
+<dd><select name="month" id="month">
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>/<select name="year" id="year">
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+</select><span class="ex">例：（2012年5月の場合） 05/12</span></dd>
+</dl>
+<dl id="securityCode">
+<dt>セキュリティコード <span class="tips">[<a href="#" class="tipObj">？</a>]</span></dt>
+<dd><input type="text" name="security" value="" maxlength="3" size="4" /></dd>
+<dd class="tipDesc">セキュリティコードとは、クレジットカードの裏面署名欄に印刷されている数字です。<br />右端3桁（または4桁）の数字を入力してください。<br /><img src="/img/store/cart/securitycode.png" wdith="169" height="126" alt="" /></dd>
+</dl>
+<ul class="annotation asterisk">
+<li>※有効期限が来月までのクレジットカードはご利用いただけません。有効期限が更新された新しいクレジットカードか、<br />
+他のクレジットカードをご使用ください。</li>
+<li>※アメリカン・エキスプレスの場合は、カード番号が15桁のため、「4桁」「4桁」「4桁」「3桁」にて入力してください。</li>
+</ul>
+</div><!--/#paymentCredit -->
+
+<p class="lead">お持ちの方は、MUJI.netクーポン／MUJI GIFT CARDをご利用いただくこともできます。</p>
+
+<div class="focus" id="paymentCod">
+<h2>MUJI.netクーポン／MUJI GIFT CARDの利用</h2>
+
+
+	<ul class="annotation asterisk">
+	<li>※MUJI GIFT CARDのご利用は、1回の寄付につき1枚までです。</li>
+	<li>※MUJI GIFT CARDご利用の際、MUJI.netクーポンの併用が可能です。</li>
+	</ul>
+
+	<form>
+
+	<div id="balance" class="section">
+		<table class="vertical">
+			<tr id="balanceCoupon">
+			<th>MUJI.netクーポン</th>
+			<td colspan="2">
+			<div class="price">残額：<span class="num">500</span>円分</div>
+			<div class="valid">有効期限：<span class="date">2010年12月28日（月）</span>まで</div>
+			<dl class="inputAmount">
+			<dt class="coupon"><b>MUJI.netクーポンご利用額</b></dt><dd class="coupon"><input type="text" value="" size="5" />円</dd>
+			</dl>
+			</td>
+			</tr>
+			<tr id="balanceGiftCard">
+			<th>MUJI GIFT CARD</th>
+			<td class="info">
+			<div class="card"><img src="/img/store/cart/cart_giftcard01.jpg" alt="カード番号、PIN番号は、ギフトカードの裏面に記載されています。" /></div>
+			<div class="price">残額：<span class="num">1,000</span>円分</div>
+			<div class="cardNo">カード番号：<span class="num">1111111</span></div>
+			<div id="balanceCheck">
+			<p>ご利用のギフトカード情報をご入力ください。</p>
+			<dl>
+			<dt class="cardNo">カード番号</dt><dd class="cardNo"><input type="text" size="18" maxlength="16" value="" /></dd>
+			<dt class="cardPin">PIN番号</dt><dd class="cardPin"><input type="text" size="4" maxlength="4" value="" /></dd>
+			</dl>
+			<div id="balanceCheckBtn"><span class="btn"><a href="#">照会</a></span></div>
+			</div>
+			<dl class="inputAmount">
+<dt class="gift"><b>MUJI GIFT CARDご利用額</b></dt><dd class="gift"><input type="text" value="" size="5" />円</dd>
+			</dl>
+			</td>
+			</tr>
+		</table>
+	</div>
+
+</div><!--/#paymentCod -->
+
+</form>
+
+<ul class="prevNext">
+<li class="prev"><a href="#">前のページに戻る</a></li>
+<li class="btn submit"><a href="confirm.html">次へ進む</a></li>
+</ul><!-- /.prevNext -->
+
+</div><!-- /#main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

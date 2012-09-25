@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>ダイレクトオーダー | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/store.css" />
+	<link rel="stylesheet" type="text/css" href="/css/store/directorder/directorder.css" />
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bigtarget.1.0.1.js"></script>
+	<script type="text/javascript" src="/js/store/directorder/directorder.js"></script>
+
+</head>
+
+<body class="store directorder" id="directorder">
+
+<div id="headerWrap"><div id="header">
+<script type="text/javascript" src="/js/dummy/header.js"></script>
+</div></div><!-- /#header and #headerWrap -->
+
+<div id="storeHeaderWrap"><div id="storeHeader">
+<script type="text/javascript" src="/js/dummy/storeheader.js"></script>
+</div></div><!-- /#storeHeader and #storeHeaderWrap -->
+
+<div class="content">
+
+	<div id="breadcrumbs">
+		<ol>
+			<li><a href="/store/">ネットストア</a></li>
+			<li class="current">ダイレクトオーダー</li>
+		</ol>
+	</div>
+
+<div id="sideNav">
+<script type="text/javascript" src="/js/dummy/sidenav.js"></script>
+</div><!-- /#sideNav -->
+
+<div id="main">
+
+<h1>ダイレクトオーダー</h1>
+<p class="lead"><a href="/catalog/">カタログ</a>（無料）に掲載されている商品を、商品番号を入力してご注文いただけます。<br />都道府県を選択し、商品番号、数量をご入力の上、「在庫確認」ボタンを押してください。</p>
+
+<!--
+<div class="message error">
+<ul>
+<li>都道府県を選択してください。</li>
+<li>商品番号を入力してください。</li>
+<li>数量を入力してください。</li>
+</ul>
+</div>
+-->
+
+
+<div class="focus">
+
+<div id="prefecture">
+<h2><span>1</span> お届け先の都道府県をお選びください。</h2>
+<select>
+<option value="">都道府県</option>
+<optgroup label="北海道・東北">
+	<option value="北海道">北海道</option>
+	<option value="青森県">青森県</option>
+	<option value="岩手県">岩手県</option>
+	<option value="宮城県">宮城県</option>
+	<option value="秋田県">秋田県</option>
+	<option value="山形県">山形県</option>
+	<option value="福島県">福島県</option>
+</optgroup>
+<optgroup label="関東">
+	<option value="茨城県">茨城県</option>
+	<option value="栃木県">栃木県</option>
+	<option value="群馬県">群馬県</option>
+	<option value="埼玉県">埼玉県</option>
+	<option value="千葉県">千葉県</option>
+	<option value="東京都">東京都</option>
+	<option value="神奈川県">神奈川県</option>
+</optgroup>
+<optgroup label="甲信越・北陸">
+	<option value="新潟県">新潟県</option>
+	<option value="富山県">富山県</option>
+	<option value="石川県">石川県</option>
+	<option value="福井県">福井県</option>
+	<option value="山梨県">山梨県</option>
+	<option value="長野県">長野県</option>
+</optgroup>
+<optgroup label="東海">
+	<option value="岐阜県">岐阜県</option>
+	<option value="静岡県">静岡県</option>
+	<option value="愛知県">愛知県</option>
+	<option value="三重県">三重県</option>
+</optgroup>
+<optgroup label="関西">
+	<option value="滋賀県">滋賀県</option>
+	<option value="京都府">京都府</option>
+	<option value="大阪府">大阪府</option>
+	<option value="兵庫県">兵庫県</option>
+	<option value="奈良県">奈良県</option>
+	<option value="和歌山県">和歌山県</option>
+</optgroup>
+<optgroup label="中国">
+	<option value="島根県">島根県</option>
+	<option value="鳥取県">鳥取県</option>
+	<option value="岡山県">岡山県</option>
+	<option value="広島県">広島県</option>
+	<option value="山口県">山口県</option>
+</optgroup>
+<optgroup label="四国">
+	<option value="徳島県">徳島県</option>
+	<option value="香川県">香川県</option>
+	<option value="愛媛県">愛媛県</option>
+	<option value="高知県">高知県</option>
+</optgroup>
+<optgroup label="九州・沖縄">
+	<option value="福岡県">福岡県</option>
+	<option value="佐賀県">佐賀県</option>
+	<option value="長崎県">長崎県</option>
+	<option value="熊本県">熊本県</option>
+	<option value="大分県">大分県</option>
+	<option value="宮崎県">宮崎県</option>
+	<option value="鹿児島県">鹿児島県</option>
+	<option value="沖縄県">沖縄県</option>
+</optgroup>
+</select>
+</div>
+
+<div id="item">
+<h2><span>2</span> カタログに掲載されている7桁の商品番号をご入力ください。</h2>
+
+<table class="horizontal">
+<thead>
+<tr>
+<th class="item">商品番号<span class="ime">（半角 7桁）</span></th>
+<th class="quantity">数量<span class="ime">（半角）</span></th>
+</tr>
+</thead>
+<tbody id="list1">
+<tr>
+<td class="item"><input type="text" name="item01" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order01" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item02" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order02" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item03" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order03" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item04" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order04" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item05" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order05" value="" size="3" /></td>
+</tr>
+</tbody>
+<tbody id="list2">
+<tr>
+<td class="item"><input type="text" name="item06" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order06" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item07" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order07" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item08" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order08" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item09" value="" size="9" /></td>
+<td class="order"><input type="text" name="order09" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item10" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order10" value="" size="3" /></td>
+</tr>
+</tbody>
+<tbody id="list3">
+<tr>
+<td class="item"><input type="text" name="item11" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order11" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item12" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order12" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item13" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order13" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item14" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order14" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item15" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order15" value="" size="3" /></td>
+</tr>
+</tbody>
+<tbody id="list4">
+<tr>
+<td class="item"><input type="text" name="item16" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order16" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item17" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order17" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item18" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order18" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item19" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order19" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item20" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order20" value="" size="3" /></td>
+</tr>
+</tbody>
+<tbody id="list5">
+<tr>
+<td class="item"><input type="text" name="item21" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order21" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item22" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order22" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item23" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order23" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item24" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order24" value="" size="3" /></td>
+</tr>
+<tr>
+<td class="item"><input type="text" name="item25" value="" size="9" /></td>
+<td class="quantity"><input type="text" name="order25" value="" size="3" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="btn submit"><a href="#">在庫確認</a></div>
+
+</div>
+
+<div class="aside">
+
+<div class="related">
+<dl class="mobile">
+<dt><a href="#"><img src="/img/store/directorder/qr.png" alt="" />携帯版 MUJI.net</a></dt>
+<dd>携帯電話でもダイレクトオーダーでご注文できます。</dd>
+</dl>
+<dl class="catalog">
+<dt><a href="#"><img src="/img/store/directorder/catalog.jpg" alt="" />カタログ</a>（無料）</dt>
+<dd>店舗で配布しているカタログを無料でお届けします。</dd>
+</dl>
+</div>
+
+<div class="note">
+<ul>
+<li>お支払い方法は「代金引き換え」、「クレジットカード」をご利用いただけます。</li>
+<li>1度のご注文で25品目まで注文できます。25品目以上ご注文される場合は<a href="/contact/">サービスセンター</a>までご連絡ください。</li>
+<li>カタログ掲載商品の中には、インターネットでご購入いただけない商品、すでに販売が終了している商品もございますのでご了承ください。</li>
+</ul>
+</div>
+
+
+</div>
+
+</div><!-- /#main -->
+</div><!-- /.content -->
+
+<div id="footer">
+<script type="text/javascript" src="/js/dummy/footer.js"></script>
+</div><!-- /#footer -->
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* CLEARFIX */
+
+.section, .section .annotation dl {zoom: 1;}
+.section:after ,
+.section .annotation dl:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+
+h1 {border-bottom: 0; margin-bottom: 0; padding-bottom: 0;}
+
+.section dt {font-weight:bold;}
+.section .annotation {width:500px;float:left;}
+.section .relatedLink {float:right;}

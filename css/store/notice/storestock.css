@@ -1,0 +1,24 @@
+/* CLEARFIX */
+.focus dl {zoom: 1;}
+.focus dl:after {content: " "; display: block; visibility: hidden; clear: both; height: 0.1px; font-size: 0.1em; line-height: 0;}
+
+body {width: 380px; padding: 10px !important;}
+
+/* H1 */
+h1 {height: 21px; margin: 15px 0; background: url(/img/store/notice/title_storestock.png) no-repeat; text-indent: -9999px; overflow: hidden;}
+
+.lead {margin-bottom: 20px;}
+.note {margin-bottom: 20px;}
+.message {margin-bottom: 10px;}
+
+dt {float: left; width: 105px; margin-bottom: 10px; font-weight: bold;}
+dd {overflow: hidden; margin-bottom: 10px;}
+
+select {width: 150px;}
+
+.submit {margin-left: 105px; margin-top: 20px;}
+
+dd.stock {font-size: 14px; font-weight: bold;}
+dd.stock #receive {font-weight: normal;}
+
+#receive {font-size: 11px;}

@@ -1,0 +1,150 @@
+
+#rfitem {
+	margin-top: 10px;
+}
+#rfitem .title{
+	font-size: 16px;
+	font-weight: bold;
+/*	margin-bottom: 5px;*/
+	padding: 3px 0 5px;
+	border-bottom: solid #333333 1px; 
+
+}
+#rfitem .choose{
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+#rfitem p.comment{
+	color: #666666;
+	padding-top: 3px;
+}
+
+#rfitem .floatclear {
+	font-size: 1px;
+	clear: both;
+}
+
+/* 上部に1px罫を持ちたい時に使用 */
+#rfitem .categorySection {
+	border-top: solid 1px #E6E6E6;
+	/*background: transparent url(/img/sectionparts/line_e8_640.gif) no-repeat 0 0;*/
+	clear: both;
+/*	padding: 1px 0 0 0;*/
+	padding: 10px 0 10px 0 ;
+	background-color: #f3f3f3;
+}
+#rfitem .categorySectionspc {/* 上部余白込み */
+	border-top: solid 1px #E6E6E6;
+	/*background: transparent url(/img/sectionparts/line_e8_640.gif) no-repeat 0 0;*/
+	clear: both;
+	padding: 21px 0 0 0;
+
+}
+#rfitem .categorySectionUpspc {/* 線上部余白込み */
+	border-top: solid 1px #E6E6E6;
+/*	background: transparent url(/img/sectionparts/line_e8_640.gif) no-repeat 0 10px;*/
+	clear: both;
+	padding: 11px 0 0 0;
+	background-color: #f3f3f3;
+}
+#rfitem .sectionList{
+	padding: 10px 0 10px 0 ;
+}
+
+/* 配送料無料 対象外商品 */
+#rfitem p.taishougai {
+	font-size: 12px;
+	font-weight: bold;
+	clear: both;
+	background-color: #F5F5F5;
+/*	border-bottom: 1px solid #E8E8E8;	*/
+	margin: 0 0 0 12px;
+}
+/*#rfitem .taishougai img {
+	vertical-align: text-bottom;
+	margin: 12px 0 11px 0;*/
+}
+
+/* 配送料無料 対象商品 */
+#rfitem ul.taishou {
+	background: #F5F5F5;
+	list-style: none;
+	clear: both;
+/*	border-bottom: 1px solid #E8E8E8;	*/
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+#rfitem ul.taishou li {
+	font-size: 12px;
+	line-height: 24px;
+}
+#rfitem ul.taishou li img {
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+#rfitem li.taishouLeft {
+	float: left;
+	padding: 13px 0 0 0;
+}
+#rfitem ul.taishou > li.taishouLeft {
+	font-weight: bold;
+	padding: 5px 0 0 12px;
+}
+#rfitem ul.taishou li.taishouRight {
+	padding: 5px 12px 10px 0;
+	text-align: right;
+}
+#rfitem ul.taishou li.taishouRight img {
+	text-align: right;
+}
+#rfitem .taishou li a { font-weight: normal;}
+#rfitem .taishou li a:link {color: #333; text-decoration: underline;}
+#rfitem .taishou li a:visited {color: #333; text-decoration: underline;}
+#rfitem .taishou li a:hover {color: #7F0019; text-decoration: underline;}
+#rfitem .taishou li a:action {color: #7F0019; text-decoration: underline;}
+
+#rfitem .listCaution {/* 注意書き */
+	font-size: 11px;
+	clear: both;
+	margin: 0;
+	padding: 12px 0 6px ;
+}
+
+#rfitem .Section { margin: 0 0 50px;}
+
+p.links {
+	text-align: right;
+}
+p.links a {
+	background: url(/img/common/arrow_right.png) no-repeat 14px 50%;
+	border: 1px solid #ccc;
+	padding: 7px 14px 7px 28px;
+	text-decoration: none;
+	font-weight: bold;
+}
+p.links a:active, p.links a:hover {
+	color: #333;
+	border: 1px solid #7F0019;
+}
+
+#rfitem #ordersystem dt { 
+	margin: 0 0 10px 0;
+	font-weight: bold;
+}
+
+#rfitem p.taishougai span {
+	font-weight: normal;
+}
+
+/* ▽100▽　*/
+
+li#itemname01 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11001_over.gif) no-repeat 0 100%; }
+li#itemname02 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11002_over.gif) no-repeat 0 100%; }
+li#itemname03 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11003_over.gif) no-repeat 0 100%; }
+li#itemname04 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11011_over.gif) no-repeat 0 100%; }
+li#itemname05 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11012_over.gif) no-repeat 0 100%; }
+li#itemname06 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11013_over.gif) no-repeat 0 100%; }
+li#itemname07 a strong { background: url(<%=img_path%>/img/sectionparts/title/T10012_over.gif) no-repeat 0 100%; }
+li#itemname08 a strong { background: url(<%=img_path%>/img/sectionparts/title/S11022_over.gif) no-repeat 0 100%; }
