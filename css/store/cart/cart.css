@@ -52,7 +52,6 @@ table.horizontal{width:100%;margin-bottom:10px;}
 .total .payment td .num{font-size:14px;font-weight:bold;margin:0 2px;font-family:"Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",sans-serif;}
 .total .tax th,.total .tax td{padding:10px 0 5px;}
 .total .tax,.total .giftcard,.total .cash{color:#666;}
-.recast{margin:5px 11px;text-align:right;}
 .addEdit{text-align:right;margin-top:-1.2em;}
 #separate .add{text-align:right;margin-bottom:10px;}
 #recommend{margin-top:60px;border:1px solid #ccc;padding:5px;}
@@ -267,8 +266,6 @@ body#pickupComplete #main .annotation {margin-bottom: 20px;}
 #receipt p a {background:url("/img/common/imageview.gif") no-repeat scroll 0 2px transparent;height:8px;padding: 0 2px 0 14px;width:11px;}
 
 
-
-/* nishiwaki */
 /* step navigation for cart */
 #shoppingFlow {width:100%;}
 #shoppingFlow ol.stepNavi {overflow: hidden; margin: 0 auto; width: 680px;}
@@ -324,6 +321,7 @@ color: #666;
 #addresseeConfirm .disabled .serviceName {text-decoration: line-through;}
 #addresseeConfirm .message li {padding :5px;}
 #addresseeConfirm p.annotation {margin-top: 10px;}
+#addresseeConfirm td p.annotation {margin-top: 0;}
 
 /* payment */
 #payment #coupon li, #payment #paymentMethod li{float: left; margin: 5px 20px 5px 0;}
@@ -332,46 +330,112 @@ color: #666;
 #payment #balanceGiftCard .price{float:left;margin-right:20px;}
 #payment #balanceGiftCard #balanceCheck{margin-top: 10px; width:500px;}
 #payment #balanceGiftCard #balanceCheck p {margin-bottom:10px;}
-#payment #balanceCheck {float:left; margin-left: 80px;}
+#payment #balanceCheck {margin-left: 80px;}
 #payment #balanceCheck dt{float:left;clear:both;width:80px;margin:2px 0 5px 0;font-weight:bold;}
 #payment #balanceCheck dd{margin-bottom:5px;}
 #payment #balanceCheckBtn{margin:10px 0 0 80px;}
-#payment #coupon {margin: 0px; padding: 15px; background: #f2f2f2;
+#payment #coupon {margin: 0px; padding: 15px; background: #fff; border-bottom: 1px solid #eee;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 -o-border-radius: 5px;
 -ms-border-radius: 5px;
 }
-#payment #GiftCard, #payment #paymentMethod {margin: 20px 0 5px 0; padding: 15px; background: #f2f2f2;
+#payment #paymentMethod {padding: 15px; background: #fff;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 -o-border-radius: 5px;
 -ms-border-radius: 5px;
 }
-#payment #balance, #payment #paymentCredit, #payment #paymentCod,  #payment #paymentRakuten {
-margin-bottom: 40px; padding: 15px; border: 6px solid #eee;
+#payment #GiftCard  {margin: 20px 0 5px 0; padding: 15px; background: #fff;}
+#payment #balance {margin-bottom: 40px; padding: 20px;
+border: 1px solid #ccc;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 -o-border-radius: 5px;
 -ms-border-radius: 5px;
 }
-#payment .balloon {padding-top: 15px; background:url("/img/store/cart/balloon.png") no-repeat scroll 50px 2px transparent;}
+#payment #paymentCredit, #payment #paymentCod, #payment #paymentRakuten {
+padding: 20px;
+border-top: 1px solid #ccc;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+}
+
+#payment #paymentCreditDiv.balloon:before, #payment #giftCardInquiry.balloon:before {
+content: " ";
+position: relative;
+left: 50px; top:1px;
+background:url("/img/store/cart/balloon.png") no-repeat;
+display: block;
+height: 15px;
+width: 25px; z-index: 100;
+}
+#payment #paymentCodDiv.balloon:before {
+content: " ";
+position: relative;
+left: 190px; top:1px;
+background:url("/img/store/cart/balloon.png") no-repeat;
+display: block;
+height: 15px;
+width: 25px; z-index: 100;
+}
+#payment #paymentRakutenDiv.balloon:before {
+content: " ";
+position: relative;
+left: 300px; top:1px;
+background:url("/img/store/cart/balloon.png") no-repeat;
+display: block;
+height: 15px;
+width: 25px; z-index: 100;
+}
+
 #payment #coupon .annotation, #payment #GiftCard .annotation{ margin:	5px 0 10px 0;}
-#payment #coupon .faqlink, #payment #GiftCard .faqlink, #payment #paymentMethod .faqlink {margin-left: 10px;　font-size: 12px;}
+#payment #coupon .faqlink, #payment #GiftCard .faqlink, #payment #paymentMethod .faqlink {float: right; font-size: 10px;}
 #payment #inputAmount dt {float:left; margin-right: 10px;}
 #payment #inputAmount dt.subTotal {padding-top: 3px;}
 #payment #inputAmount p, #payment #balanceCheck p {margin-bottom: 10px;}
-#payment #inputAmount {width: 500px; margin: 5px auto; padding-top: 15px; border-top: 1px solid #ddd;}
+#payment #inputAmount {width: 500px; margin: 10px auto; padding-top: 15px; border-top: 1px solid #ddd;}
 #payment #inputAmount #result {float:left; margin-right: 10px; width: 43%;}
 #payment #inputAmount #input {float:right; width: 52%;}
 #payment #inputAmount #input dl {margin-top: 12px;}
 #payment #inputAmount #input dt { margin-top: 3px;}
 #payment input {margin-right: 2px;}
 #payment .prevNext .prev, #payment .submit {padding-top: 20px;}
+#payment #coupon ul {margin-top:10px;}
+#payment #GiftCard .title {font-weight: bold;}
 
+#payment #coupon .annotation, #payment #GiftCard .annotation {margin-top: 10px;}
+#payment #paymentMethod ul {margin-top: 10px;}
+#payment #giftCardInquiry {display: none;}
+#paymentRakutenBalloon,
+#paymentCodBalloon  {display: none;}
+#payment #paymentMethod h2 {font-size: 14px;}
+#payment #paymentMethod ul {float: left; margin-top: 0; font-size: 16px;}
+
+#payment #balanceCheck {background: url("/img/store/cart/cart_giftcard02.png") no-repeat scroll 260px 0 transparent; }
+#coupon dl {min-height: 25px;}
+#coupon dt, #coupon dd {float: left;}
+#coupon dd.amount {margin-left: 20px;}
+
+#paymentMethodArea {
+margin: 20px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;}
+
+#GiftCard label {padding-left: 80px; background: url(/img/store/cart/giftcard_img.jpg) no-repeat 5px 4px; background-size: 40px auto; padding: 10px 0 15px 55px;}
+
+#balance  {zoom: 1;}
+#balance:after {content: ""; display: block; clear: both;}
 
 /* confirm */
 #confirm .disabled {color: #999;}
@@ -390,8 +454,6 @@ border-radius: 5px;
 
 .pickup #shoppingFlow {background: none;}
 
-
-/* nishiwaki_step10 */
 /* BANNER */
 #banner {
 	position: absolute;
@@ -449,3 +511,17 @@ opacity: 1;
 
 #totalArea {position: relative;}
 #banner .campaignName {font-weight: bold;}
+
+/*coupon present 121019*/
+#shoppingCart aside.present {
+    border: 5px solid #EFEFEF;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+#shoppingCart aside.present h1 {background-image: none; text-indent: 0; font-size: 15px; font-weight: bold; border: none; padding-top: 0; height:15px; margin-bottom:10px;}
+#shoppingCart aside.present .column2 {width: 670px; margin-top:-15px;}
+#shoppingCart aside.present .column2 .col {width: 509px; margin-right:10px;}
+#shoppingCart aside.present .column2 .col + .col {width: 151px; margin-right:0;}
+#shoppingCart aside.present .column2 .col img {width: 120px; height:118px; margin-top:10px;}
+#shoppingCart aside.present .column2 .col .annotation {display:block; margin-top:10px;}
+

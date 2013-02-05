@@ -16,7 +16,43 @@
 	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.1.js"></script>
 	<script type="text/javascript" src="/js/store/store.js"></script>
 	<script type="text/javascript" src="/js/store/cart/payment.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+	$("#coupon dt").click(function(){
+		$("input[type='radio']",this).attr("checked","checked");
+		var e = $("#coupon .amount");
+		$("#couponToggle").attr("checked")?e.fadeIn("fast"):e.fadeOut("fast");
+		});
+		
+	$("#useGiftCard").click(function () {
+  	$("#giftCardInquiry").toggle();
+  	 });
+  	 
+  	 
+  $( 'input[name="pay"]:radio' ).change( function() {  
+	if( $( this ).val()=="0"){
+		$('#paymentCreditBalloon').fadeIn('fast');
+		}else{
+		$('#paymentCreditBalloon').fadeOut('fast');
+	}
+	
+	if( $( this ).val()=="1"){
+		$('#paymentCodBalloon').fadeIn('fast');
+		}else{
+		$('#paymentCodBalloon').fadeOut('fast');
+	}
+	
+	if( $( this ).val()=="2"){
+		$('#paymentRakutenBalloon').fadeIn('fast');
+		}else{
+		$('#paymentRakutenBalloon').fadeOut('fast');
+	}
 
+});
+
+		});
+	</script>
 </head>
 
 <body class="store cart" id="payment">
@@ -45,10 +81,37 @@
 
 	<h1>お支払い方法のご指定</h1>
 	
-	<p class="lead">ご希望のお支払い方法をご指定ください。</p>
+	<!-- <p class="lead">ご希望のお支払い方法をご指定ください。</p> -->
 
 <form>
 
+<section id="coupon">
+	<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014392.html" class="iframe fancyBox" target="_blank">MUJI.netクーポンについて</a></span>
+	<dl>
+		<dt><input type="checkbox" checked="checked" name="coupon" id="couponToggle"><label for="couponToggle">MUJI.netクーポン</label></dt>
+		<dd class="balance price">（残高 <span class="num">500</span>円分）</dd>
+		<dd class="amount"><input type="number" value="500" max="500" min="0" size="6">円分を使用</dd>
+	</dl>
+</section><!-- /#coupon -->
+
+<!--
+<section id="coupon">
+	<h2>MUJI.netクーポンのご利用</h2>
+	<p>現在お持ちのMUJI.netクーポンは<span class="price"><span class="num">500</span>円分</span>です。
+	<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014392.html" class="iframe fancyBox" target="_blank">MUJI.netクーポンについて</a></span>
+	<ul>
+		<li><input type="radio" value="0" name="coupon" checked="checked" id="allCoupon"><label for="allCoupon">すべて使用する</label></li>
+		<li><input type="radio" value="1" name="coupon" id="notAllCoupon"><label for="notAllCoupon">一部を使用する</label><input type="text" maxlength="4" size="4">円</li>
+		<li><input type="radio" value="2" name="coupon" id="notUseCoupon"><label for="notUseCoupon">今回は使用しない</label></li>
+	</ul>
+	</p>
+
+	<p>
+	<span class="annotation">※クーポンをご使用いただく場合、楽天あんしん支払いサービスはご利用いただけません</span>
+	</p>	
+</section>
+-->
+<!--
 <div id="coupon">
 	<h2>MUJI.netクーポンのご利用</h2>
 	<p>ただいま、<span class="price"><span class="num">500</span>円分</span>のMUJI.netクーポンをお持ちです。クーポンを使用しますか？<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014392.html" class="iframe fancyBox" target="_blank">MUJI.netクーポンについて</a></span></p>
@@ -59,20 +122,33 @@
 		<li><input type="radio" value="2" name="coupon" id="notUseCoupon"><label for="notUseCoupon">今回は使用しない</label></li>
 	</ul>
 </div>
+-->
 
+<section id="GiftCard">
+	<p><input type="checkbox" name="useGiftCard" id="useGiftCard" value="USE_GIFT"><label for="useGiftCard">MUJI GIFT CARD</label>
+	<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014386.html" class="iframe fancyBox" target="_blank">MUJI GIFT CARDについて</a></span></p>
+	<!-- <p class="annotation">※MUJI GIFT CARDをご使用いただく場合、楽天あんしん支払いサービスはご利用いただけません</p> -->
+</section>
+
+<!--
 <div id="GiftCard">
 	<h2>MUJI GIFT CARDのご利用</h2>
 	<p>MUJI GIFT CARDをお持ちですか？お支払いにご利用いただけます。<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014386.html" class="iframe fancyBox" target="_blank">MUJI GIFT CARDについて</a></span></p>
 	<p class="annotation">※MUJI GIFT CARDをご使用いただく場合、楽天あんしん支払いサービスはご利用いただけません</p>
 	<input type="checkbox">利用する
 </div>
+-->
 
-<div class="balloon">
+
+<div class="balloon" id="giftCardInquiry">
 <div id="balance">
 	<h3>ギフトカード照会</h3>
 	<div id="balanceCheck">
-		<p>ご利用のギフトカード情報をご入力ください。</p>
+		<!--
+<p>ご利用のギフトカード情報をご入力ください。</p>
+		<p class="annotation">※MUJI GIFT CARDをご使用いただく場合<br> 楽天あんしん支払いサービスはご利用いただけません。</p>
 		<p class="annotation asterisk">※MUJI GIFT CARDは、1回のご注文につき1枚までご利用可能です。</p>
+-->
 		<form action="/store/counter/service/dogiftcard/?_st=idgoKHRPaV" id="giftForm" method="post">
 			<dl>
 			<dt class="cardNo">カード番号</dt><dd class="cardNo"><input type="text" name="giftCardNo" size="18" maxlength="16" /></dd>
@@ -83,9 +159,9 @@
 		<div id="balanceCheckBtn"><span class="btn"><a href="javascript:void(0);" onclick="return doGift();">照会</a></span></div>
 		
 	</div>
-	<div class="card"><img src="/img/store/cart/cart_giftcard01.jpg" alt="カード番号、PIN番号は、ギフトカードの裏面に記載されています。" /></div>
+	<!-- <div class="card"><img src="/img/store/cart/cart_giftcard01.jpg" alt="カード番号、PIN番号は、ギフトカードの裏面に記載されています。" /></div> -->	
 		
-		
+<!--
 	<div id="inputAmount">
 		<p>ご利用額を入力してください。</p>
 		<div id="result">
@@ -113,31 +189,36 @@
 		</div>
 	</div>
 	
+-->
+	
+</div>
 </div>
 
-</div>
+<div id="paymentMethodArea">
 
 <div id="paymentMethod">
-	<h2>お支払い方法</h2>
-	<p>ご希望のお支払方法をご指定ください。<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014393.html" class="iframe fancyBox" target="_blank">お支払い方法について</a></span></p>
+	<!-- <h2>お支払い方法の指定 --><!-- </h2> -->
+	<!--  <p>ご希望のお支払方法をご指定ください。<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014393.html" class="iframe fancyBox" target="_blank">お支払い方法について</a></span></p> -->
 	<ul>
-		<li><input type="radio" value="0" name="pay" id="pmCard"><label for="pmCard">クレジットカード</label></li>
+		<li><input type="radio" value="0" name="pay"  checked="checked" id="pmCard"><label for="pmCard">クレジットカード</label></li>
 		<li><input type="radio" value="1" name="pay" id="pmDelivery"><label for="pmDelivery">代金引換</label></li>
 		<li><input type="radio" value="2" name="pay" id="pmRakuten"><label for="pmRakuten">楽天あんしん支払いサービス</label></li>
 	</ul>
-	
+	<span class="faqlink"><a href="http://www.muji.net/mt/contact/detail_list/014393.html" class="iframe fancyBox" target="_blank">お支払い方法について</a></span>
 	<!--desabledの場合-->
-	<ul>
+	<!--
+<ul>
 		<li><input type="radio" value="0" name="pay" id="pmCard" disabled="disabled"><label for="pmCard" class="tipObj">クレジットカード</label><p class="tipDesc" style="display: none; ">お支払額を満たしているため、クレジットカードのご入力は必要はありません</p></li>
 		<li><input type="radio" value="1" name="pay" id="pmDelivery" disabled="disabled"><label for="pmDelivery" class="tipObj">代金引換</label><p class="tipDesc" style="display: none; ">ご購入を希望されている商品は、代金引き換えをご利用いただけません。</p></li>
 		<li><input type="radio" value="2" name="pay" id="pmRakuten" disabled="disabled"><label for="pmRakuten" class="tipObj">楽天あんしん支払いサービス</label><p class="tipDesc" style="display: none; ">MUJI.netクーポン・MUJI GIFT CARDをご利用時は選択できません。</p></li>
 	</ul>
+-->
 </div>
 
 
-<div class="balloon">
+<div class="balloon" id="paymentCreditBalloon">
 <div id="paymentCredit">
-<h2>クレジットカードご利用</h2>
+<!-- <h2>クレジットカードご利用</h2> -->
 <dl id="cardType">
 <dt>ご利用いただけるクレジットカード</dt>
 <dd>
@@ -196,9 +277,9 @@
 </div><!--/#paymentCredit -->
 </div>
 
-<div class="balloon">
+<div class="balloon" id="paymentCodBalloon">
 <div id="paymentCod">
-<h2 class="tipObj"><!--<input type="radio" id="pmDelivery" name="paymentMethod" value="CASH_ON_DELIVERY" disabled="disabled" />-->代金引き換え</h2>
+<!-- <h2 class="tipObj"><input type="radio" id="pmDelivery" name="paymentMethod" value="CASH_ON_DELIVERY" disabled="disabled" />代金引き換え</h2> -->
 <!--<p class="tipDesc" style="display: none; ">ご購入を希望されている商品は、代金引き換えをご利用いただけません。</p>-->
 <ul class="annotation asterisk">
 <li>※ご注文された商品のお届け時に、商品と引き換えに代金をお支払いただきます。</li>
@@ -207,9 +288,9 @@
 </div><!--/#paymentCod -->
 </div>
 
-<div class="balloon">
+<div class="balloon" id="paymentRakutenBalloon">
 <div id="paymentRakuten">
-<h2 class="tipObj"><!--<input type="radio" id="pmRakuten" name="paymentMethod" value="RAKUTEN" disabled="disabled" />-->楽天あんしん支払いサービス</h2>
+<!-- <h2 class="tipObj"><input type="radio" id="pmRakuten" name="paymentMethod" value="RAKUTEN" disabled="disabled" />楽天あんしん支払いサービス</h2> -->
 <!--<p class="tipDesc" style="display: none; ">MUJI.netクーポン・MUJI GIFT CARDをご利用時は選択できません。</p>-->
 <div id="rakutenCard"><img src="https://checkout.rakuten.co.jp/p/common/img/img_cardface_h7.gif" alt="VISA、 MASTER CARD、 JCB、 アメリカン・エキスプレス、ダイナースクラブ" /></div>
 <p>楽天会員IDでお支払いいただけます。<br />
@@ -223,6 +304,9 @@
 <p>詳しくは、<a href="http://checkout.rakuten.co.jp/" target="_blank">「楽天あんしん支払いサービス」WEBサイト</a>へ</p>
 </div><!--/#paymentCod -->
 </div>
+
+</div><!-- /#paymentMethodArea -->
+
 </form>
 
 <ul class="prevNext">

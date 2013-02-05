@@ -112,56 +112,61 @@ table#addressee dt a { background: url(/img/common/imageview.gif); background-re
 
 
 
-/*nishiwaki*/
+/* Status of the receipt */
 .receipt_link{font-size:11px;}
 .published_receipt{font-size:11px;color:#999;}
+
+/* error message */
+#createReceiptArea p.message,
+#orderDetail p.message {margin: 10px 0;}
+
+/* create receipt */
+#createReceipt #createReceiptArea table.vertical {margin-bottom: 10px;}
+#createReceipt #createReceiptArea table.vertical th {width:150px;}
+#createReceipt #createReceiptArea .annotation {margin-bottom: 15px;}
+#createReceipt h1{background-image: url("/img/store/account/orderlist/title_receipt.png");}
+
 table#receipt{width:490px;}
 #receipt .detail td {border: 1px solid #ddd;}
 #receipt p.annotation{margin:0;line-height:140%;}
 #receipt p.btn{margin:10px 0 10px 160px;}
-body#createReceipt #createReceiptArea table.vertical {margin-bottom: 10px;}
-body#createReceipt #createReceiptArea table.vertical th {width:150px;}
-body#createReceipt #createReceiptArea .annotation {margin-bottom: 15px;}
+#createReceiptArea {width:490px;}
+#createReceiptArea p.submit{margin-left:171px; width: 148px;}
+#createReceiptArea p.annotation{margin-bottom:10px}
 
-#createReceipt h1{background-image: url("/img/store/account/orderlist/title_receipt.png");}
-div#createReceiptArea {width:490px;}
-#publisher{font-size:14px;text-align:right;}
-.orderID{text-align:right;border-top: 1px solid #E6E6E6;padding-top:10px}
-.date{text-align:right}
 #receiptBox{border:1px solid #ccc;padding:10px 30px 30px 30px;margin-bottom:30px;}
+#receiptBox .receipt_ttl{margin: 20px 0 10px;}
+#receiptBox .date{text-align:right}
 #receiptBox p.lead{margin: 0 0 10px 150px;font-size:14px;}
-.receipt_detail{margin:0 0 15px 150px;width:60%;}
-.receipt_detail dt{width:15%;float:left;margin:0 10px 5px;padding-left:10px;}
-.receipt_detail dd.receipt_name,dd.receipt_price{margin:5px 0 10px;border-bottom:1px solid #ccc;}
-.receipt_name,.receipt_price{font-size:18px;font-weight:bold;}
-.receipt_purpose,.receipt_pay,receipt_date{font-size:12px;margin-bottom:5px;}
-.receipt_ttl{margin: 20px 0 10px;}
-#print_receipt dl#orderID{padding:0;background:none;margin: 20px 0 10px;}
+#receiptBox .receipt_detail{margin:0 0 15px 150px;width:60%;}
+#receiptBox .receipt_detail dt{width:15%;float:left;margin:0 10px 5px;padding-left:10px;}
+#receiptBox .receipt_detail dd.receipt_name,dd.receipt_price{margin:5px 0 10px;border-bottom:1px solid #ccc;}
+#receiptBox .receipt_name,.receipt_price{font-size:18px;font-weight:bold;}
+#receiptBox .receipt_purpose,.receipt_pay,.receipt_date{font-size:12px;margin-bottom:5px;}
+#receiptBox #publisher{font-size:14px;text-align:right;}
+
+/* Receipt print */
+#print_receipt dl#orderID{background:none; margin: 20px 0 10px;padding-left: 0;}
 #print_receipt table.horizontal th{background:none;border:1px solid #ccc;}
 #print_receipt table.horizontal td {padding:5px 10px;}
 #print_receipt .logo{margin-top:15px}
 #print_receipt table.vertical th{background:none;padding: 5px 10px;}
 #print_receipt table.vertical td{padding: 5px 10px;}
-p.message {margin-bottom: 10px;}
-#print_set{margin-bottom: 20px;}
+#print_receipt #print_set{margin-bottom: 20px;}
 #print_receipt .caption{float:left;width:50%;font-size:14px;}
 #print_receipt input{margin:0 2px 0 10px;}
-.print_link{float:right;width:42%;}
-.print_link p{float:left;}
+#print_receipt .print_link{float:right;width:42%;}
+#print_receipt .print_link p{float:left;}
 #print_set input,#print_set label{margin-top: 5px;}
 #createReceipt submit{margin-left:300px;}
 #orderReceipt #main {width: 100%;}
 #orderReceipt .submit{margin-left:20px}
 
-#createReceiptArea p.submit{margin-left:171px; width: 148px;}
-#createReceiptArea p.annotation{margin-bottom:10px}
-
-/*clearfix*/
+/* clearfix */
 .receipt_detail,#receiptBox dd,#print_set{zoom:1;}
 .receipt_detail:after,#receiptBox dd:after,#print_set:after{content: ""; display: block; clear: both;}
 
-
-/* nishiwaki */
+/* common order status */
 #orderDetail .disabled,
 #orderCancel .disabled,
 #createReceipt .disabled,

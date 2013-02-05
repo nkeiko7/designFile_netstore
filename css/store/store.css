@@ -153,6 +153,11 @@ store_sidebar
 #sideNav #snCategory #snBanner a {display:block;border:1px solid #CCCCCC;}
 #sideNav #snCategory #snBanner a:hover {border:1px solid #7F0019;}
 
+#sideNav #snCategory .D00011 h3 {margin-left: 3px;}
+#sideNav #snCategory ul li.D00011 {background: #f7f7f7;}
+#sideNav #snCategory ul li.D00011 ul li a {padding-right: 3px;}
+#sideNav #snCategory ul li.D00011 ul li a:hover {background: #d6d6d6;}
+
 /* ----------------
 #snMujilife
 ---------------- */
@@ -382,13 +387,21 @@ mobile
 
 
 /* nishiwaki */
-#CartInfo {
-background: url("/img/store/cmdty/cartinfo.png") no-repeat scroll 165px 10px transparent;
-z-index: 9999;
-position: absolute;
-margin-top: -32px
+#item .placeOrder.buy {position: relative;}
+#CartInfo {padding: 10px; background-color: #fff; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; position: relative; border: 1px solid #DAD5C9; color: #333; z-index: 9999; font-weight: normal; display: inline-block; z-index: 9999; position: absolute; top: 55px; right: 0; white-space: nowrap;
+-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;}
+#CartInfo .cartInfoText {vertical-align: middle; font-size: 13px;}
+#CartInfo .cartBtn {vertical-align: middle; margin-left: 10px;}
+#CartInfo .cartBtn a {text-decoration: none; font-size: 13px; padding: 3px 4px; background: #666; color: #fff; border-radius: 2px;}
+#CartInfo .cartBtn a:hover {background: #333;}
+#CartInfo .closeBtn {text-decoration: none; padding: 0 0 0 8px; font-size: 16px; cursor: pointer; vertical-align: middle; margin-left: 5px;}
+#CartInfo .closeBtn a {text-decoration: none;}
+#CartInfo:before {content: ""; position: absolute; width: 0; left: 180px; top: -10px; border-color: transparent #DAD5C9; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 9px solid #DAD5C9;}
+#CartInfo:after {content: ""; position: absolute; width: 0; left: 180px; top: -8px; border-color: transparent #DAD5C9; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 9px solid #fff;}
 
-}
+/*
 #CartInfo span.CartInfo_bg {
 padding: 11px 10px 7px;
 background-color: #fff;
@@ -422,6 +435,4 @@ opacity:1;
 }
 #CartInfo #cartBtn a:hover {background-color: #7F0019;}
 #CartInfo li {float: left; vertical-align: middle;}
-
-:root *> #CartInfo {margin-left: -15px;} /* IE6-IE8以外 */
-html[xmlns*=""]:root #CartInfo {margin-left: -15px;} /* Safari 2 – 3.1 */
+*/

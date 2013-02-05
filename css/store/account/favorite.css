@@ -10,10 +10,14 @@ table.horizontal {width: 100%; margin: 10px 0;}
 .message span {margin-bottom: 20px;}
 
 
+#favorite .buy {position: relative;}
+#CartInfo {top: 25px; right: 0;}
+/*
 #favorite #CartInfo {
 background: url("/img/store/cmdty/cartinfo.png") no-repeat scroll 130px 10px transparent;
 margin: 0;
 width: 245px;
 right: -55px;
 }
+*/
 #favorite .prevNext {margin-top: 20px;}

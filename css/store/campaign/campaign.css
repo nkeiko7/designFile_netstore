@@ -1,19 +1,18 @@
-h1 {border-bottom: 0; padding-bottom: 0; margin-bottom: 10px;}
+#main {font-size: 13px; line-height: 1.6;}
+.lead {font-size: 15px;}
+
+#main h1 {border-bottom: 0; padding-bottom: 0; margin-bottom: 10px;}
 h1 img {vertical-align: bottom;}
-
 #main h3 {margin-top: 20px;}
-
-.relatedLink {margin: 10px 0;}
 
 .itemList ul {margin-right: -20px; letter-spacing: -.40em;}
 .itemList li {
-display: -moz-inline-box; /* Firefox2 */
 display: inline-block;
 *display: inline; *zoom: 1; /* IE6, IE7 */
 width: 100px; margin: 10px 20px 0 0; vertical-align: top; letter-spacing: normal;}
 .itemList a {display: block; margin-bottom: 5px;}
+.itemList .name {font-size: 12px;}
 .itemList .thumb {display: block; margin-bottom: 3px;}
-.itemList .name {}
 .itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
 .itemList br {display: none;}
 
@@ -22,6 +21,13 @@ width: 100px; margin: 10px 20px 0 0; vertical-align: top; letter-spacing: normal
 .fancyBoxLink:hover img {border: 1px solid #7f0019;}
 
 .aside {border: 5px solid #efefef; margin-bottom: 20px; padding: 15px;}
+#main aside {border: 5px solid #efefef; margin-bottom: 20px; padding: 15px;}
 
 .priceListVertical {margin-top: 20px;}
 .priceListVertical li {margin-bottom: 10px;}
+
+#main section h1 {color: #333; font-size:18px; margin: 15px 0;}
+#main .column2 h1 {font-size:14px;}
+#main section section h1 {font-size:14px;}
+#main section aside h1 {font-size:14px; margin-top:0;}
+#main>section {margin-bottom: 50px;}

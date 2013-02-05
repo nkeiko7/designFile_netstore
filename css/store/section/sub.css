@@ -1,11 +1,21 @@
 /* CLEARFIX */
 .listView li,
-.listView .desc {zoom: 1;}
+.listView .desc,
+#promotion.single,
+#promotion.single .itemList li {zoom: 1;}
 .listView li:after,
-.listView .desc:after {content: "."; display: block; visibility: hidden; clear: both; height: 0; font-size: 0; line-height: 0;}
+.listView .desc:after,
+#promotion.single:after,
+#promotion.single .itemList li:after {content: ""; display: block; clear: both;}
+
+#sideNav,
+#main {margin-bottom: 30px;}
 
 /* H1 */
-/* h1 {height: 27px; margin: 0; background-repeat: no-repeat; border: 0; text-indent: -9999px; overflow: hidden;} */
+#main h1 {margin: 0; border: 0; padding: 0;}
+#main > h1 {font-family: 'ゴシックMB101 B', 'Gothic MB101 Bold';}
+
+.section {padding: 20px 0 10px; border-top: 1px solid #e6e6e6;}
 
 #freeShipping {font-size: 11px; margin-bottom: 10px;}
 #freeShipping b {font-size: 12px;}
@@ -44,10 +54,12 @@ display: inline-block;
 *display: inline; *zoom: 1; /* IE6, IE7 */
 width: 127px; margin: 15px 15px 0 0; padding-top: 15px; vertical-align: top; letter-spacing: normal;}
 #main .itemList a {display: block; margin-bottom: 5px;}
+#main #loadContent .itemList a {text-decoration: none;}
 #main .itemList .thumb {display: block; margin-bottom: 3px;}
-#main .itemList .name {}
+#main #loadContent .itemList .name {display: block;}
 #main .itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
 #main .itemList .info ul {margin-right: -3px; overflow: hidden;}
+
 .newicon,
 .stockicon {margin-bottom: 3px;}
 
@@ -67,7 +79,8 @@ margin: 0 3px 2px 0; width: 54px; text-align: center; font-size:10px; padding:1p
 .listView li {padding: 15px 0; border-bottom:1px solid #E6E6E6;}
 .listView .desc {width: 580px; float: left;}
 .listView .info li {padding:1px 0 0; *padding:0 0 1px; border: 1px solid #666;}
-.listView a {margin-right: 10px;}
+.listView a {display: block; text-decoration: none;}
+.listView a:after {content: ""; display: block; clear: both;}
 .listView .thumb {display: block; float: left; margin-right: 20px; margin-left: 5px;}
 .listView .itemSummary {margin: 5px 0;}
 .listView .name {font-weight: bold;}
@@ -75,8 +88,8 @@ margin: 0 3px 2px 0; width: 54px; text-align: center; font-size:10px; padding:1p
 
 
 /* history */
-#history {clear: both; border: solid #ccc; border-width: 1px 0 0; margin-top: 30px; padding: 5px 0 0;}
-#history h2 {padding: 0 5px 5px; border-bottom: 1px solid #e8e8e8; font-size: 14px;}
+#history {clear: both; border: solid #ccc; border-width: 1px 0 0; padding: 5px 0 0;}
+#history h1 {padding: 0 5px 5px; font-size: 14px;}
 #history .itemList {margin-bottom: 0;}
 #history .itemList ul {letter-spacing: -.40em;}
 #history .itemList li {
@@ -85,10 +98,10 @@ display: inline-block;
 *display: inline; *zoom: 1; /* IE6, IE7 */
 width: 150px; margin: 0 5px; vertical-align: top; letter-spacing: normal;}
 #history .itemList a {text-decoration: none;}
-#history .itemList .thumb {float: left;
+#history .itemList .thumb {float: left; margin-right: 5px;
 *cursor: pointer; /* IE6, IE7 */
 }
-#history .itemList .desc {padding-left: 50px; display: block;}
+#history .itemList .desc {padding-left: 55px; display: block;}
 #history .itemList .name {font-size: 11px; text-decoration: underline;}
 #history .itemList .price {margin-top: 5px; display: block; color: #000;}
 #history .btn {width: 20px; font-size: 10px; line-height: 60px;}
@@ -96,4 +109,86 @@ width: 150px; margin: 0 5px; vertical-align: top; letter-spacing: normal;}
 #history .next {float: right;}
 #history .disabled a {background:#ccc; cursor: default;}
 
-#main .info li.mixMatch {width: 70px;}
+#main .info li.mixMatch {width: auto; padding: 1px 1px 0; border: 1px solid #7F0019; color: #7F0019;}
+
+/* promotion */
+#promotion {float:none; clear:both;}
+section#promotion {padding: 20px 0 10px;}
+
+#promotion .itemList {margin-bottom: 30px;}
+#promotion .itemList ul {margin-right: -15px; letter-spacing: -.40em;}
+#promotion .itemList li {
+display: -moz-inline-box; /* Firefox2 */
+display: inline-block;
+*display: inline; *zoom: 1; /* IE6, IE7 */
+width: 127px; margin: 0 15px 0 0; vertical-align: top; letter-spacing: normal;}
+#promotion .itemList a {display: block; margin-bottom: 5px;}
+#promotion .itemList .thumb {display: block; margin-bottom: 3px;}
+#promotion .itemList .price {display: inline-block; margin-bottom: 3px; line-height: 1.2;}
+#promotion .itemList br {display: none;}
+#promotion .itemList {border: none;}
+
+/* single */
+#promotion.single .image {float: left; margin-right: 20px;}
+#promotion.single .image img {vertical-align: bottom;}
+#promotion.single .description {overflow: hidden;}
+#promotion.single .description p {margin-bottom: 15px;}
+#promotion.single .itemList {margin-bottom: 0;}
+#promotion.single .itemList ul {margin-right: 0; letter-spacing: normal;}
+#promotion.single .itemList li {display: block; width: auto; margin: 0 0 5px; padding-top: 0;}
+#promotion.single .itemList a {display: inline;}
+#promotion.single .itemList .thumb {float: left; display: inline; margin: 0 5px 0 0;}
+#promotion.single .itemList .price {display: block; margin: 5px 0 0; line-height: inherit;}
+#promotion.single .itemList br {display: inline;}
+#promotion.single .price del,
+#promotion.single .price ins {display: inline;}
+
+/*skincare*/
+.skincare ul.additive,
+#ingredient,
+#ingredient .herbType {zoom:1;}
+.skincare ul.additive:after,
+#ingredient:after,
+#ingredient .herbType:after {content:"";display:block;clear:both;}
+
+#ingredient, #procedure {padding: 20px 0 10px; border-top: 1px solid #e6e6e6;}
+#promotion.single .description p.lead {font-size:12px; margin-bottom:2px;}
+.skincare ul.additive {margin-top:0;}
+.skincare ul.additive li,
+#ingredient .natural li {float:left; display:inline-block; margin-right:10px;}
+.skincare ul.addition li {margin-right:10px; letter-spacing:0.1em;}
+#promotion.single .description ul.recommend {list-style-type:disc;}
+.skincare ul.recommend li {float:none; display:block;}
+.skincare dl dt {font-weight:bold; margin:15px 0 5px;}
+#ingredient dl dt,
+#procedure dl dt {font-weight:bold; margin-bottom:5px;}
+#procedure dd {padding-top:5px;}
+#ingredient .natural {width:300px; float:left; display:inline-block; margin-right:20px; overflow:hidden;}
+#ingredient .functional {overflow:hidden;}
+#ingredient li.figure {width:50px; font-size:10px;}
+#ingredient .natural li.figure p {margin-bottom:5px;}
+#procedure .annotation {clear:both;}
+
+.relatedLink {text-align: right;}
+
+/*mens_skincare*/
+body#S1070203 #procedure {padding:20px 0; margin-bottom:20px; border-bottom: 1px solid #e8e8e8;}
+body#S1070203 #procedure .column3 ol {margin:10px -20px 10px 5px; overflow:hidden;}
+body#S1070203 #procedure .column3 li {width:200px; display:inline-block; margin-right:20px; vertical-align:top; float:left;}
+body#S1070203 #procedure .column3 li .title {font-weight:bold; color:#444;}
+body#S1070203 #procedure .column3 li .img {width:180px; display:block; border:1px solid #a7bbdf; padding:10px; margin-top:5px; text-align:center; border-radius:5px;}
+
+/* support html5 */
+#main section h1, aside#history h1 {margin-bottom: 0;}
+#main section h1 { font-size: 18px; line-height: 1.5;}
+aside#history h1 { border-bottom: 1px solid #e8e8e8; margin-bottom: 10px;}
+
+/* sectionNav */
+.sectionNav {margin:20px 0 10px;}
+.sectionNav li {display:inline;border-right:1px solid #CCC;padding-right:1em;margin-right:1em;}
+.sectionNav li:last-child {border-right:0;padding-right:0;margin-right:0;}
+.sectionNav li a {
+	display: -moz-inline-box; /* Firefox2 */
+	display: inline-block;
+    margin-bottom: 0.5em;
+}
