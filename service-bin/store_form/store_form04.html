@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ネットストアについてのお問い合わせ | 領収書・明細書に関するお問い合わせ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/m/js/toggle/iphone-style-checkboxes.js"></script>	
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+
+<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+
+	function inputCheck(){	
+	
+	$('#receiptFaq,#aboutSpecFaq').fadeOut('fast');
+		$('aside.relatedFaq').removeClass('view'); //remove FAQ
+	
+		if( $( 'input[name="radio_0"]:checked' ).val()=="領収書について"){
+			$('#aboutReceipt,#receiptFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#aboutReceipt,#receiptFaq').fadeOut('fast');
+		}
+		
+		if( $( 'input[name="radio_0"]:checked' ).val()=="明細書について"){
+			$('#aboutSpec,#aboutSpecFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#aboutSpec,#aboutSpecFaq').fadeOut('fast');
+		}
+	}
+	
+	inputCheck();
+	$( 'input[name="radio_0"]:radio' ).change(inputCheck);
+	
+	$('form').submit(function(){
+		$(":hidden input, :hidden textarea, :hidden select, :hidden checkbox; :hidden radio").val("");	
+	});
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body>
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form_3/store_form_3.php"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_1/store_form_1.php"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li class="current">領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+		<section class="inquiryDetail block" id="order">
+			<h1>領収書・明細書について</h1>
+			<div class="contentWrap">
+				<div class="%%%G6_error%%%">%%%G6_error_msg%%%</div>
+				<p>お問い合わせ内容をお選びください。</p>
+				<ul class="subMenu">
+					<li><label title="receipt" onclick=""><input type="radio" id="receipt" name="G6_お問い合わせ種類" value="領収書について" %%%in_G6_お問い合わせ種類:__checked%%%>領収書について</label></li>
+					<li><label title="spec" onclick=""><input type="radio" id="receipt" name="G6_お問い合わせ種類" value="明細書について" %%%in_G6_お問い合わせ種類:__checked%%%>明細書について</label></li>
+				</ul>
+				
+				<div id="aboutReceipt" class="entryField">
+				<p class="title">領収書について</p>
+					<dl>
+						<dt class="subTitle">「代金引き換え」をご利用の場合</dt>
+						<dd class="lead">商品配達時に、運送会社が「代引き伝票」の領収書をお客さまにお渡しします。<br>その領収書（コピー不可）と必要事項を記入したメモを、下記までお送りください。<br>なお、発送までに10日前後いただきます。あらかじめご了承ください。
+							<dl class="sendingAddress">
+								<dt class="subTitle">必要事項</dt>
+								<dd>
+									<ul class="notice">
+										<li>領収書の記載内容（宛名・但し書き）</li>
+										<li>返送先住所</li></ul>
+								</dd>
+								<dt class="subTitle">宛先</dt>
+								<dd>〒170-8424　東京都豊島区東池袋4-26-3<br>無印良品ネットストアサービスセンター　領収書発行係</dd>
+							</dl>
+						</dd>
+						
+						<dt class="subTitle">「クレジットカード」「楽天安心サービス」をご利用の場合</dt>
+						<dd class="lead">WEB領収書発行をご利用ください。
+							<ul class="notice">
+								<li><a href="http://www.muji.net/mt/contact/guide/payment_info/014419.html" target="_blank">WEB領収書発行ご利用方法（領収書の発行について）</a></li>
+							</ul>
+						</dd>
+						
+						<dt class="subTitle">WEBサイトから出力（印刷）した帳票を経費精算にお使いいただけない場合</dt>
+						<dd>
+							<p class="lead">弊社発行の領収書を郵送いたします。下記のフォームにご入力ください。</p>
+							<section class="orderNumber">
+							<div class="%%%G7_error%%%">%%%G7_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<input type="text" name="G7_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G7_ご注文番号:__checked%%%"></div>
+							</section>
+							
+							<section class="name">
+							<div class="%%%G8_error%%%">%%%G8_error_msg%%%</div>
+							<h1>宛名</h1>
+								<div class="answer">
+								<input type="text" name="G8_宛名" size="30" placeholder="例）無印太郎&nbsp;" value="%%%in_G8_宛名:__checked%%%"></div>
+							</section>
+							
+							<section class="about">
+							<div class="%%%G9_error%%%">%%%G9_error_msg%%%</div>
+							<h1>但し書き</h1>
+								<div class="answer">
+								<input type="text" name="G9_但し書き" size="30" placeholder="例）文具費として&nbsp;" value="%%%in_G9_但し書き:__checked%%%"></div>
+							</section>
+							
+							<section class="spec notRequired">
+							<h1>明細書同封</h1>
+								<div class="answer">
+								<label title="明細書を同封してほしい"><input type="checkbox" id="checkspec" name="G24_明細書同封の有無" value="同封する" %%%in_G24_明細書同封の有無:__checked%%%>明細書を同封してほしい</label></div>
+							</section>
+							
+							<p class="specifiedAddres">ご依頼主さまのご住所以外の住所に送る場合は、以下をご記入ください。</p>
+							<section class="name notRequired">
+							<h1>お名前</h1>
+								<div class="answer">
+								<input type="text" name="G15_依頼主以外のお名前" size="30" placeholder="例）無印太郎&nbsp;" value="%%%in_G15_依頼主以外のお名前%%%"></div>
+							</section>
+							
+							<section class="address notRequired">
+								<h1>送付先住所</h1>
+								<div class="answer">
+									〒<input id="postCode1" type="text" name="G10_郵便番号１" value="%%%in_G10_郵便番号１%%%" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="G10_郵便番号２" value="%%%in_G10_郵便番号２%%%" size="5" maxlength="4" placeholder="4567"><br>
+									<select id="prefectureSelect" name="G11_都道府県">
+										<option value="">都道府県</option>
+										<optgroup label="北海道">
+												<option value="北海道" %%%in_G11_都道府県:__selected%%%>北海道</option>
+										</optgroup>
+										<optgroup label="東北">
+												<option value="青森県" %%%in_G11_都道府県:__selected%%%>青森県</option>
+												<option value="岩手県" %%%in_G11_都道府県:__selected%%%>岩手県</option>
+												<option value="宮城県" %%%in_G11_都道府県:__selected%%%>宮城県</option>
+												<option value="秋田県" %%%in_G11_都道府県:__selected%%%>秋田県</option>
+												<option value="山形県" %%%in_G11_都道府県:__selected%%%>山形県</option>
+												<option value="福島県" %%%in_G11_都道府県:__selected%%%>福島県</option>
+										</optgroup>
+										<optgroup label="関東">
+												<option value="茨城県" %%%in_G11_都道府県:__selected%%%>茨城県</option>
+												<option value="栃木県" %%%in_G11_都道府県:__selected%%%>栃木県</option>
+												<option value="群馬県" %%%in_G11_都道府県:__selected%%%>群馬県</option>
+												<option value="埼玉県" %%%in_G11_都道府県:__selected%%%>埼玉県</option>
+												<option value="千葉県" %%%in_G11_都道府県:__selected%%%>千葉県</option>
+												<option value="東京都" %%%in_G11_都道府県:__selected%%%>東京都</option>
+												<option value="神奈川県" %%%in_G11_都道府県:__selected%%%>神奈川県</option>
+										</optgroup>
+										<optgroup label="中部">
+												<option value="新潟県" %%%in_G11_都道府県:__selected%%%>新潟県</option>
+												<option value="富山県" %%%in_G11_都道府県:__selected%%%>富山県</option>
+												<option value="石川県" %%%in_G11_都道府県:__selected%%%>石川県</option>
+												<option value="福井県" %%%in_G11_都道府県:__selected%%%>福井県</option>
+												<option value="山梨県" %%%in_G11_都道府県:__selected%%%>山梨県</option>
+												<option value="長野県" %%%in_G11_都道府県:__selected%%%>長野県</option>
+												<option value="岐阜県" %%%in_G11_都道府県:__selected%%%>岐阜県</option>
+												<option value="静岡県" %%%in_G11_都道府県:__selected%%%>静岡県</option>
+												<option value="愛知県" %%%in_G11_都道府県:__selected%%%>愛知県</option>
+										</optgroup>
+										<optgroup label="関西">
+												<option value="三重県" %%%in_G11_都道府県:__selected%%%>三重県</option>
+												<option value="滋賀県" %%%in_G11_都道府県:__selected%%%>滋賀県</option>
+												<option value="京都府" %%%in_G11_都道府県:__selected%%%>京都府</option>
+												<option value="大阪府" %%%in_G11_都道府県:__selected%%%>大阪府</option>
+												<option value="兵庫県" %%%in_G11_都道府県:__selected%%%>兵庫県</option>
+												<option value="奈良県" %%%in_G11_都道府県:__selected%%%>奈良県</option>
+												<option value="和歌山県" %%%in_G11_都道府県:__selected%%%>和歌山県</option>
+										</optgroup>
+										<optgroup label="中国">
+												<option value="鳥取県" %%%in_G11_都道府県:__selected%%%>鳥取県</option>
+												<option value="島根県" %%%in_G11_都道府県:__selected%%%>島根県</option>
+												<option value="岡山県" %%%in_G11_都道府県:__selected%%%>岡山県</option>
+												<option value="広島県" %%%in_G11_都道府県:__selected%%%>広島県</option>
+												<option value="山口県" %%%in_G11_都道府県:__selected%%%>山口県</option>
+										</optgroup>
+										<optgroup label="四国">
+												<option value="徳島県" %%%in_G11_都道府県:__selected%%%>徳島県</option>
+												<option value="香川県" %%%in_G11_都道府県:__selected%%%>香川県</option>
+												<option value="愛媛県" %%%in_G11_都道府県:__selected%%%>愛媛県</option>
+												<option value="高知県" %%%in_G11_都道府県:__selected%%%>高知県</option>
+										</optgroup>
+										<optgroup label="九州・沖縄">
+												<option value="福岡県" %%%in_G11_都道府県:__selected%%%>福岡県</option>
+												<option value="佐賀県" %%%in_G11_都道府県:__selected%%%>佐賀県</option>
+												<option value="長崎県" %%%in_G11_都道府県:__selected%%%>長崎県</option>
+												<option value="熊本県" %%%in_G11_都道府県:__selected%%%>熊本県</option>
+												<option value="大分県" %%%in_G11_都道府県:__selected%%%>大分県</option>
+												<option value="宮崎県" %%%in_G11_都道府県:__selected%%%>宮崎県</option>
+												<option value="鹿児島県" %%%in_G11_都道府県:__selected%%%>鹿児島県</option>
+												<option value="沖縄県" %%%in_G11_都道府県:__selected%%%>沖縄県</option>
+										</optgroup>
+									</select><br>
+									<input type="text" name="G12_市区町村名" size="30" value="%%%in_G12_市区町村名%%%" placeholder="例）豊島区東池袋３"><br>
+									<input type="text" name="G13_番地・建物" size="30" value="%%%in_G13_番地・建物%%%" placeholder="例）ムジ・ネットビル７Ｆ">
+								</div>
+							</section>
+							
+							<section class="other notRequired">
+							<h1>その他（任意）</h1>
+								<div class="answer">
+								<textarea name="G32_その他" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)" value="%%%in_G32_その他%%%">%%%in_G32_その他%%%</textarea></div>
+							</section>
+						
+						</dd>
+					</dl>
+				
+				</div><!-- /#aboutReceipt -->
+				
+				<div id="aboutSpec" class="entryField">
+				<p class="title">明細書について</p>
+				<p>「配送便区分A」の商品には、お届け時に「返品連絡票 兼 納品書」が同梱されています。<br>その他の配送区分の商品には同梱しておりません。<br>商品明細につきましては、購入履歴ページ（要ログイン）からご確認いただけます。</p>
+						<ul class="notice loginInfo">
+						<li>購入履歴ページは、ログイン後、マイページ内のメニューよりご確認いただけます<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+					</ul>
+						<p class="specifiedAddres">「配送便区分A」以外の商品や、書面での明細書が必要な場合は以下をご記入ください。</p>
+						
+						<section class="orderNumber">
+							<div class="%%%G34_error%%%">%%%G34_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<input type="text" name="G34_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G34_ご注文番号:__checked%%%"></div>
+							</section>
+							
+						<section class="name">
+						<div class="%%%G17_error%%%">%%%G17_error_msg%%%</div>
+							<h1>お名前</h1>
+								<div class="answer">
+								<input type="text" name="G17_宛名" size="30" placeholder="例）無印太郎&nbsp;" value="%%%in_G17_宛名:__checked%%%"></div>
+							</section>
+							
+							<section class="address">
+							<div class="%%%G18_error%%%">%%%G18_error_msg%%%</div>
+							<div class="%%%G19_error%%%">%%%G19_error_msg%%%</div>
+							<div class="%%%G20_error%%%">%%%G20_error_msg%%%</div>
+							<div class="%%%G21_error%%%">%%%G21_error_msg%%%</div>
+								<h1>送付先住所</h1>
+								<div class="answer">
+									〒<input id="postCode1" type="text" name="G18_郵便番号１" value="%%%in_G18_郵便番号１:__checked%%%" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="G18_郵便番号２" value="%%%in_G18_郵便番号２:__checked%%%" size="5" maxlength="4" placeholder="4567"><br>
+									<select id="prefectureSelect" name="G19_都道府県">
+										<option value="">都道府県</option>
+										<optgroup label="北海道">
+												<option value="北海道" %%%in_G19_都道府県:__selected%%%>北海道</option>
+										</optgroup>
+										<optgroup label="東北">
+												<option value="青森県" %%%in_G19_都道府県:__selected%%%>青森県</option>
+												<option value="岩手県" %%%in_G19_都道府県:__selected%%%>岩手県</option>
+												<option value="宮城県" %%%in_G19_都道府県:__selected%%%>宮城県</option>
+												<option value="秋田県" %%%in_G19_都道府県:__selected%%%>秋田県</option>
+												<option value="山形県" %%%in_G19_都道府県:__selected%%%>山形県</option>
+												<option value="福島県" %%%in_G19_都道府県:__selected%%%>福島県</option>
+										</optgroup>
+										<optgroup label="関東">
+												<option value="茨城県" %%%in_G19_都道府県:__selected%%%>茨城県</option>
+												<option value="栃木県" %%%in_G19_都道府県:__selected%%%>栃木県</option>
+												<option value="群馬県" %%%in_G19_都道府県:__selected%%%>群馬県</option>
+												<option value="埼玉県" %%%in_G19_都道府県:__selected%%%>埼玉県</option>
+												<option value="千葉県" %%%in_G19_都道府県:__selected%%%>千葉県</option>
+												<option value="東京都" %%%in_G19_都道府県:__selected%%%>東京都</option>
+												<option value="神奈川県" %%%in_G19_都道府県:__selected%%%>神奈川県</option>
+										</optgroup>
+										<optgroup label="中部">
+												<option value="新潟県" %%%in_G19_都道府県:__selected%%%>新潟県</option>
+												<option value="富山県" %%%in_G19_都道府県:__selected%%%>富山県</option>
+												<option value="石川県" %%%in_G19_都道府県:__selected%%%>石川県</option>
+												<option value="福井県" %%%in_G19_都道府県:__selected%%%>福井県</option>
+												<option value="山梨県" %%%in_G19_都道府県:__selected%%%>山梨県</option>
+												<option value="長野県" %%%in_G19_都道府県:__selected%%%>長野県</option>
+												<option value="岐阜県" %%%in_G19_都道府県:__selected%%%>岐阜県</option>
+												<option value="静岡県" %%%in_G19_都道府県:__selected%%%>静岡県</option>
+												<option value="愛知県" %%%in_G19_都道府県:__selected%%%>愛知県</option>
+										</optgroup>
+										<optgroup label="関西">
+												<option value="三重県" %%%in_G19_都道府県:__selected%%%>三重県</option>
+												<option value="滋賀県" %%%in_G19_都道府県:__selected%%%>滋賀県</option>
+												<option value="京都府" %%%in_G19_都道府県:__selected%%%>京都府</option>
+												<option value="大阪府" %%%in_G19_都道府県:__selected%%%>大阪府</option>
+												<option value="兵庫県" %%%in_G19_都道府県:__selected%%%>兵庫県</option>
+												<option value="奈良県" %%%in_G19_都道府県:__selected%%%>奈良県</option>
+												<option value="和歌山県" %%%in_G19_都道府県:__selected%%%>和歌山県</option>
+										</optgroup>
+										<optgroup label="中国">
+												<option value="鳥取県" %%%in_G19_都道府県:__selected%%%>鳥取県</option>
+												<option value="島根県" %%%in_G19_都道府県:__selected%%%>島根県</option>
+												<option value="岡山県" %%%in_G19_都道府県:__selected%%%>岡山県</option>
+												<option value="広島県" %%%in_G19_都道府県:__selected%%%>広島県</option>
+												<option value="山口県" %%%in_G19_都道府県:__selected%%%>山口県</option>
+										</optgroup>
+										<optgroup label="四国">
+												<option value="徳島県" %%%in_G19_都道府県:__selected%%%>徳島県</option>
+												<option value="香川県" %%%in_G19_都道府県:__selected%%%>香川県</option>
+												<option value="愛媛県" %%%in_G19_都道府県:__selected%%%>愛媛県</option>
+												<option value="高知県" %%%in_G19_都道府県:__selected%%%>高知県</option>
+										</optgroup>
+										<optgroup label="九州・沖縄">
+												<option value="福岡県" %%%in_G19_都道府県:__selected%%%>福岡県</option>
+												<option value="佐賀県" %%%in_G19_都道府県:__selected%%%>佐賀県</option>
+												<option value="長崎県" %%%in_G19_都道府県:__selected%%%>長崎県</option>
+												<option value="熊本県" %%%in_G19_都道府県:__selected%%%>熊本県</option>
+												<option value="大分県" %%%in_G19_都道府県:__selected%%%>大分県</option>
+												<option value="宮崎県" %%%in_G19_都道府県:__selected%%%>宮崎県</option>
+												<option value="鹿児島県" %%%in_G19_都道府県:__selected%%%>鹿児島県</option>
+												<option value="沖縄県" %%%in_G19_都道府県:__selected%%%>沖縄県</option>
+										</optgroup>
+									</select><br>
+									<input type="text" name="G20_市区町村名" size="30" value="%%%in_G20_市区町村名:__checked%%%" placeholder="例）豊島区東池袋３"><br>
+									<input type="text" name="G21_番地・建物" size="30" value="%%%in_G21_番地・建物:__checked%%%" placeholder="例）ムジ・ネットビル７Ｆ">
+								</div>
+							</section>
+							
+							<section class="other notRequired">
+							<h1>その他（任意）</h1>
+								<div class="answer">
+								<textarea name="G33_その他" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)" value="%%%in_G33_その他%%%">%%%in_G33_その他%%%</textarea></div>
+							</section>	
+				
+				</div><!-- /#aboutSpec -->
+
+			 </div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+									
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="receiptFaq">
+					<li>購入履歴<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/payment_info/014419.html" target="_blank">領収書の発行について</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="aboutSpecFaq">
+					<li>購入履歴<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/payment_info/019860.html" target="_blank">納品書・明細書の同梱について</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+		
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</form>
+</body>
+</html>

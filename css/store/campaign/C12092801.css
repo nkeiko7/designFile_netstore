@@ -1,0 +1,174 @@
+/* CLEARFIX */
+#howtoUse ul, #mujiCard ul {zoom: 1;}
+#howtoUse ul:after, #mujiCard ul:after {content: ""; display: block; clear: both;}
+
+#main section h1 {font-size:18px; color:#333; line-height:1.5;}
+#main section section h1 {font-size:14px; color:#333; margin:15px 0 10px;}
+#main section h3 {font-size:12px; color:#333; margin:0 0 12px;}
+#howtoUse h2 {margin:14px 0; font-weight: bold;}
+#howtoUse ul {margin-bottom: 20px;}
+#howtoUse li {float: left; line-height: 150%;}
+#howtoUse #atShop {width: 325px; padding: 0 15px 0 0; border-right: 1px solid #ddd;}
+#howtoUse #atNetstore {width: 325px; padding: 0 0 0 15px; }
+.relatedLink { margin: 20px 0 10px 0; text-align: right;}
+#howtoUse p.cap {font-weight: bold;}
+#howtoUse .reminder p, #mujiCard .aboutMujiCard p {text-align: right;}
+#howtoUse .reminder p a, #mujiCard .aboutMujiCard p a {text-decoration: underline;}
+
+#mujiCard {margin: 15px 0; padding: 15px 0 0 0; border-top: 1px solid #ddd;}
+#mujiCard ul {margin-bottom: 0;}
+#mujiCard li {padding-left: 10px; float: left;}
+#interiorCoupon li {float: left; }
+#interiorCoupon li.interiorCouponImg {width: 100px; margin-right: 10px;}
+#interiorCoupon li.desc {width: 220px; }
+#interiorCoupon .cpTitle {padding: 0; display:block; font-weight:bold;}
+
+#notice {margin-top: 20px; border: 6px solid #f6f6f6; padding: 0 20px 20px;}
+#notice .annotation {font-size: 12px; line-height: 140%;}
+#notice li {margin-bottom: 8px;}
+#notice li:last-child {margin-bottom: 0;}
+
+#membershipRecruitment { border-top: 1px solid #E8E8E8; margin: 15px 0; padding: 0;}
+#other {border-top: 1px solid #E8E8E8; margin-top: 30px;}
+
+section p {line-height:1.6; margin-bottom:12px;}
+
+#snSection1,#snSection2 {padding-bottom: 30px;}
+#snSection2 .column2 {padding-bottom: 20px;}
+
+#homewares,
+#clothes,
+#foods {border-top:1px solid #e8e8e8; padding-top:5px; margin-top:30px;}
+
+#homewares h2,
+#clothes h2,
+#foods h2 {font-size:14px; margin:10px 0;}
+#main .column2 h2 {font-size:14px; margin-bottom:10px;}
+#snSection2 #homewares h1,
+#snSection2 #clothes h1,
+#snSection2 #foods h1 {font-size:18px; margin-top:10px;}
+
+/*#main {margin-bottom:30px;}*/
+#main a .cpTitle {padding:5px 0; display:block; font-weight:bold;}
+#main a {text-decoration:none;}
+
+#homewares .col p,
+#clothes .col p,
+#foods .col p {background-color: #000000; width:333px; height:240px;}
+#homewares .col p span,
+#clothes .col p span,
+#foods .col p span {background-color: #ffffff; display: block; margin-top:5px;}
+
+#homewares a img,
+#clothes a img,
+#foods a img {
+-webkit-transition: all .2s ease;
+   -moz-transition: all .2s ease;
+     -o-transition: all .2s ease;
+        transition: all .2s ease;
+}
+#homewares .col a:hover img,
+#clothes .col a:hover img,
+#foods .col a:hover img {filter: alpha(opacity=80); opacity:0.8;
+-webkit-transition: 0;
+   -moz-transition: 0;
+     -o-transition: 0;
+        transition: 0;
+}
+
+.annotation li {margin-bottom:0;}
+
+body #homewares .relatedLink,
+body #clothes .relatedLink,
+body #foods .relatedLink {margin: 30px 0px 10px; text-align: right;}
+body #main #homewares .relatedLink a,
+body #main #clothes .relatedLink a,
+body #main #foods .relatedLink a {margin-left:6px;}
+
+#offCoupon {background: #f7f7f7; padding: 5px 20px 10px; border-radius: 4px; width: 300px; float: left;}
+#offCoupon p {padding-left: 110px;background: url(/img/store/campaign/dummy/couponimage.png) no-repeat 20px 2px;}
+#offNetstore {background: #f7f7f7; padding: 5px 20px 10px; border-radius: 4px;  margin-left: 360px;}
+#offNetstore p {padding-left: 110px;background: url(/img/store/campaign/dummy/pcimage.png) no-repeat 20px 0;}
+.relatedLink a {background: #fff;}
+#offMujiCard p {padding-left: 60px; background: url(/img/store/campaign/dummy/giftcard.jpg) no-repeat 0 2px;}
+#offMujiCard a {text-decoration: underline;}
+#howtoUse .useradd {float: right; text-decoration: underline;}
+
+/* event */
+#eventWrapper { width: 100%; margin-bottom: 0;}
+#eventColumns {
+	width: 100%;
+	height: inherit;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 15px;
+  column-fill: auto;
+}
+ 
+.pin {
+  display: inline-block;
+  background: #f7f7f7;
+  border-radius: 4px;
+  margin: 0 10px 20px 0;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 10px;
+}
+
+/*#eventColumns:hover .pin:not(:hover) { opacity: 0.6;}*/
+#eventColumns a.eventBox section:hover {background: #ddd;
+	-webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;}
+ 
+.pin img { width: 200px; height: auto;} 
+.pin p { color: #333; margin: 0;}
+#main .pin h1 {margin: 10px 0;}
+#eventColumns p .annotation {display: inline-block; margin-top: 5px;}
+#eventColumns p span.term {display: inline-block; margin: 0 0 10px 0; font-weight: bold;}
+#eventColumns p.itemDetail {margin-top: 5px;}
+
+
+/* mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+	#snSection1, #snSection2 {width: 100%; margin: 20px 0 0 0; padding: 20px 0 0 0; position: relative; border-top: 1px solid #ccc;}
+	header h1 img {width: 100%; margin: 0 auto;}
+	header h1, p.lead {padding: 0 10px;}
+	
+	#howtoUse #offCoupon, #howtoUse #offNetstore {margin: 0; width: 100%;}
+	.skipNav {display: none;}
+	
+	#howtoUse #offCoupon {background: #f7f7f7; padding: 1px 0 10px 0; border-top: 1px solid #ddd; width: 100%; float: none; border-radius: 0;}
+	#howtoUse #offCoupon p {padding: 0 10px 0 105px;}
+	#howtoUse #offNetstore {background: #f7f7f7; padding: 1px 0 10px 0;  border-top: 1px solid #ddd; border-radius: 0;}
+	#howtoUse #offNetstore p {padding: 0 10px 0 105px;}	
+	#howtoUse #offMujiCard p {padding-left: 80px; background: url(/img/store/campaign/dummy/giftcard.jpg) no-repeat 20px 2px;}
+	header h1 img {width: 100%; margin: 0 auto;}	
+	
+	#notice {padding: 5px 0; background: #f7f7f7; border: 0;}
+	#notice ul {margin: 10px;}
+	
+	.relatedLink a {
+		position: relative; display: block; padding: 20px 20px 0 20px; margin: 0 10px; min-height: 40px; text-align: left; background: url(/m/img/arrow.png) no-repeat 95% center #fff; -webkit-background-size: 10px 13px;
+	}
+	
+	#eventColumns {
+		width: 95%;
+	  padding: 0 10px 20px 10px;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    margin: 0;
+    }
+  #eventColumns .pin h1 {padding: 0;}
+	#eventColumns .pin {margin-bottom: 20px; border: 2px solid #FAFAFA; box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);}
+	#eventColumns .pin img {width: 100%; height: auto;}
+	#eventColumns:hover .pin:not(:hover) { opacity: 1;}
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html xmlns:m="http://mayaa.seasar.org" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-jp" lang="ja-jp">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>お支払い方法の指定 | 無印良品ネットストア</title>
+
+	<link rel="stylesheet" href="/m/css/mobile_optimized.css">
+	<link rel="stylesheet" href="/m/css/cart/cart.css">
+	<link rel="apple-touch-icon" href="/m/img/apple-touch-icon.png">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="/m/js/mobile_optimized.js"></script>
+	<script src="/js/system/ajax.js"></script>
+	<script>
+	$(document).ready(function(){
+		// ##イベント登録
+		$('#submitLink').click(function () {
+			var couponTgl = $("#couponToggle");
+			if (!_isUseCoupon()) {
+				couponTgl.after($('<input/>',{ type:"hidden", name:couponTgl.attr("name"), value:"NOT_USE_COUPON" }));
+			}
+
+			$('#casherForm').submit();
+			return false;
+		});
+
+		// coupon checkbox event
+		$("#coupon dt").click(couponClick);
+		// giftcard checkbox event
+		$("#giftCard dt").click(useGiftCardChange);
+		// ギフトカード参照
+		$('#cardAuth').click(cardAuthClick);
+		// payment radiobutton event
+		$("#paymentMethod dt").click(paymentMethodChange);
+		// couponAmount event
+		$('#couponAmount').focusout(changePaymentRadioButton);
+		// giftcardAmount event
+		$('#giftcardAmount').focusout(changePaymentRadioButton);
+
+		// ##初期表示
+		// クーポン
+		if (!_isUseCoupon()) {
+			$("#coupon .amount").hide();
+		};
+		// ギフトカード
+		if (_isUseGiftcard()) {
+			$("#inputGiftAmount dd").fadeIn("fast");
+		};
+		// 支払い方法
+		$("#paymentMethod dt").each(function(){
+			if ($("input[type='radio']",this).prop("checked")) {
+				$(this).next().slideDown("fast");
+			}
+		});
+		changePaymentRadioButton();
+	});
+
+
+	changePaymentRadioButton = function() {
+		var useCoupon = _isUseCoupon();
+		var useGiftcard = _isUseGiftcard();
+		var isFullfill = _isFullfill();
+
+		// use giftcard
+		if (useGiftcard) {
+			paymentMethodCDisableSwich(true);
+			paymentMethodDDisableSwich(false);
+			paymentMethodRDisableSwich(false);
+		}
+		// use coupon
+		else if (useCoupon) {
+			paymentMethodCDisableSwich(true);
+			paymentMethodDDisableSwich(true);
+			paymentMethodRDisableSwich(false);
+		} else {
+			paymentMethodCDisableSwich(true);
+			paymentMethodDDisableSwich(true);
+			paymentMethodRDisableSwich(true);
+		}
+
+		// fullfill
+		if (isFullfill) {
+			paymentMethodCDisableSwich(false);
+			paymentMethodDDisableSwich(false);
+			paymentMethodRDisableSwich(false);
+		}
+	}
+
+	_isUseCoupon = function() {
+		var result = false;
+		if ($("#couponToggle").prop("checked")) {
+			result  = true;
+		}
+		return result;
+	}
+
+	_getCouponAmount = function() {
+		var result = 0;
+		if ($("#couponToggle").prop("checked")) {
+			result = $('#couponAmount').val();
+			if (!result || /[^0-9]/.test(result)) {
+				result = 0;
+			}
+		}
+		return parseInt(result);
+	}
+
+	_isUseGiftcard = function() {
+		var result = false;
+		if ($("#giftCardToggle").prop("checked")) {
+			result = true;
+		}
+		return result;
+	}
+
+	_getGiftcardAmount = function() {
+		var result = 0;
+		if (_isUseGiftcard()){
+			result = $('#giftcardAmount').val();
+			if (!result || /[^0-9]/.test(result)) {
+				result = 0;
+			}
+		}
+		return parseInt(result);
+	}
+
+	_isFullfill = function() {
+		var couponAmount = _getCouponAmount();
+		var giftcardAmount = _getGiftcardAmount();
+		var buySum = parseInt($('#buysum').val());
+		var total = couponAmount + giftcardAmount;
+		if (total >= buySum) {
+			return true;
+		}
+		return false;
+	}
+
+	// クーポンToggle
+	couponClick = function() {
+		var e = $("#coupon .amount");
+		if (_isUseCoupon()) {
+			e.fadeIn("fast");
+		} else {
+			e.fadeOut("fast");
+		}
+		changePaymentRadioButton();
+	}
+
+	// ギフトカードToggle
+	useGiftCardChange = function() {
+		var e = $("#giftCard .auth, #giftCard .balance, #giftCard .amount");
+		if (_isUseGiftcard()) {
+			e.fadeIn("fast");
+		} else {
+			e.fadeOut("fast");
+		}
+		changePaymentRadioButton();
+		return true;
+	}
+
+	//ギフトカード参照ボタン
+	cardAuthClick = function() {
+		var url = $(this).attr("url");
+
+		var onSuccess = function(data) {
+			//再度イベント登録
+			$('#cardAuth').click(cardAuthClick);
+			$('#giftcardAmount').focusout(changePaymentRadioButton);
+			useGiftCardChange();
+			// エラーメッセージ処理
+			var errorMsg = $(data).children("#errorMessageGift");
+			// エラーメッセージが存在する場合、スクロール
+			if (errorMsg.children("*").length) {
+				$("#errorMessageGiftCard").html(errorMsg.html());
+			    $('html, body').scrollTop($("#errorMessageGiftCard").offset().top);
+			} else {
+				$("#errorMessageGiftCard").html('');
+			}
+		};
+
+		var giftCardNoVal = $("input:text[name='giftCardNo']").val();
+		var pinNoVal =$("input:text[name='pinNo']").val();
+		var giftcardAmountVal = $("input:text[name='giftcardAmount']").val();
+
+		var params = {
+				giftCardNo:(giftCardNoVal ? giftCardNoVal : ''),
+				pinNo:(pinNoVal ? pinNoVal : ''),
+				giftcardAmount:(giftcardAmountVal ? giftcardAmountVal : '')
+		};
+
+		Ajax.html("#balanceDiv", url + " #inputGiftAmount", params, onSuccess);
+
+		return false;
+	}
+
+	// 支払い方法切り替え
+	paymentMethodChange = function() {
+		var paymentMethod = $("input[type='radio']",this);
+		if (!paymentMethod.attr("disabled")) {
+			paymentMethod.attr("checked","checked");
+			$(this).next().slideDown("fast");
+			$("#paymentMethod dd").not($(this).next()).not($("#paymentMethod dd dd")).slideUp("fast");
+		} else {
+			// アラート表示
+			switch(paymentMethod.val()) {
+				case "CREDIT_CARD":
+					if (!($(this).attr("enable") == "true")) {
+						alert("ご購入を希望されている商品は、クレジットカードをご利用いただけません");
+					} else if (($(this).attr("enable") == "true") && _isFullfill()){
+						alert("お支払額を満たしているため、クレジットカードのご入力は必要はありません");
+					}
+					break;
+				case "CASH_ON_DELIVERY":
+					if (!($(this).attr("enable") == "true")) {
+						alert("ギフト包装、お届け先分割、一部地域への配送を希望されている場合は、代金引換をご利用いただけません");
+					} else {
+						if (_isUseGiftcard()) {
+							alert("MUJI GIFT CARDをご利用時は選択できません");
+						} else if (_isFullfill()) {
+							alert("お支払額を満たしているため、お支払い方法の指定は必要ありません");
+						}
+					}
+					break;
+				case "RAKUTEN":
+					if ($(this).attr("enable") == "true") {
+						alert("MUJI.netクーポン・MUJI GIFT CARDをご利用時は選択できません");
+					} else if (!($(this).attr("enable") == "true") && paymentMethod.attr("includeDisableItem") != "true") {
+						alert("ご購入を希望されている商品は、楽天あんしん支払いサービスをご利用いただけません");
+					} else if (!($(this).attr("enable") == "true") && paymentMethod.attr("includeDisableItem") == "true") {
+						alert("楽天あんしん支払いサービス対象外商品をショッピングカートに入れている場合は選択できません");
+					}
+					break;
+				default:
+					break;
+			};
+		};
+		return true;
+	}
+
+	// 楽天あんしん支払い選択切り替え
+	paymentMethodRDisableSwich = function(result) {
+		var paymentMethodRObj = $('#paymentMethodR');
+		var paymentMethodRDtObj = $('#paymentMethodRDt');
+		var enable = ($('#paymentMethodRDt').attr("enable") == "true");
+		if (result && enable) {
+			paymentMethodRObj.removeAttr("disabled");
+			paymentMethodRDtObj.removeClass("disabled");
+		} else {
+			paymentMethodRObj.attr("disabled", "disabled");
+			paymentMethodRDtObj.addClass("disabled");
+
+			// 既に楽天あんしん支払いが選択されている場合
+			if ($("input:radio[name='paymentMethod']:checked").val() == "RAKUTEN") {
+				// 選択解除
+				$("input:radio[name='paymentMethod']").val([""]);
+
+				// すべて非表示
+				$("#paymentMethod dd").not($("#paymentMethod dd dd")).slideUp("fast");
+			}
+		}
+		return true;
+	}
+
+	// 代引き支払い選択切り替え
+	paymentMethodDDisableSwich = function(result) {
+		var paymentMethodDObj = $('#paymentMethodD');
+		var paymentMethodDDtObj = $('#paymentMethodDDt');
+		var enableDelivery = ($('#paymentMethodDDt').attr("enable") == "true");
+		if (result && enableDelivery) {
+			paymentMethodDObj.removeAttr("disabled");
+			paymentMethodDDtObj.removeClass("disabled");
+		} else {
+			paymentMethodDObj.attr("disabled", "disabled");
+			paymentMethodDDtObj.addClass("disabled");
+
+			// 既に代引き支払いが選択されている場合
+			if ($("input:radio[name='paymentMethod']:checked").val() == "CASH_ON_DELIVERY") {
+				// 選択解除
+				$("input:radio[name='paymentMethod']").val([""]);
+
+				// すべて非表示
+				$("#paymentMethod dd").not($("#paymentMethod dd dd")).slideUp("fast");
+			}
+		}
+
+		return true;
+	}
+	// クレジットカード選択切り替え
+	paymentMethodCDisableSwich = function(result) {
+		var paymentMethodCObj = $('#paymentMethodC');
+		var paymentMethodCDtObj = $('#paymentMethodCDt');
+		var enableCredit = ($('#paymentMethodCDt').attr("enable") == "true");
+		if (result && enableCredit) {
+			paymentMethodCObj.removeAttr("disabled");
+			paymentMethodCDtObj.removeClass("disabled");
+		} else {
+			paymentMethodCObj.attr("disabled", "disabled");
+			paymentMethodCDtObj.addClass("disabled");
+
+			// 既にクレジットカード支払いが選択されている場合
+			if ($("input:radio[name='paymentMethod']:checked").val() == "CREDIT_CARD") {
+				// 選択解除
+				$("input:radio[name='paymentMethod']").val([""]);
+
+				// すべて非表示
+				$("#paymentMethod dd").not($("#paymentMethod dd dd")).slideUp("fast");
+			}
+		}
+		return true;
+	}
+	</script>
+
+</head>
+<body id="payment" class="mobile store cart">
+
+	<div id="showSearch"></div>
+
+	<div id="breadcrumbs"><a href="/counter/delivery/goconfirm/">戻る</a></div>
+
+	<div id="main">
+		<div id="step"><img src="/m/img/cartstep3.png"></div>
+		<h1 id="title">お支払い方法の指定</h1>
+
+		<span id="errorMessage" ></span>
+		<div id="errorMessageGiftCard" ></div>
+		<input m:id="buysum" id="buysum" type="hidden" value="buysum"/>
+
+		<form action="/counter/purchase/docasher" name="casherForm" method="post" id="casherForm">
+
+		<section id="couponGiftCard">
+			<h1>クーポン／ギフトカードの利用</h1>
+			<div class="packet">
+				<div m:id="hasCoupon">
+				<section id="coupon">
+					<dl>
+						<dt><input type="checkbox" name="coupon" id="couponToggle" value="NOT_ALL_COUPON" m:id="useCoupon" ><label for="couponToggle">MUJI.netクーポン</label></dt>
+						<dd class="balance price">（残高 <span class="num" m:id="couponBalance" >500</span>円分）</dd>
+						<dd class="amount"><input id="couponAmount" name="couponAmount" type="number" value="500" max="500" min="0" size="6" m:id="couponAmountSP"/>円分を使用</dd>
+					</dl>
+				</section><!-- /#coupon -->
+				</div>
+				<section id="giftCard">
+					<dl>
+						<dt><input type="checkbox" name="useGiftCard"  id="giftCardToggle"  m:id="useGiftCard" ><label for="giftCardToggle">MUJI GIFT CARD</label></dt>
+						<div id="balanceDiv" m:id="balanceDiv" ></div>
+					</dl>
+				</section><!-- /#giftCard -->
+			</div>
+		</section>
+
+		<section id="paymentMethod">
+			<h1>お支払い方法</h1>
+			<div class="packet">
+				<section>
+					<dl>
+						<dt m:id="cardDt" class="paymentMethodC" id="paymentMethodCDt" disMsg="" alrMsg="">
+							<input type="radio" name="paymentMethod" m:id="card" id="paymentMethodC"  value="CREDIT_CARD" >
+							<label for="paymentMethodC">クレジットカード</label>
+						</dt>
+						<dd class="paymentMethodC">
+						<img src="/img/store/cart/creditcards.png" width="173" height="20" alt="セゾンカード（MUJI Cardを含む）、VISA、MASTER CARD、JCB、アメリカン・エキスプレス">
+							<div class="auth">
+								<p>クレジットカード情報をご入力ください</p>
+								<ul>
+									<li class="cardNumber"><label for="cardNumber">カード番号</label><input type="text" name="cardNo" value="" id="cardNumber" m:id="cardNo" maxlength="16" size="18" /></li>
+									<li class="securityCode"><label for="securityCode">セキュリティコード</label><input type="text" name="securityCode" m:id="secCode" id="securityCode" maxlength="4" size="4" /> <span class="note">裏面署名欄の数字3桁（または4桁）</span></li>
+									<li class="securityCode"><label for="month">有効期限</label>
+									<select m:id="limitMonth" name="limitMonth" id="month">
+										<option value=""></option><div m:id="monthLoop">
+										<option m:id="expiredMonthOpt" value=""><span m:id="expiredMonth">値</span></option></div>
+									</select>/
+									<select m:id="limitYear" name="limitYear" id="year">
+										<option value=""></option>
+										<div m:id="yearLoop"><option m:id="expiredYearOpt" value=""><span m:id="expiredYearSP">値</span></option></div>
+									</select>
+									</li>
+								</ul>
+							</div>
+							<ul class="annotation asterisk">
+							<li>※有効期限が来月までのクレジットカードはご利用いただけません</li>
+							<li>※アメリカン・エキスプレスのセキュリティコードは表面に記載されています</li>
+							</ul>
+
+						</dd>
+						<dt m:id="deliveryDt" class="paymentMethodD"  id="paymentMethodDDt"  disMsg="" alrMsg="">
+							<input type="radio" m:id="delivery" id="paymentMethodD" name="paymentMethod" value="CASH_ON_DELIVERY" />
+							<label for="paymentMethodD">代金引換</label>
+						</dt>
+						<dd class="paymentMethodD">
+							<ul class="annotation asterisk">
+								<li>※ご注文された商品のお届け時に、商品と引き換えに代金をお支払いただきます</li>
+								<li>※一部地域ではご利用いただけません</li>
+							</ul>
+						</dd>
+						<dt m:id="rakutenDt" class="paymentMethodR" id="paymentMethodRDt"  disMsg="" alrMsg="">
+							<input type="radio" m:id="rakuten" id="paymentMethodR" name="paymentMethod" value="RAKUTEN"  />
+							<label for="paymentMethodR">楽天あんしん支払いサービス</label>
+						</dt>
+						<dd class="paymentMethodR">
+							<div id="rakutenCard"><img src="https://checkout.rakuten.co.jp/p/common/img/img_cardface_h7.gif" height="43" alt="VISA、 MASTER CARD、 JCB、 アメリカン・エキスプレス、ダイナースクラブ"></div>
+							<p>楽天会員IDでお支払いいただけます。<br>
+							ご購入金額に応じて、楽天スーパーポイントが貯まります。</p>
+							<ul class="annotation asterisk">
+							<li>※楽天サイトに移動して、ご購入手続きを行っていただきます</li>
+							<li>※ご注文手続き後、在庫状況によって商品を手配できない場合があります。その際は、別途メールにてご連絡させていただきます</li>
+							<li>※「楽天あんしん支払いサービス」でお支払いの場合は、MUJI.netクーポン・MUJI GIFT CARDをご利用できません</li>
+							<span m:id="isByAffiliate"><li>※「楽天あんしん支払いサービス」でお支払いの場合は、他社サイト経由のポイントおよびアフィリエイトのポイントは付与されません</li></span>
+							</ul>
+							<p>詳しくは、<a href="http://checkout.rakuten.co.jp/" target="_blank">「楽天あんしん支払いサービス」WEBサイト</a>へ</p>
+						</dd>
+					</dl>
+				</section>
+			</div>
+		</section><!-- /#paymentMethod -->
+
+		</form>
+		<section id="submit">
+			<ul class="prevNext">
+				<li class="btn next"><a id="submitLink" href="javascript:void(0);" >次へ進む</a></li>
+			</ul><!-- /.prevNext -->
+		</section><!-- /#submit -->
+
+	</div><!-- /#main -->
+
+</body>
+</html>

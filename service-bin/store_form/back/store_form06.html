@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="http://www.muji.net/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="http://www.muji.net/m/js/toggle/iphone-style-checkboxes.js"></script>
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+	<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+
+	$( 'input[name="returns_exchanges"]:radio' ).change( function() {
+		$('#defectiveFaq,#ownReasonsFaq').fadeOut('fast');
+		$('aside.relatedFaq').removeClass('view'); //remove FAQ
+		
+		if( $( this ).val()=="商品不良・汚損・破損があった場合"){
+			$('#aboutDefective,#defectiveFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+	
+			}else{
+			$('#aboutDefective,#defectiveFaq').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="お客様の理由で返品される場合"){
+			$('#aboutOwnReasons,#ownReasonsFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#aboutOwnReasons,#ownReasonsFaq').fadeOut('fast');
+		}
+	
+	});
+
+
+	/*
+	$('form').submit(function(){
+	
+		$('.hiddenRadio').each(function(){
+			if($('input .n',this).is(':checked')==false && $('input .n',this).is(':checked')==false){
+				$('input .n',this).click();
+			}
+		});
+
+	});
+	*/
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body>
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form/store_form03.html"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form/store_form07.html"><li>配送について</li></a>
+				<a href="/service-bin/store_form/store_form06.html"><li class="current">商品の返品・交換</li></a>
+				<a href="/service-bin/store_form/store_form01.html"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form/store_form04.html"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form/store_form05.html"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form/store_form02.html"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form/store_form08.html"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+	<form>
+		<section class="inquiryDetail block" id="order">
+			<h1>商品の返品・交換</h1>
+			<div class="contentWrap">
+				<p>ネットストアでご購入いただいた商品の、店舗での返品・交換はお受けできません。また、店舗でご購入された商品の返品・交換は、ネットストアではお受けできません。</p>
+				<ul class="subMenu">
+					<li><label title="defective"><input type="radio" name="returns_exchanges" value="商品不良・汚損・破損があった場合">商品不良・汚損・破損があった場合</label></li>
+					<li><label title="ownReasons"><input type="radio" name="returns_exchanges" value="お客様の理由で返品される場合">お客様の理由で返品される場合　例）購入した商品のサイズが合わないので交換したい</label></li>
+				</ul>
+				
+				<div id="aboutDefective" class="entryField">
+					<p class="title">商品不良・汚損・破損があった場合</p>
+					<p class="lead">交換または返品を承ります。お手数ですが下記のフォームにご入力ください。</p>
+					<section class="orderNumber">
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value=""></div>
+					</section>
+					
+					<section class="returns_exchanges">
+						<h1>返品理由</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<ul>
+							<li><label title="returns"><input type="radio" name="returns_exchangesReason" value="返品">返品</label></li>
+							<li><label title="exchanges"><input type="radio" name="returns_exchangesReason" value="交換">交換</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					
+					<section class="itemName">
+					<h1>商品名</h1>
+					<div class="answer">
+					<div class="message"></div>
+					<textarea name="商品名" rows="2" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)" placeholder="例）スチールユニットシェルフ・ボックス・引出し・2段・タモ材　幅82×奥行40×高さ37cm&nbsp;"></textarea></div>
+					<p>※できるだけ正確にご入力ください</p>
+					</section>
+					
+					<section class="quantity">
+					<h1>数量（任意）</h1>
+					<div class="answer">
+					<input type="text" name="数量" size="5" placeholder="例）2&nbsp;" value=""></div>
+					</section>
+				
+					<section class="other">
+					<h1>不具合内容・返品理由</h1>
+						<div class="answer">
+						<textarea name="不具合内容・返品理由" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					
+					<p class="caseOfCOD">代引きご利用時のご返品希望の場合はご返金口座をお知らせください</p>
+					<section class="bankAccount notRequired">
+					<h1>返金口座番号（任意）</h1>
+					<div class="answer">
+					<input type="text" name="数量" size="20" placeholder="例）11111111111&nbsp;" value=""></div>
+					</section>
+					
+					<section class="dateOfPick-up">
+						<h1>引取り希望日</h1>
+						<div class="answer">
+						<div class="message"></div>
+							<label><select name="月" id="Pick-upDateMonth"><option value="" selected="">--</option><option value="01" >01</option><option value="02" >02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></label><label><select name="" id="DeliveryDateDay"><option value="">--</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><span>日</span></label>
+						</div>
+					</section>
+				</div><!-- /#aboutDefective -->
+				
+				
+				<div id="aboutOwnReasons" class="entryField">
+					<p class="title">お客様の理由で返品される場合</p>
+					<p class="lead">ネットストアではお客様の理由での「交換」は承っておりません。<br>交換をご希望の場合は、お届けした商品を返品のうえ、改めてご注文をお願いいたします。<br>なお、ご返品時の配送料はお客さま負担となります。返品商品到着後、ご返金の処理をいたします。</p>
+					
+					<div class="type">
+					<p class="subTitle">配送便区分Aの場合</p>
+					<p>お買い上げ日から30日以内に商品に同梱されている「返品連絡票」に必要事項をご記入・ご同封のうえ、商品をご返送ください。<br>お客様の理由で返品される場合は、返送料はお客様負担となりますので、あらかじめご了承ください。<br>
+					<ul class="notice">
+						<li>「オーダーカーテン」のご返品は承れません</li>
+					</ul></p>
+					
+					<p class="subTitle">配送便区分B・C・D・Eの場合</p>
+					<p>大型商品をご返品の場合は、お引き取りに伺います。お買い上げ日から30日以内にネットストアサービスセンターへご連絡をお願いいたします。<br>（配送便区分B、C、D、Eの商品には、「返品連絡票」は同梱しておりません。）<br>お客様の理由で返品される場合、配送料と同額の返送料をご負担いただいております。</p>
+					</div>
+
+					<section class="orderNumber">
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value=""></div>
+					</section>
+					
+					<section class="other">
+					<h1>商品名・数量</h1>
+						<div class="answer">
+						<textarea name="商品名・数量" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					
+					<section class="reason">
+						<h1>返品理由</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<ul>
+							<li><label title="誤注文"><input type="radio" id="wrongOrder" name="reason">誤注文</label></li>
+							<li><label title="イメージ違い（サイズが合わない）"><input type="radio" id="differenceImage" name="reason">イメージ違い（サイズが合わない）</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					<section class="dateOfPick-up">
+						<h1>引取り希望日</h1>
+						<div class="answer">
+						<div class="message"></div>
+							<label><select name="月" id="Pick-upDateMonth"><option value="" selected="">--</option><option value="01" >01</option><option value="02" >02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></label><label><select name="" id="DeliveryDateDay"><option value="">--</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><span>日</span></label>
+						</div>
+						<ul class="notice">
+							<li>お申し出日より4日後よりご指定ください</li>
+						</ul>
+					</section>
+
+					<section class="unpack">
+						<h1>開梱状態</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<ul>
+							<li><label title="開梱済み"><input type="radio" id="open" name="unpack">開梱済み</label></li>
+							<li><label title="未開墾"><input type="radio" id="notOpen" name="unpack">未開墾</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					<section class="packagingMaterial">
+						<h1>包材有無</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<ul>
+							<li><label title="あり"><input type="radio" id="packagingMaterial" name="packagingMaterial">あり</label></li>
+							<li><label title="なし"><input type="radio" id="noPackagingMaterial" name="packagingMaterial">なし</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					<p class="caseOfCOD">代引きご利用時のご返品希望の場合はご返金口座をお知らせください</p>
+					<section class="bankAccount notRequired">
+					<h1>返金口座番号（任意）</h1>
+					<div class="answer">
+					<input type="text" name="数量" size="20" placeholder="例）11111111111&nbsp;" value=""></div>
+					</section>
+					
+				</div><!-- /#aboutOwnReasons -->
+
+			 </div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_氏" size="12" placeholder="例）無印&nbsp;" value=""></label> <label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value=""></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_氏" size="12" placeholder="例）むじるし&nbsp;" value=""></label> <label>名: <input type="text" name="G2_名" size="12" placeholder="例）たろう&nbsp;" value=""></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G6_メールアドレス" size="30" value="" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G6_メールアドレス" size="30" value="" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+					
+				
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			</form>
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="defectiveFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/return_info/014415.html" target="_blank">返品・交換の方法</a></li>
+				</ul>
+				<ul class="relatedFaqList" id="ownReasonsFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/return_info/014415.html" target="_blank">返品・交換の方法</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/delivery_info/014397.html" target="_blank">配送料について（配送便区分）</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+			
+		
+
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</body>
+</html>

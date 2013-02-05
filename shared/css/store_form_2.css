@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/* RESET */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+/* RESET HTML5 */
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+
+/* GENERAL */
+
+body {color: #333; font: 12px/1.5 "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",Osaka,sans-serif;}
+a {text-decoration: none;}
+a:link, a:visited {color:#333;}
+a:active, a:hover {color:#7F0019;}
+a img {vertical-align: bottom;}
+
+/* header */
+header:after,
+header ul:after {content:""; display: block; clear: both;}
+header h1 {float: left;}
+header nav {float: right; font-size: 14px; margin-top: 10px;}
+header li {float: left;}
+header li a {display: block; padding: 0 10px; border-left: 1px solid #ccc;}
+header li:first-child a {border-left: 0;}
+#gnContact a { width: 61px; background-position: -295px -58px;}
+
+/* main */
+#mainNav, #main {width: 880px;}
+#mainNav #nav/* , #main #form */ {width: 700px;  margin-right: 20px; float: left;}
+#mainNav h1 {margin-bottom: 10px;}
+p.title {font-weight: bold; margin: 20px 0;}
+.entryField {border-top: 1px solid #ddd; padding-top: 10px;}
+
+/* aside */
+aside {overflow: hidden; padding: 10px 0 20px 0;}
+aside h1 {font-size: 14px; margin-bottom: 20px;}
+aside#tel dl {background: #F7F7F7; padding: 10px; border-radius: 4px;}
+aside .relatedFaqList a {/* text-decoration: underline; */font-size: 12px;}
+aside .relatedFaqList a:hover li {background: #D0D0C7;}
+aside.relatedFaq {padding: 15px 15px 5px 15px; background: #eee; border-radius: 4px; width: auto; display: none; margin: 15px; border: 1px solid #ddd;}
+aside.relatedFaq h1 {font-size: 13px; font-weight: normal; background: none; color: #333; padding: 0; text-align: left; margin: 0;}
+aside.relatedFaq.view {display: block;}
+aside.relatedFaq ul {margin-right: -15px; letter-spacing: -.30em;}
+
+section ul:after {content: ""; display: block; clear: both;}
+aside.relatedFaq li {margin-bottom: 10px; width: /* 131px */auto; padding: 10px; background: #e0e0d7; border-radius: 4px; display: inline-block; vertical-align: top; letter-spacing: normal; float: none;}
+
+#mainNav,
+#main,
+aside.relatedFaq {zoom:1;}
+#mainNav:after,
+#main:after,
+aside.relatedFaq:after {content: ""; display: block; clear: both;}
+
+
+/* CONTENTS */
+#content {width: 880px; margin: 0 auto 50px;}
+
+.e_waku_error {color: #ff0000;}
+
+#title {margin: 30px 0; font-weight: bold; font-size: 28px;}
+#title img {margin-bottom: 10px;}
+.lead {font-size: 14px; margin: 10px 0;}
+.lead a {text-decoration: underline;}
+
+.annotation {padding: 15px 0 0 2em; margin-bottom: 30px; clear: both;}
+.annotation li {list-style: disc; margin-bottom: .5em;}
+.notice {padding-left: 2em;}
+.notice li {list-style: disc; margin-bottom: .5em;}
+.note {font-size: 12px; font-weight: normal;}
+.block {background: #f7f7f7; border-radius: 5px; padding: 0 0 20px; box-shadow: 0 1px 2px rgba(0,0,0,.2);}
+
+section {margin-bottom: 30px; padding-top: 10px; font-size: 14px;}
+section h1 {font-size: 14px; font-weight: bold; background: #888; color: #fff; padding: 5px 15px; border-radius: 5px 5px 0 0; text-align: center;}
+.contentWrap {padding: 15px;}
+section .notice {font-size: 12px; margin-bottom: 15px;}
+section .asterisk {text-indent: -1em; padding-left: 1em;}
+section section {margin: 10px 0; padding-left: 18em;}
+section section:after {content: ""; display: block; clear: both;}
+section section h1 {background: none; color: #333; padding: 5px 0 0; line-height: 1.6; font-size: 14px; float: none; text-align: left; width: 100%; margin: 0 0 10px 0;}
+
+section section section {margin-bottom: 10px; padding-left: 18em;}
+section section section:after {content: ""; display: block; clear: both;}
+
+section input {margin-right: 5px;}
+.answer {margin-left: 15px;}
+
+section ul {margin-top: 9px;}
+section li {float: left; margin-right: 15px;}
+section .notice li {float: none;}
+section.relatedNotice {margin:0 20px 0 0; padding-left: 0;}
+
+.notice a {text-decoration: underline;}
+.notice .login a,
+aside .login a {margin-left: 10px; color: #fff; padding: 3px 8px; border-radius: 4px; text-decoration: none; background: #999; font-size: 10px; font-weight: bold; text-decoration: none;}
+.notice .login a:hover, aside .login a:hover {background: #666;}
+
+#submit {text-align: center;}
+#submit button {padding: 10px; background: #333; color: #fff; border-radius: 4px; border: 0; cursor: pointer;}
+#submit button:hover {background: #7f0019;}
+
+input[type="text"],
+input[type="email"],
+textarea {border: 1px solid #ccc; font-size: 14px; padding: 5px; line-height: 1.6; margin-bottom: 5px; border-radius: 2px;}
+label span {margin-right: 5px;}
+select {font-size: 16px; margin-top: 5px;}
+
+.placeholder {font-size: 14px; color: #aaa;}
+.message {font-size: 12px; color: #666;}
+#postCode1 {margin-left: 5px;}
+.hiddenRadio {display: none;}
+
+.option {display: none;}
+.option li {float: none; margin-bottom: 10px; text-indent: -1.5em; padding-left: 1.5em;}
+.option li:before {content: ''; color: #aaa;}
+
+.notice li a[target="_blank"] {text-decoration: underline;}
+.notice li a[target="_blank"]:after {content: url(/img/common/imageview.gif); margin-right: 5px;}
+aside .notice li a[target="_blank"]:after {content: ""; margin-right: 5px;}
+aside .notice li {list-style: none;}
+
+.solution {margin-top: 20px; font-size: 12px;}
+.faq li {margin-bottom: 15px;}
+.solution span {display: inline-block;}
+.subTitle {font-size: 14px; font-weight: bold; margin: 10px 0;}
+section.other h1 {background: none; color: #333; padding: 5px 0 0; line-height: 1.6; font-size: 14px; float: left; width: 18em; text-align: right; margin-left: -18em;}
+
+
+/* menu */
+section.menu h1 {background: #fff; color: #333; text-align: left; padding: 0;}
+section.menu {margin-bottom: 0;}
+.menu ul {margin-right: -20px; letter-spacing: -.40em;}
+.menu a li {width: 129px; margin: 0 15px 15px 0; letter-spacing: normal; min-height:60px; padding: 10px 10px 10px 22px; cursor: pointer; border: 1px solid #CCC; position:relative; border-radius: 4px;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #f9f9f9), color-stop(0.00, #f0f0f0));
+background: -webkit-linear-gradient(top, #f9f9f9 0%, #f0f0f0 100%);
+background: -moz-linear-gradient(top, #f9f9f9 0%, #f0f0f0 100%);
+background: -o-linear-gradient(top, #f9f9f9 0%, #f0f0f0 100%);
+background: -ms-linear-gradient(top, #f9f9f9 0%, #f0f0f0 100%);
+background: linear-gradient(top, #f9f9f9 0%, #f0f0f0 100%);
+}
+.menu a:hover li,
+.menu a li.current {background: #ddd;}
+#mainNav #nav .menu a li:before {content: ""; position: absolute; top: 16px; left: 10px; border-top: 3px solid transparent; border-bottom: 3px solid transparent; border-left: 6px solid #666;}
+#headerWrap #header #siteName:before {content: ""; border: none;}
+.menu span {font-size: 11px; color: #666; display: inline-block; width: 100%; padding-top: 3px;}
+.menu .contentWrap {padding-bottom: 0;}
+.menuBlock {background: #fff; border-radius: 5px; padding: 0 0 20px; box-shadow: 0 1px 2px rgba(0,0,0,.2);}
+.menuDetail ul {margin: 0; }
+.menuDetail li {float: none;}
+.subMenu {padding: 0 0 10px 20px;}
+.subMenu .subMenuTitle {color: #999;}
+.subMenu li {float: none; padding: 10px 0;}
+.subMenu li label.delivery,
+.subMenu li label.gift {margin-right: 20px;}
+/*
+.subMenu li .deliveryMenu,
+.subMenu li .giftMenu {margin-left: 20px;}
+*/
+
+
+/* form ------------------------------------- */
+#form input, #form textarea {border: 1px solid #ff9f9f; background: #fff7f7;}
+#form .notRequired input, #form .notRequired textarea {border: 1px solid #ccc; background: #fff;}
+#form .subMenu input {border: 0; background: #f7f7f7;}
+
+/* inquiry */
+section.inquiryDetail {padding: 0;}
+.inquiry h1 {background: none; color: #333; padding: 5px 0 0; line-height: 1.6; font-size: 14px; float: left; width: 18em; text-align: right; margin-left: -18em;}
+.message span {display: inline-block; background: #fdd; padding: 5px; border-radius: 5px; color: #d00; font-weight: bold;}
+
+
+/* form1 stock */
+section section h1{background: none; color: #333; padding: 5px 0 0; line-height: 1.6; font-size: 14px; float: left; width: 18em; text-align: right; margin-left: -18em;}
+#prefectureSelect {margin-left: 15px;}
+
+/* form2 error & trouble */
+#useBrowser p.title{margin-bottom: 0; width: 18em; text-align: right;}
+section.browser, section.agent {margin: 0;}
+section.version {margin-top: 0;}
+section#useBrowser {margin-bottom: 0;}
+textarea#a1, textarea#a2, input#a0 {border: 0; background: #f7f7f7;}
+
+/* form3 order */
+section #orderCancel .notice.loginInfo {margin-bottom: 40px;}
+
+#changeAddress dd, #changeDate dd,
+#changeAddress02 dd, #changeDate02 dd {margin-bottom: 40px;}
+.typeA p, .typeB p, #changeDate .notice.sub, #changeDateAndAddress .notice.sub {padding-left: 8em;}
+.typeB {margin-top: 40px;}
+#changeDate dt,
+#changeDate02 dt {border-top: 1px solid #e7e7e7; padding-top: 20px;}
+
+#PickUpFurniture {border-top: 1px solid #ddd;}
+#PickUpFurniture .title {margin-top: 10px; font-weight: bold;}
+#PickUpFurniture dl {padding-left: 1em;}
+
+#giftWrapping02 {border-top: 1px solid #e7e7e7;}
+
+#noshi,
+#giftWrapping,
+#noshiAndWrapping {display: none;}
+
+section.noshiType01 li+li {float: left; margin-right:20px;}
+section.noshiType01 li {width: 120px; text-align: center;}
+section.noshiType01 .title {margin: 0 0 5px 0; font-weight: bold; display: inline-block; width: 80px;}
+section.noshiType01 label .noshiInfo {font-size: 10px; line-height: 110%; display: inline-block; width: 120px;}
+section.noshiType01 li img {width: 80px; height: 100px;}
+
+#orderCancel,
+#delivery,
+#PickUpFurniture,
+#gift,
+#incidentalService,
+#changeAddress,
+#changeDate,
+#changeDateAndAddress {display: none;}
+
+#orderCancelFaq,
+#deliveryFaq01,
+#deliveryFaq02,
+#deliveryFaq03,
+#pickUpFurnitureFAQ,
+#incidentalServiceFAQ,
+#giftFaq {display: none;}
+
+/* form4 receipt */
+#aboutReceipt dl {margin-left: 1em;}
+#aboutReceipt dt {border-top: 1px solid #e7e7e7; padding-top: 20px;}
+#aboutReceipt dd {margin-bottom: 30px;}
+#aboutReceipt .sendingAddress dt {float: left; border: 0; padding-top: 0;}
+#aboutReceipt .sendingAddress dd {margin: 0 0 5px 5em; padding-bottom: 0;}
+#aboutReceipt .sendingAddress dd .notice li {font-size: 14px;}
+#aboutReceipt .sendingAddress {padding-left: 8em;}
+#aboutReceipt, #receiptFaq, #aboutSpec {display: none;}
+p.specifiedAddres {padding-left: 8em; margin-top: 20px;}
+section.spec .answer {padding-top: 5px;}
+
+/* form5 member */
+#form5 ul.subMenu {margin-bottom: 20px;}
+
+/* form6 returns & exchanges */
+.unpack li, .packagingMaterial li, .reason li, .returns_exchanges li {float: left; margin-right: 20px;}
+#aboutOwnReasons .type {margin-left: 8em;}
+#aboutDefective, #aboutOwnReasons {display: none;}
+section.bankAccount li {float: none;}
+p.caseOfCOD {margin-top: 40px;}
+p.yuucho {margin: 20px 0 10px;}
+
+/* form7 delivery */
+#delivery dl {margin-left: 1em;}
+
+#aboutShippingCharges,
+#aboutDelivery {display: none;}
+#deliveryFaq,
+#shippingChargesFaq {display: none;}
+
+
+/* /form ------------------------------------- */
+
+/* #footer */
+footer {border-top:1px solid #e5e5e5;}
+footer:after {content:""; display: block; clear: both;}
+
+/* #confirm */
+#confirm .block:after,
+#complete #orderID:after {content: ""; display: block; clear: both;}
+
+#submit {margin: 0 auto 30px; text-align: center;}
+#submit button.go {background: #333; color: #fff; font-weight: bold; display: inline-block; cursor: pointer; text-decoration: none;
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;
+width: 200px; padding: 10px; line-height: 1.4; border: 0; font-size: 14px;}
+#submit button.back {background: #fff; color: #333; font-weight: bold; display: inline-block; cursor: pointer; text-decoration: none;
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;
+padding: 9px 10px; line-height: 1.4; border: 0; font-size: 14px; margin-right: 20px; border:1px solid #ccc;}
+#submit button.go:hover {background: #7f0019; color: #fff;}
+#submit button.back:hover {border:1px solid #7f0019;}
+
+#confirm .block #notice {padding-left: 20px; margin-bottom: 30px;}
+#confirm .block #notice li {margin-bottom: 10px; list-style: disc;}
+#confirm .block .a {font-weight: bold;}
+
+body#confirm .block li {float: none;}
+body#confirm .block li:after {content:""; display: block; clear: both;}
+body#confirm .block .q {float:left;display: block; margin-right: 10px; width: 30%; text-align: right;margin-bottom: 10px;}
+body#confirm .block .a {overflow: hidden;margin-bottom: 10px;display: block;}
+
+
+/* #complete */
+#complete .thanksMessage {text-align: center; margin: 80px 0 50px 0; font-size: 18px;}
+#complete  ul.notice {width: 40%; margin: 0 auto 50px;}
+#complete .backStore {margin-top: 30px; text-decoration: underline; margin-bottom: -50px;}
+
+#complete #orderID{margin:30px 0 20px;background:#f3f3f3;padding:15px;}
+#complete #orderID dt{float:left;font-weight:bold;}
+#complete #orderID dd{float:left;margin-left:10px;padding-left:10px;border-left:1px solid #ccc;overflow:hidden;}
+#complete #orderID dd ul{margin-bottom:-5px;overflow:hidden;}
+#complete #orderID dd li{margin-bottom:5px;font-size:14px;}
+
+#contact {border: 5px solid #efefef; margin-bottom: 20px; padding: 15px;}
+#contact h2 {font-size: 14px; font-weight: bold; margin-top: 10px; margin-bottom: 10px;}
+
+
+#on {visibility: hidden; height: 1px; overflow: hidden; opacity: 0;}
+#login .lead {margin-bottom: 0;}
+#loginBox {width: 200px; margin: 20px auto 0;}
+#loginBtn a {display: inline-block; padding: 5px; background: #333; color: #fff; border-radius: 4px; border: 0; cursor: pointer; width: 200px; margin-top: 10px; text-align: center;}
+#login input {width: 200px;}
+#loginBtn a:hover {background: #7f0019;}
+#login .message {text-align: center;}
+
+#infoAll {margin-bottom: 10px;}
+#infoAll a {text-decoration: underline;}
+
+
+/* media query ------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 569px){
+	body {width:auto;}
+	.block {margin: 0 10px 30px;}
+	#main, #main #form, #notice {display: table-row-group; margin: 0 10px; width: auto;}
+	.content, #header, #footer {width: auto;}
+section.relatedNotice, aside {float: none; margin: 0 10px; width: auto;}
+	
+#mainNav {display: table-footer-group;}
+#globalNav {display: none;}
+#headerWrap {min-width: 1px;}
+#siteName {display: block;}
+header h1 {margin: 0; float: none; text-align: center; display: none;}
+header h1 img {width: 80px; height: 22px; margin: 10px;}
+header nav {margin-top: 0;float: none; font-size: 12px;}
+header li a {padding: 0 7px;}
+#content {margin: 0; width: auto;}
+#mainNav {width: 100%;}
+#mainNav #nav {width: 100%;  margin-right: 0; float: none;}
+#title {margin: 10px; font-size: 16px;}
+#title img {width: 100%;}
+#confirm #title img {width: 50%;}
+#title span {display: block;font-size: 11px;}
+#footer #footerNav {display: none;}
+#footer #copyright {text-align: center;}
+
+section section h1,
+section.other h1,
+.inquiry h1,
+#applicant .contentWrap h1 {float: none; width: auto; text-align: left; margin-left: 0;}
+
+section section,
+section section .title{padding-left: 0; margin-left: 0;}
+section section .answer {margin-left: 0;}
+section section.CancelButton h1,
+section section.inquiryDetail
+.orderNumber h1{margin-left: 0; width: auto; text-align: left;}
+section ul.notice li {padding:10px 0 0 5px;}
+.selectProblem li {padding: 8px;}
+.option h1  {float: left;}
+section ul {overflow: hidden;}
+section li {float: none; margin-right: 0;}
+
+section.menu {display: table-footer-group;}
+section.menu a li {float: left; width: 90%; min-height: 40px ;margin-bottom: 0; border: 0; border-top: 1px solid #dfdfdf; border-radius: 0; margin-right: 0;}
+.subMenu li .deliveryMenu,
+.subMenu li .giftMenu {margin-left: 0;}
+
+aside #infoAll {padding: 10px; text-align: center; background: #ccc; border-radius: 4px; margin-top: 20px;}
+aside #infoAll a:before {content: ""; position: absolute; top: 16px; left: 10px; border-top: 3px solid transparent; border-bottom: 3px solid transparent; border-left: 6px solid #666;}
+aside #infoAll a {text-decoration: none; color: #191919;}
+aside#tel dl {background: #fff; padding: 0;}
+aside br {display: none;}
+
+aside.relatedFaq li {width: 90%; margin-right: 15px;}
+
+input[type="text"],
+input[type="email"],
+textarea {width: 95%;}
+.name input,
+.kana input {width: 90px;}
+.dateOfBirth input {width: 60px;}
+#postCode1, #postCode2 {width: 60px;}
+.tel input {width: 60px;}
+select {max-width: 95%;}
+#message section .answer {padding-left: 0;}
+
+#delivery dt, #delivery dd,
+#receipt .paytype01 dl,
+#idPass section .mail, #idPass section .tel, #idPass section .dateOfBirth {padding-left: 0;}
+#delivery dl {margin-left: 0;}
+#delivery .typeA p, #delivery .typeB p,  #delivery .notice {padding-left: 2em;}
+.typeA p, .typeB p, #changeDate .notice.sub, #changeDateAndAddress .notice.sub {padding-left: 0;}
+
+#confirm nav {display: none;}
+
+#aboutOwnReasons .type {margin-left: 2em;}
+#aboutReceipt .sendingAddress,
+#aboutReceipt p.specifiedAddres, #aboutSpec p.specifiedAddres {padding-left: 0;}
+#nav .menu p {display: none;}
+#nav .menu h1 {margin-left: 10px;}
+#complete  ul.notice {width: 90%;}
+#complete .backStore {margin: 0 0 -45px 15px;}
+
+#useBrowser p.title{width: auto; text-align: left;}
+
+.subMenu {padding: 0;}
+.subMenu li {padding:0;}
+.subMenu li + li{border-top: 1px solid #ddd;}
+.subMenu .subMenuTitle {margin-top: 10px; display: inline-block;}
+#form .subMenu label {display: inline-block; background: #f7f7f7; padding: 15px 10px; width: 95%;}
+#form .subMenu label input[type="checkbox"]{ display: inline-block; width: 20px; height: 30px; vertical-align: top;}
+#form #incidentalService.inquiryDetail .subMenu li {background: #f0f0f0;}
+#form #incidentalService.inquiryDetail label {background: #f0f0f0;}
+
+section.noshiType01 ul {width: 130px; margin: 0 auto;}
+section.noshiType01 li {padding-bottom: 20px;}
+}
+/* /media query ------------------------------------- */
+
+

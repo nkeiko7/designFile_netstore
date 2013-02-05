@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:mayaa xmlns:m="http://mayaa.seasar.org" xmlns:s="http://sastruts.seasar.org"
+	xmlns:f="http://sastruts.seasar.org/functions" xmlns:bean="http://jakarta.apache.org/struts/tags-bean"
+	xmlns:html="http://jakarta.apache.org/struts/tags-html" xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fmt="http://java.sun.com/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	m:extends="layout/defaultlayout_d2.html"
+	m:templateSuffix="${ session.getAttribute('viewmode') }">
+
+	<!-- スタイル設定================================================================================-->
+	<m:beforeRender><![CDATA[
+		page.contentId = "payment";
+		page.contentClass = "store cart"; // classはデフォルト(store browse)以外の値を設定したい場合のみ
+		page.contentClassSP = "mobile store cart"; // classはデフォルト(store browse)以外の値を設定したい場合のみ
+
+		if(casherDto.paymentMethod!=null && casherDto.paymentMethod.equals('CREDIT_CARD')){
+			var cardNo = casherDto.creditCardDto.cardNo1+
+						 casherDto.creditCardDto.cardNo2+
+						 casherDto.creditCardDto.cardNo3+
+						 casherDto.creditCardDto.cardNo4;
+		}
+	]]></m:beforeRender>
+
+	<!-- クーポン================================================================================-->
+	<!-- クーポン残高の有無 -->
+	<m:if m:id="hasCoupon" test="${ couponBalance.hasCoupon }"/>
+
+	<!-- クーポン残高 -->
+	<m:formatNumber m:id="couponBalance" value="${couponBalance.couponBalance}" pattern="#,###,###" m:replace="false" />
+
+	<!-- MUJInetクーポンご使用額 -->
+	<m:echo m:id="couponAmount">
+		<m:attribute name="value" value="${ couponAmount }" />
+		<m:doBody />
+	</m:echo>
+
+	<!-- MUJInetクーポンご使用額(スマフォ) -->
+	<m:echo m:id="couponAmountSP">
+		<m:if test="${ couponAmount != null &amp;&amp; !(''.equals( couponAmount )) }" >
+			<m:attribute name="value" value="${ couponAmount }" />
+		</m:if>
+		<m:if test="${ couponAmount == null || ''.equals( couponAmount ) }" >
+			<m:attribute name="value" value="${ couponBalance.couponBalance }" />
+		</m:if>
+		<m:attribute name="max" value="${ couponBalance.couponBalance }" />
+		<m:doBody />
+	</m:echo>
+
+	<!-- クーポン選択ラジオボタン -->
+	<m:echo m:id="allCoupon">
+		<m:if test="${ 'ALL_COUPON'.equals( couponType ) }" >
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="notAllCoupon">
+		<m:if test="${ 'NOT_ALL_COUPON'.equals( couponType )}" >
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="notUseCoupon">
+		<m:if test="${ 'NOT_USE_COUPON'.equals( couponType ) }" >
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- クーポン選択チェックボックス(SPのみ)
+		デフォルトがPC版では、ALL_COUPONとなる。SP版は、デフォルトチェックが必要なため、以下の条件でデフォルトとした。
+		couponTypeがNOT_ALL_COUPON  ⇒ チェック
+		couponTypeがALL_COUPON ⇒ チェック(ALL_COUPONはSP版では使用していない)
+	-->
+	<m:echo m:id="useCoupon">
+		<m:if test="${ 'NOT_ALL_COUPON'.equals( couponType )}" >
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:if test="${ 'ALL_COUPON'.equals( couponType ) }" >
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- ギフトカード================================================================================-->
+	<!-- ギフトカード使用 フラグ -->
+	<m:echo m:id="useGiftCard">
+		<m:if test="${ useGiftCard }">
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<m:insert m:id="balanceDiv" path="/counter/component/giftCard.inc"  showerror="false" m:replace="false"/>
+
+
+	<!-- 支払い方法  ================================================================================ -->
+	<!-- 支払い方法選択不可時、ポップアップメッセージ用の設定 -->
+	<m:if m:id="selectableCredit" test="${casherDto.enableCard}" />
+	<m:if m:id="notSelectableCredit" test="${!casherDto.enableCard}" />
+
+	<m:if m:id="selectableDelivery" test="${casherDto.enableDelivery}" />
+	<m:if m:id="notSelectableDelivery" test="${!casherDto.enableDelivery}" />
+
+	<m:if m:id="selectableRakuten" test="${casherDto.enableRakuten}" />
+	<m:if m:id="notSelectableRakutenItemAttributeTrue" test="${!casherDto.enableRakuten &amp;&amp; casherDto.rakutenItemAttribute}" />
+	<m:if m:id="notSelectableRakutenItemAttributeFalse" test="${!casherDto.enableRakuten &amp;&amp; !casherDto.rakutenItemAttribute}" />
+
+	<!-- 選択ラジオボタン -->
+	<m:echo m:id="card">
+		<m:if test="${casherDto.enableCard &amp;&amp; (casherDto.paymentMethod==null || 'CREDIT_CARD'.equals(casherDto.paymentMethod)) }">
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:if test="${casherDto.enableCard}">
+			<m:attribute name="enableCredit" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="delivery">
+		<m:if test="${casherDto.enableDelivery &amp;&amp; casherDto.paymentMethod!=null &amp;&amp; 'CASH_ON_DELIVERY'.equals(casherDto.paymentMethod) }">
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:if test="${casherDto.enableDelivery}">
+			<m:attribute name="enableDelivery" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="rakuten">
+		<m:if test="${casherDto.enableRakuten &amp;&amp; casherDto.paymentMethod!=null &amp;&amp; 'RAKUTEN'.equals(casherDto.paymentMethod) }">
+			<m:attribute name="checked" value="checked" />
+		</m:if>
+		<m:if test="${ casherDto.enableRakuten }">
+			<m:attribute name="enableRakuten" value="true" />
+		</m:if>
+		<m:if test="${ !casherDto.rakutenItemAttribute }">
+			<m:attribute name="includeDisableItem" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- 選択ラジオボタン(スマフォ) -->
+	<m:echo m:id="cardDt">
+		<m:if test="${!casherDto.enableCard}">
+			<m:attribute name="class" value="paymentMethodC disabled" />
+		</m:if>
+		<m:if test="${casherDto.enableCard}">
+			<m:attribute name="enable" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<m:echo m:id="deliveryDt">
+		<m:if test="${!casherDto.enableDelivery}">
+			<m:attribute name="class" value="paymentMethodD disabled" />
+		</m:if>
+		<m:if test="${casherDto.enableDelivery}">
+			<m:attribute name="enable" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<m:echo m:id="rakutenDt">
+		<m:if test="${ !casherDto.enableRakuten || !casherDto.rakutenItemAttribute }">
+			<m:attribute name="class" value="paymentMethodR disabled" />
+		</m:if>
+		<m:if test="${ casherDto.enableRakuten }">
+			<m:attribute name="enable" value="true" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- カード番号 -->
+	<m:echo m:id="cardNo">
+		<m:attribute name="value" value="${cardNo}" />
+		<m:if test="${!casherDto.enableCard}">
+			<m:attribute name="disabled" value="disabled" />
+		</m:if>
+	</m:echo>
+
+	<!-- 有効期限月 -->
+	<m:forEach m:id="monthLoop" items="${expiredMonthes}" var="expiredMonth" />
+	<m:write m:id="expiredMonth" value="${expiredMonth}" />
+	<m:echo m:id="expiredMonthOpt">
+		<m:attribute name="value" value="${expiredMonth}" />
+		<m:if test="${ expiredMonth.equals(casherDto.creditCardDto.limitMonth) }">
+			<m:attribute name="selected" value="selected" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="limitMonth">
+		<m:if test="${!casherDto.enableCard}">
+			<m:attribute name="disabled" value="disabled" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- 有効期限年 -->
+	<m:forEach m:id="yearLoop" items="${expiredYears}" var="expiredYear" />
+	<m:write m:id="expiredYear" value="${expiredYear}" />
+	<m:write m:id="expiredYearSP" value="20${expiredYear}" /><!-- スマフォのみ -->
+	<m:echo m:id="expiredYearOpt">
+		<m:attribute name="value" value="${expiredYear}" />
+		<m:if test="${ expiredYear.equals(casherDto.creditCardDto.limitYear) }">
+			<m:attribute name="selected" value="selected" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:id="limitYear">
+		<m:if test="${!casherDto.enableCard}">
+			<m:attribute name="disabled" value="disabled" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<!-- セキュリティコード -->
+	<m:echo m:id="secCode">
+		<m:attribute name="value" value="${casherDto.creditCardDto.securityCode}" />
+		<m:if test="${!casherDto.enableCard}">
+			<m:attribute name="disabled" value="disabled" />
+		</m:if>
+	</m:echo>
+
+	<!-- 楽天あんしん支払:アフィリエイト経由フラグ -->
+	<m:if m:id="isByAffiliate" test="${isByAffiliate}" />
+
+
+	<!-- 楽天Tipsメッセージ 表示条件 -->
+	<m:if m:id="showRakutenItemTips" test="${ casherDto.enableRakuten || !casherDto.rakutenItemAttribute }" />
+	<!-- 楽天あんしん決済可能商品でない -->
+	<m:if m:id="notRakutenItem" test="${ !casherDto.rakutenItemAttribute }" />
+
+	<!-- 楽天あんしん決済可能商品 かつ (100円以上 9桁未満)の場合 UIで表示を切り替えるためメッセージを設定する -->
+	<m:if m:id="rakutenItem" test="${ casherDto.rakutenItemAttribute &amp;&amp; casherDto.enableRakuten }" />
+
+	<!-- セキュリティトークン  ================================================================================ -->
+	<m:echo m:xpath="//a">
+		<m:if test="${ href.indexOf('javascript:')==-1 }">
+			<m:attribute name="href" value="${ mayaaHelper.getContextUrlWithToken(href) }" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+	<m:echo m:xpath="//form">
+		<m:attribute name="action" value="${ mayaaHelper.getContextUrlWithToken(action) }" />
+		<m:doBody />
+	</m:echo>
+
+	<!-- 隠しコード：クーポン全額 -->
+	<m:echo m:id="allCouponBalance">
+		<m:attribute name="value" value="${couponBalance.couponBalance}" />
+	</m:echo>
+	<!-- 隠しコード：購入合計金額 -->
+	<m:echo m:id="buysum">
+		<m:attribute name="value" value="${buySum}" />
+	</m:echo>
+</m:mayaa>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="http://www.muji.net/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="http://www.muji.net/m/js/toggle/iphone-style-checkboxes.js"></script>
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+	<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+	$('aside.relatedFaq').addClass('view');
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body>
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form/store_form03.html"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form/store_form07.html"><li>配送について</li></a>
+				<a href="/service-bin/store_form/store_form06.html"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form/store_form01.html"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form/store_form04.html"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form/store_form05.html"><li class="current">MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form/store_form02.html"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form/store_form08.html"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+	<form>
+		<section class="inquiryDetail block" id="order">
+			<h1>MUJI.netメンバー情報について</h1>
+			<div class="contentWrap">
+				<p>お問い合わせ内容をお選びください。</p>
+				<ul class="subMenu">
+					<li><label title="mailNews"><input type="radio" name="member" value="メールニュースの配信停止について">メールニュースの配信停止希望</label></li>
+					<li><label title="idpass"><input type="radio" name="member" value="ID・パスワードを忘れた">ID・パスワードを忘れた</label></li>
+					<li><label title="leave"><input type="radio" name="member" value="退会希望">退会希望</label></li>
+					<li><label title="memberInfo"><input type="radio" name="member" value="登録内容の変更">登録内容の変更</label></li>
+				</ul>
+				
+				<section class="dateOfBirth">
+				<h1>生年月日</h1>
+				<div class="answer">
+				<div class="message"></div>
+					<label><input id="birthDateYear" name="text_5" value="" type="text" maxlength="4" size="8" placeholder="例）1972"><span>年</span></label><label><select name="select_1" id="birthDateMonth"><option value="" selected="">--</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span>月</span></label><label><select name="select_2" id="birthDateDay"><option value="">--</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><span>日</span></label>
+				</div>
+			</section>
+			
+			<section class="address">
+				<h1>郵便番号</h1>
+				<div class="answer">
+				<div class="message"></div>
+					〒<input id="postCode1" type="text" name="text_6" value="" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="text_7" value="" size="5" maxlength="4" placeholder="4567">
+				</div>
+			</section>
+			
+			<section class="tel notRequired">
+				<h1>電話番号（任意）</h1>
+				<div class="answer">
+				<div class="message"></div>
+					<label><input type="text" name="text_10" size="8" value="" placeholder="例）03"></label><label> - <input type="text" name="text_11" size="8" value="" placeholder="例）3989"></label><label> - <input type="text" name="text_12" size="8" value="" placeholder="例）4191"></label>
+				</div>
+			</section>
+			
+			<section class="other notRequired">
+			<h1>内容（任意）</h1>
+				<div class="answer">
+				<textarea name="内容" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+			</section>
+
+			</div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_氏" size="12" placeholder="例）無印&nbsp;" value=""></label> <label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value=""></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_氏" size="12" placeholder="例）むじるし&nbsp;" value=""></label> <label>名: <input type="text" name="G2_名" size="12" placeholder="例）たろう&nbsp;" value=""></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G6_メールアドレス" size="30" value="" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G6_メールアドレス" size="30" value="" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+					
+				
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			</form>
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="defectiveFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/mailnews_info/014401.html" target="_blank">メールニュースの配信変更・停止について（ご自身での設定方法）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/secession_info/014344.html" target="_blank">パスワードをお忘れの場合（ご登録メールアドレスがわかる場合）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/regist_info/014377.html" target="_blank">メンバー登録内容の変更（ご自身での変更方法）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/secession_info/014346.html" target="_blank">メンバー退会の手順（ご自身での退会設定方法）</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+			
+		
+
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</body>
+</html>

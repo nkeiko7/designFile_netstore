@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ネットストアについてのお問い合わせ | 注文に関するお問い合わせ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="http://www.muji.net/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="http://www.muji.net/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="http://www.muji.net/m/js/toggle/iphone-style-checkboxes.js"></script>	
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+
+<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+
+	$( 'input[id="deliveryOrder"]:radio' ).change( function() {
+		
+		$('#orderCancelFaq,#deliveryFaq01,#deliveryFaq02,#deliveryFaq03,#giftFaq,#pickUpFurnitureFAQ,#incidentalServiceFAQ,#giftFaq01,#giftFaq02,#giftFaq03').fadeOut('fast'); //remove FAQ
+		$('aside.relatedFaq').removeClass('view'); //remove FAQ wrap
+			
+		if( $( this ).val()=="ご注文後のキャンセル"){
+			$('#orderCancel,#orderCancelFaq').fadeIn('fast');	
+			$('aside.relatedFaq').addClass('view');	
+			}else{
+			$('#orderCancel,#orderCancelFaq').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="配送日の変更"){
+			$('#changeDate,#deliveryFaq01').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#changeDate,#deliveryFaq01').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="配送先の変更"){
+			$('#changeAddress,#deliveryFaq02').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#changeAddress,#deliveryFaq02').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="配送日と配送先の変更"){
+			$('#changeDateAndAddress,#deliveryFaq03').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#changeDateAndAddress,#deliveryFaq03').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="不用家具の引き取り"){
+			$('#PickUpFurniture,#pickUpFurnitureFAQ').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#PickUpFurniture,#pickUpFurnitureFAQ').fadeOut('fast');
+		}
+		
+		/*if( $( this ).val()=="ギフト依頼（のし・個別包装・一部包装）"){
+			$('#gift,#giftFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');			
+			}else{
+			$('#gift,#giftFaq').fadeOut('fast');
+		}*/
+		
+		if( $( this ).val()=="のし依頼"){
+			$('#noshi,#giftFaq01').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');			
+			}else{
+			$('#noshi,#giftFaq').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="個別包装・一部包装の依頼"){
+			$('#giftWrapping,#giftFaq02').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');			
+			}else{
+			$('#giftWrapping,#giftFaq02').fadeOut('fast');
+		}
+		
+		if( $( this ).val()=="のしと個別包装・一部包装の依頼"){
+			$('#noshiAndWrapping,#giftFaq03').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');			
+			}else{
+			$('#noshiAndWrapping,#giftFaq03').fadeOut('fast');
+		}
+
+		
+		if( $( this ).val()=="付帯作業などオプションサービスの追加・変更"){
+			$('#incidentalService,#incidentalServiceFAQ').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');	
+			}else{
+			$('#incidentalService,#incidentalServiceFAQ').fadeOut('fast');
+		}
+	
+	});
+
+	
+	$( 'input[id="checkNoshi"]:checkbox' ).change( function() {
+		$('#gift #noshi').slideToggle(this.checked);
+	});
+	
+	$( 'input[id="checkGift"]:checkbox' ).change( function() {
+		$('#gift #giftWrapping').slideToggle(this.checked);
+	});
+
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body id="form3">
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="#"><li class="current">注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_1/store_form_1.php"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+	<form>
+		<section class="inquiryDetail block" id="order">
+			<h1>注文について</h1>
+			<div class="contentWrap">
+				<p>お問い合わせ内容をお選びください。</p>
+				<div class="message">%%%G6_error_msg%%%</div>
+				<ul class="subMenu">
+					<li><label title="orderCancel"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="ご注文後のキャンセル" %%%in_G6_お問い合わせ種類%%%>ご注文後のキャンセル</label></li>
+					<li><span class="subMenuTitle">配送日、配送先の変更について</span><br>
+						<div class="deliveryMenu">
+						<label title="delivery01" class="delivery"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="配送日の変更" %%%in_G6_お問い合わせ種類%%%>配送日の変更</label>
+						<label title="delivery02" class="delivery"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="配送先の変更" %%%in_G6_お問い合わせ種類%%%>配送先の変更</label>
+						<label title="delivery03" class="delivery"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="配送日と配送先の変更" %%%in_G6_お問い合わせ種類%%%>配送日と配送先の変更</label>
+						</div>
+					</li>
+					<li><label title="PickUpFurniture"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="不用家具の引き取り" %%%in_G6_お問い合わせ種類%%%>不要家具の引き取り</label></li>
+					<li><span class="subMenuTitle">ギフト依頼（のし・個別包装・一部包装）について</span><br>
+						<div class="giftMenu">
+						<label title="gift01" class="gift"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="のし依頼" %%%in_g6_お問い合わせ種類%%%="">のし依頼</label>
+						<label title="gift02" class="gift"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="個別包装・一部包装の依頼" %%%in_g6_お問い合わせ種類%%%="">個別包装・一部包装の依頼</label>
+						<label title="gift03" class="gift"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="のしと個別包装・一部包装の依頼" %%%in_g6_お問い合わせ種類%%%="">のしと個別包装・一部包装の依頼</label>
+						</div>
+					
+					<!-- <label title="gift"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="ギフト依頼（のし・個別包装・一部包装）" %%%in_G6_お問い合わせ種類%%%>ギフト依頼（のし・個別包装・一部包装）</label> --></li>
+					<li><label title="incidentalService"><input type="radio" id="deliveryOrder" name="G6_お問い合わせ種類" value="付帯作業などオプションサービスの追加・変更" %%%in_G6_お問い合わせ種類%%%>付帯作業などオプションサービスの追加・変更</label></li>
+				</ul>
+				
+				<div id="orderCancel" class="entryField">			
+					<p class="lead">購入履歴のキャンセルボタンよりご自身でのキャンセルが可能です。</p>
+					<ul class="notice loginInfo">
+						<li>購入履歴ページは、ログイン後、マイページ内のメニューよりご確認いただけます<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+					</ul>
+					<p>購入履歴ページにキャンセルボタンが表示されていない場合は、下記のフォームにご入力ください。</p>
+					
+					<section class="orderNumber">
+					
+					<div class="message">%%%G7_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G7_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G7_ご注文番号:__checked%%%"></div>
+					</section>
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<textarea name="G8_その他" rows="7" cols="50" value="%%%in_G8_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					<section class="relatedNotice">
+						<ul class="notice">
+							<li>店頭受け取りサービスをご利用の場合は、受け取り予定店舗へキャンセルの連絡をお願いします</li>
+							<li>オーダーカーテンや自転車等、キャンセルのできない商品があります</li>
+							<li>クレジットカードをご利用の場合、一旦お引き落としの後、翌月以降のご請求時にご返金となる場合があります</li>
+							<li>お届け日当日以降のキャンセルは、配送料金を請求いたします</li>
+							<li>MUJI GIFT CARDをご使用の場合、リチャージの手続きに2,3日お時間をいただきます</li>
+						</ul>
+					</section>
+				</div>
+
+				<div id="changeDate" class="entryField">
+					<p class="title">配送日の変更</p>
+					<ul class="notice">
+						<li>注文番号（配送便）が複数ある場合は、注文番号毎に変更が必要です</li>
+					</ul>
+					<dl>
+						<dt class="subTitle">購入履歴にキャンセルボタンが表示されている場合</dt>
+						<dd class="lead">購入後、購入履歴画面にキャンセルボタンが表示されている場合は、一旦キャンセルをしてから、再注文をお願いします。<br>その場合、お届けが遅れる場合や、在庫不足、割引条件が変更になる可能性があります。
+							<ul class="notice">
+								<li>購入履歴ページは、ログイン後、マイページ内のメニューよりご確認いただけます<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+							</ul>
+						</dd>
+						
+						<dt class="subTitle">購入履歴にキャンセルボタンが表示されていない場合</dt>
+						<dd>
+							<div class="typeA">
+							<p class="subTitle">配送便区分A（衣服雑貨、文具、化粧小物、キッチン小物、食品）<br>配送便区分B（ポリプロピレン衣装ケースなど）<br>配送便区分C（軽家具など）<br>の場合</p>
+							<p>お届けは、ヤマト運輸の「宅急便」になります。<br>出荷後の配送日の変更は、ヤマト運輸から届く「無印良品から商品出荷のお知らせ」のメールより行えます。</p>
+							<ul class="notice sub">
+								<li>配送会社での商品の保管期限内（配送予定日から7日）にお受け取りいただけない場合、ご注文はキャンセルとなり、再配送できません</li>
+								<li>沖縄、及び離島への配送は「船便」となるため、発送からお届けまでの日数が7〜8日かかります</li>
+							</ul>
+						</div>
+						
+						<div class="typeB">
+							<p class="subTitle">配送便区分D・E・X（大型商品）の場合</p>
+							<p>下記のフォームよりお問合せください。確認をいたします。</p>
+							
+							<section class="orderNumber">
+							<div class="message">%%%G9_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<input type="text" name="G9_ご注文番号_配送日変更" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G9_ご注文番号_配送日変更:__checked%%%"></div>
+							</section>
+							
+							<ul class="notice sub">
+								<li>変更できない場合もございますので、あらかじめご了承ください</li>
+							</ul>
+							
+							<section class="dateOfDelivery">
+							<div class="message">%%%G10_error_msg%%%</div>
+							<h1>希望お届け日</h1>
+							<div class="answer">
+							<div class="message"></div>
+								<label><select name="G10_希望お届け月" id="DeliveryDateMonth">
+									<option value="" selected="">--</option>
+									<option value="01月" %%%in_G10_希望お届け月:__selected%%%>01</option>
+									<option value="02月" %%%in_G10_希望お届け月:__selected%%%>02</option>
+									<option value="03月" %%%in_G10_希望お届け月:__selected%%%>03</option>
+									<option value="04月" %%%in_G10_希望お届け月:__selected%%%>04</option>
+									<option value="05月" %%%in_G10_希望お届け月:__selected%%%>05</option>
+									<option value="06月" %%%in_G10_希望お届け月:__selected%%%>06</option>
+									<option value="07月" %%%in_G10_希望お届け月:__selected%%%>07</option>
+									<option value="08月" %%%in_G10_希望お届け月:__selected%%%>08</option>
+									<option value="09月" %%%in_G10_希望お届け月:__selected%%%>09</option>
+									<option value="10月" %%%in_G10_希望お届け月:__selected%%%>10</option>
+									<option value="11月" %%%in_G10_希望お届け月:__selected%%%>11</option>
+									<option value="12月" %%%in_G10_希望お届け月:__selected%%%>12</option>
+								</select><span>月</span></label>
+								<label><select name="G10_希望お届け日" id="DeliveryDateDay">
+									<option value="">--</option>
+									<option value="01日" %%%in_G10_希望お届け日:__selected%%%>01</option>
+									<option value="02日" %%%in_G10_希望お届け日:__selected%%%>02</option>
+									<option value="03日" %%%in_G10_希望お届け日:__selected%%%>03</option>
+									<option value="04日" %%%in_G10_希望お届け日:__selected%%%>04</option>
+									<option value="05日" %%%in_G10_希望お届け日:__selected%%%>05</option>
+									<option value="06日" %%%in_G10_希望お届け日:__selected%%%>06</option>
+									<option value="07日" %%%in_G10_希望お届け日:__selected%%%>07</option>
+									<option value="08日" %%%in_G10_希望お届け日:__selected%%%>08</option>
+									<option value="09日" %%%in_G10_希望お届け日:__selected%%%>09</option>
+									<option value="10日" %%%in_G10_希望お届け日:__selected%%%>10</option>
+									<option value="11日" %%%in_G10_希望お届け日:__selected%%%>11</option>
+									<option value="12日" %%%in_G10_希望お届け日:__selected%%%>12</option>
+									<option value="13日" %%%in_G10_希望お届け日:__selected%%%>13</option>
+									<option value="14日" %%%in_G10_希望お届け日:__selected%%%>14</option>
+									<option value="15日" %%%in_G10_希望お届け日:__selected%%%>15</option>
+									<option value="16日" %%%in_G10_希望お届け日:__selected%%%>16</option>
+									<option value="17日" %%%in_G10_希望お届け日:__selected%%%>17</option>
+									<option value="18日" %%%in_G10_希望お届け日:__selected%%%>18</option>
+									<option value="19日" %%%in_G10_希望お届け日:__selected%%%>19</option>
+									<option value="20日" %%%in_G10_希望お届け日:__selected%%%>20</option>
+									<option value="21日" %%%in_G10_希望お届け日:__selected%%%>21</option>
+									<option value="22日" %%%in_G10_希望お届け日:__selected%%%>22</option>
+									<option value="23日" %%%in_G10_希望お届け日:__selected%%%>23</option>
+									<option value="24日" %%%in_G10_希望お届け日:__selected%%%>24</option>
+									<option value="25日" %%%in_G10_希望お届け日:__selected%%%>25</option>
+									<option value="26日" %%%in_G10_希望お届け日:__selected%%%>26</option>
+									<option value="27日" %%%in_G10_希望お届け日:__selected%%%>27</option>
+									<option value="28日" %%%in_G10_希望お届け日:__selected%%%>28</option>
+									<option value="29日" %%%in_G10_希望お届け日:__selected%%%>29</option>
+									<option value="30日" %%%in_G10_希望お届け日:__selected%%%>30</option>
+									<option value="31日" %%%in_G10_希望お届け日:__selected%%%>31</option>
+								</select><span>日</span></label>
+							</div>
+						</section>
+							
+							<section class="time">
+							<h1>お届け時間帯</h1>
+							<div class="answer">
+								第一希望：<input type="text" name="G40_お届け時間帯" placeholder="例）9時-18時&nbsp;"><br>
+								第二希望（任意）：<input type="text" name="G40_お届け時間帯" class="notRequired"><br>
+								第三希望（任意）：<input type="text" name="G40_お届け時間帯" class="notRequired">
+							</div>
+							</section>
+							
+							<section class="other notRequired">
+							<h1>その他（任意）</h1>
+								<div class="answer">
+								<textarea name="G41_その他" rows="7" cols="50" value="%%%in_G41_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+							</section>
+							<section class="relatedNotice">
+								<ul class="notice">
+									<li>オーダーカーテンや自転車等、キャンセルのできない商品があります</li>
+									<li>クレジットカードをご利用の場合、一旦お引き落としの後、翌月以降のご請求時にご返金となる場合があります</li>
+									<li>お届け日当日以降のキャンセルは、配送料金を請求いたします</li>
+									<li>MUJI GIFT CARDをご使用の場合、リチャージの手続きに2〜3日お時間をいただきます</li>
+								</ul>
+							</section>
+						</div>
+						</dd>
+					</dl>
+					</div><!-- /#changeDate -->
+					
+					<div id="changeAddress" class="entryField">
+					<p class="title">配送先の変更</p>
+					<p>下記に変更したい配送先の情報をご入力ください。</p>
+					
+					<section class="orderNumber">
+					<div class="message">%%%G42_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G42_ご注文番号_配送先変更" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G42_ご注文番号_配送先変更:__checked%%%"></div>
+					</section>
+					
+					<section class="address">
+					<div class="message">%%%G11_error_msg%%%</div>
+					<div class="message">%%%G12_error_msg%%%</div>
+					<div class="message">%%%G13_error_msg%%%</div>
+					<div class="message">%%%G14_error_msg%%%</div>
+						<h1>住所</h1>
+						<div class="answer">
+						<div class="message"></div>
+							〒<input id="postCode1" type="text" name="G11_郵便番号１" value="%%%in_G11_郵便番号１:__checked%%%" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="G11_郵便番号２" value="%%%in_G11_郵便番号２%%%:__checked" size="5" maxlength="4" placeholder="4567"><br>
+							<select id="prefectureSelect" name="G12_都道府県">
+								<option value="">都道府県</option>
+								<optgroup label="北海道">
+										<option value="北海道" %%%in_G12_都道府県:__selected%%%>北海道</option>
+								</optgroup>
+								<optgroup label="東北">
+										<option value="青森県" %%%in_G12_都道府県:__selected%%%>青森県</option>
+										<option value="岩手県" %%%in_G12_都道府県:__selected%%%>岩手県</option>
+										<option value="宮城県" %%%in_G12_都道府県:__selected%%%>宮城県</option>
+										<option value="秋田県" %%%in_G12_都道府県:__selected%%%>秋田県</option>
+										<option value="山形県" %%%in_G12_都道府県:__selected%%%>山形県</option>
+										<option value="福島県" %%%in_G12_都道府県:__selected%%%>福島県</option>
+								</optgroup>
+								<optgroup label="関東">
+										<option value="茨城県" %%%in_G12_都道府県:__selected%%%>茨城県</option>
+										<option value="栃木県" %%%in_G12_都道府県:__selected%%%>栃木県</option>
+										<option value="群馬県" %%%in_G12_都道府県:__selected%%%>群馬県</option>
+										<option value="埼玉県" %%%in_G12_都道府県:__selected%%%>埼玉県</option>
+										<option value="千葉県" %%%in_G12_都道府県:__selected%%%>千葉県</option>
+										<option value="東京都" %%%in_G12_都道府県:__selected%%%>東京都</option>
+										<option value="神奈川県" %%%in_G12_都道府県:__selected%%%>神奈川県</option>
+								</optgroup>
+								<optgroup label="中部">
+										<option value="新潟県" %%%in_G12_都道府県:__selected%%%>新潟県</option>
+										<option value="富山県" %%%in_G12_都道府県:__selected%%%>富山県</option>
+										<option value="石川県" %%%in_G12_都道府県:__selected%%%>石川県</option>
+										<option value="福井県" %%%in_G12_都道府県:__selected%%%>福井県</option>
+										<option value="山梨県" %%%in_G12_都道府県:__selected%%%>山梨県</option>
+										<option value="長野県" %%%in_G12_都道府県:__selected%%%>長野県</option>
+										<option value="岐阜県" %%%in_G12_都道府県:__selected%%%>岐阜県</option>
+										<option value="静岡県" %%%in_G12_都道府県:__selected%%%>静岡県</option>
+										<option value="愛知県" %%%in_G12_都道府県:__selected%%%>愛知県</option>
+								</optgroup>
+								<optgroup label="関西">
+										<option value="三重県" %%%in_G12_都道府県:__selected%%%>三重県</option>
+										<option value="滋賀県" %%%in_G12_都道府県:__selected%%%>滋賀県</option>
+										<option value="京都府" %%%in_G12_都道府県:__selected%%%>京都府</option>
+										<option value="大阪府" %%%in_G12_都道府県:__selected%%%>大阪府</option>
+										<option value="兵庫県" %%%in_G12_都道府県:__selected%%%>兵庫県</option>
+										<option value="奈良県" %%%in_G12_都道府県:__selected%%%>奈良県</option>
+										<option value="和歌山県" %%%in_G12_都道府県:__selected%%%>和歌山県</option>
+								</optgroup>
+								<optgroup label="中国">
+										<option value="鳥取県" %%%in_G12_都道府県:__selected%%%>鳥取県</option>
+										<option value="島根県" %%%in_G12_都道府県:__selected%%%>島根県</option>
+										<option value="岡山県" %%%in_G12_都道府県:__selected%%%>岡山県</option>
+										<option value="広島県" %%%in_G12_都道府県:__selected%%%>広島県</option>
+										<option value="山口県" %%%in_G12_都道府県:__selected%%%>山口県</option>
+								</optgroup>
+								<optgroup label="四国">
+										<option value="徳島県" %%%in_G12_都道府県:__selected%%%>徳島県</option>
+										<option value="香川県" %%%in_G12_都道府県:__selected%%%>香川県</option>
+										<option value="愛媛県" %%%in_G12_都道府県:__selected%%%>愛媛県</option>
+										<option value="高知県" %%%in_G12_都道府県:__selected%%%>高知県</option>
+								</optgroup>
+								<optgroup label="九州・沖縄">
+										<option value="福岡県" %%%in_G12_都道府県:__selected%%%>福岡県</option>
+										<option value="佐賀県" %%%in_G12_都道府県:__selected%%%>佐賀県</option>
+										<option value="長崎県" %%%in_G12_都道府県:__selected%%%>長崎県</option>
+										<option value="熊本県" %%%in_G12_都道府県:__selected%%%>熊本県</option>
+										<option value="大分県" %%%in_G12_都道府県:__selected%%%>大分県</option>
+										<option value="宮崎県" %%%in_G12_都道府県:__selected%%%>宮崎県</option>
+										<option value="鹿児島県" %%%in_G12_都道府県:__selected%%%>鹿児島県</option>
+										<option value="沖縄県" %%%in_G12_都道府県:__selected%%%>沖縄県</option>
+								</optgroup>
+							</select><br>
+							市区町村名: <input type="text" name="G13_市区町村名" size="30" value="%%%in_G13_市区町村名:__checked%%%" placeholder="例）豊島区東池袋３"><br>
+							番地・建物: <input type="text" name="G14_番地・建物" size="30" value="%%%in_G14_番地・建物:__checked%%%" placeholder="例）ムジ・ネットビル７Ｆ">
+						</div>
+					</section>
+					
+					<section class="name">
+					<div class="message">%%%G16_error_msg%%%</div>
+					<h1>お名前</h1>
+						<div class="answer">
+						<input type="text" name="G16_お届け先のお名前" size="30" placeholder="例）無印太郎&nbsp;" value="%%%in_G16_お届け先のお名前:__checked%%%"></div>
+					</section>
+					
+					<section class="tel">
+					<div class="message">%%%G17_error_msg%%%</div>
+						<h1>電話番号</h1>
+						<div class="answer">
+						<div class="message"></div>
+							<label><input type="text" name="G17_お届け先電話番号１" size="8" value="%%%in_G17_お届け先電話番号１:__checked%%%%%%" placeholder="例）03"></label>
+							<label> - <input type="text" name="G17_お届け先電話番号２" size="8" value="in_G17_お届け先電話番号２:__checked%%%%%%" placeholder="例）3989"></label>
+							<label> - <input type="text" name="G17_お届け先電話番号３" size="8" value="in_G17_お届け先電話番号３:__checked%%%%%%" placeholder="例）4191"></label>
+						</div>
+					</section>
+					
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<textarea name="G15_その他" rows="7" cols="50" value="%%%in_G15_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					
+					<ul class="notice">
+						<li>変更の内容によって、承れない場合がございます。その場合は、一旦キャンセルをしてから再注文となります。</li>
+						<li>注文後にメンバー情報を変更されてもお届け先は変更されません</li>
+					</ul>
+					</div><!-- /#changeAddress -->
+					
+					<div id="changeDateAndAddress" class="entryField">
+					
+					<div id="changeDate02">
+					<p class="title">配送日の変更</p>
+					<ul class="notice">
+						<li>注文番号（配送便）が複数ある場合は、注文番号毎に変更が必要です</li>
+					</ul>
+					<dl>
+						<dt class="subTitle">購入履歴にキャンセルボタンが表示されている場合</dt>
+						<dd class="lead">購入後、購入履歴画面にキャンセルボタンが表示されている場合は、一旦キャンセルをしてから、再注文をお願いします。<br>その場合、お届けが遅れる場合や、在庫不足、割引条件が変更になる可能性があります。
+							<ul class="notice">
+								<li>購入履歴ページは、ログイン後、マイページ内のメニューよりご確認いただけます<span class="login"><a href="https://www.muji.net/store/cust/login">ログイン</a></span></li>
+							</ul>
+						</dd>
+						
+						<dt class="subTitle">購入履歴にキャンセルボタンが表示されていない場合</dt>
+						<dd>
+							<div class="typeA">
+							<p class="subTitle">配送便区分A（衣服雑貨、文具、化粧小物、キッチン小物、食品）<br>配送便区分B（ポリプロピレン衣装ケースなど）<br>配送便区分C（軽家具など）<br>の場合</p>
+							<p>お届けは、ヤマト運輸の「宅急便」になります。<br>出荷後の配送日の変更は、ヤマト運輸から届く「無印良品から商品出荷のお知らせ」のメールより行えます。</p>
+							<ul class="notice sub">
+								<li>配送会社での商品の保管期限内（配送予定日から7日）にお受け取りいただけない場合、ご注文はキャンセルとなり、再配送できません</li>
+								<li>沖縄、及び離島への配送は「船便」となるため、発送からお届けまでの日数が7〜8日かかります</li>
+							</ul>
+						</div>
+						
+						<div class="typeB">
+							<p class="subTitle">配送便区分D・E・X（大型商品）の場合</p>
+							<p>下記のフォームよりお問合せください。確認をいたします。</p>
+							
+							<section class="orderNumber">
+							<div class="message">%%%G9_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<input type="text" name="G9_ご注文番号_配送日変更" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G9_ご注文番号_配送日変更:__checked%%%"></div>
+							</section>
+							
+							<ul class="notice sub">
+								<li>変更できない場合もございますので、あらかじめご了承ください</li>
+							</ul>
+							
+							<section class="dateOfDelivery">
+							<div class="message">%%%G10_error_msg%%%</div>
+							<h1>希望お届け日</h1>
+							<div class="answer">
+							<div class="message"></div>
+								<label><select name="G10_希望お届け月" id="DeliveryDateMonth">
+									<option value="" selected="">--</option>
+									<option value="01月" %%%in_G10_希望お届け月:__selected%%%>01</option>
+									<option value="02月" %%%in_G10_希望お届け月:__selected%%%>02</option>
+									<option value="03月" %%%in_G10_希望お届け月:__selected%%%>03</option>
+									<option value="04月" %%%in_G10_希望お届け月:__selected%%%>04</option>
+									<option value="05月" %%%in_G10_希望お届け月:__selected%%%>05</option>
+									<option value="06月" %%%in_G10_希望お届け月:__selected%%%>06</option>
+									<option value="07月" %%%in_G10_希望お届け月:__selected%%%>07</option>
+									<option value="08月" %%%in_G10_希望お届け月:__selected%%%>08</option>
+									<option value="09月" %%%in_G10_希望お届け月:__selected%%%>09</option>
+									<option value="10月" %%%in_G10_希望お届け月:__selected%%%>10</option>
+									<option value="11月" %%%in_G10_希望お届け月:__selected%%%>11</option>
+									<option value="12月" %%%in_G10_希望お届け月:__selected%%%>12</option>
+								</select><span>月</span></label>
+								<label><select name="G10_希望お届け日" id="DeliveryDateDay">
+									<option value="">--</option>
+									<option value="01日" %%%in_G10_希望お届け日:__selected%%%>01</option>
+									<option value="02日" %%%in_G10_希望お届け日:__selected%%%>02</option>
+									<option value="03日" %%%in_G10_希望お届け日:__selected%%%>03</option>
+									<option value="04日" %%%in_G10_希望お届け日:__selected%%%>04</option>
+									<option value="05日" %%%in_G10_希望お届け日:__selected%%%>05</option>
+									<option value="06日" %%%in_G10_希望お届け日:__selected%%%>06</option>
+									<option value="07日" %%%in_G10_希望お届け日:__selected%%%>07</option>
+									<option value="08日" %%%in_G10_希望お届け日:__selected%%%>08</option>
+									<option value="09日" %%%in_G10_希望お届け日:__selected%%%>09</option>
+									<option value="10日" %%%in_G10_希望お届け日:__selected%%%>10</option>
+									<option value="11日" %%%in_G10_希望お届け日:__selected%%%>11</option>
+									<option value="12日" %%%in_G10_希望お届け日:__selected%%%>12</option>
+									<option value="13日" %%%in_G10_希望お届け日:__selected%%%>13</option>
+									<option value="14日" %%%in_G10_希望お届け日:__selected%%%>14</option>
+									<option value="15日" %%%in_G10_希望お届け日:__selected%%%>15</option>
+									<option value="16日" %%%in_G10_希望お届け日:__selected%%%>16</option>
+									<option value="17日" %%%in_G10_希望お届け日:__selected%%%>17</option>
+									<option value="18日" %%%in_G10_希望お届け日:__selected%%%>18</option>
+									<option value="19日" %%%in_G10_希望お届け日:__selected%%%>19</option>
+									<option value="20日" %%%in_G10_希望お届け日:__selected%%%>20</option>
+									<option value="21日" %%%in_G10_希望お届け日:__selected%%%>21</option>
+									<option value="22日" %%%in_G10_希望お届け日:__selected%%%>22</option>
+									<option value="23日" %%%in_G10_希望お届け日:__selected%%%>23</option>
+									<option value="24日" %%%in_G10_希望お届け日:__selected%%%>24</option>
+									<option value="25日" %%%in_G10_希望お届け日:__selected%%%>25</option>
+									<option value="26日" %%%in_G10_希望お届け日:__selected%%%>26</option>
+									<option value="27日" %%%in_G10_希望お届け日:__selected%%%>27</option>
+									<option value="28日" %%%in_G10_希望お届け日:__selected%%%>28</option>
+									<option value="29日" %%%in_G10_希望お届け日:__selected%%%>29</option>
+									<option value="30日" %%%in_G10_希望お届け日:__selected%%%>30</option>
+									<option value="31日" %%%in_G10_希望お届け日:__selected%%%>31</option>
+								</select><span>日</span></label>
+							</div>
+						</section>
+							
+							<section class="time">
+							<h1>お届け時間帯</h1>
+							<div class="answer">
+								第一希望：<input type="text" name="G40_お届け時間帯" placeholder="例）9時-18時&nbsp;"><br>
+								第二希望（任意）：<input type="text" name="G40_お届け時間帯" class="notRequired"><br>
+								第三希望（任意）：<input type="text" name="G40_お届け時間帯" class="notRequired">
+							</div>
+							</section>
+							
+							<section class="other notRequired">
+							<h1>その他（任意）</h1>
+								<div class="answer">
+								<textarea name="G41_その他" rows="7" cols="50" value="%%%in_G41_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+							</section>
+							<section class="relatedNotice">
+								<ul class="notice">
+									<li>オーダーカーテンや自転車等、キャンセルのできない商品があります</li>
+									<li>クレジットカードをご利用の場合、一旦お引き落としの後、翌月以降のご請求時にご返金となる場合があります</li>
+									<li>お届け日当日以降のキャンセルは、配送料金を請求いたします</li>
+									<li>MUJI GIFT CARDをご使用の場合、リチャージの手続きに2〜3日お時間をいただきます</li>
+								</ul>
+							</section>
+						</div>
+						</dd>
+					</dl>
+					</div><!-- /#changeDate02 -->
+					
+					<div id="changeAddress02" class="entryField">
+					<p class="title">配送先の変更</p>
+					<p>下記に変更したい配送先の情報をご入力ください。</p>
+					
+					<section class="orderNumber">
+					<div class="message">%%%G42_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G42_ご注文番号_配送先変更" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G42_ご注文番号_配送先変更:__checked%%%"></div>
+					</section>
+					
+					<section class="address">
+					<div class="message">%%%G11_error_msg%%%</div>
+					<div class="message">%%%G12_error_msg%%%</div>
+					<div class="message">%%%G13_error_msg%%%</div>
+					<div class="message">%%%G14_error_msg%%%</div>
+						<h1>住所</h1>
+						<div class="answer">
+						<div class="message"></div>
+							〒<input id="postCode1" type="text" name="G11_郵便番号１" value="%%%in_G11_郵便番号１:__checked%%%" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="G11_郵便番号２" value="%%%in_G11_郵便番号２%%%:__checked" size="5" maxlength="4" placeholder="4567"><br>
+							<select id="prefectureSelect" name="G12_都道府県">
+								<option value="">都道府県</option>
+								<optgroup label="北海道">
+										<option value="北海道" %%%in_G12_都道府県:__selected%%%>北海道</option>
+								</optgroup>
+								<optgroup label="東北">
+										<option value="青森県" %%%in_G12_都道府県:__selected%%%>青森県</option>
+										<option value="岩手県" %%%in_G12_都道府県:__selected%%%>岩手県</option>
+										<option value="宮城県" %%%in_G12_都道府県:__selected%%%>宮城県</option>
+										<option value="秋田県" %%%in_G12_都道府県:__selected%%%>秋田県</option>
+										<option value="山形県" %%%in_G12_都道府県:__selected%%%>山形県</option>
+										<option value="福島県" %%%in_G12_都道府県:__selected%%%>福島県</option>
+								</optgroup>
+								<optgroup label="関東">
+										<option value="茨城県" %%%in_G12_都道府県:__selected%%%>茨城県</option>
+										<option value="栃木県" %%%in_G12_都道府県:__selected%%%>栃木県</option>
+										<option value="群馬県" %%%in_G12_都道府県:__selected%%%>群馬県</option>
+										<option value="埼玉県" %%%in_G12_都道府県:__selected%%%>埼玉県</option>
+										<option value="千葉県" %%%in_G12_都道府県:__selected%%%>千葉県</option>
+										<option value="東京都" %%%in_G12_都道府県:__selected%%%>東京都</option>
+										<option value="神奈川県" %%%in_G12_都道府県:__selected%%%>神奈川県</option>
+								</optgroup>
+								<optgroup label="中部">
+										<option value="新潟県" %%%in_G12_都道府県:__selected%%%>新潟県</option>
+										<option value="富山県" %%%in_G12_都道府県:__selected%%%>富山県</option>
+										<option value="石川県" %%%in_G12_都道府県:__selected%%%>石川県</option>
+										<option value="福井県" %%%in_G12_都道府県:__selected%%%>福井県</option>
+										<option value="山梨県" %%%in_G12_都道府県:__selected%%%>山梨県</option>
+										<option value="長野県" %%%in_G12_都道府県:__selected%%%>長野県</option>
+										<option value="岐阜県" %%%in_G12_都道府県:__selected%%%>岐阜県</option>
+										<option value="静岡県" %%%in_G12_都道府県:__selected%%%>静岡県</option>
+										<option value="愛知県" %%%in_G12_都道府県:__selected%%%>愛知県</option>
+								</optgroup>
+								<optgroup label="関西">
+										<option value="三重県" %%%in_G12_都道府県:__selected%%%>三重県</option>
+										<option value="滋賀県" %%%in_G12_都道府県:__selected%%%>滋賀県</option>
+										<option value="京都府" %%%in_G12_都道府県:__selected%%%>京都府</option>
+										<option value="大阪府" %%%in_G12_都道府県:__selected%%%>大阪府</option>
+										<option value="兵庫県" %%%in_G12_都道府県:__selected%%%>兵庫県</option>
+										<option value="奈良県" %%%in_G12_都道府県:__selected%%%>奈良県</option>
+										<option value="和歌山県" %%%in_G12_都道府県:__selected%%%>和歌山県</option>
+								</optgroup>
+								<optgroup label="中国">
+										<option value="鳥取県" %%%in_G12_都道府県:__selected%%%>鳥取県</option>
+										<option value="島根県" %%%in_G12_都道府県:__selected%%%>島根県</option>
+										<option value="岡山県" %%%in_G12_都道府県:__selected%%%>岡山県</option>
+										<option value="広島県" %%%in_G12_都道府県:__selected%%%>広島県</option>
+										<option value="山口県" %%%in_G12_都道府県:__selected%%%>山口県</option>
+								</optgroup>
+								<optgroup label="四国">
+										<option value="徳島県" %%%in_G12_都道府県:__selected%%%>徳島県</option>
+										<option value="香川県" %%%in_G12_都道府県:__selected%%%>香川県</option>
+										<option value="愛媛県" %%%in_G12_都道府県:__selected%%%>愛媛県</option>
+										<option value="高知県" %%%in_G12_都道府県:__selected%%%>高知県</option>
+								</optgroup>
+								<optgroup label="九州・沖縄">
+										<option value="福岡県" %%%in_G12_都道府県:__selected%%%>福岡県</option>
+										<option value="佐賀県" %%%in_G12_都道府県:__selected%%%>佐賀県</option>
+										<option value="長崎県" %%%in_G12_都道府県:__selected%%%>長崎県</option>
+										<option value="熊本県" %%%in_G12_都道府県:__selected%%%>熊本県</option>
+										<option value="大分県" %%%in_G12_都道府県:__selected%%%>大分県</option>
+										<option value="宮崎県" %%%in_G12_都道府県:__selected%%%>宮崎県</option>
+										<option value="鹿児島県" %%%in_G12_都道府県:__selected%%%>鹿児島県</option>
+										<option value="沖縄県" %%%in_G12_都道府県:__selected%%%>沖縄県</option>
+								</optgroup>
+							</select><br>
+							市区町村名: <input type="text" name="G13_市区町村名" size="30" value="%%%in_G13_市区町村名:__checked%%%" placeholder="例）豊島区東池袋３"><br>
+							番地・建物: <input type="text" name="G14_番地・建物" size="30" value="%%%in_G14_番地・建物:__checked%%%" placeholder="例）ムジ・ネットビル７Ｆ">
+						</div>
+					</section>
+					
+					<section class="name">
+					<div class="message">%%%G16_error_msg%%%</div>
+					<h1>お名前</h1>
+						<div class="answer">
+						<input type="text" name="G16_お届け先のお名前" size="30" placeholder="例）無印太郎&nbsp;" value="%%%in_G16_お届け先のお名前:__checked%%%"></div>
+					</section>
+					
+					<section class="tel">
+					<div class="message">%%%G17_error_msg%%%</div>
+						<h1>電話番号</h1>
+						<div class="answer">
+						<div class="message"></div>
+							<label><input type="text" name="G17_お届け先電話番号１" size="8" value="%%%in_G17_お届け先電話番号１:__checked%%%%%%" placeholder="例）03"></label>
+							<label> - <input type="text" name="G17_お届け先電話番号２" size="8" value="in_G17_お届け先電話番号２:__checked%%%%%%" placeholder="例）3989"></label>
+							<label> - <input type="text" name="G17_お届け先電話番号３" size="8" value="in_G17_お届け先電話番号３:__checked%%%%%%" placeholder="例）4191"></label>
+						</div>
+					</section>
+					
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<textarea name="G15_その他" rows="7" cols="50" value="%%%in_G15_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					
+					<ul class="notice">
+						<li>変更の内容によって、承れない場合がございます。その場合は、一旦キャンセルをしてから再注文となります。</li>
+						<li>注文後にメンバー情報を変更されてもお届け先は変更されません</li>
+					</ul>
+					</div><!-- /#changeAddress02 -->
+				</div><!-- /#changeDateAndAddress -->
+				
+				<div id="PickUpFurniture" class="entryField">
+					<!-- <p class="title">不用家具の引き取り</p> -->
+					<p>対象商品に限り、新しい商品をお届けする際、購入商品1点につき同種商品1点をお引き取りします。</p>
+					<dl>
+						<dt class="title">対象商品</dt>
+						<dd>
+						<ul class="notice">
+							<li>脚付きマットレス各種</li>
+							<li>ベッド各種</li>
+							<li>ベッド用マットレス各種</li>
+							<li>ソファ（体にフィットするソファを除く）</li>
+							<li>テーブル（デスク・折りたたみ式テーブル・子供用テーブルなど、一部対象外）</li>
+						</ul>
+						</dd>
+					</dl>
+					
+					<section class="orderNumber notRequired">
+					<div class="message">%%%G18_error_msg%%%</div>
+					<h1>ご注文番号（任意）</h1>
+					<div class="answer">
+					<input type="text" name="G18_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G18_ご注文番号:__checked%%%"></div>
+					</section>
+					
+					<section class="other">
+					<div class="message">%%%G19_error_msg%%%</div>
+					<h1>引き取り商品の詳細</h1>
+						<div class="answer">
+						<textarea name="G19_引き取り商品詳細" rows="7" cols="50" value="%%%in_G19_引き取り商品詳細:__checked%%%" maxlength="650" onkeyup="return isMaxlength(this)" placeholder="例）ダイニングテーブル 幅60×奥行き80×高さ72cm&nbsp;"></textarea></div>
+					</section>
+					
+					<section class="quantity">
+					<div class="message">%%%G20_error_msg%%%</div>
+					<h1>数量</h1>
+					<div class="answer">
+					<input type="text" name="G20_数量" size="5" placeholder="例）2&nbsp;" value="%%%in_G20_数量:__checked%%%"></div>
+					</section>
+					
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<textarea name="G43_その他" rows="7" cols="50" value="%%%in_G43_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+					
+					<ul class="notice">
+						<li>配送日当日のご依頼や、購入いただいた商品と異なる種類の商品はお引き取りできません</li>
+						<li>付帯サービスを承れない地域ではお引き取りできません</li>
+						<li>大型商品で吊り下げ作業が必要な場合は、承りいたしかねる場合があります</li>
+						<li>商品のお届け先以外への引き取りは承ることができません</li>
+					</ul>
+				</div><!-- /#PickUpFurniture -->
+				
+				
+<!--
+				<div class="inquiryDetail entryField" id="gift">
+					<p>ギフト依頼済み（別途157円）のお客様で、下記ご要望の場合は、以下の項目にチェックのうえ、必要事項をご注文当日の21時までにご連絡ください。翌日以降のご連絡の場合、対応しかねる場合もございます。</p>
+					<ul class="subMenu">
+						<li><label title="のし依頼"><input type="checkbox" id="checkNoshi" name="G52_のし依頼" value="のし依頼" %%%in_G52_のし依頼:__checked%%%>のし依頼</label></li>
+						<li><label title="個別包装・一部包装"><input type="checkbox" id="checkGift" name="G53_個別包装・一部包装" value="個別包装・一部包装" %%%in_G53_個別包装・一部包装:__checked%%%>個別包装・一部包装</label></li>
+					</ul>
+-->
+				
+				<div id="noshi" class="inquiryDetail entryField">
+					<p class="title">のし依頼</p>
+					<p>ギフト依頼済み（別途157円）のお客様で、下記ご要望の場合は、<br>以下の項目にチェックのうえ、必要事項をご注文当日の21時までにご連絡ください。翌日以降のご連絡の場合、対応しかねる場合もございます。</p>
+					<section class="orderNumber">
+					<div class="message">%%%G22_error_msg%%%</div>
+						<h1>ご注文番号</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<label><input type="text" name="G22_ご注文番号" size="30" placeholder="例）400000000000（12桁）" value="%%%in_G22_ご注文番号:__checked%%%"></label></div>
+					</section>
+						
+					<section class="omotegaki">
+					<div class="message">%%%G23_error_msg%%%</div>
+						<h1>表書き</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<label><input type="text" name="G23_表書き" size="30" placeholder="例）御祝" value="%%%in_G23_表書き:__checked%%%"></label></div>
+					</section>
+					
+					<!--
+	<section class="noshiType01">
+					<div class="message">%%%G24_error_msg%%%</div>
+						<h1>のしの種類</h1>
+						<div class="answer">
+						<label><select name="G24_のしの種類" id="noshiType01">
+							<option value="" >－</option>
+							<option value="結びきり" %%%in_G24_のしの種類:__selected%%%>結びきり（結婚祝い・快気祝い・病気見舞い）</option>
+							<option value="花結び" %%%in_G24_のしの種類:__selected%%%>花結び（出産祝い・内祝い・入学祝い・賞品）</option>
+							<option value="水引" %%%in_G24_のしの種類:__selected%%%>水引［結びきり］（仏事）</option>
+							</select></label></div>
+					</section>
+	-->
+					
+					<section class="noshiType01">
+					<div class="message">%%%G24_error_msg%%%</div>
+						<h1>のしの種類</h1>
+						<div class="answer">
+						<ul>
+							<li class="noshitype">
+								<label><span class="title">華結び</span>
+								<img src="/img/contact/form/noshi_hana.png" alt=""><br>
+								<span class="noshiInfo">結婚祝い・快気祝い・病気見舞い</span>
+								<input type="radio" id="hanamusubi" name="G6_のし" value="華結び" %%%in_G6_のし%%%>
+							</label>
+							</li>
+							<li class="noshitype">
+								<label><span class="title">結びきり</span>
+								<img src="/img/contact/form/noshi_musubikiri.png" alt=""><br>
+								<span class="noshiInfo">出産祝い・内祝い・入学祝い・賞品</span>
+								<input type="radio" id="hanamusubi" name="G6_のし" value="結びきり" %%%in_G6_のし%%%>
+								</label>
+							</li>
+							<li class="noshitype">
+								<label><span class="title">水引</span>
+								<img src="/img/contact/form/noshi_mizuhiki.png" alt=""><br>
+								<span class="noshiInfo">仏事</span>
+								<input type="radio" id="hanamusubi" name="G6_のし" value="水引" %%%in_G6_のし%%%>
+								</label>
+							</li>
+						</ul>
+						</div>
+					</section>
+						
+					<section class="noshiName">
+					<div class="message">%%%G25_error_msg%%%</div>
+						<h1>表記名</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<label><input type="text" name="G25_表記名" size="30" placeholder="例）鈴木" value="%%%in_G25_表記名:__checked%%%"></label></div>
+					</section>
+						
+					<section class="noshiType02">
+					<div class="message">%%%G26_error_msg%%%</div>
+						<h1>内のし・外のし</h1>
+						<div class="answer">
+						<label><select name="G26_内のし、外のし" id="noshiType02">
+							<option value="">－</option>
+							<option value="内のし" %%%in_G26_内のし、外のし:__selected%%%>内のし</option>
+							<option value="外のし" %%%in_G26_内のし、外のし:__selected%%%>外のし</option>
+							</select></label></div>
+					</section>
+						
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<textarea name="G27_その他" rows="7" cols="50" value="%%%in_G27_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)" placeholder=""></textarea></div>
+					</section>
+				</div><!-- /#noshi -->
+				
+				<div class="inquiryDetail entryField" id="giftWrapping">
+					<p class="title">個別包装・一部包装の依頼</p>
+					<p>ギフト依頼済み（別途157円）のお客様で、下記ご要望の場合は、<br>以下の項目にチェックのうえ、必要事項をご注文当日の21時までにご連絡ください。翌日以降のご連絡の場合、対応しかねる場合もございます。</p>
+					<section class="orderNumber">
+					<div class="message">%%%G28_error_msg%%%</div>
+						<h1>ご注文番号</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<label><input type="text" name="G28_ご注文番号" size="30" placeholder="例）400000000000（12桁）" value="%%%in_G28_ご注文番号:__checked%%%"></label></div>
+					</section>
+						
+					<section class="detail">
+					<div class="message">%%%G29_error_msg%%%</div>
+					<h1>包装商品の内容</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<textarea name="G29_包装についての詳細" rows="7" cols="50" value="%%%in_G29_包装についての詳細:__checked%%%" maxlength="650" onkeyup="return isMaxlength(this)"  placeholder="中性ゲルインキ六角ボールペン0.3・ブルーブラック1点と、リサイクル上質紙開きやすいノートA6を1点をセットにして、3セットプレゼント包装。残りの商品は自宅用のため包装は不要です。&nbsp;"></textarea></div>
+					</section>
+						
+					<section class="other notRequired">
+					<h1>その他（任意）</h1>
+						<div class="answer">
+						<div class="message"></div>
+						<textarea name="G44_その他" rows="7" cols="50" value="%%%in_G44_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+					</section>
+				</div><!-- /#giftWrapping -->				
+				
+				<div id="noshiAndWrapping" class="inquiryDetail entryField">
+					<div id="noshi02">
+						<p>ギフト依頼済み（別途157円）のお客様で、下記ご要望の場合は、<br>以下の項目にチェックのうえ、必要事項をご注文当日の21時までにご連絡ください。翌日以降のご連絡の場合、対応しかねる場合もございます。</p>
+						<p class="title">のし依頼</p>
+						<section class="orderNumber">
+						<div class="message">%%%G22_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<label><input type="text" name="G22_ご注文番号" size="30" placeholder="例）400000000000（12桁）" value="%%%in_G22_ご注文番号:__checked%%%"></label></div>
+						</section>
+							
+						<section class="omotegaki">
+						<div class="message">%%%G23_error_msg%%%</div>
+							<h1>表書き</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<label><input type="text" name="G23_表書き" size="30" placeholder="例）御祝" value="%%%in_G23_表書き:__checked%%%"></label></div>
+						</section>
+						
+						<section class="noshiType01">
+						<div class="message">%%%G24_error_msg%%%</div>
+							<h1>のしの種類</h1>
+							<div class="answer">
+							<ul>
+								<li class="noshitype">
+									<label><span class="title">華結び</span>
+									<img src="/img/contact/form/noshi_hana.png" alt=""><br>
+									<span class="noshiInfo">結婚祝い・快気祝い・病気見舞い</span>
+									<input type="radio" id="hanamusubi" name="G6_のし" value="華結び" %%%in_G6_のし%%%>
+								</label>
+								</li>
+								<li class="noshitype">
+									<label><span class="title">結びきり</span>
+									<img src="/img/contact/form/noshi_musubikiri.png" alt=""><br>
+									<span class="noshiInfo">出産祝い・内祝い・入学祝い・賞品</span>
+									<input type="radio" id="hanamusubi" name="G6_のし" value="結びきり" %%%in_G6_のし%%%>
+									</label>
+								</li>
+								<li class="noshitype">
+									<label><span class="title">水引</span>
+									<img src="/img/contact/form/noshi_mizuhiki.png" alt=""><br>
+									<span class="noshiInfo">仏事</span>
+									<input type="radio" id="hanamusubi" name="G6_のし" value="水引" %%%in_G6_のし%%%>
+									</label>
+								</li>
+							</ul>
+							</div>
+						</section>
+							
+						<section class="noshiName">
+						<div class="message">%%%G25_error_msg%%%</div>
+							<h1>表記名</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<label><input type="text" name="G25_表記名" size="30" placeholder="例）鈴木" value="%%%in_G25_表記名:__checked%%%"></label></div>
+						</section>
+							
+						<section class="noshiType02">
+						<div class="message">%%%G26_error_msg%%%</div>
+							<h1>内のし・外のし</h1>
+							<div class="answer">
+							<label><select name="G26_内のし、外のし" id="noshiType02">
+								<option value="">－</option>
+								<option value="内のし" %%%in_G26_内のし、外のし:__selected%%%>内のし</option>
+								<option value="外のし" %%%in_G26_内のし、外のし:__selected%%%>外のし</option>
+								</select></label></div>
+						</section>
+							
+						<section class="other notRequired">
+						<h1>その他（任意）</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<textarea name="G27_その他" rows="7" cols="50" value="%%%in_G27_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)" placeholder=""></textarea></div>
+						</section>
+					</div><!-- /#noshi02 -->
+					
+					<div id="giftWrapping02">
+						<p class="title">個別包装・一部包装の依頼</p>
+<!--
+						<section class="orderNumber">
+						<div class="message">%%%G28_error_msg%%%</div>
+							<h1>ご注文番号</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<label><input type="text" name="G28_ご注文番号" size="30" placeholder="例）400000000000（12桁）" value="%%%in_G28_ご注文番号:__checked%%%"></label></div>
+						</section>
+-->						
+						<section class="detail">
+						<div class="message">%%%G29_error_msg%%%</div>
+						<h1>包装商品の内容</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<textarea name="G29_包装についての詳細" rows="7" cols="50" value="%%%in_G29_包装についての詳細:__checked%%%" maxlength="650" onkeyup="return isMaxlength(this)"  placeholder="中性ゲルインキ六角ボールペン0.3・ブルーブラック1点と、リサイクル上質紙開きやすいノートA6を1点をセットにして、3セットプレゼント包装。残りの商品は自宅用のため包装は不要です。&nbsp;"></textarea></div>
+						</section>
+							
+						<section class="other notRequired">
+						<h1>その他（任意）</h1>
+							<div class="answer">
+							<div class="message"></div>
+							<textarea name="G44_その他" rows="7" cols="50" value="%%%in_G44_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)"></textarea></div>
+						</section>
+					</div><!-- /#giftWrapping02 -->
+				</div><!-- /#noshiAndWrapping -->
+				
+				
+				<div id="incidentalService" class="inquiryDetail entryField">
+				<div class="message">%%%G30_error_msg%%%</div>
+				<ul class="subMenu">
+					<li><label title="家電リサイクル引き取り"><input type="radio" name="G30_付帯作業の内容" value="家電リサイクル引き取り" %%%in_G30_付帯作業の内容:__checked%%%>家電リサイクル引き取り</label></li>
+					<li><label title="開梱設置・包材持ち帰り"><input type="radio" name="G30_付帯作業の内容" value="開梱設置・包材持ち帰り" %%%in_G30_付帯作業の内容:__checked%%%>梱設置・包材持ち帰り</label></li>
+					<li><label title="パンツの裾上げサービス"><input type="radio" name="G30_付帯作業の内容" value="パンツの裾上げサービス" %%%in_G30_付帯作業の内容:__checked%%%>パンツの裾上げサービス</label></li>
+					<li><label title="組み立てサービス"><input type="radio" name="G30_付帯作業の内容" value="組み立てサービス" %%%in_G30_付帯作業の内容:__checked%%%>組み立てサービス</label></li>
+					<li><label title="家電セッティング"><input type="radio" name="G30_付帯作業の内容" value="家電セッティング" %%%in_G30_付帯作業の内容:__checked%%%>家電セッティング</label></li>
+					<li><label title="ギフト依頼"><input type="radio" name="G30_付帯作業の内容" value="ギフト依頼" %%%in_G30_付帯作業の内容:__checked%%%>ギフト依頼</label></li>
+					<li><label title="16型自転車「両脚スタンド」取付希望"><input type="radio" name="G30_付帯作業の内容" value="16型自転車「両脚スタンド」取付希望" %%%in_G30_付帯作業の内容:__checked%%%>16型自転車「両脚スタンド」取付希望</label></li>
+					<li><label title="その他"><input type="radio" name="G30_付帯作業の内容" value="その他" %%%in_G30_付帯作業の内容:__checked%%%>その他</label></li>
+				</ul>
+				
+				<ul class="notice">
+					<li>ギフト依頼、16型自転車「両脚スタンド」取付は、ご注文当日21時までにご連絡ください</li>
+				</ul>
+					
+				<section class="orderNumber">
+				<div class="message">%%%G31_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G31_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G31_ご注文番号:__checked%%%"></div>
+				</section>
+					
+				<section class="other">
+				<div class="message">%%%G32_error_msg%%%</div>
+				<h1>お問い合わせ内容</h1>
+					<div class="answer">
+					<div class="message"></div>
+					<textarea name="G32_お問い合わせ詳細" rows="7" cols="50" value="" maxlength="650" onkeyup="return isMaxlength(this)" value="%%%in_G32_お問い合わせ詳細:__checked%%%" ></textarea></div>
+				</section>
+				</div><!-- /#incidentalService -->
+
+			 </div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+				
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			</form>
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ</h1>
+				<ul class="relatedFaqList" id="orderCancelFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014353.html" target="_blank">ネット注文店舗受け取りサービスのキャンセルについて</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/cancel_info/014342.html" target="_blank">ご注文後のキャンセルについて</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/cancel_info/014459.html" target="_blank">ご注文後の商品の追加・変更、一部商品のキャンセルについて</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="deliveryFaq01">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014360.html" target="_blank">複数商品ご注文時の注意事項</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/delivery_info/014417.html" target="_blank">お届けまでにかかる日数</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="deliveryFaq02">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014360.html" target="_blank">複数商品ご注文時の注意事項</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/delivery_info/014417.html" target="_blank">お届けまでにかかる日数</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="deliveryFaq03">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014360.html" target="_blank">複数商品ご注文時の注意事項</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/delivery_info/014417.html" target="_blank">お届けまでにかかる日数</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="pickUpFurnitureFAQ">
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014441.html" target="_blank">不要家具の引き取り</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="giftFaq01">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#01" target="_blank">ギフト包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#02" target="_blank">個別包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#04" target="_blank">のしについて</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="giftFaq02">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#01" target="_blank">ギフト包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#02" target="_blank">個別包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#04" target="_blank">のしについて</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="giftFaq03">
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#01" target="_blank">ギフト包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#02" target="_blank">個別包装について</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html#04" target="_blank">のしについて</a></li>
+				</ul>
+				
+				<ul class="relatedFaqList" id="incidentalServiceFAQ">
+					<li><a href="http://www.muji.net/mt/contact/cmdty_faq/d111/L052/014741.html" target="_blank">家電リサイクル引き取り</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014453.html" target="_blank">パンツの裾上げサービス</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014452.html" target="_blank">開梱設置・包材持ち帰り</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014449.html" target="_blank">組み立てサービス</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014428.html" target="_blank">家電セッティング</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/accompanying_info/014441.html" target="_blank">不要家具の引き取り</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/order_info/014370.html" target="_blank">ギフト包装・のしについて</a></li>
+				</ul>
+			</aside>
+			
+		</div><!-- /#main -->
+			
+
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</body>
+</html>

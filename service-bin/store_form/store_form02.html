@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/m/js/toggle/iphone-style-checkboxes.js"></script>
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+	<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+	$('aside.relatedFaq').addClass('view');
+
+	$('form').submit(function(){
+	
+		$('.hiddenRadio').each(function(){
+			if($('input .n',this).is(':checked')==false && $('input .n',this).is(':checked')==false){
+				$('input .n',this).click();
+			}
+		});
+
+	});
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+var APPNAME = navigator.appName;
+var VERSION = navigator.appVersion;
+var USAGENT = navigator.userAgent;
+
+$(function(){
+	if ( APPNAME.indexOf("Internet Explorer") > -1 ){
+		$("#a0").val("Internet Explorer");
+		}else{
+	  if ( APPNAME.indexOf("Opera") > -1 ){
+	  	$("#a0").val("Opera");
+	  }else{
+	    if ( VERSION.indexOf("Safari") > -1){
+	     if( VERSION.indexOf("Chrome") > -1){
+	       $("#a0").val("Google Chrome");      
+	      }else{
+	        $("#a0").val("Safari");
+	      }
+	    }else{
+	      if( USAGENT.indexOf("Firefox") > -1 ){
+	        $("#a0").val("FireFox");
+	      }else{
+	        $("#a0").val("取得できませんでした。下記の「ブラウザとバージョン」欄にご記入ください。");
+	      }
+	    }
+	  }
+	}
+	$("#a1").val(navigator.userAgent);
+	$("#a2").val(navigator.appVersion);
+});
+</script>
+</head>
+<body id="form2">
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>				
+				<a href="/service-bin/store_form_3/store_form_3.php"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_1/store_form_1.php"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li class="current">画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+		<section class="inquiryDetail block" id="order">
+			<h1>画面のエラー・トラブル</h1>
+			<div class="contentWrap">
+			<p class="lead">エラーの出る端末の種類（PC／スマートフォン／携帯など）、OS、ブラウザとそのバージョン、起こっている現象を詳しくご記入ください。</p>
+			
+			<div id="useBrowser">
+			<p class="title">ご利用中の端末情報</p>
+			<section class="browser">
+			<h1>ブラウザ</h1>
+			<div class="answer">
+			<input type="text" name="G10_現在のブラウザ" size="30" value="%%%in_G10_現在のブラウザ%%%" id="a0"></div>
+			</section>
+			
+			<section class="agent">
+			<h1>エージェント</h1>
+			<div class="answer">
+			<textarea id="a1" name="G11_現在のエージェント" value="%%%in_G11_現在のエージェント%%%" rows="4" cols="50"></textarea>
+			</section>
+			
+			<section class="version">
+			<h1>バージョン</h1>
+			<div class="answer">
+			<textarea id="a2" name="G12_現在のOSバージョン" value="%%%in_G12_現在のOSバージョン%%%" rows="4" cols="50"></textarea>
+			</section>
+			</div>
+			
+			<p>ご利用中の端末以外で、エラーが起こっている場合は、以下をご記入ください</p>	
+			<section class="otherTerminal notRequired">
+			<h1>エラーの起こる端末（任意）</h1>
+			<div class="answer">
+			<input type="text" name="G6_使用端末" size="30" placeholder="例）PC・スーマートフォン・携帯&nbsp;" value="%%%in_G6_使用端末%%%"></div>
+			</section>
+			
+			<section class="otherOS notRequired">
+			<h1>OSとバージョン（任意）</h1>
+			<div class="answer">
+			<input type="text" name="G7_OSとバージョン" size="50" placeholder="例）Mac OS X Lion 10.7.5/スマートフォン・携帯の場合は機種名&nbsp;" value="%%%in_G7_OSとバージョン%%%"></div>
+			</section>
+			
+			<section class="otherBrowser notRequired">
+			<h1>ブラウザとバージョン（任意）</h1>
+			<div class="answer">
+			<input type="text" name="G8_ブラウザとバージョン" size="50" placeholder="例）IE9&nbsp;" value="%%%in_G8_ブラウザとバージョン%%%"></div>
+			</section>
+			
+			<section class="other">
+			<h1>現象</h1>
+				<div class="answer">
+				<textarea name="G9_発生した現象" rows="7" cols="50" value="%%%in_G9_発生した現象%%%" maxlength="650" onkeyup="return isMaxlength(this)">%%%in_G9_発生した現象%%%</textarea></div>
+			</section>
+			
+			</div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_返信用メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+					
+				
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="defectiveFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/netstore_faq/regist_faq/014378.html" target="_blank">登録画面で「使用不可文字が含まれている」というエラーが出るのですが</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/netstore_faq/order_faq/014369.html" target="_blank">商品を選んで「ショッピングカートに入れる」ボタンを押すと「ページが表示されません」というエラーがでます</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/netstore_faq/regist_faq/014351.html" target="_blank">登録画面でエラーが出る時は</a></li>
+					<li><a href="http://www.muji.net/mt/contact/others/014424.html" target="_blank">推奨ブラウザについて</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+			
+		
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+		
+</form>
+</body>
+</html>

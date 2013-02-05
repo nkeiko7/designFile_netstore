@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ネットストアについてのお問い合わせ | 在庫に関するお問い合わせ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/m/js/toggle/iphone-style-checkboxes.js"></script>	
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+
+<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+	$('aside.relatedFaq').addClass('view');
+	$('#aboutOwnReasons,#ownReasonsFaq').fadeIn('fast');
+	
+});
+ 
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body id="form1">
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form_3/store_form_3.php"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_6/store_form_1.php"><li class="current">在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	
+	<div id="main">
+	
+	<div id="form">
+		<section class="inquiryDetail block" id="stock">
+			<h1>在庫問い合わせ</h1>
+			<div class="contentWrap">
+				<p class="lead">ネットストア在庫切れ商品の入荷・在庫状況をお調べいたします。下記フォームにご入力ください。</p>
+
+				<section class="relatedNotice">
+					<ul class="notice">
+						<li>店舗在庫は直接店舗へお問い合わせください。<a href="/shop/">店舗一覧</a></li>
+						<li>ネットストアで取り扱いのない商品もございます。</li>
+						<li>このフォームから商品のご注文は承りができかねます。</li>
+						<li>家具や家電などの大型商品は、お住まいに近いセンターの在庫状況をお調べします。お住まいの地域以外のセンターに在庫がある場合でもお取り寄せはできません。</li>
+					</ul>
+				</section>
+				
+				<section class="itemName">
+				<div class="%%%G6_error%%%">%%%G6_error_msg%%%</div>
+				<h1>商品名</h1>
+				<div class="answer">
+				<textarea name="G6_商品名" rows="2" cols="50" value="%%%in_G6_商品名%%%" maxlength="650" onkeyup="return isMaxlength(this)" placeholder="例）スチールユニットシェルフ・ボックス・引出し・2段・タモ材　幅82×奥行40×高さ37cm&nbsp;">%%%in_G6_商品名%%%</textarea></div>
+				<p>※できるだけ正確にご入力ください</p>
+				</section>
+				
+				<section class="addressee">
+				<div class="%%%G7_error%%%">%%%G7_error_msg%%%</div>
+				<h1>お届け先の都道府県</h1>
+				<select id="prefectureSelect" name="G7_配送先都道府県" %%%in_G7_配送先都道府県:__checked%%%>
+					<option value="">都道府県</option>
+					<optgroup label="北海道">
+							<option value="北海道" %%%in_G7_配送先都道府県:__selected%%%>北海道</option>
+					</optgroup>
+					<optgroup label="東北">
+							<option value="青森県" %%%in_G7_配送先都道府県:__selected%%%>青森県</option>
+							<option value="岩手県" %%%in_G7_配送先都道府県:__selected%%%>岩手県</option>
+							<option value="宮城県" %%%in_G7_配送先都道府県:__selected%%%>宮城県</option>
+							<option value="秋田県" %%%in_G7_配送先都道府県:__selected%%%>秋田県</option>
+							<option value="山形県" %%%in_G7_配送先都道府県:__selected%%%>山形県</option>
+							<option value="福島県" %%%in_G7_配送先都道府県:__selected%%%>福島県</option>
+					</optgroup>
+					<optgroup label="関東">
+							<option value="茨城県" %%%in_G7_配送先都道府県:__selected%%%>茨城県</option>
+							<option value="栃木県" %%%in_G7_配送先都道府県:__selected%%%>栃木県</option>
+							<option value="群馬県" %%%in_G7_配送先都道府県:__selected%%%>群馬県</option>
+							<option value="埼玉県" %%%in_G7_配送先都道府県:__selected%%%>埼玉県</option>
+							<option value="千葉県" %%%in_G7_配送先都道府県:__selected%%%>千葉県</option>
+							<option value="東京都" %%%in_G7_配送先都道府県:__selected%%%>東京都</option>
+							<option value="神奈川県" %%%in_G7_配送先都道府県:__selected%%%>神奈川県</option>
+					</optgroup>
+					<optgroup label="中部">
+							<option value="新潟県" %%%in_G7_配送先都道府県:__selected%%%>新潟県</option>
+							<option value="富山県" %%%in_G7_配送先都道府県:__selected%%%>富山県</option>
+							<option value="石川県" %%%in_G7_配送先都道府県:__selected%%%>石川県</option>
+							<option value="福井県" %%%in_G7_配送先都道府県:__selected%%%>福井県</option>
+							<option value="山梨県" %%%in_G7_配送先都道府県:__selected%%%>山梨県</option>
+							<option value="長野県" %%%in_G7_配送先都道府県:__selected%%%>長野県</option>
+							<option value="岐阜県" %%%in_G7_配送先都道府県:__selected%%%>岐阜県</option>
+							<option value="静岡県" %%%in_G7_配送先都道府県:__selected%%%>静岡県</option>
+							<option value="愛知県" %%%in_G7_配送先都道府県:__selected%%%>愛知県</option>
+					</optgroup>
+					<optgroup label="関西">
+							<option value="三重県" %%%in_G7_配送先都道府県:__selected%%%>三重県</option>
+							<option value="滋賀県" %%%in_G7_配送先都道府県:__selected%%%>滋賀県</option>
+							<option value="京都府" %%%in_G7_配送先都道府県:__selected%%%>京都府</option>
+							<option value="大阪府" %%%in_G7_配送先都道府県:__selected%%%>大阪府</option>
+							<option value="兵庫県" %%%in_G7_配送先都道府県:__selected%%%>兵庫県</option>
+							<option value="奈良県" %%%in_G7_配送先都道府県:__selected%%%>奈良県</option>
+							<option value="和歌山県" %%%in_G7_配送先都道府県:__selected%%%>和歌山県</option>
+					</optgroup>
+					<optgroup label="中国">
+							<option value="鳥取県" %%%in_G7_配送先都道府県:__selected%%%>鳥取県</option>
+							<option value="島根県" %%%in_G7_配送先都道府県:__selected%%%>島根県</option>
+							<option value="岡山県" %%%in_G7_配送先都道府県:__selected%%%>岡山県</option>
+							<option value="広島県" %%%in_G7_配送先都道府県:__selected%%%>広島県</option>
+							<option value="山口県" %%%in_G7_配送先都道府県:__selected%%%>山口県</option>
+					</optgroup>
+					<optgroup label="四国">
+							<option value="徳島県" %%%in_G7_配送先都道府県:__selected%%%>徳島県</option>
+							<option value="香川県" %%%in_G7_配送先都道府県:__selected%%%>香川県</option>
+							<option value="愛媛県" %%%in_G7_配送先都道府県:__selected%%%>愛媛県</option>
+							<option value="高知県" %%%in_G7_配送先都道府県:__selected%%%>高知県</option>
+					</optgroup>
+					<optgroup label="九州・沖縄">
+							<option value="福岡県" %%%in_G7_配送先都道府県:__selected%%%>福岡県</option>
+							<option value="佐賀県" %%%in_G7_配送先都道府県:__selected%%%>佐賀県</option>
+							<option value="長崎県" %%%in_G7_配送先都道府県:__selected%%%>長崎県</option>
+							<option value="熊本県" %%%in_G7_配送先都道府県:__selected%%%>熊本県</option>
+							<option value="大分県" %%%in_G7_配送先都道府県:__selected%%%>大分県</option>
+							<option value="宮崎県" %%%in_G7_配送先都道府県:__selected%%%>宮崎県</option>
+							<option value="鹿児島県" %%%in_G7_配送先都道府県:__selected%%%>鹿児島県</option>
+							<option value="沖縄県" %%%in_G7_配送先都道府県:__selected%%%>沖縄県</option>
+					</optgroup>
+				</select>
+				</section>
+				
+				<section class="jancode notRequired">
+				<h1>商品番号（任意）</h1>
+				<div class="answer">
+				<input type="text" name="G8_商品番号" size="30" placeholder="例）1364254（7桁）&nbsp;" value="%%%in_G8_商品番号%%%"></div>
+				</section>
+				
+				<section class="color notRequired">
+				<h1>色（任意）</h1>
+				<div class="answer">
+				<input type="text" name="G9_色" size="30" placeholder="例）白×杢ピンク&nbsp;" value="%%%in_G9_色%%%"></div>
+				</section>
+				
+				<section class="size notRequired">
+				<h1>サイズ（任意）</h1>
+				<div class="answer">
+				<input type="text" name="G10_サイズ" size="30" placeholder="例）XS&nbsp;" value="%%%in_G10_サイズ%%%"></div>
+				</section>
+				
+				<section class="quantity notRequired">
+				<h1>数量（任意）</h1>
+				<div class="answer">
+				<input type="text" name="G11_数量" size="5" placeholder="例）2&nbsp;" value="%%%in_G11_数量%%%"></div>
+				</section>
+				
+				<section class="other notRequired">
+				<h1>その他（任意）</h1>
+					<div class="answer">
+					<textarea name="G12_その他" rows="7" cols="50" value="%%%in_G12_その他%%%" maxlength="650" onkeyup="return isMaxlength(this)">%%%in_G12_その他%%%</textarea></div>
+				</section>	
+
+			</div><!--.contentWrap -->
+		</section><!-- #SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+									
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->		
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ</h1>
+				<ul class="notice">
+					<li><a href="http://www.muji.net/mt/contact/guide/price_info/014414.html" target="_blank">価格・在庫について</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+			
+		
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</form>
+</body>
+</html>

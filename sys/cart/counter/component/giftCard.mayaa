@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:mayaa xmlns:m="http://mayaa.seasar.org"
+	m:extends=""
+	m:templateSuffix="${ session.getAttribute('viewmode') }">
+
+	<m:beforeRender><![CDATA[
+		errorHelper = Packages.org.seasar.framework.container.SingletonS2Container.getComponent("errorHelper");
+	]]></m:beforeRender>
+
+	<!-- エラー表示 の有無 デフォルト表示 -->
+	<m:echo m:id="errorMessageGift">
+		<m:if test="${ 'false'.equals( binding.showerror ) }">
+		</m:if>
+		<m:if test="${ !'false'.equals( binding.showerror ) }">
+			<m:doBody />
+		</m:if>
+	</m:echo>
+
+	<m:if m:id="hasGiftCard" test="${ giftCardBalance.hasGiftCard }"/>
+	<!-- ギフトカード残高 -->
+	<m:if m:id="hasGiftCardBalance" test="${ giftCardBalance.giftCardBalance &gt; 0}"/>
+	<m:if m:id="hasNotGiftCardBalance" test="${ giftCardBalance.giftCardBalance == 0}"/>
+	<m:formatNumber m:id="giftCardBalance" value="${ giftCardBalance.giftCardBalance}" pattern="#,###,###" m:replace="false" />
+
+
+	<!-- ギフトカード番号 -->
+	<m:echo m:id="giftCardInput">
+		<m:if test="${ errorHelper.hasError()}">
+			<m:attribute name="value" value="${ giftCardNo }" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- ギフトPIN番号 -->
+	<m:echo m:id="pinNoInput">
+		<m:if test="${ errorHelper.hasError()}">
+			<m:attribute name="value" value="${ pinNo }" />
+		</m:if>
+		<m:doBody />
+	</m:echo>
+
+	<!-- ギフトカード参照ボタンURL -->
+	<m:echo m:id="dogiftcard">
+		<m:attribute name="url" value="${ httpHelper.getContextUrl(mayaaHelper.getUrlWithToken('/counter/purchase/dogiftcard')) }" m:replace="false" />
+		<m:doBody />
+	</m:echo>
+
+
+	<!-- ギフトカードご利用額 -->
+	<m:echo m:id="giftcardAmount">
+		<m:attribute name="value" value="${ giftCardAmount }" />
+		<m:doBody />
+	</m:echo>
+
+	<!-- ギフトカードご利用額(スマフォ) -->
+	<m:echo m:id="giftcardAmountSP">
+		<m:attribute name="value" value="${ giftCardAmount }" />
+		<m:attribute name="max" value="${ giftCardBalance.giftCardBalance }" />
+		<m:doBody />
+	</m:echo>
+
+	<!-- ギフトカード番号 -->
+	<m:write m:id="giftCardNo" value="${ giftCardBalance.cardNo }"/>
+
+
+</m:mayaa>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ネットストアについてのお問い合わせ | MUJI.netメンバー情報に関するお問い合わせ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/m/js/toggle/iphone-style-checkboxes.js"></script>	
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+
+<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+	$('aside.relatedFaq').addClass('view');
+	$('#inquiryDetail,#defectiveFaq').fadeIn('fast');
+
+});
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+</head>
+<body id="form5">
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="http://www.muji.net/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form_3/store_form_3.php"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li>商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_1/store_form_1.php"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li class="current">MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+		<section class="inquiryDetail block" id="inquiryDetail">
+			<h1>MUJI.netメンバー情報について</h1>
+			<div class="contentWrap">
+				<div class="%%%G6_error%%%">%%%G6_error_msg%%%</div>
+				<p>お問い合わせ内容をお選びください。</p>
+				<ul class="subMenu">
+					<li><label title="mailNews" onclick=""><input type="radio" name="G6_お問い合わせ内容" value="メールニュースの配信停止について" %%%in_G6_お問い合わせ内容:__checked%%%>メールニュースの配信停止希望</label></li>
+					<li><label title="idpass" onclick=""><input type="radio" name="G6_お問い合わせ内容" value="ID・パスワードを忘れた" %%%in_G6_お問い合わせ内容:__checked%%%>ID・パスワードを忘れた</label></li>
+					<li><label title="leave" onclick=""><input type="radio" name="G6_お問い合わせ内容" value="退会希望" %%%in_G6_お問い合わせ内容:__checked%%%>退会希望</label></li>
+					<li><label title="memberInfo" onclick=""><input type="radio" name="G6_お問い合わせ内容" value="登録内容の変更" %%%in_G6_お問い合わせ内容:__checked%%%>登録内容の変更</label></li>
+				</ul>
+				
+				<p>ご本人様確認のため、下記内容をご入力ください。</p>
+				<section class="dateOfBirth">
+				<div class="%%%G7_error%%%">%%%G7_error_msg%%%</div>
+				<h1>生年月日</h1>
+				<div class="answer">
+				<div class="message"></div>
+					<label><input id="birthDateYear" name="G7_生年月日_年" value="%%%in_G7_生年月日_年:__checked%%%" type="text" maxlength="4" size="8" placeholder="例）1972"><span>年</span></label>
+					<label><select name="G7_生年月日_月" id="birthDateMonth">
+						<option value="" selected="">--</option>
+						<option value="01月" %%%in_G7_生年月日_月:__selected%%%>01</option>
+						<option value="02月" %%%in_G7_生年月日_月:__selected%%%>02</option>
+						<option value="03月" %%%in_G7_生年月日_月:__selected%%%>03</option>
+						<option value="04月" %%%in_G7_生年月日_月:__selected%%%>04</option>
+						<option value="05月" %%%in_G7_生年月日_月:__selected%%%>05</option>
+						<option value="06月" %%%in_G7_生年月日_月:__selected%%%>06</option>
+						<option value="07月" %%%in_G7_生年月日_月:__selected%%%>07</option>
+						<option value="08月" %%%in_G7_生年月日_月:__selected%%%>08</option>
+						<option value="09月" %%%in_G7_生年月日_月:__selected%%%>09</option>
+						<option value="10月" %%%in_G7_生年月日_月:__selected%%%>10</option>
+						<option value="11月" %%%in_G7_生年月日_月:__selected%%%>11</option>
+						<option value="12月" %%%in_G7_生年月日_月:__selected%%%>12</option>
+					</select><span>月</span></label>
+					<label><select name="select_2" id="birthDateDay">
+						<option value="">--</option>
+						<option value="01日" %%%in_G7_生年月日_日:__selected%%%>01</option>
+						<option value="02日" %%%in_G7_生年月日_日:__selected%%%>02</option>
+						<option value="03日" %%%in_G7_生年月日_日:__selected%%%>03</option>
+						<option value="04日" %%%in_G7_生年月日_日:__selected%%%>04</option>
+						<option value="05日" %%%in_G7_生年月日_日:__selected%%%>05</option>
+						<option value="06日" %%%in_G7_生年月日_日:__selected%%%>06</option>
+						<option value="07日" %%%in_G7_生年月日_日:__selected%%%>07</option>
+						<option value="08日" %%%in_G7_生年月日_日:__selected%%%>08</option>
+						<option value="09日" %%%in_G7_生年月日_日:__selected%%%>09</option>
+						<option value="10日" %%%in_G7_生年月日_日:__selected%%%>10</option>
+						<option value="11日" %%%in_G7_生年月日_日:__selected%%%>11</option>
+						<option value="12日" %%%in_G7_生年月日_日:__selected%%%>12</option>
+						<option value="13日" %%%in_G7_生年月日_日:__selected%%%>13</option>
+						<option value="14日" %%%in_G7_生年月日_日:__selected%%%>14</option>
+						<option value="15日" %%%in_G7_生年月日_日:__selected%%%>15</option>
+						<option value="16日" %%%in_G7_生年月日_日:__selected%%%>16</option>
+						<option value="17日" %%%in_G7_生年月日_日:__selected%%%>17</option>
+						<option value="18日" %%%in_G7_生年月日_日:__selected%%%>18</option>
+						<option value="19日" %%%in_G7_生年月日_日:__selected%%%>19</option>
+						<option value="20日" %%%in_G7_生年月日_日:__selected%%%>20</option>
+						<option value="21日" %%%in_G7_生年月日_日:__selected%%%>21</option>
+						<option value="22日" %%%in_G7_生年月日_日:__selected%%%>22</option>
+						<option value="23日" %%%in_G7_生年月日_日:__selected%%%>23</option>
+						<option value="24日" %%%in_G7_生年月日_日:__selected%%%>24</option>
+						<option value="25日" %%%in_G7_生年月日_日:__selected%%%>25</option>
+						<option value="26日" %%%in_G7_生年月日_日:__selected%%%>26</option>
+						<option value="27日" %%%in_G7_生年月日_日:__selected%%%>27</option>
+						<option value="28日" %%%in_G7_生年月日_日:__selected%%%>28</option>
+						<option value="29日" %%%in_G7_生年月日_日:__selected%%%>29</option>
+						<option value="30日" %%%in_G7_生年月日_日:__selected%%%>30</option>
+						<option value="31日" %%%in_G7_生年月日_日:__selected%%%>31</option>
+					</select><span>日</span></label>
+				</div>
+			</section>
+			
+			<section class="address">
+			<div class="%%%G8_error%%%">%%%G8_error_msg%%%</div>
+				<h1>郵便番号</h1>
+				<div class="answer">
+				<div class="message"></div>
+					〒<input id="postCode1" type="text" name="G8_郵便番号１" value="%%%in_G8_郵便番号１:__checked%%%" size="5" maxlength="3" placeholder="123"> - <input id="postCode2" type="text" name="G8_郵便番号２" value="%%%in_G8_郵便番号２:__checked%%%" size="5" maxlength="4" placeholder="4567">
+				</div>
+			</section>
+			
+			<section class="tel notRequired">
+				<h1>電話番号（任意）</h1>
+				<div class="answer">
+				<div class="message"></div>
+					<label><input type="text" name="G9_電話番号１" size="8" value="%%%in_G9_電話番号１:__checked%%%" placeholder="例）03"></label><label> - <input type="text" name="G9_電話番号２" size="8" value="%%%in_G9_電話番号２:__checked%%%" placeholder="例）3989"></label><label> - <input type="text" name="G9_電話番号３" size="8" value="%%%in_G9_電話番号３:__checked%%%" placeholder="例）4191"></label>
+				</div>
+			</section>
+			
+			<section class="other notRequired">
+			<h1>内容（任意）</h1>
+				<div class="answer">
+				<textarea name="G10_変更内容" rows="7" cols="50" value="%%%in_G10_変更内容%%%" maxlength="650" onkeyup="return isMaxlength(this)">%%%in_G10_変更内容%%</textarea></div>
+			</section>
+
+			</div><!-- /.contentWrap -->
+		</section><!-- /#inquiryDetail -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>					
+				
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="defectiveFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/mailnews_info/014401.html" target="_blank">メールニュースの配信変更・停止について（ご自身での設定方法）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/secession_info/014344.html" target="_blank">パスワードをお忘れの場合（ご登録メールアドレスがわかる場合）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/regist_info/014377.html" target="_blank">メンバー登録内容の変更（ご自身での変更方法）</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/secession_info/014346.html" target="_blank">メンバー退会の手順（ご自身での退会設定方法）</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->		
+
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</form>
+</body>
+</html>

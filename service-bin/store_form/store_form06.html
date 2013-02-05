@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ネットストアについてのお問い合わせ | 商品の返品交換に関するお問い合わせ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/css/muji.css" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="/shared/css/store_form.css">
+	<link rel="stylesheet" href="/m/js/toggle/style.css">
+	<!--[if lt IE 9]><script src="/js/lib/html5.js"></script><![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//www.muji.net/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/m/js/toggle/iphone-style-checkboxes.js"></script>	
+	<script src="/shared/js/jquery.placeholder.min.js"></script>
+
+<script>
+$(function(){
+	$('input[placeholder],textarea[placeholder]').placeholder();
+	
+	function inputCheck(){	
+	
+		$('#defectiveFaq,#ownReasonsFaq').fadeOut('fast');
+		$('aside.relatedFaq').removeClass('view'); //remove FAQ
+		
+		if( $( 'input[name="radio_0"]:checked' ).val()=="商品不良・汚損・破損で交換をご希望の場合"){
+			$('#aboutDefective,#defectiveFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+	
+			}else{
+			$('#aboutDefective,#defectiveFaq').fadeOut('fast');
+		}
+		
+		if( $( 'input[name="radio_0"]:checked' ).val()=="商品不良・汚損・破損または、お客様の理由で返品される場合"){
+			$('#aboutOwnReasons,#ownReasonsFaq').fadeIn('fast');
+			$('aside.relatedFaq').addClass('view');
+			}else{
+			$('#aboutOwnReasons,#ownReasonsFaq').fadeOut('fast');
+		}
+	}
+	
+	inputCheck();
+	$( 'input[name="radio_0"]:radio' ).change(inputCheck);
+	
+	$('form').submit(function(){
+		$(":hidden input, :hidden textarea, :hidden select, :hidden checkbox; :hidden radio").val("");	
+	});
+
+});
+
+
+function isMaxlength(obj){
+  var mlength = obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : "";
+  if (obj.getAttribute && obj.value.length > mlength)
+    obj.value = obj.value.substring(0,mlength);
+}
+
+</script>
+
+</head>
+<body id="form6">
+
+<form action="%%%form_action%%%" method="%%%form_method%%%">
+%%%SYSTEM_HIDDEN%%%
+<input type="hidden" name="mode" value="%%%form_hidden_mode%%%">
+
+<div id="headerWrap"><div id="header">
+<div id="siteName"><a href="/">無印良品</a></div>
+<ul id="globalNav">
+<li id="gnHome"><a href="/">ホーム</a></li>
+<li id="gnStore"><a href="/store/">ネットストア</a></li>
+<li id="gnShop"><a href="/shop/">店舗情報</a></li>
+<li id="gnLab"><a href="/lab/">くらしの良品研究所</a></li>
+<li id="gnMymuji"><a href="http://my.muji.net/">my MUJI</a></li>
+<li id="gnContact"><a href="/contact/">お問い合わせ</a></li>
+<li id="gnGS"><a href="http://www.muji.com/">Global Site</a></li>
+</ul></div></div><!-- /#header and #headerWrap --> 
+
+<div id="content">
+
+	<h1 id="title">ネットストアについてのお問い合わせ</h1>
+	
+	<div id="mainNav">
+	
+	<div id="nav">
+		<section class="menu">
+			<h1>お問い合わせ内容</h1>
+			<p>以下のメニューから該当のお問い合わせをお選びください。</p>
+			<ul>
+				<a href="/service-bin/store_form_3/store_form_3.php"><li>注文について<span>商品のキャンセル・変更 など</span></li></a>
+				<a href="/service-bin/store_form_7/store_form_7.php"><li>配送について</li></a>
+				<a href="/service-bin/store_form_6/store_form_6.php"><li class="current">商品の返品・交換</li></a>
+				<a href="/service-bin/store_form_1/store_form_1.php"><li>在庫お問い合わせ</li></a>
+				<a href="/service-bin/store_form_4/store_form_4.php"><li>領収書・明細書</li></a>
+				<a href="/service-bin/store_form_5/store_form_5.php"><li>MUJI.netメンバー情報について</li></a>
+				<a href="/service-bin/store_form_2/store_form_2.php"><li>画面のエラー・トラブル</li></a>
+				<a href="/service-bin/store_form_8/store_form_8.php"><li>その他</li></a>
+			</ul>
+		</section>
+	</div>
+	
+	<aside id="tel">
+		<p id="infoAll"><a href="https://www.muji.net/service-bin/feedback_jpn03/feedback_jpn03.php">ネットストア以外の、無印良品全般に関するお問い合わせフォーム</a></p>
+		<dl>
+			<dt>無印良品ネットストア<br>サービスセンター</dt>
+			<dd><a href="tel:0120866404">0120-86-6404</a><br><span class="businessHours">（平日 10:00〜21:00 ／ 土・日・祝 10:00〜18:00）</span></dd>
+		</dl>
+	</aside>
+	
+	</div><!-- /#mainNav -->
+	
+	<div id="main">
+	
+	<div id="form">
+		<section class="inquiryDetail block" id="order">
+			<h1>商品の返品・交換</h1>
+			<div class="contentWrap">
+				<p>ネットストアでご購入いただいた商品は、店舗での返品・交換はお受けできません。また、店舗でご購入された商品は、ネットストアでの返品・交換をお受けできません。</p>
+				<div class="%%%G6_error%%%">%%%G6_error_msg%%%</div>
+				<ul class="subMenu">
+					<li><label title="defective" onclick=""><input type="radio" id="returns_exchanges" name="G6_お問い合わせ内容" value="商品不良・汚損・破損で交換をご希望の場合" %%%in_G6_お問い合わせ内容:__checked%%%>商品不良・汚損・破損で交換をご希望の場合</label></li>
+					<li><label title="ownReasons" onclick=""><input type="radio" id="returns_exchanges" name="G6_お問い合わせ内容" value="商品不良・汚損・破損または、お客様の理由で返品される場合" %%%in_G6_お問い合わせ内容:__checked%%%>商品不良・汚損・破損または、お客様の理由で返品される場合</label></li>
+				</ul>
+				
+				<div id="aboutDefective" class="entryField">
+					<p class="title">商品不良・汚損・破損があった場合</p>
+					<p class="lead">交換を承ります。お手数ですが下記のフォームにご入力ください。</p>
+					<section class="orderNumber">
+					<div class="%%%G7_error%%%">%%%G7_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G7_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G7_ご注文番号:__checked%%%"></div>
+					</section>
+					
+					<section class="other">
+					<div class="%%%G9_error%%%">%%%G9_error_msg%%%</div>
+					<h1>お問い合わせ内容</h1>
+					<div class="answer">
+					<textarea name="G9_お問い合わせ内容" rows="7" cols="50" value="%%%in_G9_お問い合わせ内容%%%" maxlength="650" onkeyup="return isMaxlength(this)" placeholder="商品名、数量、不具合内容、梱包材の有無をご入力ください&nbsp;">%%%in_G9_お問い合わせ内容%%%</textarea></div>
+					<ul class="notice"><li>商品名（できるだけ正確に）、数量、不具合内容、梱包材の有無をご入力ください</li></ul>
+					</section>
+					
+					<section class="notice">
+					<ul class="notice">
+						<li>在庫状況によっては交換ではなく返品での承りとなります</li>
+						<li>在庫確認後、交換のお手続きをご連絡します</li>
+						<li>新しい商品をお届け時に、お手元の商品をお引き取りいたします</li>
+						<li>梱包材を廃棄された場合はお知らせください</li>
+					</ul>
+					</section>
+				
+				</div><!-- /#aboutDefective -->
+				
+				
+				<div id="aboutOwnReasons" class="entryField">
+					<p class="title">お客様の理由で返品される場合</p>
+					<p class="lead">ネットストアではお客様の理由での「交換」は承っておりません。<br>交換をご希望の場合は、お届けした商品を返品のうえ、改めてご注文をお願いいたします。<br>なお、ご返品時の配送料はお客さま負担となります。返品商品到着後、ご返金の処理をいたします。</p>
+					
+					<div class="type">
+					<p class="subTitle">配送便区分Aの場合</p>
+					<p>お買い上げ日から30日以内に商品に同梱されている「返品連絡票」に必要事項をご記入・ご同封のうえ、商品をご返送ください。<br>お客様の理由で返品される場合は、返送料はお客様負担となりますので、あらかじめご了承ください。<br>不具合時のご返品は、配送料着払いにてご発送ください。<br>
+					<ul class="notice">
+						<li>オーダーカーテン、自転車のご返品は承れません</li>
+					</ul></p>
+					
+					<p class="subTitle">配送便区分B・C・D・Eの場合</p>
+					<p>大型商品をご返品の場合は、お引き取りに伺います。お買い上げ日から30日以内にネットストアサービスセンターへご連絡をお願いいたします。<br>（配送便区分B、C、D、Eの商品には、「返品連絡票」は同梱しておりません。）<br>お客様の理由で返品される場合、配送料と同額の返送料をご負担いただいております。</p>
+					</div>
+
+					<section class="orderNumber">
+					<div class="%%%G14_error%%%">%%%G14_error_msg%%%</div>
+					<h1>ご注文番号</h1>
+					<div class="answer">
+					<input type="text" name="G14_ご注文番号" size="30" placeholder="例）400000000000（12桁）&nbsp;" value="%%%in_G14_ご注文番号:__checked%%%"></div>
+					</section>
+					
+					<section class="other">
+					<div class="%%%G15_error%%%">%%%G15_error_msg%%%</div>
+					<h1>商品名・数量</h1>
+						<div class="answer">
+						<textarea name="G15_商品名・数量" rows="7" cols="50" value="%%%in_G15_商品名・数量%%%" maxlength="650" onkeyup="return isMaxlength(this)">%%%in_G15_商品名・数量%%%</textarea></div>
+					</section>
+					
+					<section class="reason">
+					<div class="%%%G16_error%%%">%%%G16_error_msg%%%</div>
+						<h1>返品理由</h1>
+						<div class="answer">
+						<ul>
+							<li><label title="誤注文" onclick=""><input type="radio" id="wrongOrder" name="G16_返品理由" value="誤注文" %%%in_G16_返品理由:__checked%%%>誤注文</label></li>
+							<li><label title="イメージ違い（サイズが合わない）" onclick=""><input type="radio" id="differenceImage" name="G16_返品理由" value="イメージ違い（サイズが合わない）" %%%in_G16_返品理由:__checked%%%>イメージ違い（サイズが合わない）</label></li>
+							
+							<li><label title="不具合" onclick=""><input type="radio" id="differenceImage" name="G16_返品理由" value="イメージ違い（サイズが合わない）" %%%in_G16_返品理由:__checked%%%>不具合　</label><span class="notRequired">具体的な内容: <input type="text" name="G30_具体的返品理由" size="30" %%%in_G30_具体的返品理由:__checked%%%></span></li>
+						</ul>
+					</div>
+					</section>
+					
+					<section class="dateOfPick-up">
+					<div class="%%%G17_error%%%">%%%G17_error_msg%%%</div>
+						<h1>引取り希望日</h1>
+						<div class="answer">
+							<label><select name="G17_お引取り月" id="Pick-upDateMonth">
+								<option value="" selected="">--</option>
+								<option value="01月" %%%in_G17_お引取り月:__selected%%%>01</option>
+								<option value="02月" %%%in_G17_お引取り月:__selected%%%>02</option>
+								<option value="03月" %%%in_G17_お引取り月:__selected%%%>03</option>
+								<option value="04月" %%%in_G17_お引取り月:__selected%%%>04</option>
+								<option value="05月" %%%in_G17_お引取り月:__selected%%%>05</option>
+								<option value="06月" %%%in_G17_お引取り月:__selected%%%>06</option>
+								<option value="07月" %%%in_G17_お引取り月:__selected%%%>07</option>
+								<option value="08月" %%%in_G17_お引取り月:__selected%%%>08</option>
+								<option value="09月" %%%in_G17_お引取り月:__selected%%%>09</option>
+								<option value="10月" %%%in_G17_お引取り月:__selected%%%>10</option>
+								<option value="11月" %%%in_G17_お引取り月:__selected%%%>11</option>
+								<option value="12月" %%%in_G17_お引取り月:__selected%%%>12</option>
+							</select><span>月</span></label>
+							<label><select name="G17_お引取り日" id="DeliveryDateDay">
+								<option value="">--</option>
+								<option value="01日" %%%in_G17_お引取り日:__selected%%%>01</option>
+								<option value="02日" %%%in_G17_お引取り日:__selected%%%>02</option>
+								<option value="03日" %%%in_G17_お引取り日:__selected%%%>03</option>
+								<option value="04日" %%%in_G17_お引取り日:__selected%%%>04</option>
+								<option value="05日" %%%in_G17_お引取り日:__selected%%%>05</option>
+								<option value="06日" %%%in_G17_お引取り日:__selected%%%>06</option>
+								<option value="07日" %%%in_G17_お引取り日:__selected%%%>07</option>
+								<option value="08日" %%%in_G17_お引取り日:__selected%%%>08</option>
+								<option value="09日" %%%in_G17_お引取り日:__selected%%%>09</option>
+								<option value="10日" %%%in_G17_お引取り日:__selected%%%>10</option>
+								<option value="11日" %%%in_G17_お引取り日:__selected%%%>11</option>
+								<option value="12日" %%%in_G17_お引取り日:__selected%%%>12</option>
+								<option value="13日" %%%in_G17_お引取り日:__selected%%%>13</option>
+								<option value="14日" %%%in_G17_お引取り日:__selected%%%>14</option>
+								<option value="15日" %%%in_G17_お引取り日:__selected%%%>15</option>
+								<option value="16日" %%%in_G17_お引取り日:__selected%%%>16</option>
+								<option value="17日" %%%in_G17_お引取り日:__selected%%%>17</option>
+								<option value="18日" %%%in_G17_お引取り日:__selected%%%>18</option>
+								<option value="19日" %%%in_G17_お引取り日:__selected%%%>19</option>
+								<option value="20日" %%%in_G17_お引取り日:__selected%%%>20</option>
+								<option value="21日" %%%in_G17_お引取り日:__selected%%%>21</option>
+								<option value="22日" %%%in_G17_お引取り日:__selected%%%>22</option>
+								<option value="23日" %%%in_G17_お引取り日:__selected%%%>23</option>
+								<option value="24日" %%%in_G17_お引取り日:__selected%%%>24</option>
+								<option value="25日" %%%in_G17_お引取り日:__selected%%%>25</option>
+								<option value="26日" %%%in_G17_お引取り日:__selected%%%>26</option>
+								<option value="27日" %%%in_G17_お引取り日:__selected%%%>27</option>
+								<option value="28日" %%%in_G17_お引取り日:__selected%%%>28</option>
+								<option value="29日" %%%in_G17_お引取り日:__selected%%%>29</option>
+								<option value="30日" %%%in_G17_お引取り日:__selected%%%>30</option>
+								<option value="31日" %%%in_G17_お引取り日:__selected%%%>31</option>
+							</select><span>日</span></label>
+						</div>
+						<ul class="notice">
+							<li>お問い合わせ日の5日後よりご指定ください</li>
+						</ul>
+					</section>
+
+					<section class="unpack">
+					<div class="%%%G18_error%%%">%%%G18_error_msg%%%</div>
+						<h1>開梱状態</h1>
+						<div class="answer">
+						<ul>
+							<li><label title="開梱済み" onclick=""><input type="radio" id="open" name="G18_開梱状態" value="開梱済み" %%%in_G18_開梱状態:__checked%%%>開梱済み</label></li>
+							<li><label title="未開梱" onclick=""><input type="radio" id="notOpen" name="G18_開梱状態" value="未開梱" %%%in_G18_開梱状態:__checked%%%>未開梱</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					<section class="packagingMaterial">
+					<div class="%%%G19_error%%%">%%%G19_error_msg%%%</div>
+						<h1>包材有無</h1>
+						<div class="answer">
+						<ul>
+							<li><label title="あり" onclick=""><input type="radio" id="packagingMaterial" name="G19_包材有無" value="あり" %%%in_G19_包材有無:__checked%%%>あり</label></li>
+							<li><label title="なし" onclick=""><input type="radio" id="noPackagingMaterial" name="G19_包材有無" value="なし" %%%in_G19_包材有無:__checked%%%>なし</label></li>
+						</ul>
+					</div>
+					</section>
+					
+					<p class="caseOfCOD">代引きご利用時のご返品希望の場合はご返金口座をお知らせください</p>
+					<section class="bankAccount notRequired">
+					<h1>返金口座情報（任意）</h1>
+					<div class="answer">
+					<ul>
+						<li>銀行名: <input type="text" name="G20_銀行名" size="20" placeholder="例）みずほ銀行&nbsp;" value="%%%in_G20_銀行名%%%"></li>
+						<li>支店名: <input type="text" name="G20_支店名" size="20" placeholder="例）池袋支店&nbsp;" value="%%%in_G20_支店名%%%"></li>
+						<li>種別: <select name="G20_口座種別">
+							<option value="" selected="">--</option>
+							<option value="普通" %%%in_G20_口座種別:__selected%%%>普通</option>
+							<option value="当座" %%%in_G20_口座種別:__selected%%%>当座</option>
+						</select></li>
+						<li>口座番号: <input type="text" name="G20_返金口座" size="20" placeholder="例）11111111111&nbsp;" value="%%%in_G20_返金口座%%%"></li>
+						<li>口座名: <input type="text" name="G20_口座名" size="20" placeholder="例）無印太郎&nbsp;" value="%%%in_G20_口座名%%%"></li>
+						<li>カナ表記: <input type="text" name="G20_カナ表記" size="20" placeholder="例）ムジルシタロウ&nbsp;" value="%%%in_G20_カナ表記名%%%"></li>
+					</ul>
+					</div>
+						
+					<div class="answer">
+					<p class="yuucho">ゆうちょ銀行に口座をお持ちの場合は、以下をご記入ください</p>
+					<input type="text" name="G20_郵貯口座番号１" size="20" placeholder="例）11960&nbsp;" value="%%%in_G20_郵貯口座番号１%%%">-<input type="text" name="G20_郵貯口座番号２" size="5" placeholder="例）1&nbsp;" value="%%%in_G20_郵貯口座番号２%%%">-<input type="text" name="G20_郵貯口座番号３" size="20" placeholder="例）1234561&nbsp;" value="%%%in_G20_郵貯口座番号３%%%">
+						<ul class="notice">
+							<li>間に1桁の数字がない場合は、真ん中の入力欄は空欄にしてください</li>
+						</ul>
+					</div>
+
+					</section>
+					
+				</div><!-- /#aboutOwnReasons -->
+
+			 </div><!-- /.contentWrap -->
+		</section><!-- /#SelectInquiry -->
+		
+			
+		<section id="applicant" class="block">
+				<h1>お問い合わせをされる方について</h1>
+				<div class="contentWrap">
+	
+				<section class="name">
+					<div class="%%%G1_error%%%">%%%G1_error_msg%%%</div>
+					<h1>お名前</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G1_姓" size="12" placeholder="例）無印&nbsp;" value="%%%in_G1_姓%%%:__checked"></label>
+						<label><span>名:</span><input type="text" name="G1_名" size="12" placeholder="例）太郎 &nbsp;" value="%%%in_G1_名%%%:__checked"></label>
+					</div>
+				</section>
+	
+				<section class="kana">
+					<div class="%%%G2_error%%%">%%%G2_error_msg%%%</div>
+					<h1>ふりがな</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><span>姓:</span><input type="text" name="G2_姓（フリガナ）" size="12" placeholder="例）むじるし&nbsp;" value="%%%in_G2_姓（フリガナ）%%%:__checked"></label>
+						<label>名: <input type="text" name="G2_名（フリガナ）" size="12" placeholder="例）たろう&nbsp;" value="%%%in_G2_名（フリガナ）%%%:__checked"></label>
+					</div>
+				</section>
+
+				<section class="reply">
+					<div class="%%%G3_error%%%">%%%G3_error_msg%%%</div>
+					<h1>返信用メールアドレス</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G3_返信用メールアドレス" size="30" value="%%%in_G3_メールアドレス%%%:__checked" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+				</section>
+				
+				<section class="mail notRequired">
+					<h1>MUJI.netメンバー登録メールアドレス（任意）</h1>
+					<div class="answer">
+					<div class="message"></div>
+						<label><input type="text" name="G5_MUJIメールアドレス" size="30" value="%%%in_G5_MUJIメールアドレス%%%" placeholder="例）mujitaro@muji.net"></label>
+					</div>
+					<ul class="notice">
+						<li>返信用アドレスが登録アドレスと異なる場合は、両方のアドレスをご入力ください。</li>
+					</ul>
+				</section>
+									
+				</div><!-- .contentWrap -->
+			</section><!-- #applicant -->
+			
+			</div><!-- /#form -->
+			
+			<aside class="relatedFaq">
+				<h1>関連FAQ・関連コンテンツ</h1>
+				<ul class="relatedFaqList" id="defectiveFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/return_info/014415.html" target="_blank">返品・交換の方法</a></li>
+				</ul>
+				<ul class="relatedFaqList" id="ownReasonsFaq">
+					<li><a href="http://www.muji.net/mt/contact/guide/return_info/014415.html" target="_blank">返品・交換の方法</a></li>
+					<li><a href="http://www.muji.net/mt/contact/guide/delivery_info/014397.html" target="_blank">配送料について（配送便区分）</a></li>
+				</ul>
+			</aside>
+		</div><!-- /#main -->
+
+		<section id="notice">
+			<ul class="notice">
+				<li>お問い合わせいただく内容及びお客さまの個人情報は、「個人情報の取り扱い」に則り管理いたします。<a href="http://www.muji.net/mt/contact/others/014425.html" target="_blank">個人情報の取り扱い</a></li>
+				<li>ご返答にお時間を頂戴する場合や、ご返答できない場合がございます。</li>
+				<li>お問い合わせいただいた情報より、メンバー登録情報を確認し、お電話・お手紙にてご連絡を差し上げる場合がございます。</li>
+				<li>迷惑メール防止のため受信設定をされている場合は、ドメイン指定「@muji.net」またはアドレス指定「netstore@muji.net」を設定ください。</li>
+			</ul>
+		</section>
+
+		<section id="submit">
+			<button type="submit">次へ進む（内容の確認）</button>
+		</section>
+</div>
+
+<div id="footerWrap"><div id="footer">
+<ul id="pageEnd">
+<li class="pageTop"><a href="#header">ページの先頭へ戻る</a></li>
+</ul>
+<ul id="footerNav">
+<li id="fnPrivacy"><a href="http://www.muji.net/mt/contact/others/014425.html">個人情報の取り扱い</a></li>
+<li id="fnSecurity"><a href="http://www.muji.net/mt/contact/guide/netstore_info/014426.html">セキュリティについて</a></li>
+<li id="fnSitemap"><a href="/sitemap/">サイトマップ</a></li>
+
+<li id="fnCorporate"><a href="http://ryohin-keikaku.jp/">株式会社 良品計画</a></li>
+<li id="fnJob"><a href="http://ryohin-keikaku.jp/job/">採用情報</a></li>
+</ul>
+<p id="copyright"><small>Copyright &copy;Ryohin Keikaku Co., Ltd.</small></p>
+</div></div><!-- /#footer and #footerWrap -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3015583-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript" src="/shared/js/sc/s_code.js"></script>
+<script type="text/javascript" src="/shared/js/sc/code_to_paste.js"></script>
+</form>
+</body>
+</html>

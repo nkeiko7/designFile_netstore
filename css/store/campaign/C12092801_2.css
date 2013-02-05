@@ -1,0 +1,82 @@
+
+#main section h1 {font-size:18px; color:#333; line-height:1.5;}
+#main section section h1 {font-size:14px; color:#333; margin:15px 0 10px;}
+
+.relatedLink { margin: 20px 0 10px 0; text-align: right;}
+section p {line-height:1.6; margin-bottom:12px;}
+
+#snSection1,#snSection2 {padding-bottom: 30px;}
+
+#notice {margin-top: 20px; border: 6px solid #f6f6f6; padding: 0 20px 20px;}
+#notice .annotation {font-size: 12px; line-height: 140%;}
+#notice li {margin-bottom: 8px;}
+#notice li:last-child {margin-bottom: 0;}
+
+#membershipRecruitment { border-top: 1px solid #E8E8E8; margin: 15px 0; padding: 0;}
+#main a {text-decoration:none;}
+
+
+#offCoupon {padding: 5px 20px 10px; border-radius: 4px; width: 300px; float: left;
+background: url(/img/store/campaign/dummy/showcoupon.png) no-repeat 45px 50px #f7f7f7;}
+#offCoupon p {padding: 10px 0 10px 100px;}
+#offNetstore {padding: 5px 20px 10px; border-radius: 4px;  margin-left: 360px;
+background: url(/img/store/campaign/dummy/pcimage.png) no-repeat 30px 50px  #f7f7f7;}
+#offNetstore p {padding: 10px 0 10px 120px;}
+.relatedLink a {background: #fff;}
+#offMujiCard p {padding-left: 60px; background: url(/img/store/campaign/dummy/giftcard.jpg) no-repeat 0 2px;}
+#offMujiCard a {text-decoration: underline;}
+#howtoUse .useradd {float: right; text-decoration: underline;}
+
+
+
+/* event */
+
+#container { clear: both; margin-bottom: 20px; width: 100%; margin: 0; padding: 0;}
+.box { margin: 0 20px 20px 0; padding: 10px; background: #f7f7f7; float: left;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;}
+#container .box img { display: block; width: 190px; height: auto;}
+.col1 { width: 190px; }
+
+#container a.eventBox .box:hover {background: #ddd;
+	-webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;}
+ 
+#main .box h1 {margin: 10px 0;}
+#container p .annotation {display: inline-block; margin-top: 5px;}
+#container p span.term {display: inline-block; margin: 0 0 10px 0; font-weight: bold;}
+#container p.itemDetail {margin-top: 5px;}
+
+
+/* mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+	#snSection1, #snSection2 {width: 100%; margin: 20px 0 0 0; padding: 20px 0 0 0; position: relative; border-top: 1px solid #ccc;}
+	header h1 img {width: 100%; margin: 0 auto;}
+	header h1, p.lead {padding: 0 10px;}
+	
+	#howtoUse #offCoupon, #howtoUse #offNetstore {margin: 0; width: 100%;}
+	.skipNav {display: none;}
+	
+	
+	#howtoUse #offCoupon {padding: 1px 0 10px 0; border-top: 1px solid #ddd; width: 100%; float: none; border-radius: 0; background-position: 30px 45px;}
+	#howtoUse #offCoupon p {padding: 0 10px 0 100px;}
+	#howtoUse #offNetstore {padding: 1px 0 10px 0;  border-top: 1px solid #ddd; border-radius: 0; background-position: 20px 45px;}
+	#howtoUse #offNetstore p {padding: 0 10px 0 130px;}	
+	#howtoUse #offMujiCard p {padding-left: 80px; background: url(/img/store/campaign/dummy/giftcard.jpg) no-repeat 20px 2px;}
+	header h1 img {width: 100%; margin: 0 auto;}	
+	
+	#notice {padding: 5px 0; background: #f7f7f7; border: 0;}
+	#notice ul {margin: 10px;}
+	
+	.relatedLink a {
+		position: relative; display: block; padding: 20px 20px 0 20px; margin: 0 10px; min-height: 40px; text-align: left; background: url(/m/img/arrow.png) no-repeat 95% center #fff; -webkit-background-size: 10px 13px;
+	}
+	#container { width: 95%; padding: 0; margin: 0 auto; }
+  #container .box h1 {padding: 0;}
+	#container .box {width: 90%; height: auto; border: 2px solid #FAFAFA; box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);}
+	#container .box img { width: 100%; height: auto;}
+	a.eventBox {display: block;}
+}
